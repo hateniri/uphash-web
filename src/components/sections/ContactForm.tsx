@@ -10,7 +10,7 @@ interface FormData {
   phone: string
   products: string[]
   message: string
-  preferredContact: 'email' | 'phone' | 'online-call'
+  preferredContact: 'email' | 'online-call'
 }
 
 export default function ContactForm() {
@@ -38,7 +38,7 @@ export default function ContactForm() {
 会社名: ${formData.company}
 メールアドレス: ${formData.email}
 電話番号: ${formData.phone}
-希望連絡方法: ${formData.preferredContact === 'email' ? 'メール' : formData.preferredContact === 'phone' ? '電話' : 'オンラインコール'}
+希望商談方法: ${formData.preferredContact === 'email' ? 'メールでの詳細資料送付' : 'オンラインミーティング'}
 
 対象製品:
 ${formData.products.join('\n')}
@@ -136,7 +136,7 @@ ${formData.message}
 
             <div className="mt-6">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                ご希望の連絡方法
+                ご希望の商談方法
               </label>
               <div className="flex gap-4">
                 <label className="flex items-center">
@@ -148,18 +148,7 @@ ${formData.message}
                     onChange={(e) => setFormData({...formData, preferredContact: e.target.value as FormData['preferredContact']})}
                     className="mr-2"
                   />
-                  メール
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="radio"
-                    name="contact"
-                    value="phone"
-                    checked={formData.preferredContact === 'phone'}
-                    onChange={(e) => setFormData({...formData, preferredContact: e.target.value as FormData['preferredContact']})}
-                    className="mr-2"
-                  />
-                  電話
+                  メールでの詳細資料送付
                 </label>
                 <label className="flex items-center">
                   <input
@@ -170,7 +159,7 @@ ${formData.message}
                     onChange={(e) => setFormData({...formData, preferredContact: e.target.value as FormData['preferredContact']})}
                     className="mr-2"
                   />
-                  オンラインコール
+                  オンラインミーティング
                 </label>
               </div>
             </div>
@@ -217,21 +206,14 @@ ${formData.message}
               </div>
             )}
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-8">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-400"
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-400"
               >
-                {isSubmitting ? '送信中...' : '見積もりを依頼する'}
+                {isSubmitting ? '送信中...' : '見積もり・ミーティングを依頼する'}
               </button>
-              
-              <a
-                href="tel:+81-3-1234-5678"
-                className="flex-1 text-center bg-white text-blue-600 py-3 px-6 rounded-lg font-medium border-2 border-blue-600 hover:bg-blue-50 transition-colors"
-              >
-                電話で相談する
-              </a>
             </div>
 
             <p className="mt-4 text-sm text-gray-600 text-center">

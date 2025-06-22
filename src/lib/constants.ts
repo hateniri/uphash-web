@@ -1,15 +1,15 @@
 import { CompanyInfo, NavItem } from '@/types'
 
 export const COMPANY_INFO: CompanyInfo = {
-  name: 'UP HASH',
+  name: '株式会社UPHASH',
   tagline: '空間をスキャンし、コンテンツに変える',
   description: 'XGRIDS Field Scannerで点群データをリアルタイムで表示。空間スキャニングと3Dコンテンツ作成の革新的ソリューション。',
   foundedYear: 2024,
   address: {
-    street: '',
-    city: 'Tokyo',
-    state: 'Tokyo',
-    zip: '',
+    street: '虎ノ門１丁目１７−１',
+    city: '港区',
+    state: '東京都',
+    zip: '105-6415',
     country: 'Japan'
   },
   contact: {
@@ -19,11 +19,28 @@ export const COMPANY_INFO: CompanyInfo = {
 }
 
 export const NAVIGATION_ITEMS: NavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Products', href: '/products' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'Topics', href: '/topics' }
+  { label: 'ホーム', href: '/' },
+  { 
+    label: 'ハードウェア', 
+    href: '/products',
+    submenu: [
+      { label: 'Lixel L2 Pro', href: '/products/lixel-l2-pro' },
+      { label: 'Lixel K1', href: '/products/lixel-k1' },
+      { label: 'アクセサリー', href: '/products/accessories' }
+    ]
+  },
+  { 
+    label: 'ソフトウェア', 
+    href: '/software',
+    submenu: [
+      { label: 'Lixel Studio', href: '/products/lixel-studio' },
+      { label: 'Lixel Cyber Color', href: '/products/lixel-cyber-color' },
+      { label: 'Lixel GO', href: '/products/lixel-go' }
+    ]
+  },
+  { label: '導入事例', href: '/case-studies' },
+  { label: 'サポート', href: '/support' },
+  { label: 'お問い合わせ', href: '/contact' }
 ]
 
 export const SOCIAL_LINKS = {
@@ -35,83 +52,97 @@ export const SOCIAL_LINKS = {
 
 export const PRODUCTS = [
   {
-    id: 'lixel-l2-pro',
-    name: 'Lixel L2 Pro',
+    id: 'lixel-l2-pro-16-120',
+    name: 'Lixel L2 Pro 16/120',
     category: 'Professional',
-    description: 'プロフェッショナル向け最高級3Dレーザースキャナー',
+    description: 'エントリーレベル プロフェッショナル3Dレーザースキャナー',
     features: [
-      '最高精度±0.03mm',
-      'スキャン範囲: 0.3m-5m',
-      'リアルタイム点群処理',
-      'AI搭載自動キャリブレーション',
-      '防塵防水IP54規格'
+      '16チャンネルLiDAR',
+      'スキャン範囲: 0.5m-120m',
+      '320,000点/秒',
+      'リアルタイムカラー点群生成',
+      'RTK統合による絶対測位'
     ],
     specs: {
-      accuracy: '±0.03mm',
-      range: '0.3m-5m',
-      speed: '480,000点/秒',
-      weight: '1.2kg'
+      accuracy: '相対精度: ±2cm / 絶対精度: ±3cm',
+      range: '0.5m-120m',
+      speed: '320,000点/秒',
+      channels: '16チャンネル',
+      camera: '2×48MP（190°×190°視野）'
     },
     image: '/images/lixel_l2_pro.jpg'
   },
   {
-    id: 'lixel-l2',
-    name: 'Lixel L2',
-    category: 'Standard',
-    description: 'バランスの取れたスタンダードモデル',
+    id: 'lixel-l2-pro-32-120',
+    name: 'Lixel L2 Pro 32/120',
+    category: 'Professional',
+    description: 'スタンダード プロフェッショナル3Dレーザースキャナー',
     features: [
-      '高精度±0.05mm',
-      'スキャン範囲: 0.3m-4m',
-      '簡単操作インターフェース',
-      'ポータブル設計',
-      '長時間バッテリー'
+      '32チャンネルLiDAR',
+      'スキャン範囲: 0.5m-120m',
+      '640,000点/秒',
+      '高密度点群（1mm間隔）',
+      'ゼロ後処理時代のSLAM技術'
     ],
     specs: {
-      accuracy: '±0.05mm',
-      range: '0.3m-4m',
-      speed: '320,000点/秒',
-      weight: '0.9kg'
+      accuracy: '相対精度: ±2cm / 絶対精度: ±3cm',
+      range: '0.5m-120m',
+      speed: '640,000点/秒',
+      channels: '32チャンネル',
+      camera: '2×48MP（190°×190°視野）'
     },
-    image: '/images/lixel_l2.webp'
+    image: '/images/lixel_l2_pro.jpg'
+  },
+  {
+    id: 'lixel-l2-pro-32-300',
+    name: 'Lixel L2 Pro 32/300',
+    category: 'Professional',
+    description: '長距離対応 プロフェッショナル3Dレーザースキャナー',
+    features: [
+      '32チャンネルLiDAR',
+      'スキャン範囲: 0.5m-300m',
+      '640,000点/秒',
+      '大規模エリアスキャン対応',
+      'DJI M350/M300 RTK対応'
+    ],
+    specs: {
+      accuracy: '相対精度: ±2cm / 絶対精度: ±3cm',
+      range: '0.5m-300m',
+      speed: '640,000点/秒',
+      channels: '32チャンネル',
+      camera: '2×48MP（190°×190°視野）'
+    },
+    image: '/images/lixel_l2_pro.jpg'
   },
   {
     id: 'lixel-k1',
     name: 'Lixel K1',
     category: 'Compact',
-    description: '超コンパクト・軽量モデル',
+    description: '超軽量コンパクトハンドヘルドスキャナー',
     features: [
-      '精度±0.1mm',
-      'スキャン範囲: 0.2m-2m',
-      '片手操作可能',
-      'スマートフォン連携',
-      '初心者にも扱いやすい'
+      '40チャンネルLiDAR',
+      'スキャン範囲: 最大40m',
+      '200,000点/秒',
+      '重量1kg未満（バッテリー込み）',
+      'AI駆動の動的オブジェクト除去'
     ],
     specs: {
-      accuracy: '±0.1mm',
-      range: '0.2m-2m',
-      speed: '160,000点/秒',
-      weight: '0.5kg'
+      accuracy: '相対精度: ±1.2cm / 絶対精度: ≤3cm',
+      range: '最大40m',
+      speed: '200,000点/秒',
+      weight: '<1kg',
+      camera: '56MPパノラマカメラ（360°×360°）'
     },
     image: '/images/lixel_kity_k1.jpg'
-  },
-  {
-    id: 'lixel-lcc',
-    name: 'Lixel LCC',
-    category: 'Industrial',
-    description: '大規模施設向け産業用スキャナー',
-    features: [
-      '超長距離スキャン: 最大120m',
-      '360度全方位スキャン',
-      '自動レジストレーション',
-      'クラウド直接アップロード',
-      '複数台同時制御'
-    ],
-    specs: {
-      accuracy: '±2mm@10m',
-      range: '0.6m-120m',
-      speed: '1,000,000点/秒',
-      weight: '5.2kg'
-    },
-    image: '/images/products/lixel-lcc.jpg'
   }
 ]
+
+export const SEO_CONFIG = {
+  siteName: 'UP HASH',
+  siteUrl: 'https://uphash.net',
+  defaultTitle: 'UP HASH - 空間をスキャンし、コンテンツに変える',
+  defaultDescription: 'XGRIDS Field Scannerで点群データをリアルタイムで表示。空間スキャニングと3Dコンテンツ作成の革新的ソリューション。',
+  defaultKeywords: 'technology,innovation,software,solutions,business,Japan,Tokyo',
+  defaultImage: '/og-image.png',
+  twitterHandle: '@uphash'
+}

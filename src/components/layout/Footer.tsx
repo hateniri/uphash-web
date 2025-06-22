@@ -1,21 +1,22 @@
 import Link from 'next/link'
 import { COMPANY_INFO, NAVIGATION_ITEMS, SOCIAL_LINKS } from '@/lib/constants'
+import { getImagePath } from '@/lib/utils'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-white text-gray-900 border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-12 md:py-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="col-span-1 md:col-span-2">
               <img 
-                src="/images/uphash_footer_logo.png" 
+                src={getImagePath('/images/uphash_footer_logo.png')} 
                 alt={COMPANY_INFO.name} 
                 className="h-12 w-auto mb-4"
               />
-              <p className="text-gray-400 mb-4 max-w-md">
+              <p className="text-gray-600 mb-4 max-w-md">
                 {COMPANY_INFO.description}
               </p>
               <div className="flex space-x-4">
@@ -25,7 +26,7 @@ export default function Footer() {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-600 hover:text-gray-900 transition-colors"
                     aria-label={`Follow us on ${platform}`}
                   >
                     <span className="sr-only">{platform}</span>
@@ -49,54 +50,64 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <h4 className="text-lg font-semibold mb-4 text-gray-900">Quick Links</h4>
               <ul className="space-y-2">
                 {NAVIGATION_ITEMS.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-600 hover:text-gray-900 transition-colors"
                     >
                       {item.label}
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <a
+                    href="https://uphash.net"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    会社概要
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-              <address className="text-gray-400 not-italic space-y-2">
-                <p>{COMPANY_INFO.address.street}</p>
-                <p>
-                  {COMPANY_INFO.address.city}, {COMPANY_INFO.address.state} {COMPANY_INFO.address.zip}
-                </p>
-                <p>{COMPANY_INFO.address.country}</p>
-                <p className="pt-2">
-                  <a href={`mailto:${COMPANY_INFO.contact.email}`} className="hover:text-white transition-colors">
+              <h4 className="text-lg font-semibold mb-4 text-gray-900">Contact Info</h4>
+              <address className="text-gray-600 not-italic space-y-3">
+                <div>
+                  <p className="font-medium text-gray-700 mb-1">東京本社</p>
+                  <p>〒{COMPANY_INFO.address.zip}</p>
+                  <p>{COMPANY_INFO.address.state}{COMPANY_INFO.address.city}{COMPANY_INFO.address.street}</p>
+                </div>
+                <div>
+                  <p className="font-medium text-gray-700 mb-1">福岡支社</p>
+                  <p>〒810-0001</p>
+                  <p>福岡県福岡市中央区天神１丁目１１−１</p>
+                </div>
+                <div className="pt-2">
+                  <a href={`mailto:${COMPANY_INFO.contact.email}`} className="hover:text-gray-900 transition-colors">
                     {COMPANY_INFO.contact.email}
                   </a>
-                </p>
-                <p>
-                  <a href={`tel:${COMPANY_INFO.contact.phone}`} className="hover:text-white transition-colors">
-                    {COMPANY_INFO.contact.phone}
-                  </a>
-                </p>
+                </div>
               </address>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 py-6">
+        <div className="border-t border-gray-200 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-600 text-sm">
               &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/privacy" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/terms" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
                 Terms of Service
               </Link>
             </div>

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { PRODUCTS } from '@/lib/constants'
+import { getImagePath } from '@/lib/utils'
 
 export default function ProductShowcase() {
   return (
@@ -24,7 +25,7 @@ export default function ProductShowcase() {
               <div className="relative h-64 bg-gray-100 overflow-hidden">
                 {product.image ? (
                   <img 
-                    src={product.image} 
+                    src={getImagePath(product.image)} 
                     alt={product.name}
                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                   />

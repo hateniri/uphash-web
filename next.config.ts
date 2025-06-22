@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/uphash-web',
-  assetPrefix: '/uphash-web',
+  basePath: process.env.NODE_ENV === 'production' ? '/uphash-web' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/uphash-web' : '',
 };
 
 export default nextConfig;
