@@ -271,35 +271,6 @@ export default function SupportPage() {
         </div>
       </section>
 
-      {/* Contact Support */}
-      <section className="py-16 md:py-24 bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            お困りですか？
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            専門スタッフが丁寧にサポートいたします。
-            お気軽にお問い合わせください。
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              サポートに問い合わせる
-            </Link>
-            <Link
-              href="/news"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-            >
-              最新情報を見る
-            </Link>
-          </div>
-          <p className="text-gray-300 mt-6">
-            営業時間: 平日 9:00-18:00（土日祝日を除く）
-          </p>
-        </div>
-      </section>
     </main>
   )
 }

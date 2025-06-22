@@ -32,14 +32,7 @@ export default function SoftwarePage() {
             {/* Lixel Studio */}
             <Link href="/products/lixel-studio" className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full">
-                <div className="aspect-square bg-gray-100 flex items-center justify-center p-8">
-                  <img 
-                    src={getImagePath('/images/l2Pro_name_en.png')} 
-                    alt="Lixel Studio"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="p-6">
+                <div className="p-8">
                   <h2 className="text-xl font-bold mb-3">Lixel Studio</h2>
                   <p className="text-gray-600 mb-4">
                     包括的な点群処理・編集ソフトウェア
@@ -57,14 +50,7 @@ export default function SoftwarePage() {
             {/* Lixel Cyber Color */}
             <Link href="/products/lixel-cyber-color" className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full">
-                <div className="aspect-square bg-gray-100 flex items-center justify-center p-8">
-                  <img 
-                    src={getImagePath('/images/lcc.png')} 
-                    alt="Lixel Cyber Color"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="p-6">
+                <div className="p-8">
                   <h2 className="text-xl font-bold mb-3">Lixel Cyber Color</h2>
                   <p className="text-gray-600 mb-4">
                     次世代3D再構築ソフトウェア
@@ -82,14 +68,7 @@ export default function SoftwarePage() {
             {/* Lixel GO */}
             <Link href="/products/lixel-go" className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full">
-                <div className="aspect-square bg-gray-100 flex items-center justify-center p-8">
-                  <img 
-                    src={getImagePath('/images/k1_name_en.png')} 
-                    alt="Lixel GO"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="p-6">
+                <div className="p-8">
                   <h2 className="text-xl font-bold mb-3">Lixel GO</h2>
                   <p className="text-gray-600 mb-4">
                     モバイルコントロールアプリ

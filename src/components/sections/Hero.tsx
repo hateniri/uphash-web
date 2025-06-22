@@ -38,8 +38,9 @@ export default function Hero() {
       {/* Second section with white background */}
       <div className="bg-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="mb-20">
+          <div className="max-w-6xl mx-auto">
+            {/* Text section */}
+            <div className="text-center mb-24">
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
                 完全な3D制作のためのデータ取得ハードウェア
               </h2>
@@ -48,7 +49,8 @@ export default function Hero() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left mt-16">
+            {/* Products section with proper spacing */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left pt-32">
               {/* L2 Pro */}
               <div className="relative">
                 <div className="relative overflow-visible mb-8 h-64">

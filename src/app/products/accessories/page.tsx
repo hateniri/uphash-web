@@ -57,7 +57,7 @@ const accessories = [
         features: ['タブレット対応', '防振マウント', 'USB給電対応'],
         price: 'お問い合わせ',
         compatibility: 'L2 Pro',
-        image: '/images/accessories/l2-phone-mount.png'
+        image: '/images/accessories/phone-mount.jpg'
       },
       {
         name: 'L2 Series GCPプレート',
@@ -118,7 +118,7 @@ const accessories = [
         features: ['各種スマホ対応', '振動吸収設計', '角度調整可能'],
         price: 'お問い合わせ',
         compatibility: 'K1',
-        image: '/images/accessories/k1-phone-mount.png'
+        image: '/images/accessories/phone-mount.jpg'
       },
       {
         name: 'K1 GCPプレート',
