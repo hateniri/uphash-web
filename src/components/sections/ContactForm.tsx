@@ -1,0 +1,245 @@
+'use client'
+
+import { useState } from 'react'
+import { PRODUCTS } from '@/lib/constants'
+
+interface FormData {
+  name: string
+  company: string
+  email: string
+  phone: string
+  products: string[]
+  message: string
+  preferredContact: 'email' | 'phone' | 'online-call'
+}
+
+export default function ContactForm() {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    products: [],
+    message: '',
+    preferredContact: 'email'
+  })
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    // 静的サイトなので、実際の送信はメールクライアントを開く
+    const subject = `見積もり依頼: ${formData.products.join(', ')}`
+    const body = `
+お名前: ${formData.name}
+会社名: ${formData.company}
+メールアドレス: ${formData.email}
+電話番号: ${formData.phone}
+希望連絡方法: ${formData.preferredContact === 'email' ? 'メール' : formData.preferredContact === 'phone' ? '電話' : 'オンラインコール'}
+
+対象製品:
+${formData.products.join('\n')}
+
+お問い合わせ内容:
+${formData.message}
+    `.trim()
+
+    const mailtoUrl = `mailto:info@uphash.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = mailtoUrl
+
+    setSubmitMessage('メールクライアントが開きました。送信してください。')
+    setIsSubmitting(false)
+  }
+
+  const handleProductToggle = (productId: string) => {
+    setFormData(prev => ({
+      ...prev,
+      products: prev.products.includes(productId)
+        ? prev.products.filter(id => id !== productId)
+        : [...prev.products, productId]
+    }))
+  }
+
+  return (
+    <section className="py-16 md:py-24 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              見積もり依頼・お問い合わせ
+            </h2>
+            <p className="text-lg text-gray-600">
+              プロフェッショナル向け3Dスキャナーの詳細な見積もりをご提供いたします
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  お名前 <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  会社名 <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  value={formData.company}
+                  onChange={(e) => setFormData({...formData, company: e.target.value})}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  メールアドレス <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  電話番号
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                />
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                ご希望の連絡方法
+              </label>
+              <div className="flex gap-4">
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    name="contact"
+                    value="email"
+                    checked={formData.preferredContact === 'email'}
+                    onChange={(e) => setFormData({...formData, preferredContact: e.target.value as FormData['preferredContact']})}
+                    className="mr-2"
+                  />
+                  メール
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    name="contact"
+                    value="phone"
+                    checked={formData.preferredContact === 'phone'}
+                    onChange={(e) => setFormData({...formData, preferredContact: e.target.value as FormData['preferredContact']})}
+                    className="mr-2"
+                  />
+                  電話
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    name="contact"
+                    value="online-call"
+                    checked={formData.preferredContact === 'online-call'}
+                    onChange={(e) => setFormData({...formData, preferredContact: e.target.value as FormData['preferredContact']})}
+                    className="mr-2"
+                  />
+                  オンラインコール
+                </label>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                ご興味のある製品（複数選択可）
+              </label>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {PRODUCTS.map((product) => (
+                  <label key={product.id} className="flex items-start cursor-pointer p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <input
+                      type="checkbox"
+                      checked={formData.products.includes(product.name)}
+                      onChange={() => handleProductToggle(product.name)}
+                      className="mt-1 mr-3"
+                    />
+                    <div>
+                      <div className="font-medium text-gray-900">{product.name}</div>
+                      <div className="text-sm text-gray-600">{product.category}</div>
+                    </div>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                お問い合わせ内容
+              </label>
+              <textarea
+                id="message"
+                rows={4}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                value={formData.message}
+                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                placeholder="ご利用予定の用途、必要な機能、その他ご要望などをお聞かせください"
+              />
+            </div>
+
+            {submitMessage && (
+              <div className="mt-4 p-4 bg-green-50 text-green-700 rounded-lg">
+                {submitMessage}
+              </div>
+            )}
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-400"
+              >
+                {isSubmitting ? '送信中...' : '見積もりを依頼する'}
+              </button>
+              
+              <a
+                href="tel:+81-3-1234-5678"
+                className="flex-1 text-center bg-white text-blue-600 py-3 px-6 rounded-lg font-medium border-2 border-blue-600 hover:bg-blue-50 transition-colors"
+              >
+                電話で相談する
+              </a>
+            </div>
+
+            <p className="mt-4 text-sm text-gray-600 text-center">
+              営業時間: 平日 9:00-18:00（土日祝日を除く）
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  )
+}
