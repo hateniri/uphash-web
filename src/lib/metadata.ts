@@ -10,7 +10,7 @@ export const defaultMetadata: Metadata = {
     template: `%s | ${COMPANY_INFO.name}`
   },
   description: COMPANY_INFO.description,
-  keywords: ['technology', 'innovation', 'software', 'solutions', 'business', 'Japan', 'Tokyo'],
+  keywords: ['XGRIDS', 'Lixel', 'LiDAR', '3Dスキャナー', 'SLAM', 'Lixel L2 Pro', 'Lixel K1', 'Lixel Studio', 'Lixel Cyber Color', '点群処理', '3D計測', '測量', 'UP HASH', '日本'],
   authors: [{ name: COMPANY_INFO.name }],
   creator: COMPANY_INFO.name,
   publisher: COMPANY_INFO.name,
@@ -24,7 +24,7 @@ export const defaultMetadata: Metadata = {
     description: COMPANY_INFO.description,
     url: baseUrl,
     siteName: COMPANY_INFO.name,
-    locale: 'en_US',
+    locale: 'ja_JP',
     type: 'website',
     images: [
       {
@@ -57,8 +57,7 @@ export const defaultMetadata: Metadata = {
   alternates: {
     canonical: baseUrl,
     languages: {
-      'en-US': baseUrl,
-      'ja-JP': `${baseUrl}/ja`,
+      'ja-JP': baseUrl,
     },
   },
   icons: {
