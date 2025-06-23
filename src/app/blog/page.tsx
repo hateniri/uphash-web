@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    id: 'mining-digital-twin',
+    title: '地下100メートルでのデジタルツイン：高精度3Dマッピングが鉱山作業を変革する',
+    date: '2025-03-13',
+    category: '導入事例',
+    excerpt: '中国・広東省の石灰岩鉱山で、Lixel L2 ProのMulti-SLAM技術により垂直100m超の坑道や地下河川を含む危険地帯の完全な3Dデジタルツインを実現。測量時間80%短縮と±4.8mmの高精度を達成。',
+    image: '/images/blog/mining-digital-twin-hero.png',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=96'
+  },
+  {
     id: 'underground-utility-corridor',
     title: '都市の「ライフライン」を可視化：Lixel L2 Proが全長8kmの地下管路調査を支援',
     date: '2025-02-21',

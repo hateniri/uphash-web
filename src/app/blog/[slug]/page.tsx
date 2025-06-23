@@ -73,6 +73,179 @@ const blogPosts = {
       </div>
     `
   },
+  'mining-digital-twin': {
+    title: '地下100メートルでのデジタルツイン：高精度3Dマッピングが鉱山作業を変革する',
+    date: '2025-03-13',
+    category: '導入事例',
+    author: 'UP HASH Team',
+    image: '/images/blog/mining-digital-twin-hero.png',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=96',
+    content: `
+      <h2>光が届かず、人の立ち入りが困難な場所で</h2>
+      
+      <p>中国・広東省の石灰岩鉱山では、垂直100メートルを超える坑道や地下河川を含む危険な地下空間を正確に記録するという、極めて困難な課題に直面していました。</p>
+      
+      <p>その課題を解決したのが、XGRIDS製の「Lixel L2 Pro」。Multi-SLAM技術を搭載したこの3Dスキャナーは、従来比で80%の時間短縮を実現しながら、安全かつ高精度な3Dモデルを作成。このデジタルツインは現在、安全管理、体積解析、作業計画に活用され、鉱山業界における"不可能"を"日常"へと変えています。</p>
+
+      <img src="${getImagePath('/images/blog/mining-site-overview.png')}" alt="鉱山全体の概観" class="w-full rounded-lg my-8" />
+
+      <h2>従来測量の限界</h2>
+      
+      <p>地下空間は、三次元的な記録において極めて困難な環境です。</p>
+      
+      <p>この現場では、Trimble SX10を使って100以上のスキャンステーションを設置しましたが、それでも下記の領域は十分に測量できませんでした：</p>
+      
+      <ul>
+        <li>極端な垂直坑道（落差100m超）</li>
+        <li>水の流れる地下河川や冠水区域</li>
+        <li>複雑なトンネル構造</li>
+        <li>人の立ち入りが困難な高リスク区域</li>
+        <li>アクセス困難な閉鎖空間</li>
+      </ul>
+      
+      <blockquote class="border-l-4 border-blue-500 pl-4 my-4 italic">
+        <p>「従来手法では記録できない空間が多く、不完全なデータに基づいて運用判断を下すしかなかった」</p>
+        <cite>—鉱山プランニングエンジニア</cite>
+      </blockquote>
+
+      <img src="${getImagePath('/images/blog/mining-point-cloud-1.png')}" alt="従来手法での測量結果" class="w-full rounded-lg my-8" />
+
+      <h2>地下環境におけるSLAM技術の課題</h2>
+      
+      <p>一般的なSLAM技術は以下のような環境では性能が落ちます：</p>
+      
+      <ul>
+        <li>視覚特徴の乏しい石灰岩の壁面</li>
+        <li>反射の強い濡れた地面や水面</li>
+        <li>空気中の粉塵が光学センサーに干渉</li>
+        <li>GPS信号が完全に遮断される空間</li>
+      </ul>
+      
+      <p>そのため、鉱山業界では単なるSLAMではなく、進化型SLAMが必要とされていました。</p>
+
+      <h2>XGRIDS Lixel L2 Pro：Multi-SLAMによる革新的アプローチ</h2>
+      
+      <h3>技術構成</h3>
+      <ul>
+        <li><strong>LiDAR（32ch／120m）</strong>：640,000点／秒、FOV：360°×270°</li>
+        <li><strong>48MP デュアルカメラ</strong>：視覚SLAM対応</li>
+        <li><strong>IMU搭載</strong>：GPS不要でも自己位置推定可能</li>
+        <li><strong>リアルタイム処理</strong>：LixelGOアプリで即時確認</li>
+        <li><strong>IP54耐久性</strong>：粉塵・水しぶき対策</li>
+        <li><strong>反射面に対応した独自フィルタ搭載</strong></li>
+      </ul>
+      
+      <p>重量はわずか1.98kg。手持ちでの長時間運用が可能です。</p>
+
+      <img src="${getImagePath('/images/blog/mining-equipment-scan.png')}" alt="Lixel L2 Proによるスキャン作業" class="w-full rounded-lg my-8" />
+
+      <h2>スキャンの実施手順</h2>
+      
+      <h3>① 事前調査</h3>
+      <p>安全計画を立案し、複数回のスキャンでターゲット反射マーカーを記録。</p>
+      
+      <h3>② 初期化</h3>
+      <p>平坦面にて20秒間スキャナーを初期化。</p>
+      
+      <h3>③ 地下河川のスキャン</h3>
+      <ul>
+        <li>小型ボートに乗りながら連続スキャン</li>
+        <li>天井・壁・水面すべてをリアルタイムで可視化</li>
+        <li>手持ち操作で揺れる環境にも対応</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/mining-scan-animation.gif')}" alt="地下河川のスキャン作業" class="w-full rounded-lg my-8" />
+      
+      <h3>④ 垂直坑道のスキャン</h3>
+      <ul>
+        <li>手持ちで安全距離からのスキャンを実施</li>
+        <li>ドリフト補正のためスキャンルートにループを構成</li>
+        <li>縦壁を完全にカバーするよう重ねて撮影</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/mining-3d-model-1.png')}" alt="垂直坑道の3Dモデル" class="w-full rounded-lg my-8" />
+
+      <h2>データ処理と統合</h2>
+      
+      <h3>1. 精密な位置合わせ</h3>
+      <p>Trimble RealWorksによる点群の座標変換により：</p>
+      <ul>
+        <li>地下河川での誤差：<strong>4.848mm</strong></li>
+        <li>垂直坑道での誤差：<strong>4.823mm</strong></li>
+      </ul>
+      
+      <h3>2. 点群統合</h3>
+      <p>Lixel L2 ProとTrimble SX10のデータを完全統合。ずれは目視では確認不可能なレベルに。</p>
+
+      <img src="${getImagePath('/images/blog/mining-point-cloud-2.png')}" alt="統合された点群データ" class="w-full rounded-lg my-8" />
+
+      <h2>メッシュ化と体積解析</h2>
+      
+      <p>GeoMagicで後処理を行い、Trimble RealWorksでメッシュ作成。<br>
+      最終的な空間体積は<strong>114,548.34㎥</strong>と算出されました。</p>
+
+      <img src="${getImagePath('/images/blog/mining-volumetric-analysis.png')}" alt="体積解析結果" class="w-full rounded-lg my-8" />
+
+      <h2>成果と定量的効果</h2>
+      <ul>
+        <li>登録精度：<strong>±4.8mm</strong></li>
+        <li>測定不可だった空間の3Dモデル化に成功</li>
+        <li>高リスク現場での安全事故ゼロ</li>
+      </ul>
+
+      <h2>定性的メリット</h2>
+      <ul>
+        <li>詳細なデジタルツインによるシミュレーションと計画立案</li>
+        <li>避難経路や脆弱箇所の視覚化による安全性向上</li>
+        <li>採掘計画とリソース活用の最適化</li>
+        <li>将来のアーカイブ・記録としても有効</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/mining-safety-zones.png')}" alt="安全区域の可視化" class="w-full rounded-lg my-8" />
+
+      <h2>ビジネスインパクト</h2>
+      
+      <h3>オペレーション効率</h3>
+      <ul>
+        <li>高品位鉱石への正確なアクセス</li>
+        <li>機器の経路最適化</li>
+        <li>メンテナンス予測の精度向上</li>
+      </ul>
+      
+      <h3>安全管理</h3>
+      <ul>
+        <li>危険区域の把握と避難計画</li>
+        <li>作業員教育への活用（VR環境可）</li>
+      </ul>
+      
+      <h3>法令対応</h3>
+      <ul>
+        <li>環境報告／構造安定性確認</li>
+        <li>文書提出用の信頼できる空間記録</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/mining-dashboard-view.png')}" alt="統合管理ダッシュボード" class="w-full rounded-lg my-8" />
+
+      <h2>今後の展望：デジタルマインのエコシステムへ</h2>
+      
+      <p>Lixel L2 Proによって、以下の取り組みが可能に：</p>
+      <ul>
+        <li>採掘シミュレーションを行う予測型デジタルツイン</li>
+        <li>実際の地形を使ったVRトレーニング環境の構築</li>
+        <li>自律走行車のための高精度マッピング</li>
+        <li>状況変化のモニタリングと異常検知によるリアルタイム管理</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/mining-digital-twin-process.png')}" alt="デジタルツインプロセス" class="w-full rounded-lg my-8" />
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <h3 class="text-lg font-semibold mb-2">結論｜"地下"の限界を再定義する</h3>
+        <p>今回の石灰岩鉱山プロジェクトは、XGRIDSのLixel L2 Proによる地下測量の革新を象徴しています。</p>
+        <p class="mt-3">これまで人が入れなかった場所、記録不可能だった空間が、今や手軽に、しかも高精度に可視化できるようになりました。</p>
+        <p class="mt-3">Lixel L2 Proは、鉱山に限らず、トンネル、土木、水力発電、地下インフラ全般において、新たなスタンダードとなる可能性を秘めています。</p>
+      </div>
+    `
+  },
   '3d-gaussian-splatting-webinar': {
     title: '3D技術の未来を探る：「3D Gaussian Splatting」ウェビナーの注目ポイント10選',
     date: '2024-12-30',
