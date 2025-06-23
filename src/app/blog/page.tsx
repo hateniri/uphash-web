@@ -8,6 +8,15 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    id: 'lixel-l1-centimeter-accuracy',
+    title: 'Lixel L1ハンドヘルドスキャナー：センチメートル級精度を実現する革新的技術',
+    date: '2024-12-20',
+    category: '製品技術',
+    excerpt: 'Lixel L1は±1.2cmの相対精度と毎秒32万点のスキャン速度を実現。建設、測量、文化財保護など幅広い分野で活用されている次世代3Dスキャナーの技術詳細を解説します。',
+    image: '/images/blog/lixel-l1-accuracy.jpg',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=114'
+  },
+  {
     id: 'lixel-go-1-1-9',
     title: 'Lixel Go 1.1.9リリース - 3D空間データ取得がさらに簡単に',
     date: '2024-12-13',
