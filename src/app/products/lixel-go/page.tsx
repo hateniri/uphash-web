@@ -1,13 +1,11 @@
-import { Metadata } from 'next'
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
 
-export const metadata: Metadata = {
-  title: 'Lixel Go - フィールドで使えるLiDAR操作アプリ | UP HASH',
-  description: 'スキャンも確認も、スマホひとつ。Lixel Go は、Lixelデバイス専用のモバイルアプリです。現場でのリアルタイム操作・プレビュー・状態管理をスマートに。',
-}
-
 export default function LixelGoPage() {
+  const [showVideo, setShowVideo] = useState(false)
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -50,11 +48,11 @@ export default function LixelGoPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative h-[500px] bg-gray-800/20 rounded-xl overflow-hidden backdrop-blur-sm">
+            <div className="relative">
               <img 
-                src={getImagePath('/images/lixel_go_app.jpg')} 
+                src={getImagePath('/images/products/lixel-go/lixell2pro_4_2_img_6.png')} 
                 alt="Lixel Go App"
-                className="w-full h-full object-contain"
+                className="w-full h-auto rounded-xl shadow-2xl"
               />
             </div>
           </div>
@@ -64,7 +62,10 @@ export default function LixelGoPage() {
       {/* Main Features */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">主な機能</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">主な機能</h2>
+            <p className="text-xl text-gray-600">現場での作業を効率化する4つの主要機能</p>
+          </div>
           <div className="space-y-16 max-w-6xl mx-auto">
             {/* スキャナー制御 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -83,15 +84,26 @@ export default function LixelGoPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">スキャナー制御画面</p>
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={getImagePath('/images/products/lixel-go/lixell2pro_4_2_img_5.png')} 
+                  alt="スキャナー制御画面"
+                  className="w-full h-auto"
+                />
               </div>
             </div>
 
             {/* リアルタイムプレビュー */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="order-2 lg:order-1 bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">プレビューUI例</p>
+              <div className="order-2 lg:order-1 relative bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg font-medium text-gray-700">リアルタイムで<br />点群データを確認</p>
+                </div>
               </div>
               <div className="order-1 lg:order-2">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -127,15 +139,29 @@ export default function LixelGoPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">ステータスモニター画面</p>
+              <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                    <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg font-medium text-gray-700">バッテリー・温度<br />保存容量を監視</p>
+                </div>
               </div>
             </div>
 
             {/* アクティベーション補助 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="order-2 lg:order-1 bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">SNコード画面</p>
+              <div className="order-2 lg:order-1 relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                    <svg className="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg font-medium text-gray-700">SNコード表示で<br />ライセンス申請が簡単</p>
+                </div>
               </div>
               <div className="order-1 lg:order-2">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -152,6 +178,47 @@ export default function LixelGoPage() {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Video Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-teal-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">操作デモ動画</h2>
+            <p className="text-xl text-gray-600">Lixel Goの実際の操作画面をご覧ください</p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+              {!showVideo ? (
+                <div 
+                  className="absolute inset-0 flex items-center justify-center cursor-pointer group"
+                  onClick={() => setShowVideo(true)}
+                >
+                  <video 
+                    className="w-full h-full object-cover"
+                    poster={getImagePath('/images/products/lixel-go/lixell2pro_4_2_img_6.png')}
+                  >
+                    <source src={getImagePath('/videos/lixelgo.mp4')} type="video/mp4" />
+                  </video>
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
+                  <button className="absolute bg-white/90 rounded-full p-6 shadow-lg hover:bg-white transition-colors">
+                    <svg className="w-12 h-12 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              ) : (
+                <video 
+                  className="w-full h-full"
+                  controls
+                  autoPlay
+                >
+                  <source src={getImagePath('/videos/lixelgo.mp4')} type="video/mp4" />
+                </video>
+              )}
             </div>
           </div>
         </div>
@@ -283,8 +350,12 @@ export default function LixelGoPage() {
                 </tbody>
               </table>
             </div>
-            <div className="mt-8 bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-              <p className="text-gray-500">現場利用風景</p>
+            <div className="mt-8 relative overflow-hidden rounded-xl shadow-lg">
+              <img 
+                src={getImagePath('/images/products/lixel-go/lixell2pro_4_2_img_5.png')} 
+                alt="現場利用風景"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
