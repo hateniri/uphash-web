@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://uphash.github.io/uphash-web/sitemap.xml

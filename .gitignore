@@ -16,6 +16,7 @@
 # next.js
 /.next/
 # /out/  # GitHub Pages用に一時的にコメントアウト
+# /docs/  # GitHub Pages用にdocsディレクトリをトラッキング
 
 # production
 /build
