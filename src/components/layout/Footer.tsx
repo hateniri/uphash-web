@@ -85,6 +85,14 @@ export default function Footer() {
                     コミュニティ
                   </a>
                 </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    ブログ
+                  </Link>
+                </li>
               </ul>
             </div>
 
