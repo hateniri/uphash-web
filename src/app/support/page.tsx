@@ -10,24 +10,124 @@ export default function SupportPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 md:py-24">
+      <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 md:py-24 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              サポートセンター
-            </h1>
-            <p className="text-xl text-gray-300">
-              製品の使い方からトラブルシューティングまで、
-              必要な情報とサポートをご提供します
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="max-w-xl">
+              <div className="mb-6">
+                <span className="inline-flex items-center px-3 py-1 text-sm font-medium bg-white/10 backdrop-blur-sm rounded-full">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                  SUPPORT CENTER
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                サポートセンター
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                製品の使い方からトラブルシューティングまで、
+                必要な情報とサポートをご提供します
+              </p>
+              
+              {/* Quick Access Buttons */}
+              <div className="flex flex-wrap gap-4">
+                <a href="#quick-links" className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  クイックアクセス
+                </a>
+                <a href="/downloads" className="inline-flex items-center px-6 py-3 bg-transparent text-white font-medium rounded-lg border border-white/30 hover:bg-white/10 transition-colors">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                  </svg>
+                  ダウンロード
+                </a>
+              </div>
+            </div>
+
+            {/* Product Ecosystem Visual */}
+            <div className="relative">
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl"></div>
+              
+              {/* Device Layout */}
+              <div className="relative z-10">
+                <div className="grid grid-cols-2 gap-4">
+                  {/* Mobile App */}
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mb-4 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-white font-semibold mb-1">モバイルアプリ</h3>
+                    <p className="text-gray-300 text-sm">iOS/Android対応</p>
+                  </div>
+
+                  {/* Tablet */}
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl mb-4 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-white font-semibold mb-1">タブレット表示</h3>
+                    <p className="text-gray-300 text-sm">リアルタイムプレビュー</p>
+                  </div>
+
+                  {/* Scanner */}
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl mb-4 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                      </svg>
+                    </div>
+                    <h3 className="text-white font-semibold mb-1">Lixelスキャナー</h3>
+                    <p className="text-gray-300 text-sm">L2 Pro / K1対応</p>
+                  </div>
+
+                  {/* PC Software */}
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl mb-4 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-white font-semibold mb-1">PCソフトウェア</h3>
+                    <p className="text-gray-300 text-sm">Lixel Studio</p>
+                  </div>
+                </div>
+
+                {/* Connection Lines */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <svg className="w-full h-full" viewBox="0 0 400 400">
+                    <line x1="100" y1="100" x2="300" y2="100" stroke="white" strokeOpacity="0.2" strokeWidth="2" strokeDasharray="5,5">
+                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="100" y1="300" x2="300" y2="300" stroke="white" strokeOpacity="0.2" strokeWidth="2" strokeDasharray="5,5">
+                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="100" y1="100" x2="100" y2="300" stroke="white" strokeOpacity="0.2" strokeWidth="2" strokeDasharray="5,5">
+                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="300" y1="100" x2="300" y2="300" stroke="white" strokeOpacity="0.2" strokeWidth="2" strokeDasharray="5,5">
+                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite" />
+                    </line>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Quick Links */}
-      <section className="py-16 md:py-24">
+      <section id="quick-links" className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <Link
               href="/downloads"
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group"
@@ -71,19 +171,6 @@ export default function SupportPage() {
               <p className="text-gray-700 mt-4 group-hover:text-gray-900">視聴する →</p>
             </Link>
 
-            <Link
-              href="/contact"
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group"
-            >
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-gray-200 transition-colors">
-                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">お問い合わせ</h3>
-              <p className="text-gray-600">技術サポートへの直接お問い合わせ</p>
-              <p className="text-gray-700 mt-4 group-hover:text-gray-900">連絡する →</p>
-            </Link>
           </div>
         </div>
       </section>
@@ -180,75 +267,9 @@ export default function SupportPage() {
         </div>
       </section>
 
-      {/* Training & Certification */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">トレーニング & 認定プログラム</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl p-8 text-white">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-4">初級トレーニング</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      基本操作とセットアップ
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      スキャン技術の基礎
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      データ処理入門
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold mb-4">上級トレーニング</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      高度なスキャン技術
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      プロジェクト管理
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      業界別専門技術
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="mt-8 text-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  トレーニングを申し込む
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Catalog Download */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-2xl font-bold mb-6 text-center">製品カタログダウンロード</h2>

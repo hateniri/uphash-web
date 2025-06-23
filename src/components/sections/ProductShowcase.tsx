@@ -22,12 +22,33 @@ export default function ProductShowcase() {
               key={product.id}
               className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
             >
-              <div className="relative h-64 bg-gray-100 overflow-hidden">
+              <div className="relative h-64 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+                {/* Background logo */}
+                {product.id.includes('l2-pro') && (
+                  <div className="absolute inset-0 flex items-center justify-center opacity-5">
+                    <img 
+                      src={getImagePath('/images/logos/l2-pro-logo.png')} 
+                      alt=""
+                      className="w-3/4 h-3/4 object-contain"
+                    />
+                  </div>
+                )}
+                {product.id.includes('k1') && (
+                  <div className="absolute inset-0 flex items-center justify-center opacity-5">
+                    <img 
+                      src={getImagePath('/images/logos/k1-logo.png')} 
+                      alt=""
+                      className="w-3/4 h-3/4 object-contain"
+                    />
+                  </div>
+                )}
+                
+                {/* Product image */}
                 {product.image ? (
                   <img 
                     src={getImagePath(product.image)} 
                     alt={product.name}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 relative z-10 p-4"
                   />
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">

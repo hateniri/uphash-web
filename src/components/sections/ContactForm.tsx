@@ -30,28 +30,57 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitMessage('')
     
-    // 静的サイトなので、実際の送信はメールクライアントを開く
-    const subject = `見積もり依頼: ${formData.products.join(', ')}`
-    const body = `
-お名前: ${formData.name}
-会社名: ${formData.company}
-メールアドレス: ${formData.email}
-電話番号: ${formData.phone}
-希望商談方法: ${formData.preferredContact === 'email' ? 'メールでの詳細資料送付' : 'オンラインミーティング'}
+    try {
+      // FormspreeのエンドポイントURL
+      // https://formspree.io でアカウント作成後、フォームIDを取得して置き換えてください
+      const FORMSPREE_URL = 'https://formspree.io/f/mjkravbp'
+      
+      console.log('送信データ:', formData)
+      
+      const response = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          products: formData.products.join(', '), // 配列を文字列に変換
+          message: formData.message,
+          preferredContact: formData.preferredContact === 'email' ? 'メールでの詳細資料送付' : 'オンラインミーティング',
+          _subject: `見積もり依頼: ${formData.products.join(', ')}`, // メールの件名
+        }),
+      })
 
-対象製品:
-${formData.products.join('\n')}
-
-お問い合わせ内容:
-${formData.message}
-    `.trim()
-
-    const mailtoUrl = `mailto:info@uphash.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    window.location.href = mailtoUrl
-
-    setSubmitMessage('メールクライアントが開きました。送信してください。')
-    setIsSubmitting(false)
+      console.log('レスポンスステータス:', response.status)
+      
+      if (response.ok) {
+        setSubmitMessage('お問い合わせを受け付けました。担当者より2営業日以内にご連絡させていただきます。')
+        // フォームをリセット
+        setFormData({
+          name: '',
+          company: '',
+          email: '',
+          phone: '',
+          products: [],
+          message: '',
+          preferredContact: 'email'
+        })
+      } else {
+        const errorText = await response.text()
+        console.error('エラーレスポンス:', errorText)
+        setSubmitMessage('エラーが発生しました。しばらくしてから再度お試しください。')
+      }
+    } catch (error) {
+      console.error('送信エラー:', error)
+      setSubmitMessage('ネットワークエラーが発生しました。しばらくしてから再度お試しください。')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleProductToggle = (productId: string) => {
@@ -201,7 +230,11 @@ ${formData.message}
             </div>
 
             {submitMessage && (
-              <div className="mt-4 p-4 bg-green-50 text-green-700 rounded-lg">
+              <div className={`mt-4 p-4 rounded-lg ${
+                submitMessage.includes('エラー') 
+                  ? 'bg-red-50 text-red-700' 
+                  : 'bg-green-50 text-green-700'
+              }`}>
                 {submitMessage}
               </div>
             )}

@@ -97,190 +97,362 @@ export default function LixelK1Page() {
       <section id="specs" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">詳細スペック</h2>
-          <div className="max-w-5xl mx-auto">
-            {/* Device Performance */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold mb-6 text-blue-600">デバイス性能</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-gray-500">重量</dt>
-                      <dd className="text-lg font-medium">約1kg</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">消費電力</dt>
-                      <dd className="text-lg font-medium">&lt;20W</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">電源入力</dt>
-                      <dd className="text-lg font-medium">14.4V</dd>
-                    </div>
-                  </dl>
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-gray-500">データインターフェース</dt>
-                      <dd className="text-lg font-medium">USB 3.1 Gen2</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">ストレージ容量</dt>
-                      <dd className="text-lg font-medium">TFカード 256GB</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">動作温度</dt>
-                      <dd className="text-lg font-medium">-20℃〜50℃</dd>
-                    </div>
-                  </dl>
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-gray-500">保護等級</dt>
-                      <dd className="text-lg font-medium">IP54</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">筐体材質</dt>
-                      <dd className="text-lg font-medium">高耐久アルミ筐体</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">稼働時間</dt>
-                      <dd className="text-lg font-medium">約1.5時間</dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-            </div>
-
-            {/* LiDAR Performance */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="p-8 border-b md:border-b-0 md:border-r border-gray-200">
-                  <h3 className="text-xl font-semibold mb-6 text-blue-600">LiDAR性能</h3>
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-gray-500">相対精度</dt>
-                      <dd className="text-lg font-medium">±1.2cm</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">繰り返し精度</dt>
-                      <dd className="text-lg font-medium">±2cm</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">絶対精度</dt>
-                      <dd className="text-lg font-medium">±3cm</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">レーザークラス</dt>
-                      <dd className="text-lg font-medium">クラス1（905nm）</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">スキャン速度</dt>
-                      <dd className="text-lg font-medium">最大200,000点/秒</dd>
-                    </div>
-                  </dl>
-                </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-semibold mb-6 text-blue-600">測定範囲・視野角</h3>
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-gray-500">動作範囲</dt>
-                      <dd className="text-lg font-medium">0.1m〜40m（10%反射率）</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">最大範囲</dt>
-                      <dd className="text-lg font-medium">最大70m（80%反射率）</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">水平精度</dt>
-                      <dd className="text-lg font-medium">±0.015°</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">LiDAR視野角</dt>
-                      <dd className="text-lg font-medium">水平360° × 垂直-7〜+52°</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">スキャンモード</dt>
-                      <dd className="text-lg font-medium">モバイルスキャン（歩行計測）</dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-            </div>
-
-            {/* Vision Module */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-              <div className="p-8">
-                <h3 className="text-xl font-semibold mb-6 text-blue-600">視覚モジュール</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-gray-500">カメラ視野角</dt>
-                      <dd className="text-lg font-medium">360° × 360° カラーパノラマHDV</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">カメラ解像度</dt>
-                      <dd className="text-lg font-medium">48MP ×2（デュアルカメラ）</dd>
-                    </div>
-                  </dl>
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-gray-500">パノラマ画像解像度</dt>
-                      <dd className="text-lg font-medium">最大 56MP</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">視覚支援測位</dt>
-                      <dd className="text-lg font-medium">対応</dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-            </div>
-
-            {/* Connectivity & Battery */}
+          <div className="max-w-6xl mx-auto space-y-12">
+            
+            {/* 1. システムパラメータ */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="p-8 border-b md:border-b-0 md:border-r border-gray-200">
-                  <h3 className="text-xl font-semibold mb-6 text-blue-600">接続仕様</h3>
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-gray-500">接続モード</dt>
-                      <dd className="text-lg font-medium">WiFi / Bluetooth</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">WiFi周波数</dt>
-                      <dd className="text-sm">
-                        • 2.4GHz: 2412–2472MHz<br />
-                        • 5.2GHz: 5180–5240MHz<br />
-                        • 5.8GHz: 5745–5825MHz
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">APP WiFi距離</dt>
-                      <dd className="text-lg font-medium">最大20m</dd>
-                    </div>
-                  </dl>
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">1</span>
+                  <h3 className="text-xl font-semibold text-white">システムパラメータ</h3>
                 </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-semibold mb-6 text-blue-600">バッテリー・データ</h3>
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-gray-500">バッテリー容量</dt>
-                      <dd className="text-lg font-medium">28.8Wh</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">電源供給</dt>
-                      <dd className="text-lg font-medium">着脱式ファストロックバッテリー／外部電源</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">点群フォーマット</dt>
-                      <dd className="text-lg font-medium">.las（標準点群フォーマット）</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500">カラー点群</dt>
-                      <dd className="text-lg font-medium">対応（リアルタイムカラー点群生成）</dd>
-                    </div>
-                  </dl>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">製品モデル</td>
+                        <td className="py-3 px-4 text-gray-900">LixelKity K1</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">寸法</td>
+                        <td className="py-3 px-4 text-gray-900">250mm × 110mm × 95mm（長さ×幅×高さ）</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">重量</td>
+                        <td className="py-3 px-4 text-gray-900">約1kg（バッテリー含む）</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">消費電力</td>
+                        <td className="py-3 px-4 text-gray-900">&lt;20W</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">電源入力</td>
+                        <td className="py-3 px-4 text-gray-900">14.4V</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">データインターフェース</td>
+                        <td className="py-3 px-4 text-gray-900">USB 3.1 Gen2</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">ストレージ容量</td>
+                        <td className="py-3 px-4 text-gray-900">TFカード 256GB</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
+
+            {/* 2. 環境仕様 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">2</span>
+                  <h3 className="text-xl font-semibold text-white">環境仕様</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">動作温度</td>
+                        <td className="py-3 px-4 text-gray-900">-20℃ ~ +50℃</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">保管温度</td>
+                        <td className="py-3 px-4 text-gray-900">-30℃ ~ +60℃</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">保護等級</td>
+                        <td className="py-3 px-4 text-gray-900">IP54</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">耐久性</td>
+                        <td className="py-3 px-4 text-gray-900">高耐久アルミ筐体</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* 3. 精度仕様 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">3</span>
+                  <h3 className="text-xl font-semibold text-white">精度仕様</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">相対精度</td>
+                        <td className="py-3 px-4 text-gray-900">±1.2cm</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">繰り返し精度</td>
+                        <td className="py-3 px-4 text-gray-900">±2cm</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">絶対精度</td>
+                        <td className="py-3 px-4 text-gray-900">±3cm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. LiDARモジュール */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">4</span>
+                  <h3 className="text-xl font-semibold text-white">LiDARモジュール</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">レーザークラス</td>
+                        <td className="py-3 px-4 text-gray-900">クラス1（アイセーフ）</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">レーザー波長</td>
+                        <td className="py-3 px-4 text-gray-900">905nm</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">動作範囲</td>
+                        <td className="py-3 px-4 text-gray-900">0.1m ~ 40m（10%反射率）<br/>最大70m（80%反射率）</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">スキャンレート</td>
+                        <td className="py-3 px-4 text-gray-900">最大200,000点/秒</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">視野角</td>
+                        <td className="py-3 px-4 text-gray-900">水平 360° × 垂直 -7° ~ +52°</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">角度分解能</td>
+                        <td className="py-3 px-4 text-gray-900">水平 0.09° × 垂直 1.45°</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">水平精度</td>
+                        <td className="py-3 px-4 text-gray-900">±0.015°</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">チャンネル数</td>
+                        <td className="py-3 px-4 text-gray-900">40チャンネル</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* 5. 視覚システム（パノラマカメラ） */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">5</span>
+                  <h3 className="text-xl font-semibold text-white">視覚システム（パノラマカメラ）</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">カメラ視野角</td>
+                        <td className="py-3 px-4 text-gray-900">360° × 360° カラーパノラマHDV</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">カメラ解像度</td>
+                        <td className="py-3 px-4 text-gray-900">48MP × 2（デュアルカメラ）</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">パノラマ画像解像度</td>
+                        <td className="py-3 px-4 text-gray-900">最大 56MP</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">視覚支援測位</td>
+                        <td className="py-3 px-4 text-gray-900">あり</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* 6. バッテリー＆充電 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">6</span>
+                  <h3 className="text-xl font-semibold text-white">バッテリー＆充電</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">動作可能時間</td>
+                        <td className="py-3 px-4 text-gray-900">約1.5時間</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">バッテリー容量</td>
+                        <td className="py-3 px-4 text-gray-900">28.8Wh</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">充電時間</td>
+                        <td className="py-3 px-4 text-gray-900">約60分</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">電源タイプ</td>
+                        <td className="py-3 px-4 text-gray-900">着脱式ファストロックバッテリー / 外部電源</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* 7. 接続性 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">7</span>
+                  <h3 className="text-xl font-semibold text-white">接続性</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">接続モード</td>
+                        <td className="py-3 px-4 text-gray-900">WiFi / Bluetooth</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">WiFi周波数</td>
+                        <td className="py-3 px-4 text-gray-900">
+                          • 2.4GHz：2412–2472MHz<br/>
+                          • 5.2GHz：5180–5240MHz<br/>
+                          • 5.8GHz：5745–5825MHz
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">APP WiFi距離</td>
+                        <td className="py-3 px-4 text-gray-900">最大20m</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* 8. IMU */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">8</span>
+                  <h3 className="text-xl font-semibold text-white">IMU</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">高周波慣性計測装置</td>
+                        <td className="py-3 px-4 text-gray-900">9軸IMU</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* 9. RTKモジュール */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">9</span>
+                  <h3 className="text-xl font-semibold text-white">RTKモジュール</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">デュアルアンテナRTK</td>
+                        <td className="py-3 px-4 text-gray-900">なし</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* 10. データ出力フォーマット */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">10</span>
+                  <h3 className="text-xl font-semibold text-white">データ出力フォーマット</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">点群フォーマット</td>
+                        <td className="py-3 px-4 text-gray-900">.las（標準点群フォーマット）</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">カラー点群</td>
+                        <td className="py-3 px-4 text-gray-900">対応（リアルタイムカラー点群生成）</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* 11. スキャンモード */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white font-semibold">11</span>
+                  <h3 className="text-xl font-semibold text-white">スキャンモード</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-3 px-4 text-gray-600 font-medium">モード</td>
+                        <td className="py-3 px-4 text-gray-900">モバイルスキャン（歩行計測）</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

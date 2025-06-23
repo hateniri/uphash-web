@@ -157,70 +157,413 @@ export default function LixelL2ProPage() {
         </div>
       </section>
 
-      {/* Common Specifications */}
+      {/* Detailed Specifications */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">共通仕様</h2>
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Point Cloud Quality */}
-              <div className="bg-gray-50 rounded-xl p-8">
-                <h3 className="text-xl font-semibold mb-6 text-blue-600">点群品質</h3>
-                <dl className="space-y-4">
-                  <div>
-                    <dt className="text-sm text-gray-500">点群密度</dt>
-                    <dd className="text-lg font-medium">100万点/㎡（1mm間隔）</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm text-gray-500">点群厚さ</dt>
-                    <dd className="text-lg font-medium">5mm</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm text-gray-500">相対精度</dt>
-                    <dd className="text-lg font-medium">±2cm（100m以内の任意の2点間）</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm text-gray-500">絶対精度</dt>
-                    <dd className="text-lg font-medium">±3cm（RTK信号切断時、軌跡100m以下）</dd>
-                  </div>
-                </dl>
-              </div>
-
-              {/* Technical Features */}
-              <div className="bg-gray-50 rounded-xl p-8">
-                <h3 className="text-xl font-semibold mb-6 text-blue-600">技術仕様</h3>
-                <dl className="space-y-4">
-                  <div>
-                    <dt className="text-sm text-gray-500">カメラシステム</dt>
-                    <dd className="text-lg font-medium">2×48MP（190°×190°視野）</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm text-gray-500">IMU</dt>
-                    <dd className="text-lg font-medium">高精度6DOF IMU</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm text-gray-500">データ形式</dt>
-                    <dd className="text-lg font-medium">リアルタイムトゥルーカラー点群</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm text-gray-500">対応ドローン</dt>
-                    <dd className="text-lg font-medium">DJI M350/M300 RTK</dd>
-                  </div>
-                </dl>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">詳細仕様</h2>
+          <div className="max-w-7xl mx-auto">
+            {/* System Parameters */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 flex items-center">
+                <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                システムパラメータ
+              </h3>
+              <div className="bg-gray-50 rounded-xl overflow-hidden">
+                <table className="w-full">
+                  <tbody className="divide-y divide-gray-200">
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900 w-1/3">重量</td>
+                      <td className="px-6 py-4 text-gray-700">1.7kg</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900">寸法</td>
+                      <td className="px-6 py-4 text-gray-700">180mm × 130mm × 400mm</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900">外装</td>
+                      <td className="px-6 py-4 text-gray-700">工業グレードアルミニウム</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900">消費電力</td>
+                      <td className="px-6 py-4 text-gray-700">&lt;30W</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900">インターフェース</td>
+                      <td className="px-6 py-4 text-gray-700">USB 3.1 Gen2</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900">ストレージ</td>
+                      <td className="px-6 py-4 text-gray-700">1TB SSD</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900">連続動作時間</td>
+                      <td className="px-6 py-4 text-gray-700">約1.5時間</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900 align-top">ワイヤレス</td>
+                      <td className="px-6 py-4 text-gray-700">
+                        WiFi / Bluetooth<br/>
+                        • 802.11 a/b/g/n/ac<br/>
+                        • 2.4GHz: 2412–2472MHz<br/>
+                        • 5.2GHz: 5180–5240MHz<br/>
+                        • 5.8GHz: 5745–5825MHz
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
 
-            {/* Software */}
-            <div className="mt-8 bg-blue-50 rounded-xl p-8">
-              <h3 className="text-xl font-semibold mb-4">ソフトウェア</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold mb-2">LixelGo モバイルアプリ</h4>
-                  <p className="text-gray-600">スキャン制御とリアルタイムプレビュー</p>
+            {/* Environment & Functions */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div>
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                  環境仕様
+                </h3>
+                <div className="bg-gray-50 rounded-xl overflow-hidden">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">動作温度</td>
+                        <td className="px-6 py-4 text-gray-700">-20℃ ～ 50℃</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">防塵防水</td>
+                        <td className="px-6 py-4 text-gray-700">IP54</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+                  機能
+                </h3>
+                <div className="bg-gray-50 rounded-xl overflow-hidden">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">視覚測位</td>
+                        <td className="px-6 py-4 text-gray-700">対応</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">リアルタイムRTK融合</td>
+                        <td className="px-6 py-4 text-gray-700">対応</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">リアルタイムRGB</td>
+                        <td className="px-6 py-4 text-gray-700">対応</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* Accuracy */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 flex items-center">
+                <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">4</span>
+                測定精度
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-semibold mb-2">LixelStudio</h4>
-                  <p className="text-gray-600">点群データの表示、編集、処理をワンストップで提供</p>
+                  <h4 className="text-lg font-semibold mb-4 text-blue-600">リアルタイム計測精度</h4>
+                  <div className="bg-gray-50 rounded-xl overflow-hidden">
+                    <table className="w-full">
+                      <tbody className="divide-y divide-gray-200">
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">絶対垂直精度 (RMSE)</td>
+                          <td className="px-6 py-4 text-gray-700 font-semibold">3cm</td>
+                        </tr>
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">絶対水平精度 (RMSE)</td>
+                          <td className="px-6 py-4 text-gray-700 font-semibold">3cm</td>
+                        </tr>
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">相対精度 (RMSE)</td>
+                          <td className="px-6 py-4 text-gray-700 font-semibold">2cm</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold mb-4 text-blue-600">処理後の精度</h4>
+                  <div className="bg-gray-50 rounded-xl overflow-hidden">
+                    <table className="w-full">
+                      <tbody className="divide-y divide-gray-200">
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">絶対垂直精度</td>
+                          <td className="px-6 py-4 text-gray-700 font-semibold">3cm</td>
+                        </tr>
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">絶対水平精度</td>
+                          <td className="px-6 py-4 text-gray-700 font-semibold">3cm</td>
+                        </tr>
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">相対精度 (RMSE)</td>
+                          <td className="px-6 py-4 text-gray-700 font-semibold">1cm</td>
+                        </tr>
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">反復精度 (RMSE)</td>
+                          <td className="px-6 py-4 text-gray-700">2cm</td>
+                        </tr>
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">点群厚さ</td>
+                          <td className="px-6 py-4 text-gray-700">0.5cm</td>
+                        </tr>
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">水平性 (RTK使用時)</td>
+                          <td className="px-6 py-4 text-gray-700">0.015°</td>
+                        </tr>
+                        <tr className="hover:bg-gray-100">
+                          <td className="px-6 py-4 font-medium text-gray-900">垂直性</td>
+                          <td className="px-6 py-4 text-gray-700">0.03°</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* LiDAR Module */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 flex items-center">
+                <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">5</span>
+                LiDARモジュール
+              </h3>
+              <div className="bg-gray-50 rounded-xl overflow-hidden">
+                <table className="w-full">
+                  <tbody className="divide-y divide-gray-200">
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900 w-1/3">動作範囲</td>
+                      <td className="px-6 py-4 text-gray-700">0.5m～120m（モデルによって300m）</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900">スキャン周波数</td>
+                      <td className="px-6 py-4 text-gray-700">320,000 / 640,000 points/sec</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900">LiDARセンサー</td>
+                      <td className="px-6 py-4 text-gray-700">Class 1 / 905nm</td>
+                    </tr>
+                    <tr className="hover:bg-gray-100">
+                      <td className="px-6 py-4 font-medium text-gray-900">センサー視野角</td>
+                      <td className="px-6 py-4 text-gray-700">360° × 270°</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Camera Systems */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div>
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">6</span>
+                  パノラマカメラ
+                </h3>
+                <div className="bg-gray-50 rounded-xl overflow-hidden">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">解像度</td>
+                        <td className="px-6 py-4 text-gray-700">2 × 48MP</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">CMOS</td>
+                        <td className="px-6 py-4 text-gray-700">1/2インチ</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">焦点距離</td>
+                        <td className="px-6 py-4 text-gray-700">2mm</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">絞り</td>
+                        <td className="px-6 py-4 text-gray-700">F/2.0</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">シャッター</td>
+                        <td className="px-6 py-4 text-gray-700">ローリングシャッター</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">パノラマ解像度</td>
+                        <td className="px-6 py-4 text-gray-700">最大 56MP</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">視野角</td>
+                        <td className="px-6 py-4 text-gray-700">190° × 190°</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">7</span>
+                  視覚測位カメラ
+                </h3>
+                <div className="bg-gray-50 rounded-xl overflow-hidden">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">解像度</td>
+                        <td className="px-6 py-4 text-gray-700">1 × 1MP</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">シャッター</td>
+                        <td className="px-6 py-4 text-gray-700">グローバルシャッター</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">視野角</td>
+                        <td className="px-6 py-4 text-gray-700">190° × 119°</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* Battery & Charging */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div>
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">8</span>
+                  バッテリー
+                </h3>
+                <div className="bg-gray-50 rounded-xl overflow-hidden">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">電圧</td>
+                        <td className="px-6 py-4 text-gray-700">14.4V</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">容量</td>
+                        <td className="px-6 py-4 text-gray-700">46.8Wh</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">9</span>
+                  充電器
+                </h3>
+                <div className="bg-gray-50 rounded-xl overflow-hidden">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">入力</td>
+                        <td className="px-6 py-4 text-gray-700">100〜240V, 50〜60Hz</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">出力</td>
+                        <td className="px-6 py-4 text-gray-700">16.8V 2.0A</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">電力定格</td>
+                        <td className="px-6 py-4 text-gray-700">34W</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* RTK Module */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 flex items-center">
+                <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">10</span>
+                RTKモジュール仕様
+              </h3>
+              <div className="bg-blue-50 rounded-xl p-6">
+                <p className="font-medium mb-4">Standard RTK / Survey Grade RTK 共通仕様</p>
+                <div className="bg-white rounded-lg overflow-hidden">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900 w-1/3">対応衛星</td>
+                        <td className="px-6 py-4 text-gray-700">
+                          GPS L1/L2/L5, GLONASS L1/L2, BDS B1/B2/B3, Galileo E1/E5a/E5b/E6b
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900">精度</td>
+                        <td className="px-6 py-4 text-gray-700">
+                          水平 ±0.8cm + 1ppm / 垂直 ±1.5cm + 1ppm
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900">アンテナ仕様</td>
+                        <td className="px-6 py-4 text-gray-700">
+                          インピーダンス 50 ohm、右旋円偏波、水平カバレッジ 360°
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900">出力定在波</td>
+                        <td className="px-6 py-4 text-gray-700">≦2.0</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900">ゲイン</td>
+                        <td className="px-6 py-4 text-gray-700">
+                          標準2.8dBi / 測量用5.5dBi（最大）
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* Output Formats */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div>
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">11</span>
+                  出力形式
+                </h3>
+                <div className="bg-gray-50 rounded-xl overflow-hidden">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">点群データ</td>
+                        <td className="px-6 py-4 text-gray-700">.las</td>
+                      </tr>
+                      <tr className="hover:bg-gray-100">
+                        <td className="px-6 py-4 font-medium text-gray-900">画像形式</td>
+                        <td className="px-6 py-4 text-gray-700">.jpg</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 text-sm">12</span>
+                  ソフトウェア
+                </h3>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-2">LixelGo モバイルアプリ</h4>
+                      <p className="text-gray-600">スキャン制御とリアルタイムプレビュー</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">LixelStudio</h4>
+                      <p className="text-gray-600">点群データの表示、編集、処理をワンストップで提供</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

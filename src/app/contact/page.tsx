@@ -9,14 +9,49 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section with Grid Pattern Background */}
+      <section className="relative overflow-hidden bg-gray-900 text-white py-20 md:py-32">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div 
+            className="absolute inset-0" 
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '20px 20px'
+            }}
+          />
+        </div>
+
+        {/* Floating UP HASH Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-10 -left-10 opacity-5">
+            <div className="text-[200px] font-bold transform -rotate-12">⟨⟩</div>
+          </div>
+          <div className="absolute -bottom-20 -right-20 opacity-5">
+            <div className="text-[300px] font-bold transform rotate-12">⟨⟩</div>
+          </div>
+          <div className="absolute top-1/3 right-1/4 opacity-5">
+            <div className="text-[100px] font-bold transform rotate-45">UP</div>
+          </div>
+          <div className="absolute bottom-1/3 left-1/4 opacity-5">
+            <div className="text-[100px] font-bold transform -rotate-45">HASH</div>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <div className="mb-8">
+              <div className="inline-flex items-center justify-center p-2 bg-white/10 backdrop-blur-sm rounded-lg">
+                <span className="text-sm font-medium px-3 py-1 bg-white/20 rounded">CONTACT</span>
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
               お問い合わせ
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300 leading-relaxed">
               XGRIDS製品に関するご質問、デモのご依頼、価格のお見積もりなど、
               お気軽にお問い合わせください。
             </p>
@@ -28,15 +63,37 @@ export default function ContactPage() {
       <ContactForm />
 
       {/* Company Info Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gray-50 relative">
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div 
+            className="absolute inset-0" 
+            style={{
+              backgroundImage: `
+                linear-gradient(#000 1px, transparent 1px),
+                linear-gradient(90deg, #000 1px, transparent 1px)
+              `,
+              backgroundSize: '40px 40px'
+            }}
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">会社情報</h2>
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center mb-4">
+                <div className="h-px w-12 bg-gray-300"></div>
+                <span className="mx-4 text-sm font-medium text-gray-500 tracking-wider">COMPANY INFO</span>
+                <div className="h-px w-12 bg-gray-300"></div>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">会社情報</h2>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Tokyo Office */}
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">東京本社</h3>
-                <div className="space-y-3 text-gray-600">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 relative overflow-hidden group hover:shadow-xl transition-shadow">
+                <div className="absolute -top-6 -right-6 text-8xl font-bold text-gray-50 group-hover:text-gray-100 transition-colors">⟨⟩</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4 relative z-10">東京本社</h3>
+                <div className="space-y-3 text-gray-600 relative z-10">
                   <div className="flex items-start">
                     <svg className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -57,9 +114,10 @@ export default function ContactPage() {
               </div>
 
               {/* Fukuoka Office */}
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">福岡支社</h3>
-                <div className="space-y-3 text-gray-600">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 relative overflow-hidden group hover:shadow-xl transition-shadow">
+                <div className="absolute -top-6 -right-6 text-8xl font-bold text-gray-50 group-hover:text-gray-100 transition-colors">⟨⟩</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4 relative z-10">福岡支社</h3>
+                <div className="space-y-3 text-gray-600 relative z-10">
                   <div className="flex items-start">
                     <svg className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -81,9 +139,11 @@ export default function ContactPage() {
             </div>
 
             {/* Business Hours */}
-            <div className="mt-8 bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">営業時間</h3>
-              <div className="space-y-2 text-gray-600">
+            <div className="mt-8 bg-white rounded-xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
+              <div className="absolute -top-10 -left-10 text-[150px] font-bold text-gray-50">UP</div>
+              <div className="absolute -bottom-10 -right-10 text-[150px] font-bold text-gray-50">HASH</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 relative z-10">営業時間</h3>
+              <div className="space-y-2 text-gray-600 relative z-10">
                 <p>平日: 9:00 - 18:00</p>
                 <p>土日祝日: 休業</p>
                 <p className="text-sm text-gray-500 mt-2">

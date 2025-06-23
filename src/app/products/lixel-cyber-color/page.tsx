@@ -3,431 +3,376 @@ import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'Lixel Cyber Color - 高速3D再構築ソフトウェア | 株式会社UPHASH',
-  description: 'SLAM技術とガウシアンスプラッティングを融合した革新的3D再構築ソフトウェア。無料Viewerと有料Studio版（ベーシック/プレミアム）をご用意。',
+  title: 'Lixel Cyber Color (LCC Studio) - フォトリアルな3D空間再構築ソフトウェア | UP HASH',
+  description: '"見る" を超えて "没入する" 3Dへ。Lixelのスキャンデータをフォトリアルかつ軽量に変換する次世代3DGSエンジン。AI + Gaussian Splattingによる高速・高精細な3Dモデル生成。',
 }
 
 export default function LixelCyberColorPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-900 to-blue-900 text-white py-16 md:py-24">
+      <section className="relative bg-gradient-to-br from-purple-900 via-pink-800 to-orange-700 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="mb-4">
                 <span className="inline-block px-3 py-1 text-sm font-medium bg-purple-500 text-white rounded-full">
-                  Software Solution
+                  Software
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Lixel Cyber Color
+                <span className="text-2xl font-normal block mt-2">(LCC Studio)</span>
               </h1>
-              <p className="text-xl mb-8">
-                次世代3D再構築ソフトウェア
+              <p className="text-xl mb-4">
+                フォトリアルな3D空間再構築ソフトウェア
+              </p>
+              <p className="text-2xl font-bold mb-8 text-pink-200">
+                "見る" を超えて "没入する" 3Dへ。
               </p>
               <p className="text-lg mb-8 text-gray-200">
-                SLAM技術とガウシアンスプラッティングを融合し、
-                フォトリアリスティックな3Dモデルを高速生成。
-                無料のViewerと高機能なStudio版をご用意しています。
+                Lixelのスキャンデータをフォトリアルかつ軽量に変換する次世代3DGSエンジン。
               </p>
               <div className="flex gap-4">
                 <Link
-                  href="#features"
-                  className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
+                  href="#download"
+                  className="inline-flex items-center px-6 py-3 bg-white text-purple-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
                 >
-                  機能詳細を見る
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                  </svg>
+                  ダウンロード
                 </Link>
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-purple-900 transition-colors"
                 >
-                  デモを申し込む
+                  お問い合わせ
                 </Link>
               </div>
             </div>
-            <div className="relative h-[500px] bg-gray-800 rounded-xl overflow-hidden flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-lg text-gray-300">Lixel Cyber Color</p>
-              </div>
+            <div className="relative h-[500px] bg-gray-800/20 rounded-xl overflow-hidden backdrop-blur-sm">
+              <img 
+                src={getImagePath('/images/lixel_cyber_color_demo.jpg')} 
+                alt="Lixel Cyber Color Demo"
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Features */}
-      <section id="features" className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">主要機能</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">高速処理</h3>
-              <p className="text-gray-600">10分のスキャンデータを2時間以内に3Dモデル化</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">データ圧縮</h3>
-              <p className="text-gray-600">従来比90%のファイルサイズ削減を実現</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">高精度</h3>
-              <p className="text-gray-600">センチメートルレベルの測定・注釈精度</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">技術仕様</h2>
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <h3 className="text-xl font-semibold mb-6 text-purple-600">コア技術</h3>
-                <dl className="space-y-4">
-                  <div>
-                    <dt className="text-sm text-gray-500">アルゴリズム</dt>
-                    <dd className="text-lg font-medium">Multi-SLAM + 3Dガウシアンスプラッティング</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm text-gray-500">AI機能</dt>
-                    <dd className="text-lg font-medium">動的オブジェクト自動除去</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm text-gray-500">処理精度</dt>
-                    <dd className="text-lg font-medium">低・中・高精度設定可能</dd>
-                  </div>
-                </dl>
-              </div>
-
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <h3 className="text-xl font-semibold mb-6 text-purple-600">対応プラットフォーム</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    PC（Windows、Mac）
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    モバイル（iOS、Android）
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Unity、Unreal Engine
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    WebGL、VRヘッドセット
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Editions */}
-            <div className="mt-12">
-              <h3 className="text-2xl font-semibold mb-8 text-center">エディション比較</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Viewer */}
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                  <div className="bg-gray-100 p-4 text-center">
-                    <h4 className="text-xl font-semibold text-gray-800">Viewer</h4>
-                    <p className="text-2xl font-bold text-gray-900 mt-2">無料</p>
-                  </div>
-                  <div className="p-6">
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">3Dモデルの閲覧</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">基本的な測定機能</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">スクリーンショット</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">共有リンク対応</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Studio Basic */}
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                  <div className="bg-purple-100 p-4 text-center">
-                    <h4 className="text-xl font-semibold text-purple-800">Studio ベーシック</h4>
-                    <p className="text-2xl font-bold text-purple-900 mt-2">有料</p>
-                  </div>
-                  <div className="p-6">
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">Viewerの全機能</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">3D再構築機能</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">詳細測定ツール</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">標準エクスポート</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">クラウド連携</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Studio Premium */}
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-purple-500">
-                  <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-4 text-center">
-                    <h4 className="text-xl font-semibold text-white">Studio プレミアム</h4>
-                    <p className="text-2xl font-bold text-white mt-2">有料</p>
-                  </div>
-                  <div className="p-6">
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">ベーシックの全機能</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">Revit統合</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">航空・地上マップ融合</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">開発者SDK</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">空間分析ツール</span>
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600">優先サポート</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Premium Features Detail */}
+      {/* Product Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">プレミアム機能詳細</h2>
-          
-          {/* Revit Integration */}
-          <div className="max-w-6xl mx-auto mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-purple-700">Revitインテグレーション</h3>
-                <p className="text-lg text-gray-600 mb-4">
-                  スキャンデータから直接BIMモデルを生成する革新的な機能。
-                  建築・建設プロジェクトのワークフローを大幅に効率化します。
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">点群データをRevitファミリーに自動変換</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">パラメトリックBIM要素の自動認識・生成</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">壁、床、天井、配管などの構造要素を自動分類</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">LOD 200-400レベルのBIMモデル生成</span>
-                  </li>
-                </ul>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">製品概要</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
               </div>
-              <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl p-8 h-80 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-24 h-24 text-purple-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
-                  <p className="text-purple-700 font-semibold">点群 → BIM</p>
+              <h3 className="text-lg font-semibold mb-2">AI + Gaussian Splatting</h3>
+              <p className="text-gray-600">高速・高精細な3Dモデル生成</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">映画のようなビジュアル</h3>
+              <p className="text-gray-600">リアルタイム再構築</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H6a2 2 0 00-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">最大90%のファイル圧縮</h3>
+              <p className="text-gray-600">軽量化と高画質を両立</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Aerial-Ground Fusion</h3>
+              <p className="text-gray-600">真の屋内外統合モデル</p>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-gray-700 mb-2">
+              <strong>対応形式：</strong>`.lcc`, `.ply`（独自形式と汎用形式両対応）
+            </p>
+            <p className="text-gray-700">
+              <strong>プラットフォーム：</strong>Windows / Web / LCC Viewer / Revit
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Download Section */}
+      <section id="download" className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">ダウンロード</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold mb-2">
+                    💻 LCC Studio V1.8.0 for Windows
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    ⏬ 約3.8GB
+                  </p>
+                  <div className="flex gap-4">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
+                    >
+                      ダウンロードリンクを取得
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* HD Enhancement */}
-          <div className="max-w-6xl mx-auto mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="order-2 lg:order-1 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-8 h-80 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-24 h-24 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <h4 className="font-semibold mb-2 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
-                  <p className="text-blue-700 font-semibold">AI画質向上</p>
-                </div>
+                  ユーザーマニュアル（PDF）
+                </h4>
+                <p className="text-sm text-gray-600 mb-3">
+                  基本操作から高度な機能まで詳しく解説
+                </p>
+                <Link
+                  href="/contact"
+                  className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+                >
+                  ダウンロード →
+                </Link>
+              </div>
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <h4 className="font-semibold mb-2 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  スキャンガイド（PDF）
+                </h4>
+                <p className="text-sm text-gray-600 mb-3">
+                  最適なスキャン方法とベストプラクティス
+                </p>
+                <Link
+                  href="/contact"
+                  className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+                >
+                  ダウンロード →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Highlight */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">特長と機能ハイライト</h2>
+          <div className="space-y-16 max-w-6xl mx-auto">
+            {/* Aerial-Ground Map Fusion */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                  🛰️ Aerial-Ground Map Fusion
+                </h3>
+                <p className="text-lg text-gray-700">
+                  ドローン空撮と地上スキャンを1つの空間モデルに融合
+                </p>
+              </div>
+              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
+                <p className="text-gray-500">Map Fusion before-after</p>
+              </div>
+            </div>
+
+            {/* HD Enhancement */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1 bg-gray-100 rounded-xl h-64 flex items-center justify-center">
+                <p className="text-gray-500">HD強化例</p>
               </div>
               <div className="order-1 lg:order-2">
-                <h3 className="text-2xl font-bold mb-4 text-blue-700">HDエンハンスメント</h3>
-                <p className="text-lg text-gray-600 mb-4">
-                  AI技術により、スキャンデータの品質を飛躍的に向上。
-                  低解像度データから高精細な3Dモデルを生成します。
+                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                  🖼️ HD Enhancement
+                </h3>
+                <p className="text-lg text-gray-700">
+                  高解像度画像（DSLR/スマホ）を補完合成し、質感を飛躍的に向上
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">テクスチャ解像度を最大4倍に向上</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">ノイズ除去とエッジ強調処理</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">欠損部分の自動補完</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">照明条件の最適化と色補正</span>
-                  </li>
-                </ul>
+              </div>
+            </div>
+
+            {/* 空間認識 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                  🧱 空間認識（Spatial Recognition）
+                </h3>
+                <p className="text-lg text-gray-700">
+                  部屋・壁・開口部を自動抽出し、BIMや図面作成に直結
+                </p>
+              </div>
+              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
+                <p className="text-gray-500">空間認識デモ</p>
+              </div>
+            </div>
+
+            {/* 精密測定 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1 bg-gray-100 rounded-xl h-64 flex items-center justify-center">
+                <p className="text-gray-500">測定画面UI</p>
+              </div>
+              <div className="order-1 lg:order-2">
+                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                  🧮 精密測定（dx, dy, dz オフセット対応）
+                </h3>
+                <p className="text-lg text-gray-700">
+                  高精度なプロ用測定ツールで3Dモデルと現実空間を一致
+                </p>
+              </div>
+            </div>
+
+            {/* アセットオーバーレイ */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                  🧩 アセットオーバーレイ
+                </h3>
+                <p className="text-lg text-gray-700">
+                  OBJ / FBX / GLB等の3Dモデルを重ねて空間内で表示・調整
+                </p>
+              </div>
+              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
+                <p className="text-gray-500">Asset Overlay</p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Drone Integration */}
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-green-700">ドローン撮影融合</h3>
-                <p className="text-lg text-gray-600 mb-4">
-                  地上スキャンデータとドローン撮影データをシームレスに統合。
-                  完全な3Dモデルを効率的に作成します。
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">航空写真と地上スキャンの自動位置合わせ</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">マルチスケール3Dモデルの生成</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">屋根や高所の詳細データ統合</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">DJI、Parrotなど主要ドローンに対応</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-8 h-80 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-24 h-24 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                  </svg>
-                  <p className="text-green-700 font-semibold">地上＋航空統合</p>
-                </div>
+      {/* Viewer / Revit Integration */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Viewer / Revit 連携</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                🔍 LCC Viewer
+              </h3>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">軽量ビューア（Win/Mac対応）</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">アバターモード、測定、注釈対応</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">Web Viewerにも対応（7日間ログインフリー）</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
+              >
+                Viewerダウンロード →
+              </Link>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                🏗️ LCC for Revit
+              </h3>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">AIによる壁・開口部の自動BIM生成</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">ワンクリックモデリング</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">カメラ同期、点群オーバーレイ</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
+              >
+                Revit用プラグイン →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Release Info */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">リリース情報（V1.8.0）</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8">
+              <p className="text-lg font-semibold text-purple-900 mb-4">
+                🆕 2025年最新版で以下を追加：
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">空地統合（Aerial-Ground Fusion）</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">HD画質補強</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">空間認識（フロアプラン抽出）</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">dx/dy/dz 表示</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">DirectX 12 対応</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-700">複数の安定性向上とパフォーマンス最適化</span>
+                </li>
+              </ul>
+              <div className="mt-6">
+                <Link
+                  href="/contact"
+                  className="text-purple-600 hover:text-purple-700 font-medium"
+                >
+                  📄 リリースノート全文はこちら →
+                </Link>
               </div>
             </div>
           </div>
@@ -437,69 +382,149 @@ export default function LixelCyberColorPage() {
       {/* Applications */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">活用分野</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg p-6 text-center shadow-md">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="font-semibold">建築・建設</h3>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">アプリケーション例</h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-gradient-to-r from-purple-500 to-pink-600">
+                    <th className="px-6 py-4 text-left text-white font-semibold">業界</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">使用例</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">建築・不動産</td>
+                    <td className="px-6 py-4 text-gray-700">高精度モデルでの物件紹介・設計レビュー</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">インフラ・土木</td>
+                    <td className="px-6 py-4 text-gray-700">トンネルや道路の3D可視化・損傷解析</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">教育・文化財保存</td>
+                    <td className="px-6 py-4 text-gray-700">ミュージアムや遺跡の3Dアーカイブ化とVR展示</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">メタバース・XR</td>
+                    <td className="px-6 py-4 text-gray-700">現実空間をそのまま仮想空間へ転用、ゲームやトレーニング用途に</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div className="bg-white rounded-lg p-6 text-center shadow-md">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
-                </svg>
-              </div>
-              <h3 className="font-semibold">ゲーム開発</h3>
+          </div>
+        </div>
+      </section>
+
+      {/* System Requirements */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">動作環境</h2>
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-gray-50 rounded-xl p-8">
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-purple-600 font-semibold mr-3 min-w-[100px]">OS：</span>
+                  <span className="text-gray-700">Windows 10/11</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 font-semibold mr-3 min-w-[100px]">GPU：</span>
+                  <span className="text-gray-700">NVIDIA RTX 3060 以上推奨</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 font-semibold mr-3 min-w-[100px]">メモリ：</span>
+                  <span className="text-gray-700">16GB以上（推奨32GB）</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 font-semibold mr-3 min-w-[100px]">ストレージ：</span>
+                  <span className="text-gray-700">SSD（高速読込が必要）</span>
+                </li>
+              </ul>
             </div>
-            <div className="bg-white rounded-lg p-6 text-center shadow-md">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Started */}
+      <section className="py-16 md:py-24 bg-gradient-to-r from-purple-100 to-pink-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">今すぐLCC Studioを体験しよう</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <span className="text-2xl font-bold text-purple-600">1</span>
+                </div>
+                <h4 className="font-semibold mb-2">スキャナーで空間をキャプチャ</h4>
+                <p className="text-sm text-gray-600">Lixelスキャナーで簡単取得</p>
               </div>
-              <h3 className="font-semibold">AR/VR</h3>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <span className="text-2xl font-bold text-purple-600">2</span>
+                </div>
+                <h4 className="font-semibold mb-2">LCC Studioで自動再構築</h4>
+                <p className="text-sm text-gray-600">AIが高精度に処理</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <span className="text-2xl font-bold text-purple-600">3</span>
+                </div>
+                <h4 className="font-semibold mb-2">ViewerやRevitで活用</h4>
+                <p className="text-sm text-gray-600">多様な用途に展開</p>
+              </div>
             </div>
-            <div className="bg-white rounded-lg p-6 text-center shadow-md">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+            <div className="text-center space-y-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
+              >
+                ソフトウェアを今すぐ入手
+              </Link>
+              <div>
+                <Link
+                  href="/contact"
+                  className="text-purple-600 hover:text-purple-700 font-medium"
+                >
+                  法人導入のご相談はこちら →
+                </Link>
               </div>
-              <h3 className="font-semibold">文化財保存</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">よくある質問（FAQ）</h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h4 className="font-semibold mb-2">Q. ファイルサイズが小さいのに高精細なのはなぜ？</h4>
+              <p className="text-gray-700">A. 独自のGaussian Splatting + 可視領域最適化により非表示領域を省略して軽量化しています。</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h4 className="font-semibold mb-2">Q. Lixel Studioとの違いは？</h4>
+              <p className="text-gray-700">A. Lixel Studioは点群処理中心、LCC Studioは<strong>3Dモデル化とビジュアル重視</strong>です。</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-600 to-blue-600">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-600 to-pink-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            3D再構築の新時代を体験
+            フォトリアルな3D体験を始めよう
           </h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Lixel Cyber Colorで、スキャンから完成まで
-            わずか2時間で高品質な3Dモデルを作成
+            Lixel Cyber Colorで、見るだけでなく没入する3D空間を
           </p>
-          <div className="flex gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-medium rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              無料デモを申し込む
-            </Link>
-            <Link
-              href="/downloads"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              ダウンロード
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            お問い合わせ・デモ依頼
+          </Link>
         </div>
       </section>
     </main>

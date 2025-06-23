@@ -38,16 +38,17 @@ export const NAVIGATION_ITEMS: NavItem[] = [
       { label: 'Lixel GO', href: '/products/lixel-go' }
     ]
   },
-  { label: '導入事例', href: '/case-studies' },
+  { label: '業界別使用例', href: '/case-studies' },
   { label: 'サポート', href: '/support' },
   { label: 'お問い合わせ', href: '/contact' }
 ]
 
 export const SOCIAL_LINKS = {
-  twitter: 'https://twitter.com/uphash',
-  linkedin: 'https://linkedin.com/company/uphash',
-  github: 'https://github.com/hateniri',
-  facebook: 'https://facebook.com/uphash'
+  twitter: 'https://x.com/UpHashNet',
+  youtube: 'https://www.youtube.com/@UPHASHNET',
+  github: 'https://github.com/UpHash-Network',
+  linkedin: 'https://www.linkedin.com/in/shotaimai/',
+  community: 'https://x.com/i/communities/1933731194157609219'
 }
 
 export const PRODUCTS = [
