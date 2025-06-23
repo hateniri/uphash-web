@@ -51,12 +51,37 @@ export default function LixelCyberColorPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative h-[500px] bg-gray-800/20 rounded-xl overflow-hidden backdrop-blur-sm">
-              <img 
-                src={getImagePath('/images/lixel_cyber_color_demo.jpg')} 
-                alt="Lixel Cyber Color Demo"
-                className="w-full h-full object-contain"
-              />
+            <div className="relative bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 rounded-xl p-12 flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-orange-500/10"></div>
+              <div className="relative text-center">
+                <div className="mb-8">
+                  <div className="relative inline-block">
+                    <div className="absolute inset-0 bg-purple-500 blur-3xl opacity-20"></div>
+                    <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8">
+                      <svg className="w-32 h-32 text-purple-600 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4 max-w-md mx-auto">
+                  <div className="flex items-center justify-center gap-3 text-purple-700">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">AI</span>
+                    </div>
+                    <span className="text-2xl">+</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-orange-500 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">3DGS</span>
+                    </div>
+                  </div>
+                  <p className="text-lg font-medium text-gray-700">高速・高精細な3Dモデル生成</p>
+                  <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
+                    <span className="px-3 py-1 bg-purple-100 rounded-full">90%圧縮</span>
+                    <span className="px-3 py-1 bg-pink-100 rounded-full">フォトリアル</span>
+                    <span className="px-3 py-1 bg-orange-100 rounded-full">リアルタイム</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -65,7 +90,10 @@ export default function LixelCyberColorPage() {
       {/* Product Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">製品概要</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">製品概要</h2>
+            <p className="text-xl text-gray-600">次世代3DGSエンジンが実現する4つの革新</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -204,15 +232,51 @@ export default function LixelCyberColorPage() {
                   ドローン空撮と地上スキャンを1つの空間モデルに融合
                 </p>
               </div>
-              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">Map Fusion before-after</p>
+              <div className="relative bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full -mr-16 -mt-16 opacity-20"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-cyan-200 rounded-full -ml-12 -mb-12 opacity-20"></div>
+                <div className="relative flex items-center justify-center h-full">
+                  <div className="text-center">
+                    <div className="flex justify-center gap-4 mb-4">
+                      <div className="w-20 h-20 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                        </svg>
+                      </div>
+                      <div className="text-4xl font-bold text-gray-400 self-center">→</div>
+                      <div className="w-20 h-20 bg-cyan-100 rounded-lg flex items-center justify-center">
+                        <svg className="w-10 h-10 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-600">ドローン + 地上 = 統合モデル</p>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* HD Enhancement */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="order-2 lg:order-1 bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">HD強化例</p>
+              <div className="order-2 lg:order-1 relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 overflow-hidden">
+                <div className="absolute top-0 left-0 w-32 h-32 bg-purple-200 rounded-full -ml-16 -mt-16 opacity-20"></div>
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-pink-200 rounded-full -mr-12 -mb-12 opacity-20"></div>
+                <div className="relative flex items-center justify-center h-full">
+                  <div className="text-center">
+                    <div className="mb-4">
+                      <div className="relative inline-block">
+                        <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-400 blur-xl opacity-30"></div>
+                        <div className="relative w-24 h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto">
+                          <svg className="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-lg font-medium text-gray-700 mb-2">HDエンハンスメント</p>
+                    <p className="text-sm text-gray-600">高解像度画像で質感向上</p>
+                  </div>
+                </div>
               </div>
               <div className="order-1 lg:order-2">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -234,15 +298,45 @@ export default function LixelCyberColorPage() {
                   部屋・壁・開口部を自動抽出し、BIMや図面作成に直結
                 </p>
               </div>
-              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">空間認識デモ</p>
+              <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-green-200 rounded-full -mr-16 -mt-16 opacity-20"></div>
+                <div className="relative flex items-center justify-center h-full">
+                  <div className="grid grid-cols-3 gap-2 max-w-xs">
+                    <div className="col-span-3 h-12 bg-green-200 rounded flex items-center justify-center text-xs font-medium text-green-700">壁</div>
+                    <div className="h-20 bg-emerald-200 rounded flex items-center justify-center text-xs font-medium text-emerald-700">部屋1</div>
+                    <div className="h-20 bg-emerald-300 rounded flex items-center justify-center text-xs font-medium text-emerald-800">部屋2</div>
+                    <div className="h-20 bg-emerald-200 rounded flex items-center justify-center text-xs font-medium text-emerald-700">部屋3</div>
+                    <div className="col-span-3 h-8 bg-green-300 rounded flex items-center justify-center text-xs font-medium text-green-800">開口部</div>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* 精密測定 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="order-2 lg:order-1 bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">測定画面UI</p>
+              <div className="order-2 lg:order-1 relative bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8 overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-orange-200 rounded-full -ml-16 -mb-16 opacity-20"></div>
+                <div className="relative flex items-center justify-center h-full">
+                  <div className="text-center">
+                    <div className="inline-flex items-center gap-2 bg-white rounded-lg shadow-lg px-4 py-2 mb-4">
+                      <span className="text-sm font-mono text-orange-600">dx: 3.24m</span>
+                      <span className="text-gray-400">|</span>
+                      <span className="text-sm font-mono text-red-600">dy: 1.58m</span>
+                      <span className="text-gray-400">|</span>
+                      <span className="text-sm font-mono text-pink-600">dz: 2.41m</span>
+                    </div>
+                    <div className="relative">
+                      <svg className="w-32 h-32 text-gray-300" viewBox="0 0 100 100">
+                        <line x1="10" y1="90" x2="90" y2="90" stroke="currentColor" strokeWidth="2" />
+                        <line x1="10" y1="90" x2="10" y2="10" stroke="currentColor" strokeWidth="2" />
+                        <line x1="10" y1="90" x2="50" y2="50" stroke="currentColor" strokeWidth="2" />
+                        <circle cx="50" cy="50" r="3" fill="#f97316" />
+                        <circle cx="90" cy="90" r="3" fill="#ef4444" />
+                        <circle cx="10" cy="10" r="3" fill="#ec4899" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="order-1 lg:order-2">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -264,8 +358,25 @@ export default function LixelCyberColorPage() {
                   OBJ / FBX / GLB等の3Dモデルを重ねて空間内で表示・調整
                 </p>
               </div>
-              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">Asset Overlay</p>
+              <div className="relative bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-8 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-200 rounded-full -mr-16 -mt-16 opacity-20"></div>
+                <div className="relative flex items-center justify-center h-full">
+                  <div className="text-center">
+                    <div className="relative">
+                      <div className="w-32 h-32 border-2 border-dashed border-indigo-300 rounded-lg flex items-center justify-center mb-4">
+                        <svg className="w-16 h-16 text-indigo-200" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 7a2 2 0 114 0 2 2 0 01-4 0z" />
+                        </svg>
+                      </div>
+                      <div className="absolute top-8 left-8 w-16 h-16 bg-blue-500 rounded shadow-lg flex items-center justify-center transform rotate-12">
+                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 0010 17a8.995 8.995 0 005-1.5V14a1 1 0 00-1-1H8a1 1 0 00-1 1v1.5a8.972 8.972 0 002.3 1.073z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-600">3Dモデルを重ねて表示</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
