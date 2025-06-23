@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "build:static": "next build && touch out/.nojekyll",
+    "build:static": "next build && touch docs/.nojekyll",
     "start": "next start",
     "lint": "next lint",
     "deploy:vercel": "vercel --prod",
-    "deploy": "npm run build && touch out/.nojekyll && npx gh-pages -d out"
+    "deploy": "npm run build && touch docs/.nojekyll && cp public/CNAME docs/CNAME && npx gh-pages -d docs"
   },
   "dependencies": {
     "next": "15.3.4",
