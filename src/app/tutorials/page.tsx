@@ -118,84 +118,84 @@ const tutorialCategories = [
     tutorials: [
       {
         id: 'studio-installation',
-        title: 'インストールとアクティベーション',
+        title: '001｜インストールとアクティベーション',
         description: 'ソフトウェアのインストールとライセンス認証',
-        duration: '10分',
+        duration: '約3分',
         difficulty: '初級',
         thumbnail: '/images/tutorials/studio-install.jpg',
-        videoUrl: '#'
+        videoUrl: 'https://youtu.be/0JNvQC1UTCI'
       },
       {
         id: 'studio-data-import',
-        title: 'データの読み込みと表示',
+        title: '002｜データの読み込みと表示',
         description: 'スキャンデータのインポートと基本表示',
-        duration: '12分',
+        duration: '約4分',
         difficulty: '初級',
         thumbnail: '/images/tutorials/studio-import.jpg',
-        videoUrl: '#'
+        videoUrl: 'https://youtu.be/NXZMmZ08rhg'
       },
       {
         id: 'studio-interface',
-        title: 'インターフェース',
+        title: '003｜インターフェースの紹介',
         description: 'UI概要と各ツールの説明',
-        duration: '15分',
+        duration: '約2分',
         difficulty: '初級',
         thumbnail: '/images/tutorials/studio-interface.jpg',
-        videoUrl: '#'
+        videoUrl: 'https://youtu.be/k_6wz1cpgCQ'
       },
       {
         id: 'studio-processing',
-        title: 'プロジェクト処理',
+        title: '004｜プロジェクトの処理手順',
         description: '点群データの処理とエクスポート',
-        duration: '20分',
+        duration: '約8分',
         difficulty: '中級',
         thumbnail: '/images/tutorials/studio-processing.jpg',
-        videoUrl: '#'
+        videoUrl: 'https://youtu.be/ZBTMlYi_qH0'
       },
       {
         id: 'studio-panorama-mesh',
-        title: 'パノラマとメッシュ合成',
+        title: '005｜パノラマ合成とメッシュ作成',
         description: 'パノラマ画像とメッシュの生成',
-        duration: '18分',
+        duration: '約3分',
         difficulty: '中級',
         thumbnail: '/images/tutorials/studio-panorama.jpg',
-        videoUrl: '#'
+        videoUrl: 'https://youtu.be/iLzexzgUsWU'
       },
       {
         id: 'studio-map-fusion',
-        title: 'マップフュージョン',
+        title: '006｜マップ融合（Map Fusion）',
         description: '複数スキャンデータの統合',
-        duration: '25分',
+        duration: '約4分',
         difficulty: '上級',
         thumbnail: '/images/tutorials/studio-fusion.jpg',
-        videoUrl: '#'
+        videoUrl: 'https://youtu.be/3MbKMzOfX9I'
       },
       {
         id: 'studio-volume',
-        title: '体積計算',
+        title: '007｜体積計算（Volume Calculation）',
         description: '3Dデータからの体積測定',
-        duration: '15分',
+        duration: '約3分',
         difficulty: '中級',
         thumbnail: '/images/tutorials/studio-volume.jpg',
-        videoUrl: '#'
+        videoUrl: 'https://youtu.be/MpuAvjcr8sY'
+      },
+      {
+        id: 'studio-volume-alt',
+        title: '008｜体積計算（別手法）',
+        description: '別アプローチでの体積測定',
+        duration: '約2分',
+        difficulty: '中級',
+        thumbnail: '/images/tutorials/studio-volume-alt.jpg',
+        videoUrl: 'https://youtu.be/YWctpF2MJjs'
       },
       {
         id: 'studio-control-points',
-        title: 'コントロールポイント変換',
+        title: '009｜コントロールポイント変換',
         description: '座標系の変換と位置合わせ',
-        duration: '20分',
+        duration: '約3分',
         difficulty: '上級',
         thumbnail: '/images/tutorials/studio-control.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'studio-cybercolor-guide',
-        title: 'スキャンガイド（CyberColor）',
-        description: 'CyberColor用データの準備',
-        duration: '15分',
-        difficulty: '中級',
-        thumbnail: '/images/tutorials/studio-cybercolor.jpg',
-        videoUrl: '#'
+        videoUrl: 'https://youtu.be/A6NL6KXXO_Q'
       }
     ]
   },
@@ -478,9 +478,12 @@ export default function TutorialsPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {category.tutorials.map((tutorial) => (
-                <div
+                <a
                   key={tutorial.id}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                  href={tutorial.videoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 >
                   {/* Video Thumbnail */}
                   <div className="relative aspect-video bg-gray-200">
@@ -505,7 +508,7 @@ export default function TutorialsPage() {
                     <h3 className="text-xl font-semibold mb-2">{tutorial.title}</h3>
                     <p className="text-gray-600">{tutorial.description}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
