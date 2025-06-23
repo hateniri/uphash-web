@@ -5,6 +5,74 @@ import { getImagePath } from '@/lib/utils'
 
 // ブログ記事のデータ
 const blogPosts = {
+  'underground-utility-corridor': {
+    title: '都市の「ライフライン」を可視化：Lixel L2 Proが全長8kmの地下管路調査を支援',
+    date: '2025-02-21',
+    category: '導入事例',
+    author: 'UP HASH Team',
+    image: '/images/blog/underground-survey-main.jpg',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=123',
+    content: `
+      <p class="lead">電力、通信、水道などのインフラを収容する「共同溝（ユーティリティ・コリドー）」は、都市機能を支えるまさに"ライフライン"です。こうした複雑な地下ネットワークは、正確な測量とマッピングが施工・保守の両面で不可欠です。</p>
+      
+      <p>中国・寧波市で完成した全長8kmの地下管路において、精密な竣工測量が求められました。地中15〜20メートルという深さと、狭小な空間により技術的なハードルは高く、XGRIDSのパートナー企業はLixel L2 Proハンドヘルド3Dスキャナーを導入。高精度なマッピングを可能にし、プロジェクトの検収作業をサポートしました。</p>
+
+      <img src="${getImagePath('/images/blog/underground-survey-1.gif')}" alt="地下管路スキャン作業" class="w-full rounded-lg my-8" />
+
+      <h2>01｜現場での課題</h2>
+      
+      <h3>■ 狭小かつ制限された空間</h3>
+      <p>幅わずか1.3mの管路では、機材の設置や移動が困難。トータルステーションなどの従来機器は、位置取りのたびに移設が必要で、作業の大きな遅延要因となっていました。</p>
+      
+      <h3>■ 特徴に乏しい構造</h3>
+      <p>長く、繰り返し構造の管路内では、SLAMによる自己位置推定が困難。特徴点が少ないために軌道がずれやすく、データの整合性も損なわれがちです。</p>
+      
+      <h3>■ 大規模空間の測量負荷</h3>
+      <p>8kmに及ぶ距離を従来方式で測量するには、膨大な人員と時間が必要。また、長距離のSLAM走行では誤差の蓄積による精度低下も懸念されます。</p>
+
+      <img src="${getImagePath('/images/blog/underground-survey-2.gif')}" alt="狭小空間でのスキャニング" class="w-full rounded-lg my-8" />
+
+      <h2>02｜Lixel L2 Proによる解決アプローチ</h2>
+      
+      <h3>1. Lixel L2 Pro：リアルタイム3Dスキャンとモデリング</h3>
+      <p>XGRIDSの主力製品であるLixel L2 Proは、独自の「Multi-SLAMアルゴリズム」により、地下管路のような特徴点の少ない環境でも安定した測位と高精度マッピングを実現します。</p>
+      
+      <h3>2. 絶対精度を担保する地上基準点の設置</h3>
+      <p>正確な位置合わせのため、レーザー鉛直照射装置を用いて地下に<strong>75点の基準点（100m間隔）</strong>を設置。相対座標をトータルステーションで取得した絶対座標に変換することで、地図としての正確性を担保しました。</p>
+
+      <img src="${getImagePath('/images/blog/underground-survey-3.gif')}" alt="基準点設置作業" class="w-full rounded-lg my-8" />
+      
+      <h3>3. セクション分割による段階的なスキャンと即時検証</h3>
+      <p>管路を13のセクションに分割し、各セクションをLixel L2 Proで順にスキャン。カラー点群をリアルタイムで確認し、ズレや抜けのない状態で次工程へ進めました。</p>
+      
+      <h3>4. RCS形式での出力によりCADとのシームレスな連携</h3>
+      <p>取得した点群データはLixelStudioで整合処理を行い、カラー点群として忠実な地下空間の再現を実現。さらにRCS形式に直接変換し、CADソフトへの取り込み・平面図作成をスムーズにしました。</p>
+
+      <img src="${getImagePath('/images/blog/underground-survey-screenshot.png')}" alt="LixelStudioでの点群処理" class="w-full rounded-lg my-8" />
+
+      <h2>03｜Lixel L2 Proソリューションの特長</h2>
+      
+      <h3>■ 特徴の少ない環境でも安定した性能</h3>
+      <p>LiDARとビジュアルセンサーの融合による「Multi-SLAM」で、人工的な特徴点を設けずとも自己位置を正確に推定。ズレのない高精度な成果物を確実に生成します。</p>
+      
+      <h3>■ 軽量・狭所最適設計</h3>
+      <p>Lixel L2 Proは手持ち型で、機材設置の手間や再配置が不要。狭い管路内でも構造物全体をシームレスにスキャンでき、従来のトータルステーションでは困難だった場所でも活躍します。</p>
+      
+      <h3>■ ソフトウェアとの統合による効率化</h3>
+      <p>リアルタイムの点群はその場でモバイルやPCから確認可能。LixelStudioによる後処理も効率化され、RCP形式での出力により、即CAD連携が可能です。</p>
+
+      <img src="${getImagePath('/images/blog/underground-survey-4.gif')}" alt="点群データの可視化" class="w-full rounded-lg my-8" />
+
+      <h2>04｜顧客からの評価</h2>
+      
+      <p>クライアントは、Lixel L2 Proの安定性と高精度に高い評価を寄せています。特に、特徴点の乏しい環境でも信頼できる測定結果を得られる点と、作業効率の向上が好評でした。最終的なデータセットはプロジェクト関係者にも受け入れられ、検収プロセスの迅速化に寄与しました。</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <h3 class="text-lg font-semibold mb-2">まとめ</h3>
+        <p>Lixel L2 Proは、地下インフラ測量に革新をもたらすデバイスです。煩雑な機材設置を不要とし、CAD連携もスムーズな本製品は、従来の測量方法を刷新し、スピード・精度・効率を兼ね備えた新たなスタンダードとして注目を集めています。</p>
+      </div>
+    `
+  },
   'lcc-for-revit-announcement': {
     title: '業界初：XGRIDS、Autodesk DevCon Europe 2025にてRevit向けAI搭載「LCC for Revit」プラグインを発表',
     date: '2025-05-21',

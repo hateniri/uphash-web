@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    id: 'underground-utility-corridor',
+    title: '都市の「ライフライン」を可視化：Lixel L2 Proが全長8kmの地下管路調査を支援',
+    date: '2025-02-21',
+    category: '導入事例',
+    excerpt: '中国・寧波市の全長8km地下管路において、Lixel L2 Proによる高精度3Dマッピングを実施。狭小空間での効率的な測量と、CADへのシームレスな連携を実現しました。',
+    image: '/images/blog/underground-survey-main.jpg',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=123'
+  },
+  {
     id: 'lcc-for-revit-announcement',
     title: '業界初：XGRIDS、Autodesk DevCon Europe 2025にてRevit向けAI搭載「LCC for Revit」プラグインを発表',
     date: '2025-05-21',
