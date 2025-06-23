@@ -30,7 +30,7 @@ export default function LixelStudioPage() {
                 AI × 3D × 一発変換。
               </p>
               <p className="text-lg mb-8 text-gray-300">
-                Lixel LiDARデバイス専用のオールインワン3Dデータ処理プラットフォーム。
+                Lixel LiDARデバイス専用のオールインワン3Dデータ処理プラットフォーム。点群処理と精度管理に特化。
               </p>
               <div className="flex gap-4">
                 <Link
@@ -393,11 +393,87 @@ export default function LixelStudioPage() {
         </div>
       </section>
 
+      {/* Comparison with LCC Studio */}
+      <section className="py-16 md:py-24 bg-indigo-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Lixel Studio vs LCC Studio</h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-gradient-to-r from-indigo-500 to-purple-600">
+                    <th className="px-6 py-4 text-left text-white font-semibold">比較項目</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Lixel Studio</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">LCC Studio</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">主な用途</td>
+                    <td className="px-6 py-4 text-gray-700">点群処理・測量・精度重視</td>
+                    <td className="px-6 py-4 text-gray-700">3Dモデル化・ビジュアル重視</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">コア技術</td>
+                    <td className="px-6 py-4 text-gray-700">SLAM処理・点群最適化</td>
+                    <td className="px-6 py-4 text-gray-700">3D Gaussian Splatting (3DGS)</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">出力形式</td>
+                    <td className="px-6 py-4 text-gray-700">.e57, .las, .ply（点群）</td>
+                    <td className="px-6 py-4 text-gray-700">.ply, .lcc（フォトリアル3D）</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">特徴的な機能</td>
+                    <td className="px-6 py-4 text-gray-700">狭小エリアモード、RTK精度管理</td>
+                    <td className="px-6 py-4 text-gray-700">HD Enhancement、空撮融合</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">ファイルサイズ</td>
+                    <td className="px-6 py-4 text-gray-700">大容量（精度優先）</td>
+                    <td className="px-6 py-4 text-gray-700">最大90%圧縮（配信最適化）</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">対象ユーザー</td>
+                    <td className="px-6 py-4 text-gray-700">測量士、建設技術者</td>
+                    <td className="px-6 py-4 text-gray-700">建築家、不動産、XR開発者</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-indigo-100 to-blue-100 rounded-xl p-6">
+                <h3 className="font-semibold mb-3 text-indigo-900">Lixel Studioを選ぶべき場合</h3>
+                <ul className="text-sm text-gray-700 space-y-2">
+                  <li>• 高精度な測量データが必要</li>
+                  <li>• 土木・建設現場での活用</li>
+                  <li>• 点群データの詳細な編集・解析</li>
+                  <li>• BIMソフトへの点群インポート</li>
+                </ul>
+              </div>
+              <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-6">
+                <h3 className="font-semibold mb-3 text-purple-900">LCC Studioを選ぶべき場合</h3>
+                <ul className="text-sm text-gray-700 space-y-2">
+                  <li>• フォトリアルな3D表現が必要</li>
+                  <li>• Web共有・VR/AR活用</li>
+                  <li>• 不動産の内覧・プレゼン</li>
+                  <li>• 軽量データでの配信</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">よくある質問（FAQ）</h2>
           <div className="max-w-3xl mx-auto space-y-6">
+            <div className="bg-white rounded-xl shadow-lg p-6">
+              <h4 className="font-semibold mb-2">Q. Lixel StudioとLCC Studioの違いは？</h4>
+              <p className="text-gray-700">A. Lixel Studioは点群処理中心、LCC Studioは3Dモデル化とビジュアル重視です。</p>
+            </div>
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h4 className="font-semibold mb-2">Q. Macには対応していますか？</h4>
               <p className="text-gray-700">A. 現在はWindows版のみ提供しています。</p>
