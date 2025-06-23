@@ -3,7 +3,10 @@
  * @returns The base path for the application
  */
 export function getBasePath(): string {
-  return process.env.NODE_ENV === 'production' ? '/uphash-web' : ''
+  // カスタムドメインを使用する場合は空文字列を返す
+  return ''
+  // GitHub Pages サブディレクトリの場合は以下を使用
+  // return process.env.NODE_ENV === 'production' ? '/uphash-web' : ''
 }
 
 /**
