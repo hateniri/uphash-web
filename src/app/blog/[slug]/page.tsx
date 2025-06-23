@@ -73,6 +73,120 @@ const blogPosts = {
       </div>
     `
   },
+  '3d-gaussian-splatting-webinar': {
+    title: '3D技術の未来を探る：「3D Gaussian Splatting」ウェビナーの注目ポイント10選',
+    date: '2024-12-30',
+    category: 'イベント',
+    author: 'UP HASH Team',
+    image: '/images/blog/3dgs-webinar-main.jpg',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=68',
+    content: `
+      <img src="${getImagePath('/images/blog/3dgs-webinar-main.jpg')}" alt="3D Gaussian Splattingウェビナー" class="w-full rounded-lg mb-8" />
+
+      <h2>はじめに</h2>
+      
+      <p>2024年12月18日、3DISEのMicha Gula氏が主催するウェビナー「Gaussian splatting + SLAM ― 現実を捉える究極のツールとは？」が開催されました。登壇者には、リアリティキャプチャの専門家であるMindy Li（XGRIDS）、Tomas Barnas（Overhead4D）、Michael Rubloff（Radiance Fields）が参加し、急速に進化する3D技術の最前線について貴重な知見が共有されました。</p>
+
+      <div class="bg-gray-100 rounded-lg p-6 my-8">
+        <h3 class="text-lg font-semibold mb-3">こんな方におすすめのセッション</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>最先端の3D技術に興味がある方</li>
+          <li>3D Gaussian Splatting（3DGS）をわかりやすく学びたい方</li>
+          <li>Unreal EngineやUnityでの応用に関心がある方</li>
+          <li>建設・映画・都市計画など、リアルな事例から学びたい方</li>
+        </ul>
+      </div>
+
+      <h2>ウェビナーで語られた10のハイライト</h2>
+
+      <h3>1｜SLAM技術が"伝統"と"革新"をつなぐ架け橋に</h3>
+      
+      <img src="${getImagePath('/images/blog/3dgs-webinar-1.png')}" alt="SLAM技術の説明" class="w-full rounded-lg my-6" />
+      
+      <p>XGRIDSのMindy氏は、SLAMがトータルステーションや航空LiDARといった従来技術と、3DGSのような次世代技術をつなぐ役割を担っていると説明。</p>
+      
+      <blockquote class="border-l-4 border-blue-500 pl-4 my-4 italic">
+        <p>「固定型では対応しきれない現場で、SLAMのリアルタイム性能が真価を発揮します」</p>
+      </blockquote>
+      
+      <p>建設、都市計画、環境モニタリングなど、多様な業界でSLAMが重要なインフラになりつつあります。</p>
+
+      <h3>2｜Gaussian Splattingがもたらす圧倒的なビジュアル品質</h3>
+      
+      <p>Radiance FieldsのRubloff氏は、GSが映画や3Dビジュアライゼーションで「写真のような描写を軽量に実現できる」と解説。</p>
+      
+      <blockquote class="border-l-4 border-blue-500 pl-4 my-4 italic">
+        <p>「特に映画制作のようにビジュアルの精度が命の分野で、GSは革新的です」</p>
+      </blockquote>
+
+      <h3>3｜LiDARは3DGSの精度を支える基盤</h3>
+      
+      <img src="${getImagePath('/images/blog/3dgs-webinar-2.png')}" alt="LiDARと3DGSの連携" class="w-full rounded-lg my-6" />
+      
+      <p>Mindy氏は、LiDARのジオメトリ把握力が3DGSの正確な描画に欠かせないと強調。</p>
+      
+      <blockquote class="border-l-4 border-blue-500 pl-4 my-4 italic">
+        <p>「とくに特徴点の少ない環境では、LiDARの正確さがGSの再現力を引き出します」</p>
+      </blockquote>
+
+      <h3>4｜映画・ゲームの制作ワークフローを一変</h3>
+      
+      <p>Overhead4DのTomas氏は、「従来は数週間かかっていた3Dアセットの生成が数日で完了する」と紹介。<br>
+      LEDウォールやバーチャルプロダクションにおいて、3DGSは圧倒的な効率と品質を両立しています。</p>
+
+      <h3>5｜リアルタイムなフィードバックで制作の試行錯誤が加速</h3>
+      
+      <img src="${getImagePath('/images/blog/3dgs-webinar-3.png')}" alt="リアルタイムフィードバック" class="w-full rounded-lg my-6" />
+      
+      <blockquote class="border-l-4 border-blue-500 pl-4 my-4 italic">
+        <p>「モデルをその場で微調整できることで、反復作業のサイクルが大きく短縮されます」</p>
+      </blockquote>
+      
+      <p>とMindy氏。これはVRやARなど即時性が求められる分野において特に重要です。</p>
+
+      <h3>6｜中小企業にも開かれた3D技術</h3>
+      
+      <p>Rubloff氏は「大企業だけのものではなくなった」と語り、SLAMと3DGSの組み合わせによって、建築・教育・小売などの分野でも小規模チームが高品質な成果を得られる時代が来ていると指摘しました。</p>
+
+      <h3>7｜広範な都市空間も短時間でカバー</h3>
+      
+      <img src="${getImagePath('/images/blog/3dgs-webinar-4.png')}" alt="都市スケールのスキャン" class="w-full rounded-lg my-6" />
+      
+      <p>Tomas氏は、都市スケールのスキャン事例を紹介し、</p>
+      
+      <blockquote class="border-l-4 border-blue-500 pl-4 my-4 italic">
+        <p>「SLAM＋3DGSで大規模環境を迅速かつ高精度に取得できる」</p>
+      </blockquote>
+      
+      <p>と述べました。都市開発、交通設計、災害対応などに不可欠な技術です。</p>
+
+      <h3>8｜データ圧縮で"軽い"3Dモデルをグローバル共有</h3>
+      
+      <p>Mindy氏は「最大90%の圧縮率で、チーム間のデータ共有がスムーズになった」と述べ、遠隔地チームとの連携が大幅に向上した点を紹介しました。</p>
+
+      <h3>9｜制作コストと時間の劇的な削減</h3>
+      
+      <p>Rubloff氏は、「アセット制作時間が半分以下になった事例もある」と語り、映画や不動産業界など、コストに敏感な分野での導入が加速していることを示しました。</p>
+
+      <h3>10｜3D視覚技術が当たり前になる未来へ</h3>
+      
+      <img src="${getImagePath('/images/blog/3dgs-webinar-5.png')}" alt="3D技術の未来" class="w-full rounded-lg my-6" />
+      
+      <p>最後にMicha氏はこう締めくくりました。</p>
+      
+      <blockquote class="border-l-4 border-blue-500 pl-4 my-4 italic">
+        <p>「SLAMと3DGSの統合はまだ始まりに過ぎません。将来、3D視覚は2D画像のように当たり前になるでしょう」</p>
+      </blockquote>
+      
+      <p>AI、ロボティクス、空間コンピューティングなど、多方面への応用が期待されています。</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <h3 class="text-lg font-semibold mb-2">おわりに</h3>
+        <p>これは単なる派手な技術デモではありません。Mindy氏やXGRIDSを含むパネリストたちは、3DGSという先端技術を、現場で使える実用的なツールとして確立しつつあります。<br>
+        今後も、3DGSとSLAMの進化が、3D技術の常識を塗り替えていくことは間違いないでしょう。</p>
+      </div>
+    `
+  },
   'lcc-for-revit-announcement': {
     title: '業界初：XGRIDS、Autodesk DevCon Europe 2025にてRevit向けAI搭載「LCC for Revit」プラグインを発表',
     date: '2025-05-21',
