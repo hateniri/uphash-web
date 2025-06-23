@@ -471,9 +471,13 @@ export default function TutorialsPage() {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 チュートリアル
               </h1>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600 mb-8">
                 Lixelシリーズの使い方を動画で分かりやすく解説。
                 製品別・機能別に整理されたチュートリアルで効率的に学習できます。
+                <br />
+                <span className="text-lg">
+                  弊社のAI技術により、英語の動画を日本語に翻訳して随時アップロード予定です。
+                </span>
               </p>
             </div>
           </div>
