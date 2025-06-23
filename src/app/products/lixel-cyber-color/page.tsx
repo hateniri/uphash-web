@@ -34,15 +34,17 @@ export default function LixelCyberColorPage() {
                 3D Gaussian Splatting（3DGS）をベースにした高精度・高圧縮の写実的3Dモデリングソフト。
               </p>
               <div className="flex gap-4">
-                <Link
-                  href="#download"
+                <a
+                  href="https://xgrids.com/support/download?page=LCCStudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-white text-purple-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
                   </svg>
                   ダウンロード
-                </Link>
+                </a>
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-purple-900 transition-colors"
@@ -165,12 +167,14 @@ export default function LixelCyberColorPage() {
                     ⏬ 約3.8GB
                   </p>
                   <div className="flex gap-4">
-                    <Link
-                      href="/contact"
+                    <a
+                      href="https://xgrids.com/support/download?page=LCCStudio"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
                     >
-                      ダウンロードリンクを取得
-                    </Link>
+                      ダウンロード
+                    </a>
                   </div>
                 </div>
               </div>
@@ -187,12 +191,14 @@ export default function LixelCyberColorPage() {
                 <p className="text-sm text-gray-600 mb-3">
                   基本操作から高度な機能まで詳しく解説
                 </p>
-                <Link
-                  href="/contact"
+                <a
+                  href="https://xgrids.com/support/download?page=LCCStudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-purple-600 hover:text-purple-700 text-sm font-medium"
                 >
                   ダウンロード →
-                </Link>
+                </a>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h4 className="font-semibold mb-2 flex items-center gap-2">
@@ -205,12 +211,14 @@ export default function LixelCyberColorPage() {
                 <p className="text-sm text-gray-600 mb-3">
                   最適なスキャン方法とベストプラクティス
                 </p>
-                <Link
-                  href="/contact"
+                <a
+                  href="https://xgrids.com/support/download?page=LCCStudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-purple-600 hover:text-purple-700 text-sm font-medium"
                 >
                   ダウンロード →
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -576,12 +584,14 @@ export default function LixelCyberColorPage() {
                   <span className="text-gray-700">Web Viewerにも対応（7日間ログインフリー）</span>
                 </li>
               </ul>
-              <Link
-                href="/contact"
+              <a
+                href="https://xgrids.com/support/download?page=LCCViewer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
               >
                 Viewerダウンロード →
-              </Link>
+              </a>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
@@ -601,12 +611,14 @@ export default function LixelCyberColorPage() {
                   <span className="text-gray-700">カメラ同期、点群オーバーレイ</span>
                 </li>
               </ul>
-              <Link
-                href="/contact"
+              <a
+                href="https://xgrids.com/support/download?page=LCCRevit"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
               >
                 Revit用プラグイン →
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -779,12 +791,14 @@ export default function LixelCyberColorPage() {
               </div>
             </div>
             <div className="text-center space-y-4">
-              <Link
-                href="/contact"
+              <a
+                href="https://xgrids.com/support/download?page=LCCStudio"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
               >
                 ソフトウェアを今すぐ入手
-              </Link>
+              </a>
               <div>
                 <Link
                   href="/contact"

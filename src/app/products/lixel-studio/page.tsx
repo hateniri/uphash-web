@@ -33,15 +33,17 @@ export default function LixelStudioPage() {
                 Lixel LiDARデバイス専用のオールインワン3Dデータ処理プラットフォーム。点群処理と精度管理に特化。
               </p>
               <div className="flex gap-4">
-                <Link
-                  href="#download"
+                <a
+                  href="https://xgrids.com/support/download?page=LixelStudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-white text-indigo-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
                   </svg>
                   ダウンロード
-                </Link>
+                </a>
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-indigo-900 transition-colors"
@@ -176,12 +178,14 @@ export default function LixelStudioPage() {
                     ⏬ 約2.2GB
                   </p>
                   <div className="flex gap-4">
-                    <Link
-                      href="/contact"
+                    <a
+                      href="https://xgrids.com/support/download?page=LixelStudio"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                     >
-                      ダウンロードリンクを取得
-                    </Link>
+                      ダウンロード
+                    </a>
                   </div>
                 </div>
               </div>
@@ -198,12 +202,14 @@ export default function LixelStudioPage() {
                 <p className="text-sm text-gray-600 mb-3">
                   基本操作から高度な機能まで詳しく解説
                 </p>
-                <Link
-                  href="/contact"
+                <a
+                  href="https://xgrids.com/support/download?page=LixelStudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-700 text-sm font-medium"
                 >
                   ダウンロード →
-                </Link>
+                </a>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h4 className="font-semibold mb-2 flex items-center gap-2">
@@ -215,12 +221,14 @@ export default function LixelStudioPage() {
                 <p className="text-sm text-gray-600 mb-3">
                   高精度測位のためのRTK設定方法
                 </p>
-                <Link
-                  href="/contact"
+                <a
+                  href="https://xgrids.com/support/download?page=LixelStudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-700 text-sm font-medium"
                 >
                   ダウンロード →
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -379,7 +387,11 @@ export default function LixelStudioPage() {
                   <span className="text-2xl font-bold text-indigo-600">3</span>
                 </div>
                 <h4 className="font-semibold mb-2">コードを申請</h4>
-                <p className="text-sm text-gray-600">アクティベーションコード申請</p>
+                <p className="text-sm text-gray-600">
+                  <a href="https://xgrids.com/activationrequest" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700">
+                    アクティベーションコード申請
+                  </a>
+                </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
