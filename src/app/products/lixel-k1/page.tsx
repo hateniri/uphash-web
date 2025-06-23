@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
 
@@ -35,11 +33,18 @@ export default function LixelK1Page() {
               <p className="text-2xl text-gray-800 font-semibold mb-4">
                 小さいけどパワフル
               </p>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-gray-600 mb-4">
                 片手で持てる1kg未満の超軽量ボディに、
                 プロフェッショナルグレードの性能を凝縮。
                 誰でも簡単に、高精度3Dスキャンを実現します。
               </p>
+              <div className="bg-orange-50 rounded-lg p-4 mb-8">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-gray-600">標準価格</span>
+                  <span className="text-3xl font-bold text-orange-600">190万円</span>
+                  <span className="text-sm text-gray-500">（税別・送料別途）</span>
+                </div>
+              </div>
               <div className="flex gap-4">
                 <button
                   onClick={() => setShowSpecs(true)}
@@ -61,6 +66,31 @@ export default function LixelK1Page() {
                 alt="Lixel K1"
                 className="w-full h-full object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Price Highlight Section */}
+      <section className="py-8 bg-gradient-to-r from-orange-50 to-yellow-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              プロフェッショナル性能を、より手軽に
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="text-3xl font-bold text-orange-600 mb-2">190万円</div>
+                <p className="text-gray-600">標準価格（税別）</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="text-3xl font-bold text-gray-800 mb-2">&lt; 1kg</div>
+                <p className="text-gray-600">超軽量設計</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="text-3xl font-bold text-gray-800 mb-2">32ch</div>
+                <p className="text-gray-600">高精度LiDAR</p>
+              </div>
             </div>
           </div>
         </div>

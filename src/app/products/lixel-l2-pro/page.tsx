@@ -13,7 +13,8 @@ const models = [
     range: '0.5m-120m',
     speed: '320,000点/秒',
     description: 'エントリーレベルのプロフェッショナルモデル',
-    image: '/images/l2pro_product.png'
+    image: '/images/l2pro_product.png',
+    price: '350万円'
   },
   {
     name: 'L2 Pro 32/120',
@@ -21,7 +22,8 @@ const models = [
     range: '0.5m-120m',
     speed: '640,000点/秒',
     description: 'スタンダードモデル、最も人気の構成',
-    image: '/images/l2pro_product.png'
+    image: '/images/l2pro_product.png',
+    price: '550万円'
   },
   {
     name: 'L2 Pro 32/300',
@@ -29,7 +31,8 @@ const models = [
     range: '0.5m-300m',
     speed: '640,000点/秒',
     description: '長距離対応、大規模プロジェクト向け',
-    image: '/images/l2pro_product.png'
+    image: '/images/l2pro_product.png',
+    price: '750万円'
   }
 ]
 
@@ -388,6 +391,13 @@ export default function LixelL2ProPage() {
                       <dd className="font-medium">{model.speed}</dd>
                     </div>
                   </dl>
+                  <div className="mt-6 pt-6 border-t">
+                    <div className="flex justify-between items-baseline">
+                      <dt className="text-gray-500">標準価格</dt>
+                      <dd className="text-2xl font-bold text-blue-600">{model.price}</dd>
+                    </div>
+                    <p className="text-xs text-gray-500 mt-2">※税別・送料別途</p>
+                  </div>
                 </div>
                 <div className="px-8 py-4 bg-gray-50">
                   <Link
