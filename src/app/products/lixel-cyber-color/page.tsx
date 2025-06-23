@@ -31,7 +31,7 @@ export default function LixelCyberColorPage() {
                 "見る" を超えて "没入する" 3Dへ。
               </p>
               <p className="text-lg mb-8 text-gray-200">
-                Lixelのスキャンデータをフォトリアルかつ軽量に変換する次世代3DGSエンジン。
+                3D Gaussian Splatting（3DGS）をベースにした高精度・高圧縮の写実的3Dモデリングソフト。
               </p>
               <div className="flex gap-4">
                 <Link
@@ -101,8 +101,8 @@ export default function LixelCyberColorPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">AI + Gaussian Splatting</h3>
-              <p className="text-gray-600">高速・高精細な3Dモデル生成</p>
+              <h3 className="text-lg font-semibold mb-2">3D Gaussian Splatting</h3>
+              <p className="text-gray-600">高精度・高圧縮の3Dモデル生成</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -128,16 +128,16 @@ export default function LixelCyberColorPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Aerial-Ground Fusion</h3>
-              <p className="text-gray-600">真の屋内外統合モデル</p>
+              <h3 className="text-lg font-semibold mb-2">空撮・地上融合</h3>
+              <p className="text-gray-600">ドローンと地上スキャンの統合</p>
             </div>
           </div>
           <div className="mt-12 text-center">
             <p className="text-gray-700 mb-2">
-              <strong>対応形式：</strong>`.lcc`, `.ply`（独自形式と汎用形式両対応）
+              <strong>出力形式：</strong>`.ply`形式（オープン）、`.lcc`形式（圧縮・軽量）
             </p>
             <p className="text-gray-700">
-              <strong>プラットフォーム：</strong>Windows / Web / LCC Viewer / Revit
+              <strong>対応機能：</strong>Web共有、注釈・測定、モデル編集、衝突判定、アセット追加
             </p>
           </div>
         </div>
@@ -217,6 +217,65 @@ export default function LixelCyberColorPage() {
         </div>
       </section>
 
+      {/* Workflow Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">ワークフロー</h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Step 1 */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-6">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mb-4">
+                    1
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">データ取得</h3>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Lixelスキャナーでスキャン</li>
+                    <li>• RTK対応でWGS84/CSCS2000</li>
+                    <li>• ドローン画像（100～2000枚）</li>
+                  </ul>
+                </div>
+              </div>
+              {/* Step 2 */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-pink-100 to-orange-100 rounded-xl p-6">
+                  <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mb-4">
+                    2
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">モデル生成</h3>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• 単一モデル生成</li>
+                    <li>• マップ融合（最大10件）</li>
+                    <li>• 空撮融合</li>
+                  </ul>
+                </div>
+              </div>
+              {/* Step 3 */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-xl p-6">
+                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold mb-4">
+                    3
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">編集・出力</h3>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• 測定・注釈追加</li>
+                    <li>• 3Dアセット重ね合わせ</li>
+                    <li>• 動画出力（Flythrough）</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 bg-yellow-50 rounded-xl p-6">
+              <p className="text-sm text-gray-700">
+                <span className="font-semibold text-yellow-700">⚠️ 注意：</span>
+                必要なディスク空き容量はスキャンデータの2倍以上。LCC Studioを閉じると処理中断（再開可能）
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Highlight */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,10 +285,13 @@ export default function LixelCyberColorPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                  🛰️ Aerial-Ground Map Fusion
+                  🛰️ 空撮・地上融合（Aerial-Ground Fusion）
                 </h3>
-                <p className="text-lg text-gray-700">
+                <p className="text-lg text-gray-700 mb-2">
                   ドローン空撮と地上スキャンを1つの空間モデルに融合
+                </p>
+                <p className="text-sm text-gray-600">
+                  ※ ドローン画像100～2000枚をWGS84/RTKで取得
                 </p>
               </div>
               <div className="relative bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 overflow-hidden">
@@ -280,10 +342,13 @@ export default function LixelCyberColorPage() {
               </div>
               <div className="order-1 lg:order-2">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                  🖼️ HD Enhancement
+                  🖼️ HDエンハンスメント（HD Enhancement）
                 </h3>
-                <p className="text-lg text-gray-700">
-                  高解像度画像（DSLR/スマホ）を補完合成し、質感を飛躍的に向上
+                <p className="text-lg text-gray-700 mb-2">
+                  一眼レフ/スマホ画像を使った高精細化
+                </p>
+                <p className="text-sm text-gray-600">
+                  高解像度画像を補完合成して質感向上
                 </p>
               </div>
             </div>
@@ -378,6 +443,111 @@ export default function LixelCyberColorPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Editor & Viewer Functions */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Editor & Viewer 機能</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Viewer Functions */}
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                Viewer 機能
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <div>
+                    <span className="font-medium">モデル閲覧</span>
+                    <p className="text-sm text-gray-600">Viewモード、点群表示、透視切替</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <div>
+                    <span className="font-medium">計測機能</span>
+                    <p className="text-sm text-gray-600">距離/面積測定、dx/dy/dzオフセット</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <div>
+                    <span className="font-medium">注釈機能</span>
+                    <p className="text-sm text-gray-600">写真・動画・テキスト・URL挿入</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <div>
+                    <span className="font-medium">表示切替</span>
+                    <p className="text-sm text-gray-600">一人称・ピボット・アバター移動</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            {/* Editor Functions */}
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+                Editor 機能
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <span className="text-pink-600 mr-2 mt-0.5">•</span>
+                  <div>
+                    <span className="font-medium">リアルタイム編集</span>
+                    <p className="text-sm text-gray-600">測定・注釈は自動保存</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-pink-600 mr-2 mt-0.5">•</span>
+                  <div>
+                    <span className="font-medium">Clipping</span>
+                    <p className="text-sm text-gray-600">内部/外部切替、Y軸回転、6面ビュー</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-pink-600 mr-2 mt-0.5">•</span>
+                  <div>
+                    <span className="font-medium">3Dアセット</span>
+                    <p className="text-sm text-gray-600">.fbx/.glb/.objの重ね合わせ</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-pink-600 mr-2 mt-0.5">•</span>
+                  <div>
+                    <span className="font-medium">動画出力</span>
+                    <p className="text-sm text-gray-600">Flythroughで.mp4出力</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* Portal Function */}
+          <div className="mt-8 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl p-6">
+              <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+                ポータル機能
+              </h3>
+              <p className="text-gray-700 mb-2">複数モデル間の空間遷移設定</p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• 最大10モデルまでリンク可能</li>
+                <li>• 離陸点と着地点を設定してモデル間ジャンプ</li>
+                <li>• .lctファイル形式で保存</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -530,27 +700,51 @@ export default function LixelCyberColorPage() {
       {/* System Requirements */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">動作環境</h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-gray-50 rounded-xl p-8">
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="text-purple-600 font-semibold mr-3 min-w-[100px]">OS：</span>
-                  <span className="text-gray-700">Windows 10/11</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-purple-600 font-semibold mr-3 min-w-[100px]">GPU：</span>
-                  <span className="text-gray-700">NVIDIA RTX 3060 以上推奨</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-purple-600 font-semibold mr-3 min-w-[100px]">メモリ：</span>
-                  <span className="text-gray-700">16GB以上（推奨32GB）</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-purple-600 font-semibold mr-3 min-w-[100px]">ストレージ：</span>
-                  <span className="text-gray-700">SSD（高速読込が必要）</span>
-                </li>
-              </ul>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">推奨スペック</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Basic Spec */}
+              <div className="bg-gray-50 rounded-xl p-6">
+                <h3 className="font-semibold mb-4 text-purple-600">基本構成</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-gray-600 font-medium mr-3 min-w-[60px]">OS:</span>
+                    <span className="text-gray-700">Windows 10/11</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-gray-600 font-medium mr-3 min-w-[60px]">CPU:</span>
+                    <span className="text-gray-700">Intel i7 8700K以上</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-gray-600 font-medium mr-3 min-w-[60px]">GPU:</span>
+                    <span className="text-gray-700">RTX 3070以上推奨</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-gray-600 font-medium mr-3 min-w-[60px]">メモリ:</span>
+                    <span className="text-gray-700">64GB以上</span>
+                  </li>
+                </ul>
+              </div>
+              {/* Map Fusion Spec */}
+              <div className="bg-purple-50 rounded-xl p-6">
+                <h3 className="font-semibold mb-4 text-purple-600">Map Fusion向け</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-gray-600 font-medium mr-3 min-w-[60px]">GPU:</span>
+                    <span className="text-gray-700 font-semibold">RTX 4090推奨</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-gray-600 font-medium mr-3 min-w-[60px]">メモリ:</span>
+                    <span className="text-gray-700 font-semibold">96GB～128GB推奨</span>
+                  </li>
+                  <li className="text-sm text-purple-700 mt-4">
+                    ※ データのオーバーラップは15m以上確保
+                  </li>
+                  <li className="text-sm text-purple-700">
+                    ※ 最大10件まで対応
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
