@@ -19,7 +19,6 @@ export const COMPANY_INFO: CompanyInfo = {
 }
 
 export const NAVIGATION_ITEMS: NavItem[] = [
-  { label: 'ホーム', href: '/' },
   { 
     label: 'ハードウェア', 
     href: '/products',
@@ -38,8 +37,27 @@ export const NAVIGATION_ITEMS: NavItem[] = [
       { label: 'Lixel GO', href: '/products/lixel-go' }
     ]
   },
-  { label: '業界別使用例', href: '/case-studies' },
-  { label: 'サポート', href: '/support' },
+  { 
+    label: '業界別使用例', 
+    href: '/case-studies',
+    submenu: [
+      { label: '建設・土木', href: '/case-studies#construction' },
+      { label: '測量・地図作成', href: '/case-studies#surveying' },
+      { label: '不動産・施設管理', href: '/case-studies#real-estate' },
+      { label: '製造業', href: '/case-studies#manufacturing' },
+      { label: '文化財保護', href: '/case-studies#heritage' }
+    ]
+  },
+  { 
+    label: 'サポート', 
+    href: '/support',
+    submenu: [
+      { label: 'ダウンロード', href: '/downloads' },
+      { label: 'チュートリアル', href: '/tutorials' },
+      { label: 'FAQ', href: '/faq' },
+      { label: 'お問い合わせ', href: '/contact' }
+    ]
+  },
   { label: 'お問い合わせ', href: '/contact' }
 ]
 
