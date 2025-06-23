@@ -1,16 +1,14 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'チュートリアル - 操作ガイド・使い方動画 | UP HASH',
-  description: 'Lixelシリーズの操作方法、活用事例、テクニックを動画で分かりやすく解説。初心者から上級者まで役立つチュートリアル集。',
-}
+import { useState } from 'react'
+import Link from 'next/link'
+import { getImagePath } from '@/lib/utils'
 
 const tutorialCategories = [
   {
     id: 'lixel-l2-pro',
     title: 'Lixel L2 Pro',
-    icon: '🔧',
+    icon: '/images/logos/l2-pro-logo.png',
     tutorials: [
       {
         id: 'l2-pro-unboxing',
@@ -18,7 +16,7 @@ const tutorialCategories = [
         description: '製品開封から初回起動までの手順',
         duration: '10分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/l2-pro-unboxing.jpg',
+        thumbnail: '/images/tutorials/lixell2pro/001_Unboxing&Quick Start.jpg',
         videoUrl: '#'
       },
       {
@@ -27,7 +25,7 @@ const tutorialCategories = [
         description: 'デバイスの初期設定とキャリブレーション',
         duration: '15分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/l2-pro-init.jpg',
+        thumbnail: '/images/tutorials/lixell2pro/002_Initialization.jpg',
         videoUrl: '#'
       },
       {
@@ -36,7 +34,7 @@ const tutorialCategories = [
         description: '基本的なスキャン手順と操作方法',
         duration: '20分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/l2-pro-scan.jpg',
+        thumbnail: '/images/tutorials/lixell2pro/003_Standard operation.jpg',
         videoUrl: '#'
       },
       {
@@ -45,7 +43,7 @@ const tutorialCategories = [
         description: '高所や届きにくい場所のスキャン方法',
         duration: '15分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/l2-pro-pole.jpg',
+        thumbnail: '/images/tutorials/lixell2pro/004_Scanning_With_Extension_Pole.jpg',
         videoUrl: '#'
       },
       {
@@ -54,7 +52,7 @@ const tutorialCategories = [
         description: 'ハーネスを使用したハンズフリースキャン',
         duration: '12分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/l2-pro-harness.jpg',
+        thumbnail: '/images/tutorials/lixell2pro/005_The_harness_system.jpg',
         videoUrl: '#'
       },
       {
@@ -63,7 +61,7 @@ const tutorialCategories = [
         description: 'CyberColor用の最適なスキャン方法',
         duration: '18分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/l2-pro-cybercolor.jpg',
+        thumbnail: '/images/tutorials/lixell2pro/006_LCC Scanning Guide.jpg',
         videoUrl: '#'
       }
     ]
@@ -71,7 +69,7 @@ const tutorialCategories = [
   {
     id: 'lixel-k1',
     title: 'Lixel K1',
-    icon: '🎯',
+    icon: '/images/logos/k1-logo.png',
     tutorials: [
       {
         id: 'k1-unboxing',
@@ -79,7 +77,7 @@ const tutorialCategories = [
         description: '製品内容の確認と初期セットアップ',
         duration: '8分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/k1-unboxing.jpg',
+        thumbnail: '/images/tutorials/lixelk1/001_K1 Unboxing.jpg',
         videoUrl: '#'
       },
       {
@@ -88,7 +86,7 @@ const tutorialCategories = [
         description: 'K1の初期設定とキャリブレーション',
         duration: '12分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/k1-init.jpg',
+        thumbnail: '/images/tutorials/lixelk1/002_Initialization.jpg',
         videoUrl: '#'
       },
       {
@@ -97,7 +95,7 @@ const tutorialCategories = [
         description: 'ハンドヘルドスキャンの基本操作',
         duration: '15分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/k1-scan.jpg',
+        thumbnail: '/images/tutorials/lixelk1/003_Standard operation.jpg',
         videoUrl: '#'
       },
       {
@@ -106,7 +104,7 @@ const tutorialCategories = [
         description: 'K1でのCyberColor最適化スキャン',
         duration: '15分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/k1-cybercolor.jpg',
+        thumbnail: '/images/tutorials/lixelk1/004_Scanning Guide.jpg',
         videoUrl: '#'
       }
     ]
@@ -114,7 +112,7 @@ const tutorialCategories = [
   {
     id: 'lixel-studio',
     title: 'Lixel Studio',
-    icon: '💻',
+    icon: '/images/logos/lixel-studio-logo.png',
     tutorials: [
       {
         id: 'studio-installation',
@@ -122,7 +120,7 @@ const tutorialCategories = [
         description: 'ソフトウェアのインストールとライセンス認証',
         duration: '約3分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/studio-install.jpg',
+        thumbnail: '/images/tutorials/lixelstudio/001_Installation and activation.jpg',
         videoUrl: 'https://youtu.be/0JNvQC1UTCI'
       },
       {
@@ -131,7 +129,7 @@ const tutorialCategories = [
         description: 'スキャンデータのインポートと基本表示',
         duration: '約4分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/studio-import.jpg',
+        thumbnail: '/images/tutorials/lixelstudio/002_Loading and viewing data.jpg',
         videoUrl: 'https://youtu.be/NXZMmZ08rhg'
       },
       {
@@ -140,7 +138,7 @@ const tutorialCategories = [
         description: 'UI概要と各ツールの説明',
         duration: '約2分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/studio-interface.jpg',
+        thumbnail: '/images/tutorials/lixelstudio/003_ interface.jpg',
         videoUrl: 'https://youtu.be/k_6wz1cpgCQ'
       },
       {
@@ -149,7 +147,7 @@ const tutorialCategories = [
         description: '点群データの処理とエクスポート',
         duration: '約8分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/studio-processing.jpg',
+        thumbnail: '/images/tutorials/lixelstudio/004_project_processing.jpg',
         videoUrl: 'https://youtu.be/ZBTMlYi_qH0'
       },
       {
@@ -158,7 +156,7 @@ const tutorialCategories = [
         description: 'パノラマ画像とメッシュの生成',
         duration: '約3分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/studio-panorama.jpg',
+        thumbnail: '/images/tutorials/lixelstudio/005_panoramic_overlaya_nd_mesh.jpg',
         videoUrl: 'https://youtu.be/iLzexzgUsWU'
       },
       {
@@ -167,7 +165,7 @@ const tutorialCategories = [
         description: '複数スキャンデータの統合',
         duration: '約4分',
         difficulty: '上級',
-        thumbnail: '/images/tutorials/studio-fusion.jpg',
+        thumbnail: '/images/tutorials/lixelstudio/006_map_fusion.jpg',
         videoUrl: 'https://youtu.be/3MbKMzOfX9I'
       },
       {
@@ -176,7 +174,7 @@ const tutorialCategories = [
         description: '3Dデータからの体積測定',
         duration: '約3分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/studio-volume.jpg',
+        thumbnail: '/images/tutorials/lixelstudio/007_volume calculation.jpg',
         videoUrl: 'https://youtu.be/MpuAvjcr8sY'
       },
       {
@@ -185,7 +183,7 @@ const tutorialCategories = [
         description: '別アプローチでの体積測定',
         duration: '約2分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/studio-volume-alt.jpg',
+        thumbnail: '/images/tutorials/lixelstudio/008_Colume Calculation.jpg',
         videoUrl: 'https://youtu.be/YWctpF2MJjs'
       },
       {
@@ -194,7 +192,7 @@ const tutorialCategories = [
         description: '座標系の変換と位置合わせ',
         duration: '約3分',
         difficulty: '上級',
-        thumbnail: '/images/tutorials/studio-control.jpg',
+        thumbnail: '/images/tutorials/lixelstudio/009_Control Point Transformation.jpg',
         videoUrl: 'https://youtu.be/A6NL6KXXO_Q'
       }
     ]
@@ -202,7 +200,7 @@ const tutorialCategories = [
   {
     id: 'lixel-cybercolor',
     title: 'Lixel CyberColor Studio',
-    icon: '🎨',
+    icon: '/images/logos/lcc-studio-logo.png',
     tutorials: [
       {
         id: 'lcc-quickstart',
@@ -210,7 +208,7 @@ const tutorialCategories = [
         description: 'LCC Studioの基本操作',
         duration: '10分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/lcc-quickstart.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/001_LCC quick start.jpg',
         videoUrl: '#'
       },
       {
@@ -219,7 +217,7 @@ const tutorialCategories = [
         description: '最適なスキャン方法とテクニック',
         duration: '15分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/lcc-scan.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/Scanning Guide.jpg',
         videoUrl: '#'
       },
       {
@@ -228,7 +226,7 @@ const tutorialCategories = [
         description: '空地統合機能の活用',
         duration: '20分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/lcc-fusion.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/002_LCC map fusion.jpg',
         videoUrl: '#'
       },
       {
@@ -237,7 +235,7 @@ const tutorialCategories = [
         description: 'アバターモードの設定と活用',
         duration: '8分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/lcc-avatar.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_avatar.jpg',
         videoUrl: '#'
       },
       {
@@ -246,7 +244,7 @@ const tutorialCategories = [
         description: 'PLYファイルのインポートと変換',
         duration: '10分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/lcc-ply.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_input ply.jpg',
         videoUrl: '#'
       },
       {
@@ -255,7 +253,7 @@ const tutorialCategories = [
         description: '距離・面積・体積の測定',
         duration: '12分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/lcc-measure.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_measure.jpg',
         videoUrl: '#'
       },
       {
@@ -264,7 +262,7 @@ const tutorialCategories = [
         description: '注釈とメモの追加方法',
         duration: '8分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/lcc-notes.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_notes.jpg',
         videoUrl: '#'
       },
       {
@@ -273,7 +271,7 @@ const tutorialCategories = [
         description: 'ピボット機能の使い方',
         duration: '10分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/lcc-pivot.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_pivot mode.jpg',
         videoUrl: '#'
       },
       {
@@ -282,7 +280,7 @@ const tutorialCategories = [
         description: 'プロジェクトの共有と公開',
         duration: '15分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/lcc-publish.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_publish.jpg',
         videoUrl: '#'
       },
       {
@@ -291,7 +289,7 @@ const tutorialCategories = [
         description: '座標系の調整と位置合わせ',
         duration: '18分',
         difficulty: '上級',
-        thumbnail: '/images/tutorials/lcc-align.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_relocate.jpg',
         videoUrl: '#'
       },
       {
@@ -300,7 +298,7 @@ const tutorialCategories = [
         description: '詳細設定とカスタマイズ',
         duration: '10分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/lcc-settings.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_setting.jpg',
         videoUrl: '#'
       },
       {
@@ -309,7 +307,7 @@ const tutorialCategories = [
         description: 'スペースポータル機能の活用',
         duration: '12分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/lcc-portal.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_space porta.jpg',
         videoUrl: '#'
       },
       {
@@ -318,7 +316,7 @@ const tutorialCategories = [
         description: '表示モードとレンダリング設定',
         duration: '10分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/lcc-pointcloud.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_switch to point cloud.jpg',
         videoUrl: '#'
       }
     ]
@@ -326,7 +324,7 @@ const tutorialCategories = [
   {
     id: 'lcc-viewer',
     title: 'LCC Viewer',
-    icon: '👁️',
+    icon: '/images/logos/lcc-viewer-logo.png',
     tutorials: [
       {
         id: 'viewer-avatar',
@@ -334,7 +332,7 @@ const tutorialCategories = [
         description: 'ビューアでのアバターモード',
         duration: '5分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/viewer-avatar.jpg',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_avatar.jpg',
         videoUrl: '#'
       },
       {
@@ -343,7 +341,7 @@ const tutorialCategories = [
         description: 'PLYファイルの表示',
         duration: '8分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/viewer-ply.jpg',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_input ply.jpg',
         videoUrl: '#'
       },
       {
@@ -352,7 +350,7 @@ const tutorialCategories = [
         description: 'ビューアでの測定機能',
         duration: '10分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/viewer-measure.jpg',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_measure.jpg',
         videoUrl: '#'
       },
       {
@@ -361,7 +359,7 @@ const tutorialCategories = [
         description: 'コメントと注釈の追加',
         duration: '6分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/viewer-notes.jpg',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_notes.jpg',
         videoUrl: '#'
       },
       {
@@ -370,7 +368,7 @@ const tutorialCategories = [
         description: 'ビューアでのピボット操作',
         duration: '8分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/viewer-pivot.jpg',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_pivot mode.jpg',
         videoUrl: '#'
       },
       {
@@ -379,7 +377,7 @@ const tutorialCategories = [
         description: 'ビューアでの位置調整',
         duration: '10分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/viewer-align.jpg',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_relocate.jpg',
         videoUrl: '#'
       },
       {
@@ -388,7 +386,7 @@ const tutorialCategories = [
         description: 'ビューア設定のカスタマイズ',
         duration: '5分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/viewer-settings.jpg',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_setting.jpg',
         videoUrl: '#'
       },
       {
@@ -397,7 +395,7 @@ const tutorialCategories = [
         description: 'ポータル機能の使い方',
         duration: '8分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/viewer-portal.jpg',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_space portal.jpg',
         videoUrl: '#'
       },
       {
@@ -406,7 +404,7 @@ const tutorialCategories = [
         description: '表示モードの切り替え',
         duration: '6分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/viewer-pointcloud.jpg',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_switch to point cloud.jpg',
         videoUrl: '#'
       }
     ]
@@ -414,7 +412,7 @@ const tutorialCategories = [
   {
     id: 'lcc-revit',
     title: 'LCC for Revit',
-    icon: '🏗️',
+    icon: '/images/logos/revit-logo.png',
     tutorials: [
       {
         id: 'revit-plugin',
@@ -422,7 +420,7 @@ const tutorialCategories = [
         description: 'RevitでのLCCデータ活用完全ガイド',
         duration: '30分',
         difficulty: '上級',
-        thumbnail: '/images/tutorials/revit-plugin.jpg',
+        thumbnail: '/images/tutorials/revit/lcc for revit tutorial.jpg',
         videoUrl: '#'
       }
     ]
@@ -430,7 +428,7 @@ const tutorialCategories = [
   {
     id: 'lixel-go',
     title: 'Lixel GO',
-    icon: '📱',
+    icon: '/images/logos/lixel-go-logo.png',
     tutorials: [
       {
         id: 'go-activation-scan',
@@ -438,7 +436,7 @@ const tutorialCategories = [
         description: 'Lixel GOアプリの初期設定とスキャン操作',
         duration: '15分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/go-activation.jpg',
+        thumbnail: '/images/tutorials/lixelgo/001_Device activation and scanning.jpg',
         videoUrl: '#'
       }
     ]
@@ -446,19 +444,38 @@ const tutorialCategories = [
 ]
 
 export default function TutorialsPage() {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
+  
+  // YouTubeのvideo IDを抽出する関数
+  const getYouTubeId = (url: string) => {
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^&\n?#]+)/)
+    return match ? match[1] : null
+  }
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 to-white py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              チュートリアル
-            </h1>
-            <p className="text-xl text-gray-600">
-              Lixelシリーズの使い方を動画で分かりやすく解説。
-              製品別・機能別に整理されたチュートリアルで効率的に学習できます。
-            </p>
+      <section className="relative overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${getImagePath('/images/banner.png')})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.15
+          }}
+        />
+        <div className="relative z-10 bg-gradient-to-br from-purple-50/90 to-white/90 py-16 md:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                チュートリアル
+              </h1>
+              <p className="text-xl text-gray-600">
+                Lixelシリーズの使い方を動画で分かりやすく解説。
+                製品別・機能別に整理されたチュートリアルで効率的に学習できます。
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -471,45 +488,64 @@ export default function TutorialsPage() {
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
-              <h2 className="text-3xl font-bold flex items-center gap-3">
-                <span className="text-4xl">{category.icon}</span>
+              <h2 className="text-3xl font-bold flex items-center gap-4">
+                <img 
+                  src={getImagePath(category.icon)} 
+                  alt={category.title}
+                  className="w-12 h-12 object-contain"
+                />
                 {category.title}
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.tutorials.map((tutorial) => (
-                <a
-                  key={tutorial.id}
-                  href={tutorial.videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                >
-                  {/* Video Thumbnail */}
-                  <div className="relative aspect-video bg-gray-200">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="bg-gray-900/80 backdrop-blur-sm rounded-full p-6 hover:bg-gray-900/90 transition-colors cursor-pointer">
-                        <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
+              {category.tutorials.map((tutorial) => {
+                const videoId = getYouTubeId(tutorial.videoUrl)
+                return (
+                  <div
+                    key={tutorial.id}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                    onClick={() => setSelectedVideo(tutorial.videoUrl)}
+                  >
+                    {/* Video Thumbnail */}
+                    <div className="relative aspect-video bg-gray-200">
+                      <img
+                        src={getImagePath(tutorial.thumbnail)}
+                        alt={tutorial.title}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // YouTubeのサムネイルにフォールバック
+                          if (videoId) {
+                            e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+                            e.currentTarget.onerror = () => {
+                              e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+                            }
+                          }
+                        }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="bg-gray-900/80 backdrop-blur-sm rounded-full p-6 hover:bg-gray-900/90 transition-colors">
+                          <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+                        {tutorial.duration}
+                      </div>
+                      <div className={`absolute top-4 left-4 px-3 py-1 rounded text-sm text-white ${
+                        tutorial.difficulty === '初級' ? 'bg-green-600' :
+                        tutorial.difficulty === '中級' ? 'bg-yellow-600' : 'bg-red-600'
+                      }`}>
+                        {tutorial.difficulty}
                       </div>
                     </div>
-                    <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
-                      {tutorial.duration}
-                    </div>
-                    <div className={`absolute top-4 left-4 px-3 py-1 rounded text-sm text-white ${
-                      tutorial.difficulty === '初級' ? 'bg-green-600' :
-                      tutorial.difficulty === '中級' ? 'bg-yellow-600' : 'bg-red-600'
-                    }`}>
-                      {tutorial.difficulty}
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold mb-2">{tutorial.title}</h3>
+                      <p className="text-gray-600">{tutorial.description}</p>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{tutorial.title}</h3>
-                    <p className="text-gray-600">{tutorial.description}</p>
-                  </div>
-                </a>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>
@@ -540,6 +576,37 @@ export default function TutorialsPage() {
           </div>
         </div>
       </section>
+
+      {/* Video Modal */}
+      {selectedVideo && (
+        <div 
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div 
+            className="relative w-full max-w-4xl bg-black rounded-lg overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedVideo(null)}
+              className="absolute top-4 right-4 z-10 bg-gray-900/70 hover:bg-gray-900 text-white rounded-full p-2 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="relative aspect-video">
+              <iframe
+                src={`https://www.youtube.com/embed/${getYouTubeId(selectedVideo)}?autoplay=1`}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   )
 }

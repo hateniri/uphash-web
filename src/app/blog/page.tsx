@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { getImagePath } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'ブログ - 最新技術情報 | UP HASH',
@@ -7,6 +8,15 @@ export const metadata: Metadata = {
 }
 
 const blogPosts = [
+  {
+    id: 'lcc-for-revit-announcement',
+    title: '業界初：XGRIDS、Autodesk DevCon Europe 2025にてRevit向けAI搭載「LCC for Revit」プラグインを発表',
+    date: '2025-05-21',
+    category: '製品発表',
+    excerpt: 'BIMモデリングを70〜90%高速化、センチメートル単位の精度で現場からRevitにリアルタイム連携。SLAMベースの3D Gaussian Splatting技術をAutodesk Revitワークフローに直接統合。',
+    image: '/images/blog/lcc-for-revit.jpg',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=120'
+  },
   {
     id: 'lixel-l1-centimeter-accuracy',
     title: 'Lixel L1ハンドヘルドスキャナー：センチメートル級精度を実現する革新的技術',
@@ -83,7 +93,7 @@ export default function BlogPage() {
                 <Link href={`/blog/${post.id}`}>
                   <div className="relative aspect-video bg-gray-200">
                     <img
-                      src={post.image}
+                      src={getImagePath(post.image)}
                       alt={post.title}
                       className="w-full h-full object-cover"
                     />

@@ -1,9 +1,81 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { getImagePath } from '@/lib/utils'
 
 // ブログ記事のデータ
 const blogPosts = {
+  'lcc-for-revit-announcement': {
+    title: '業界初：XGRIDS、Autodesk DevCon Europe 2025にてRevit向けAI搭載「LCC for Revit」プラグインを発表',
+    date: '2025-05-21',
+    category: '製品発表',
+    author: 'Xgrids Team',
+    image: '/images/blog/lcc-for-revit.jpg',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=120',
+    content: `
+      <p class="lead">〜BIMモデリングを70〜90%高速化、センチメートル単位の精度で現場からRevitにリアルタイム連携〜</p>
+      
+      <p><strong>アムステルダム（オランダ）— 2025年5月21日</strong></p>
+      
+      <p>XGRIDSは、Autodesk DevCon Europe 2025の会場にて、革新的なRevit用プラグイン「LCC for Revit」を正式発表しました。このプラグインは、SLAMベースの3D Gaussian Splatting技術をAutodesk Revitワークフローに直接統合するもので、BIMモデリングにおける作業効率を従来比で70〜90%向上させつつ、測量レベルの精度を保持します。</p>
+
+      <h2>空間インテリジェンスとBIMの融合</h2>
+      
+      <p>建設業界ではAI技術の導入が急速に進んでおり、AutodeskによるAI強化投資（2023年のAutodesk AI発表など）からも、その生産性向上への期待の高さが伺えます。</p>
+      
+      <p>XGRIDSの「LCC for Revit」はこの流れに呼応し、実世界のスキャンデータとBIM設計プロセスを繋ぐ、実用的かつインテリジェントなソリューションです。</p>
+      
+      <blockquote>
+        <p>「建設業界は、スキャン精度とBIM設計意図の両方を理解できるツールを必要としています。LCC for Revitは、まさにその融合をRevitという日常的なツールの中に持ち込むものです。」</p>
+        <cite>— Sunny Liao（XGRIDS グローバルビジネスディレクター）</cite>
+      </blockquote>
+
+      <h2>技術革新による明確な成果</h2>
+      
+      <p>本プラグインの中核には、XGRIDS独自の「Lixel CyberColor（LCC）」技術が組み込まれており、LiDARとビジュアルデータを3D Gaussian Splattingにより統合。フォトリアルな視覚表現と構造的な精度を同時に実現するモデル生成を可能にします。</p>
+      
+      <h3>LCC for Revit の主な特長：</h3>
+      <ul>
+        <li><strong>リアル空間の再現性</strong>：XGRIDS製の空間カメラで取得した1回のスキャンから、視覚的忠実度と構造精度の両立する3Dモデルを自動生成。従来の手動測定工程を不要に。</li>
+        <li><strong>Revitとのリアルタイム連携</strong>：LCCモデルとBIMモデルを即座に整合させ、現場の状況を正確に反映。設計のズレや手戻りを削減。</li>
+        <li><strong>AIによる要素生成</strong>：壁、ドア、窓などの主要要素をワンクリックで生成し、構造意図を保ちつつモデリングを高速化。</li>
+      </ul>
+
+      <h2>実証されたパフォーマンス</h2>
+      
+      <p>各種建築プロジェクトにおける導入実験では、以下のような結果が報告されています：</p>
+      <ul>
+        <li>中規模屋内空間でのBIMモデリング時間が70〜90%短縮</li>
+        <li>全体でセンチメートル単位の精度を安定して保持</li>
+        <li>ビジュアル検証と視点同期による手戻りゼロ</li>
+        <li>問題のリアルタイム検知とその場での修正が可能</li>
+      </ul>
+      
+      <blockquote>
+        <p>「LCC for Revitは空間を単にデジタル化するのではなく、"理解"します。AIは構造関係や階層も把握し、スキャンデータをインテリジェントなBIM要素に変換します。」</p>
+        <cite>— Mindy Li（XGRIDS プロダクトマネージャー）</cite>
+      </blockquote>
+
+      <h2>今後の展望と市場への影響</h2>
+      
+      <p>LCC for Revitは、AutodeskとXGRIDSの共同開発により誕生し、BIMの"成果志向型"トレンドと完全に合致。カーボン削減や建設廃材の最小化といった新たなニーズに応えるための、構造化・文脈化されたデータ基盤を提供します。</p>
+      
+      <h3>提供開始について</h3>
+      <ul>
+        <li>2025年5月末より、Autodesk App Storeを通じて公開予定</li>
+        <li>対応バージョン：Revit 2025以降</li>
+        <li>XGRIDS製ワークフローとシームレスに統合可能</li>
+      </ul>
+      
+      <p>DevCon Europeの会場では、スキャン〜BIM連携までの実演デモを通じて、その即時性と実用性が紹介されています。</p>
+
+      <h2>空間インテリジェンスが変える設計の未来</h2>
+      
+      <p>LCC for Revitは、単なるワークフロー効率化を超え、設計プロセスの本質を変革する可能性を示しています。スキャン精度とパラメトリック設計の知性が共存する新時代の建築ワークフロー。その礎となるのが、このプラグインです。</p>
+      
+      <p>AI技術の浸透により、BIMは"描くもの"から"理解し導くもの"へと進化します。LCC for Revitは、スキャンデータが単なる参考情報ではなく、"設計の知性"として機能することを証明する実例です。</p>
+    `
+  },
   'lixel-l1-centimeter-accuracy': {
     title: 'Lixel L1ハンドヘルドスキャナー：センチメートル級精度を実現する革新的技術',
     date: '2024-12-20',
@@ -373,7 +445,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Featured Image */}
             <div className="mb-12">
               <img
-                src={post.image}
+                src={getImagePath(post.image)}
                 alt={post.title}
                 className="w-full h-auto rounded-xl shadow-lg"
               />
