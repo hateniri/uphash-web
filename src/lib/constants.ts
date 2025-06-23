@@ -34,7 +34,8 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     submenu: [
       { label: 'Lixel Studio', href: '/products/lixel-studio' },
       { label: 'Lixel Cyber Color', href: '/products/lixel-cyber-color' },
-      { label: 'Lixel GO', href: '/products/lixel-go' }
+      { label: 'Lixel GO', href: '/products/lixel-go' },
+      { label: 'LCC for Revit', href: '/products/revit-plugin' }
     ]
   },
   { 

@@ -1,4 +1,5 @@
-User-Agent: *
+User-agent: *
 Allow: /
 
-Sitemap: https://uphash.github.io/uphash-web/sitemap.xml
+# Sitemap
+Sitemap: https://uphash.net/sitemap.xml

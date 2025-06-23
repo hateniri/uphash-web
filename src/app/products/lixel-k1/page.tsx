@@ -71,30 +71,6 @@ export default function LixelK1Page() {
         </div>
       </section>
 
-      {/* Price Highlight Section */}
-      <section className="py-8 bg-gradient-to-r from-orange-50 to-yellow-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              プロフェッショナル性能を、より手軽に
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <div className="text-3xl font-bold text-orange-600 mb-2">190万円</div>
-                <p className="text-gray-600">標準価格（税別）</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <div className="text-3xl font-bold text-gray-800 mb-2">&lt; 1kg</div>
-                <p className="text-gray-600">超軽量設計</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <div className="text-3xl font-bold text-gray-800 mb-2">32ch</div>
-                <p className="text-gray-600">高精度LiDAR</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Easy to Use Section */}
       <section className="py-16 md:py-24 bg-white">

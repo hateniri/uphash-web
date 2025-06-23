@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import ContactForm from '@/components/sections/ContactForm'
+import { getImagePath } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'お問い合わせ | 株式会社UPHASH',
@@ -61,6 +62,50 @@ export default function ContactPage() {
 
       {/* Contact Form Section */}
       <ContactForm />
+
+      {/* Catalog Download Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
+              <h3 className="text-2xl font-bold mb-4">製品カタログのダウンロード</h3>
+              <p className="text-gray-600 mb-8">
+                詳細な製品情報をお求めの方は、以下からカタログをダウンロードいただけます。
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-lg p-6 border border-gray-200">
+                  <h4 className="text-lg font-semibold mb-3">Lixel L2 Pro</h4>
+                  <p className="text-sm text-gray-600 mb-4">プロフェッショナル向け高精度3Dスキャナー</p>
+                  <a
+                    href={getImagePath('/downloads/Lixel-L2Pro-Catalog-JP.pdf')}
+                    download
+                    className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors w-full justify-center"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    カタログをダウンロード
+                  </a>
+                </div>
+                <div className="bg-white rounded-lg p-6 border border-gray-200">
+                  <h4 className="text-lg font-semibold mb-3">Lixel K1</h4>
+                  <p className="text-sm text-gray-600 mb-4">コンパクト＆パワフルなハンドヘルドスキャナー</p>
+                  <a
+                    href={getImagePath('/downloads/Lixel-K1-Catalog-JP.pdf')}
+                    download
+                    className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors w-full justify-center"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    カタログをダウンロード
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Company Info Section */}
       <section className="py-16 bg-gray-50 relative">

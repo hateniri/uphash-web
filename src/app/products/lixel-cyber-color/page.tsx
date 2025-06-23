@@ -11,12 +11,12 @@ export default function LixelCyberColorPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-900 via-pink-800 to-orange-700 text-white py-16 md:py-24">
+      <section className="relative bg-gradient-to-br from-gray-900 to-black text-white py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="mb-4">
-                <span className="inline-block px-3 py-1 text-sm font-medium bg-purple-500 text-white rounded-full">
+                <span className="inline-block px-3 py-1 text-sm font-medium bg-blue-600 text-white rounded-full">
                   Software
                 </span>
               </div>
@@ -27,7 +27,7 @@ export default function LixelCyberColorPage() {
               <p className="text-xl mb-4">
                 フォトリアルな3D空間再構築ソフトウェア
               </p>
-              <p className="text-2xl font-bold mb-8 text-pink-200">
+              <p className="text-2xl font-bold mb-8 text-blue-200">
                 "見る" を超えて "没入する" 3Dへ。
               </p>
               <p className="text-lg mb-8 text-gray-200">
@@ -38,7 +38,7 @@ export default function LixelCyberColorPage() {
                   href="https://xgrids.com/support/download?page=LCCStudio"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-white text-purple-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+                  className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
@@ -47,40 +47,40 @@ export default function LixelCyberColorPage() {
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-purple-900 transition-colors"
+                  className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
                 >
                   お問い合わせ
                 </Link>
               </div>
             </div>
-            <div className="relative bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 rounded-xl p-12 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-orange-500/10"></div>
+            <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-12 flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-gray-500/10"></div>
               <div className="relative text-center">
                 <div className="mb-8">
                   <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-purple-500 blur-3xl opacity-20"></div>
+                    <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-20"></div>
                     <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8">
-                      <svg className="w-32 h-32 text-purple-600 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <svg className="w-32 h-32 text-blue-600 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                       </svg>
                     </div>
                   </div>
                 </div>
                 <div className="space-y-4 max-w-md mx-auto">
-                  <div className="flex items-center justify-center gap-3 text-purple-700">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
+                  <div className="flex items-center justify-center gap-3 text-gray-700">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-lg">AI</span>
                     </div>
                     <span className="text-2xl">+</span>
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-orange-500 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm">3DGS</span>
                     </div>
                   </div>
                   <p className="text-lg font-medium text-gray-700">高速・高精細な3Dモデル生成</p>
                   <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-                    <span className="px-3 py-1 bg-purple-100 rounded-full">90%圧縮</span>
-                    <span className="px-3 py-1 bg-pink-100 rounded-full">フォトリアル</span>
-                    <span className="px-3 py-1 bg-orange-100 rounded-full">リアルタイム</span>
+                    <span className="px-3 py-1 bg-blue-100 rounded-full">90%圧縮</span>
+                    <span className="px-3 py-1 bg-gray-100 rounded-full">フォトリアル</span>
+                    <span className="px-3 py-1 bg-silver-100 rounded-full">リアルタイム</span>
                   </div>
                 </div>
               </div>
@@ -98,8 +98,8 @@ export default function LixelCyberColorPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
@@ -107,8 +107,8 @@ export default function LixelCyberColorPage() {
               <p className="text-gray-600">高精度・高圧縮の3Dモデル生成</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
               </div>
@@ -116,8 +116,8 @@ export default function LixelCyberColorPage() {
               <p className="text-gray-600">リアルタイム再構築</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H6a2 2 0 00-2 2z" />
                 </svg>
               </div>
@@ -125,8 +125,8 @@ export default function LixelCyberColorPage() {
               <p className="text-gray-600">軽量化と高画質を両立</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -153,8 +153,8 @@ export default function LixelCyberColorPage() {
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                     </svg>
                   </div>
@@ -171,7 +171,7 @@ export default function LixelCyberColorPage() {
                       href="https://xgrids.com/support/download?page=LCCStudio"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
+                      className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                     >
                       ダウンロード
                     </a>
@@ -195,7 +195,7 @@ export default function LixelCyberColorPage() {
                   href="https://xgrids.com/support/download?page=LCCStudio"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+                  className="text-blue-600 hover:text-blue-700 text-sm font-medium"
                 >
                   ダウンロード →
                 </a>
@@ -215,7 +215,7 @@ export default function LixelCyberColorPage() {
                   href="https://xgrids.com/support/download?page=LCCStudio"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+                  className="text-blue-600 hover:text-blue-700 text-sm font-medium"
                 >
                   ダウンロード →
                 </a>
@@ -233,8 +233,8 @@ export default function LixelCyberColorPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Step 1 */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-6">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mb-4">
+                <div className="bg-gradient-to-br from-blue-100 to-gray-100 rounded-xl p-6">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mb-4">
                     1
                   </div>
                   <h3 className="text-lg font-semibold mb-2">データ取得</h3>
@@ -247,8 +247,8 @@ export default function LixelCyberColorPage() {
               </div>
               {/* Step 2 */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-pink-100 to-orange-100 rounded-xl p-6">
-                  <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mb-4">
+                <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6">
+                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold mb-4">
                     2
                   </div>
                   <h3 className="text-lg font-semibold mb-2">モデル生成</h3>
@@ -261,8 +261,8 @@ export default function LixelCyberColorPage() {
               </div>
               {/* Step 3 */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-xl p-6">
-                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold mb-4">
+                <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl p-6">
+                  <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold mb-4">
                     3
                   </div>
                   <h3 className="text-lg font-semibold mb-2">編集・出力</h3>
@@ -274,9 +274,9 @@ export default function LixelCyberColorPage() {
                 </div>
               </div>
             </div>
-            <div className="mt-8 bg-yellow-50 rounded-xl p-6">
+            <div className="mt-8 bg-gray-100 rounded-xl p-6">
               <p className="text-sm text-gray-700">
-                <span className="font-semibold text-yellow-700">⚠️ 注意：</span>
+                <span className="font-semibold text-gray-700">⚠️ 注意：</span>
                 必要なディスク空き容量はスキャンデータの2倍以上。LCC Studioを閉じると処理中断（再開可能）
               </p>
             </div>
@@ -328,16 +328,16 @@ export default function LixelCyberColorPage() {
 
             {/* HD Enhancement */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="order-2 lg:order-1 relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 overflow-hidden">
-                <div className="absolute top-0 left-0 w-32 h-32 bg-purple-200 rounded-full -ml-16 -mt-16 opacity-20"></div>
-                <div className="absolute bottom-0 right-0 w-24 h-24 bg-pink-200 rounded-full -mr-12 -mb-12 opacity-20"></div>
+              <div className="order-2 lg:order-1 relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 overflow-hidden">
+                <div className="absolute top-0 left-0 w-32 h-32 bg-blue-200 rounded-full -ml-16 -mt-16 opacity-20"></div>
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-gray-300 rounded-full -mr-12 -mb-12 opacity-20"></div>
                 <div className="relative flex items-center justify-center h-full">
                   <div className="text-center">
                     <div className="mb-4">
                       <div className="relative inline-block">
-                        <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-400 blur-xl opacity-30"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-gray-400 blur-xl opacity-30"></div>
                         <div className="relative w-24 h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto">
-                          <svg className="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                           </svg>
                         </div>
@@ -371,15 +371,15 @@ export default function LixelCyberColorPage() {
                   部屋・壁・開口部を自動抽出し、BIMや図面作成に直結
                 </p>
               </div>
-              <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-green-200 rounded-full -mr-16 -mt-16 opacity-20"></div>
+              <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gray-300 rounded-full -mr-16 -mt-16 opacity-20"></div>
                 <div className="relative flex items-center justify-center h-full">
                   <div className="grid grid-cols-3 gap-2 max-w-xs">
-                    <div className="col-span-3 h-12 bg-green-200 rounded flex items-center justify-center text-xs font-medium text-green-700">壁</div>
-                    <div className="h-20 bg-emerald-200 rounded flex items-center justify-center text-xs font-medium text-emerald-700">部屋1</div>
-                    <div className="h-20 bg-emerald-300 rounded flex items-center justify-center text-xs font-medium text-emerald-800">部屋2</div>
-                    <div className="h-20 bg-emerald-200 rounded flex items-center justify-center text-xs font-medium text-emerald-700">部屋3</div>
-                    <div className="col-span-3 h-8 bg-green-300 rounded flex items-center justify-center text-xs font-medium text-green-800">開口部</div>
+                    <div className="col-span-3 h-12 bg-gray-200 rounded flex items-center justify-center text-xs font-medium text-gray-700">壁</div>
+                    <div className="h-20 bg-gray-200 rounded flex items-center justify-center text-xs font-medium text-gray-700">部屋1</div>
+                    <div className="h-20 bg-gray-300 rounded flex items-center justify-center text-xs font-medium text-gray-800">部屋2</div>
+                    <div className="h-20 bg-gray-200 rounded flex items-center justify-center text-xs font-medium text-gray-700">部屋3</div>
+                    <div className="col-span-3 h-8 bg-gray-300 rounded flex items-center justify-center text-xs font-medium text-gray-800">開口部</div>
                   </div>
                 </div>
               </div>
@@ -387,25 +387,25 @@ export default function LixelCyberColorPage() {
 
             {/* 精密測定 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="order-2 lg:order-1 relative bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8 overflow-hidden">
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-orange-200 rounded-full -ml-16 -mb-16 opacity-20"></div>
+              <div className="order-2 lg:order-1 relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-200 rounded-full -ml-16 -mb-16 opacity-20"></div>
                 <div className="relative flex items-center justify-center h-full">
                   <div className="text-center">
                     <div className="inline-flex items-center gap-2 bg-white rounded-lg shadow-lg px-4 py-2 mb-4">
-                      <span className="text-sm font-mono text-orange-600">dx: 3.24m</span>
+                      <span className="text-sm font-mono text-blue-600">dx: 3.24m</span>
                       <span className="text-gray-400">|</span>
-                      <span className="text-sm font-mono text-red-600">dy: 1.58m</span>
+                      <span className="text-sm font-mono text-gray-600">dy: 1.58m</span>
                       <span className="text-gray-400">|</span>
-                      <span className="text-sm font-mono text-pink-600">dz: 2.41m</span>
+                      <span className="text-sm font-mono text-gray-700">dz: 2.41m</span>
                     </div>
                     <div className="relative">
                       <svg className="w-32 h-32 text-gray-300" viewBox="0 0 100 100">
                         <line x1="10" y1="90" x2="90" y2="90" stroke="currentColor" strokeWidth="2" />
                         <line x1="10" y1="90" x2="10" y2="10" stroke="currentColor" strokeWidth="2" />
                         <line x1="10" y1="90" x2="50" y2="50" stroke="currentColor" strokeWidth="2" />
-                        <circle cx="50" cy="50" r="3" fill="#f97316" />
-                        <circle cx="90" cy="90" r="3" fill="#ef4444" />
-                        <circle cx="10" cy="10" r="3" fill="#ec4899" />
+                        <circle cx="50" cy="50" r="3" fill="#3b82f6" />
+                        <circle cx="90" cy="90" r="3" fill="#6b7280" />
+                        <circle cx="10" cy="10" r="3" fill="#9ca3af" />
                       </svg>
                     </div>
                   </div>
@@ -432,12 +432,12 @@ export default function LixelCyberColorPage() {
                 </p>
               </div>
               <div className="relative bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-8 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-200 rounded-full -mr-16 -mt-16 opacity-20"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full -mr-16 -mt-16 opacity-20"></div>
                 <div className="relative flex items-center justify-center h-full">
                   <div className="text-center">
                     <div className="relative">
-                      <div className="w-32 h-32 border-2 border-dashed border-indigo-300 rounded-lg flex items-center justify-center mb-4">
-                        <svg className="w-16 h-16 text-indigo-200" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="w-32 h-32 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center mb-4">
+                        <svg className="w-16 h-16 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 7a2 2 0 114 0 2 2 0 01-4 0z" />
                         </svg>
                       </div>
@@ -457,14 +457,14 @@ export default function LixelCyberColorPage() {
       </section>
 
       {/* Editor & Viewer Functions */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Editor & Viewer 機能</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Viewer Functions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
@@ -472,28 +472,28 @@ export default function LixelCyberColorPage() {
               </h3>
               <ul className="space-y-2">
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <div>
                     <span className="font-medium">モデル閲覧</span>
                     <p className="text-sm text-gray-600">Viewモード、点群表示、透視切替</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <div>
                     <span className="font-medium">計測機能</span>
                     <p className="text-sm text-gray-600">距離/面積測定、dx/dy/dzオフセット</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <div>
                     <span className="font-medium">注釈機能</span>
                     <p className="text-sm text-gray-600">写真・動画・テキスト・URL挿入</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <div>
                     <span className="font-medium">表示切替</span>
                     <p className="text-sm text-gray-600">一人称・ピボット・アバター移動</p>
@@ -504,35 +504,35 @@ export default function LixelCyberColorPage() {
             {/* Editor Functions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                 </svg>
                 Editor 機能
               </h3>
               <ul className="space-y-2">
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-600 mr-2 mt-0.5">•</span>
                   <div>
                     <span className="font-medium">リアルタイム編集</span>
                     <p className="text-sm text-gray-600">測定・注釈は自動保存</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-600 mr-2 mt-0.5">•</span>
                   <div>
                     <span className="font-medium">Clipping</span>
                     <p className="text-sm text-gray-600">内部/外部切替、Y軸回転、6面ビュー</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-600 mr-2 mt-0.5">•</span>
                   <div>
                     <span className="font-medium">3Dアセット</span>
                     <p className="text-sm text-gray-600">.fbx/.glb/.objの重ね合わせ</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-600 mr-2 mt-0.5">•</span>
                   <div>
                     <span className="font-medium">動画出力</span>
                     <p className="text-sm text-gray-600">Flythroughで.mp4出力</p>
@@ -543,9 +543,9 @@ export default function LixelCyberColorPage() {
           </div>
           {/* Portal Function */}
           <div className="mt-8 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl p-6">
+            <div className="bg-gradient-to-r from-blue-100 to-gray-100 rounded-xl p-6">
               <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
                 ポータル機能
@@ -572,15 +572,15 @@ export default function LixelCyberColorPage() {
               </h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">軽量ビューア（Win/Mac対応）</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">アバターモード、測定、注釈対応</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">Web Viewerにも対応（7日間ログインフリー）</span>
                 </li>
               </ul>
@@ -588,7 +588,7 @@ export default function LixelCyberColorPage() {
                 href="https://xgrids.com/support/download?page=LCCViewer"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
               >
                 Viewerダウンロード →
               </a>
@@ -599,15 +599,15 @@ export default function LixelCyberColorPage() {
               </h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">AIによる壁・開口部の自動BIM生成</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">ワンクリックモデリング</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">カメラ同期、点群オーバーレイ</span>
                 </li>
               </ul>
@@ -615,7 +615,7 @@ export default function LixelCyberColorPage() {
                 href="https://xgrids.com/support/download?page=LCCRevit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
               >
                 Revit用プラグイン →
               </a>
@@ -629,40 +629,40 @@ export default function LixelCyberColorPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">リリース情報（V1.8.0）</h2>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8">
-              <p className="text-lg font-semibold text-purple-900 mb-4">
+            <div className="bg-gradient-to-r from-blue-50 to-gray-50 rounded-xl p-8">
+              <p className="text-lg font-semibold text-gray-900 mb-4">
                 🆕 2025年最新版で以下を追加：
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">空地統合（Aerial-Ground Fusion）</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">HD画質補強</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">空間認識（フロアプラン抽出）</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">dx/dy/dz 表示</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">DirectX 12 対応</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2 mt-0.5">•</span>
+                  <span className="text-blue-600 mr-2 mt-0.5">•</span>
                   <span className="text-gray-700">複数の安定性向上とパフォーマンス最適化</span>
                 </li>
               </ul>
               <div className="mt-6">
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover:text-purple-700 font-medium"
+                  className="text-blue-600 hover:text-blue-700 font-medium"
                 >
                   📄 リリースノート全文はこちら →
                 </Link>
@@ -680,7 +680,7 @@ export default function LixelCyberColorPage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-purple-500 to-pink-600">
+                  <tr className="bg-gradient-to-r from-gray-800 to-black">
                     <th className="px-6 py-4 text-left text-white font-semibold">業界</th>
                     <th className="px-6 py-4 text-left text-white font-semibold">使用例</th>
                   </tr>
@@ -717,7 +717,7 @@ export default function LixelCyberColorPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Basic Spec */}
               <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="font-semibold mb-4 text-purple-600">基本構成</h3>
+                <h3 className="font-semibold mb-4 text-gray-700">基本構成</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-gray-600 font-medium mr-3 min-w-[60px]">OS:</span>
@@ -738,8 +738,8 @@ export default function LixelCyberColorPage() {
                 </ul>
               </div>
               {/* Map Fusion Spec */}
-              <div className="bg-purple-50 rounded-xl p-6">
-                <h3 className="font-semibold mb-4 text-purple-600">Map Fusion向け</h3>
+              <div className="bg-gray-100 rounded-xl p-6">
+                <h3 className="font-semibold mb-4 text-gray-700">Map Fusion向け</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-gray-600 font-medium mr-3 min-w-[60px]">GPU:</span>
@@ -749,10 +749,10 @@ export default function LixelCyberColorPage() {
                     <span className="text-gray-600 font-medium mr-3 min-w-[60px]">メモリ:</span>
                     <span className="text-gray-700 font-semibold">96GB～128GB推奨</span>
                   </li>
-                  <li className="text-sm text-purple-700 mt-4">
+                  <li className="text-sm text-gray-600 mt-4">
                     ※ データのオーバーラップは15m以上確保
                   </li>
-                  <li className="text-sm text-purple-700">
+                  <li className="text-sm text-gray-600">
                     ※ 最大10件まで対応
                   </li>
                 </ul>
@@ -763,28 +763,28 @@ export default function LixelCyberColorPage() {
       </section>
 
       {/* Get Started */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-purple-100 to-pink-100">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-gray-100 to-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">今すぐLCC Studioを体験しよう</h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="text-center">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-2xl font-bold text-purple-600">1</span>
+                  <span className="text-2xl font-bold text-blue-600">1</span>
                 </div>
                 <h4 className="font-semibold mb-2">スキャナーで空間をキャプチャ</h4>
                 <p className="text-sm text-gray-600">Lixelスキャナーで簡単取得</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-2xl font-bold text-purple-600">2</span>
+                  <span className="text-2xl font-bold text-blue-600">2</span>
                 </div>
                 <h4 className="font-semibold mb-2">LCC Studioで自動再構築</h4>
                 <p className="text-sm text-gray-600">AIが高精度に処理</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-2xl font-bold text-purple-600">3</span>
+                  <span className="text-2xl font-bold text-blue-600">3</span>
                 </div>
                 <h4 className="font-semibold mb-2">ViewerやRevitで活用</h4>
                 <p className="text-sm text-gray-600">多様な用途に展開</p>
@@ -795,14 +795,14 @@ export default function LixelCyberColorPage() {
                 href="https://xgrids.com/support/download?page=LCCStudio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
               >
                 ソフトウェアを今すぐ入手
               </a>
               <div>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover:text-purple-700 font-medium"
+                  className="text-blue-600 hover:text-blue-700 font-medium"
                 >
                   法人導入のご相談はこちら →
                 </Link>
@@ -830,17 +830,17 @@ export default function LixelCyberColorPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-600 to-pink-600">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-800 to-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             フォトリアルな3D体験を始めよう
           </h2>
-          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Lixel Cyber Colorで、見るだけでなく没入する3D空間を
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
           >
             お問い合わせ・デモ依頼
           </Link>
