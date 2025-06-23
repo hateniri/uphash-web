@@ -54,8 +54,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     submenu: [
       { label: 'ダウンロード', href: '/downloads' },
       { label: 'チュートリアル', href: '/tutorials' },
-      { label: 'FAQ', href: '/faq' },
-      { label: 'お問い合わせ', href: '/contact' }
+      { label: 'FAQ', href: '/faq' }
     ]
   },
   { label: 'お問い合わせ', href: '/contact' }

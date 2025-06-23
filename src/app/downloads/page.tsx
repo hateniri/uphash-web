@@ -163,7 +163,7 @@ export default function DownloadsPage() {
       {/* Manuals Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12">マニュアル・技術資料</h2>
+          <h2 className="text-3xl font-bold mb-12">日本語マニュアル・技術資料</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {downloads.manuals.map((manual, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
@@ -192,138 +192,6 @@ export default function DownloadsPage() {
         </div>
       </section>
 
-      {/* Software Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12">ソフトウェア</h2>
-          <div className="space-y-8">
-            {downloads.software.map((software, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3">{software.name}</h3>
-                    <p className="text-gray-600 mb-4">{software.description}</p>
-                    <div className="mb-6">
-                      <div className="flex items-center text-sm text-gray-500 mb-2">
-                        <span className="font-medium mr-2">バージョン:</span>
-                        <span>{software.version}</span>
-                      </div>
-                      <div className="flex items-center text-sm text-gray-500 mb-2">
-                        <span className="font-medium mr-2">サイズ:</span>
-                        <span>{software.size}</span>
-                      </div>
-                      <div className="flex items-center text-sm text-gray-500">
-                        <span className="font-medium mr-2">対応OS:</span>
-                        <div className="flex gap-2">
-                          {software.platforms.map((platform) => (
-                            <span key={platform} className="px-2 py-1 bg-gray-100 rounded text-xs">
-                              {platform}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <a
-                      href={software.link}
-                      className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
-                      </svg>
-                      ダウンロード
-                    </a>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-6">
-                    <h4 className="font-semibold mb-4">システム要件</h4>
-                    <dl className="space-y-2 text-sm">
-                      {software.name === 'Lixel GO' ? (
-                        <>
-                          {software.requirements.ios && (
-                            <>
-                              <dt className="font-medium text-gray-700">iOS:</dt>
-                              <dd className="text-gray-600 ml-4">{software.requirements.ios}</dd>
-                            </>
-                          )}
-                          {software.requirements.android && (
-                            <>
-                              <dt className="font-medium text-gray-700">Android:</dt>
-                              <dd className="text-gray-600 ml-4">{software.requirements.android}</dd>
-                            </>
-                          )}
-                          {software.requirements.storage && (
-                            <>
-                              <dt className="font-medium text-gray-700">ストレージ:</dt>
-                              <dd className="text-gray-600 ml-4">{software.requirements.storage}</dd>
-                            </>
-                          )}
-                          {software.requirements.network && (
-                            <>
-                              <dt className="font-medium text-gray-700">ネットワーク:</dt>
-                              <dd className="text-gray-600 ml-4">{software.requirements.network}</dd>
-                            </>
-                          )}
-                        </>
-                      ) : (
-                        <>
-                          <dt className="font-medium text-gray-700">CPU:</dt>
-                          <dd className="text-gray-600 ml-4">{software.requirements.cpu}</dd>
-                          <dt className="font-medium text-gray-700">メモリ:</dt>
-                          <dd className="text-gray-600 ml-4">{software.requirements.ram}</dd>
-                          <dt className="font-medium text-gray-700">GPU:</dt>
-                          <dd className="text-gray-600 ml-4">{software.requirements.gpu}</dd>
-                          <dt className="font-medium text-gray-700">ストレージ:</dt>
-                          <dd className="text-gray-600 ml-4">{software.requirements.storage}</dd>
-                          <dt className="font-medium text-gray-700">OS:</dt>
-                          <dd className="text-gray-600 ml-4">{software.requirements.os}</dd>
-                        </>
-                      )}
-                    </dl>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Plugins Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12">プラグイン・統合ツール</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {downloads.plugins.map((plugin, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold mb-2">{plugin.name}</h3>
-                <p className="text-gray-600 mb-3">{plugin.description}</p>
-                <div className="mb-4">
-                  <div className="text-sm text-gray-500">
-                    <div className="flex items-center mb-1">
-                      <span className="font-medium mr-2">対応:</span>
-                      <span>{plugin.compatibility}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span>v{plugin.version}</span>
-                      <span className="mx-2">•</span>
-                      <span>{plugin.size}</span>
-                      <span className="mx-2">•</span>
-                      <span>{plugin.platforms.join(', ')}</span>
-                    </div>
-                  </div>
-                </div>
-                <a
-                  href={plugin.link}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                >
-                  ダウンロード
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Support Section */}
       <section className="py-16 md:py-24 bg-blue-600">
