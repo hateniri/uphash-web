@@ -19,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/case-studies',
     '/tutorials',
     '/support',
-    '/downloads',
     '/news',
     '/blog',
     '/faq',
