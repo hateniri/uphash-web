@@ -55,42 +55,6 @@ const blogPosts = [
     excerpt: 'Lixel L1は±1.2cmの相対精度と毎秒32万点のスキャン速度を実現。建設、測量、文化財保護など幅広い分野で活用されている次世代3Dスキャナーの技術詳細を解説します。',
     image: '/images/blog/lixel-l1-accuracy.jpg',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=114'
-  },
-  {
-    id: 'lixel-go-1-1-9',
-    title: 'Lixel Go 1.1.9リリース - 3D空間データ取得がさらに簡単に',
-    date: '2024-12-13',
-    category: 'ソフトウェアアップデート',
-    excerpt: 'Lixel Goの最新バージョン1.1.9がリリースされました。このアップデートでは、より効率的な3D空間データの取得と処理が可能になります。',
-    image: '/images/blog/lixel-go-119.jpg',
-    originalUrl: 'https://www.xgrids.com/newsdetails?id=114'
-  },
-  {
-    id: 'vietnam-urbanization',
-    title: 'ベトナムにおける急速な都市化とスマートシティ開発',
-    date: '2024-10-18',
-    category: '市場動向',
-    excerpt: 'ベトナムの都市化率は2045年までに57%に達すると予測されています。この急速な成長に対応するため、スマートシティ技術の導入が進んでいます。',
-    image: '/images/blog/vietnam-urbanization.jpg',
-    originalUrl: 'https://www.xgrids.com/newsdetails?id=96'
-  },
-  {
-    id: 'construction-tech-expo',
-    title: '建設技術博覧会2024 - デジタル建設の未来を展示',
-    date: '2024-09-05',
-    category: 'イベント',
-    excerpt: '建設業界最大の技術展示会で、Xgridsは最新の3Dスキャニング技術とBIM統合ソリューションを発表しました。',
-    image: '/images/blog/construction-expo.jpg',
-    originalUrl: 'https://www.xgrids.com/newsdetails?id=74'
-  },
-  {
-    id: 'lidar-mapping-innovation',
-    title: 'LiDARマッピング技術の革新 - 精度と効率の新基準',
-    date: '2024-08-22',
-    category: '技術解説',
-    excerpt: '最新のLiDAR技術により、従来の5倍の速度で高精度な3Dマッピングが可能になりました。建設、測量、都市計画など幅広い分野での活用が期待されています。',
-    image: '/images/blog/lidar-innovation.jpg',
-    originalUrl: 'https://www.xgrids.com/newsdetails?id=68'
   }
 ]
 

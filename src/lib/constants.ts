@@ -54,10 +54,13 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     href: '/support',
     submenu: [
       { label: 'XGRIDSとは', href: '/about-xgrids' },
+      { label: 'スキャンガイド', href: '/scan-guide' },
+      { label: 'カタログ', href: '/catalog' },
       { label: 'チュートリアル', href: '/tutorials' },
       { label: 'FAQ', href: '/faq' }
     ]
   },
+  { label: 'ブログ', href: '/blog' },
   { label: 'お問い合わせ', href: '/contact' }
 ]
 

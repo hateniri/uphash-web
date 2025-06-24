@@ -13,7 +13,7 @@ export default function AboutXgridsPage() {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-24 md:py-36 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
             <p className="text-lg md:text-xl text-gray-400 mb-6">世界をリードする</p>
@@ -27,7 +27,7 @@ export default function AboutXgridsPage() {
               />
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-6xl font-bold mb-16 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
               3Dインテリジェント空間コンピューティング
             </h1>
             
@@ -50,9 +50,9 @@ export default function AboutXgridsPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 md:py-32 border-t border-gray-800">
+      <section className="py-24 md:py-36 border-t border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-400">ミッション</h2>
               <p className="text-lg md:text-xl text-gray-300">
@@ -70,53 +70,53 @@ export default function AboutXgridsPage() {
       </section>
 
       {/* Team & Technology */}
-      <section className="py-20 md:py-32 border-t border-gray-800">
+      <section className="py-24 md:py-36 border-t border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            私たちのチームと技術
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-20">
+            XGRIDSのチームと技術
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">革新を牽引するチーム</h3>
-              <p className="text-gray-300">
-                研究開発人材の80%が、世界有数のテック企業やトップ大学出身。
+              <h3 className="text-2xl font-bold mb-6 text-blue-400">革新を牽引するチーム</h3>
+              <p className="text-gray-300 leading-relaxed">
+                XGRIDSの研究開発人材の80%が、世界有数のテック企業やトップ大学出身。
                 最先端の技術を実用的なソリューションへと変革しています。
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">次世代テクノロジースタック</h3>
-              <p className="text-gray-300">
-                70件以上の発明特許を保有し、AIベースの空間インテリジェンスエンジン、
+              <h3 className="text-2xl font-bold mb-6 text-purple-400">次世代テクノロジースタック</h3>
+              <p className="text-gray-300 leading-relaxed">
+                XGRIDSは70件以上の発明特許を保有し、AIベースの空間インテリジェンスエンジン、
                 マルチセンサーSLAM、3Dガウシアンスプラッティング技術を駆使。
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-green-400">実績に裏打ちされた信頼性</h3>
-              <p className="text-gray-300">
+              <h3 className="text-2xl font-bold mb-6 text-green-400">実績に裏打ちされた信頼性</h3>
+              <p className="text-gray-300 leading-relaxed">
                 すでに2,000社以上がXGRIDS技術を導入し、測量・建設・文化財保存・
-                デジタルエンターテインメントなど多分野で活用。
+                デジタルエンターテインメントなど多分野で活用されています。
               </p>
             </div>
           </div>
           
-          <p className="text-center text-lg md:text-xl text-gray-300 mt-12 max-w-4xl mx-auto">
-            空間を「見える化」「測定可能化」「理解可能化」することで、
+          <p className="text-center text-lg md:text-xl text-gray-300 mt-16 max-w-4xl mx-auto leading-relaxed">
+            XGRIDSは空間を「見える化」「測定可能化」「理解可能化」することで、
             インテリジェントなデジタルレプリカを実現しています。
           </p>
         </div>
       </section>
 
       {/* Milestones */}
-      <section className="py-20 md:py-32 border-t border-gray-800">
+      <section className="py-24 md:py-36 border-t border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-20">
             マイルストーン
           </h2>
           
-          <div className="max-w-6xl mx-auto mb-16">
+          <div className="max-w-6xl mx-auto mb-20">
             <img 
               src={getImagePath('/images/xgrids-milestones.png')} 
               alt="XGRIDSマイルストーン - 2020年から2024年までの歩み"
@@ -124,8 +124,8 @@ export default function AboutXgridsPage() {
             />
           </div>
           
-          <div className="text-center mb-16">
-            <p className="text-2xl md:text-3xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
+          <div className="text-center mb-20">
+            <p className="text-2xl md:text-3xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
               フィジカルとデジタルの世界をつなぐ架け橋に。
             </p>
             
@@ -141,7 +141,7 @@ export default function AboutXgridsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-32 border-t border-gray-800">
+      <section className="py-24 md:py-36 border-t border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
             XGRIDSで未来の空間体験を
