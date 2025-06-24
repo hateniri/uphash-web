@@ -1,5 +1,16 @@
-User-agent: *
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /*.json$
+
+User-Agent: Googlebot
 Allow: /
 
-# Sitemap
-Sitemap: https://uphash.net/sitemap.xml
+User-Agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+Host: https://xgrids.uphash.net
+Sitemap: https://xgrids.uphash.net/sitemap.xml
