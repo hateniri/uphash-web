@@ -1,0 +1,185 @@
+1:"$Sreact.fragment"
+2:I[9403,["874","static/chunks/874-6c932be8bed200c7.js","177","static/chunks/app/layout-ed47581b972a7481.js"],"default"]
+3:I[7555,[],""]
+4:I[1295,[],""]
+5:I[6874,["874","static/chunks/874-6c932be8bed200c7.js","953","static/chunks/app/blog/%5Bslug%5D/page-53b1e8da73459c76.js"],""]
+7:I[9665,[],"OutletBoundary"]
+a:I[4911,[],"AsyncMetadataOutlet"]
+c:I[9665,[],"ViewportBoundary"]
+e:I[9665,[],"MetadataBoundary"]
+10:I[6614,[],""]
+:HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/c88ee59ee142bb20.css","style"]
+0:{"P":null,"b":"Rbo7mZVZVmE4nTgDr6koz","p":"","c":["","blog","lithium-mica-measurement-revolution"],"i":false,"f":[[["",{"children":["blog",{"children":[["slug","lithium-mica-measurement-revolution","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c88ee59ee142bb20.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ja","className":"__variable_e8ce0c","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}]]}],["$","body",null,{"className":"font-sans antialiased bg-white text-gray-900 min-h-screen","children":[["$","a",null,{"href":"#main-content","className":"sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md","children":"Skip to main content"}],["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","footer",null,{"className":"bg-white text-gray-900 border-t border-gray-200","children":["$","div",null,{"className":"container mx-auto px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"py-12 md:py-16","children":["$","div",null,{"className":"grid grid-cols-1 gap-8 md:grid-cols-4","children":[["$","div",null,{"className":"col-span-1 md:col-span-2","children":[["$","img",null,{"src":"/images/uphash_footer_logo.png","alt":"UP HASHフッターロゴ","className":"h-12 w-auto mb-4"}],["$","p",null,{"className":"text-gray-600 mb-4 max-w-md","children":"XGRIDS Field Scannerで点群データをリアルタイムで表示。空間スキャニングと3Dコンテンツ作成の革新的ソリューション。"}],["$","div",null,{"className":"flex space-x-4","children":[["$","a","twitter",{"href":"https://x.com/UpHashNet","target":"_blank","rel":"noopener noreferrer","className":"text-gray-600 hover:text-gray-900 transition-colors","aria-label":"Follow us on twitter","children":[["$","span",null,{"className":"sr-only","children":"twitter"}],["$","svg",null,{"className":"h-6 w-6","fill":"currentColor","viewBox":"0 0 24 24","children":[["$","path",null,{"d":"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"}],false,false,false,false]}]]}],["$","a","youtube",{"href":"https://www.youtube.com/@UPHASHNET","target":"_blank","rel":"noopener noreferrer","className":"text-gray-600 hover:text-gray-900 transition-colors","aria-label":"Follow us on youtube","children":[["$","span",null,{"className":"sr-only","children":"youtube"}],["$","svg",null,{"className":"h-6 w-6","fill":"currentColor","viewBox":"0 0 24 24","children":[false,["$","path",null,{"d":"M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"}],false,false,false]}]]}],["$","a","github",{"href":"https://github.com/UpHash-Network","target":"_blank","rel":"noopener noreferrer","className":"text-gray-600 hover:text-gray-900 transition-colors","aria-label":"Follow us on github","children":[["$","span",null,{"className":"sr-only","children":"github"}],["$","svg",null,{"className":"h-6 w-6","fill":"currentColor","viewBox":"0 0 24 24","children":[false,false,false,["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}],false]}]]}],["$","a","linkedin",{"href":"https://www.linkedin.com/in/shotaimai/","target":"_blank","rel":"noopener noreferrer","className":"text-gray-600 hover:text-gray-900 transition-colors","aria-label":"Follow us on linkedin","children":[["$","span",null,{"className":"sr-only","children":"linkedin"}],["$","svg",null,{"className":"h-6 w-6","fill":"currentColor","viewBox":"0 0 24 24","children":[false,false,["$","path",null,{"d":"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"}],false,false]}]]}]]}]]}],["$","div",null,{"children":[["$","h4",null,{"className":"text-lg font-semibold mb-4 text-gray-900","children":"Quick Links"}],["$","ul",null,{"className":"space-y-2","children":[[["$","li","/products",{"children":["$","$L5",null,{"href":"/products","className":"text-gray-600 hover:text-gray-900 transition-colors","children":"ハードウェア"}]}],["$","li","/software",{"children":["$","$L5",null,{"href":"/software","className":"text-gray-600 hover:text-gray-900 transition-colors","children":"ソフトウェア"}]}],["$","li","/case-studies",{"children":["$","$L5",null,{"href":"/case-studies","className":"text-gray-600 hover:text-gray-900 transition-colors","children":"事例紹介"}]}],["$","li","/support",{"children":["$","$L5",null,{"href":"/support","className":"text-gray-600 hover:text-gray-900 transition-colors","children":"サポート"}]}]],["$","li",null,{"children":["$","a",null,{"href":"https://uphash.net","target":"_blank","rel":"noopener noreferrer","className":"text-gray-600 hover:text-gray-900 transition-colors","children":"会社概要"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://x.com/i/communities/1933731194157609219","target":"_blank","rel":"noopener noreferrer","className":"text-gray-600 hover:text-gray-900 transition-colors","children":"コミュニティ"}]}],["$","li",null,{"children":["$","$L5",null,{"href":"/blog","className":"text-gray-600 hover:text-gray-900 transition-colors","children":"ブログ"}]}]]}]]}],["$","div",null,{"children":[["$","h4",null,{"className":"text-lg font-semibold mb-4 text-gray-900","children":"Contact Info"}],["$","address",null,{"className":"text-gray-600 not-italic space-y-3","children":[["$","div",null,{"children":[["$","p",null,{"className":"font-medium text-gray-700 mb-1","children":"東京本社"}],["$","p",null,{"children":["〒","105-6415"]}],["$","p",null,{"children":["東京都","港区","虎ノ門１丁目１７−１"]}]]}],["$","div",null,{"children":[["$","p",null,{"className":"font-medium text-gray-700 mb-1","children":"福岡支社"}],["$","p",null,{"children":"〒810-0001"}],["$","p",null,{"children":"福岡県福岡市中央区天神１丁目１１−１"}]]}],["$","div",null,{"className":"pt-2","children":["$","a",null,{"href":"mailto:info@uphash.net","className":"hover:text-gray-900 transition-colors","children":"info@uphash.net"}]}]]}]]}]]}]}],["$","div",null,{"className":"border-t border-gray-200 py-6","children":["$","div",null,{"className":"flex flex-col md:flex-row justify-between items-center","children":[["$","p",null,{"className":"text-gray-600 text-sm","children":["© ",2025," ","株式会社UPHASH",". All rights reserved."]}],["$","div",null,{"className":"mt-4 md:mt-0 flex space-x-6","children":[["$","$L5",null,{"href":"/privacy","className":"text-gray-600 hover:text-gray-900 text-sm transition-colors","children":"Privacy Policy"}],["$","$L5",null,{"href":"/terms","className":"text-gray-600 hover:text-gray-900 text-sm transition-colors","children":"Terms of Service"}]]}]]}]}]]}]}]]}]]}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","lithium-mica-measurement-revolution","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6",null,["$","$L7",null,{"children":["$L8","$L9",["$","$La",null,{"promise":"$@b"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","Il3YgOUeWA_OUStlg1n8-v",{"children":[["$","$Lc",null,{"children":"$Ld"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Le",null,{"children":"$Lf"}]]}],false]],"m":"$undefined","G":["$10","$undefined"],"s":false,"S":true}
+11:"$Sreact.suspense"
+12:I[4911,[],"AsyncMetadata"]
+14:I[8395,["874","static/chunks/874-6c932be8bed200c7.js","953","static/chunks/app/blog/%5Bslug%5D/page-53b1e8da73459c76.js"],"default"]
+f:["$","div",null,{"hidden":true,"children":["$","$11",null,{"fallback":null,"children":["$","$L12",null,{"promise":"$@13"}]}]}]
+15:T2000,
+      <h2>はじめに</h2>
+
+      <p>新エネルギー分野の中核資源として注目されるリチウム。中でも「リチウム雲母」は重要な鉱物資源であり、その採掘・運用の精度は業界全体の効率を左右します。本記事では、中国のリチウム工場における<strong>Lixel携帯型スキャンシステム</strong>の導入事例を紹介します。これにより、リチウム雲母の山積測定がどのように効率化・高精度化されたのかを解説します。</p>
+
+      <img src="/images/blog/lithium-measurement/image_001.webp" alt="リチウム雲母の山積測定現場" class="w-full rounded-lg my-8" />
+
+      <h2>クライアント概要</h2>
+
+      <div class="bg-gray-50 p-6 rounded-lg my-8">
+        <ul class="space-y-2">
+          <li><strong>所在地</strong>：中国</li>
+          <li><strong>業種</strong>：リチウム炭酸塩の製造工場</li>
+          <li><strong>生産能力</strong>：年間20,000トンのバッテリーグレード・リチウム炭酸塩を製造</li>
+          <li><strong>設備</strong>：鉱山採掘、選鉱、リチウム塩製造、リサイクルまでを統合</li>
+        </ul>
+      </div>
+
+      <h2>従来の課題</h2>
+
+      <p>従来の山積測定方法（トータルステーションやGPS/RTK）は、次のような問題を抱えていました：</p>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li>作業が<strong>手間と時間</strong>を要する</li>
+        <li><strong>人為的誤差</strong>が生じやすい</li>
+        <li>計算精度の制限により<strong>生産計画への影響大</strong></li>
+      </ul>
+
+      <h2>導入されたソリューション</h2>
+
+      <h3>使用機材・技術</h3>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <ul class="space-y-2">
+          <li>• <strong>Lixel 携帯型スキャンシステム</strong></li>
+          <li>• <strong>LiDAR + パノラマカメラ + 高精度IMU</strong></li>
+          <li>• <strong>リアルタイムモデリング</strong></li>
+          <li>• <strong>TRW点群処理ソフトウェア</strong></li>
+        </ul>
+      </div>
+
+      <img src="/images/blog/lithium-measurement/image_002.webp" alt="Lixel L2 Proの使用風景" class="w-full rounded-lg my-8" />
+
+      <h2>現場での運用手順</h2>
+
+      <h3>① プランニング</h3>
+
+      <p>スキャン範囲を確認し、<strong>山積体の全体をカバー</strong>するようなスキャンルートを事前に設計。</p>
+
+      <img src="/images/blog/lithium-measurement/image_003.webp" alt="スキャンルート設計図" class="w-full rounded-lg my-8" />
+
+      <h3>② データ収集</h3>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>Lixel L1 / L2 Pro</strong>を使用（延長ロッド付き）</li>
+        <li><strong>リアルタイムプレビュー</strong>により、現場で即座にスキャン範囲やノイズを確認</li>
+        <li><strong>一人作業が可能</strong>で、スキャン中のシャドウノイズも軽減</li>
+      </ul>
+
+      <img src="/images/blog/lithium-measurement/image_004.webp" alt="スキャン作業とリアルタイムプレビュー" class="w-full rounded-lg my-8" />
+
+      <h3>③ ポストプロセッシング</h3>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>LixelStudio</strong>にて点群の整理と山積体のセグメント化</li>
+        <li>自動で<strong>埋め戻し体積・掘削体積</strong>を計算し、レポートとして出力</li>
+      </ul>
+
+      <img src="/images/blog/lithium-measurement/image_005.webp" alt="点群処理と体積計算画面" class="w-full rounded-lg my-8" />
+
+      <h2>測定結果の詳細（Pile 1〜4）</h2>
+
+      <p>以下の画像は、4つのリチウム雲母山に対してスキャンおよび解析した体積・面積データの概要を示しています。</p>
+
+      <img src="/images/blog/lithium-measurement/image_006.webp" alt="Pile 1〜4の測定データ" class="w-full rounded-lg my-8" />
+
+      <h2>導入成果</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✔ 効率性</h3>
+          <p>最長90分のスキャンで<strong>追加設置・校正なし</strong></p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✔ 精度</h3>
+          <p><strong>センチメートル単位の精度</strong>により、測定誤差を大幅に低減</p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✔ 操作性</h3>
+          <p>一体型で<strong>直感的な操作</strong>、リアルタイムで確認しながらスムーズに進行</p>
+        </div>
+      </div>
+
+      <img src="/images/blog/lithium-measurement/image_007.webp" alt="体積レポート画面" class="w-full rounded-lg my-8" />
+
+      <h2>顧客の声</h2>
+
+      <blockquote class="border-l-4 border-blue-500 pl-6 my-8 italic">
+        <p class="text-lg mb-4">「Lixelモバイルスキャニングシステムは、在庫測定の精度と効率性を劇的に改善してくれました。簡単で信頼性も高く、我々の業務の基盤を支える技術です」</p>
+        <cite class="text-sm text-gray-600">—— プロジェクトマネージャー（リチウム工場）</cite>
+      </blockquote>
+
+      <h2>関連製品紹介</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-3">📦 ハードウェア</h3>
+          <ul class="space-y-1 text-gray-700">
+            <li>• Lixel L2 Pro</li>
+            <li>• LixelKit K1</li>
+            <li>• Lixel L2-16 / L2-32</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3">🖥 ソフトウェア</h3>
+          <ul class="space-y-1 text-gray-700">
+            <li>• LixelStudio</li>
+            <li>• Lixel CyberColor</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3">🔌 プラグイン</h3>
+          <ul class="space-y-1 text-gray-700">
+            <li>• LCC for Revit</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>関連業種</h2>
+
+      <div class="flex flex-wrap gap-3 my-6">
+        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full">エネルギー・鉱業</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full">測量・地理空間情報</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full">建築・都市設計</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full">公共安全</span>
+      </div>
+
+      <h2>モデルを確認する</h2>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <p class="font-semibold mb-2">LCC Viewerでモデルを見る</p>
+        <a href="https://lcc-viewer.xgrids.com" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-blue-600 hover:text-blue-800 underline">
+          リチウム雲母山積の3Dモデルを確認
+        </a>
+      </div>
+
+      <img src="/images/blog/lithium-measurement/image_008.webp" alt="LCC Viewer画面" class="w-full rounded-lg my-8" />
+
+      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg my-8">
+        <h3 class="text-xl font-bold mb-4">リチウム資源管理の最適化を実現</h3>
+        <p class="mb-4">Lixelスキャンシステムで、あなたの鉱山・工場の在庫管理を革新しませんか？</p>
+        <a href="/contact" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          導入のご相談はこちら
+        </a>
+      </div>
+    6:["$","main",null,{"className":"min-h-screen","children":[["$","section",null,{"className":"relative bg-gradient-to-br from-gray-900 to-gray-800 py-16 md:py-24","children":["$","div",null,{"className":"container mx-auto px-4 sm:px-6 lg:px-8","children":["$","div",null,{"className":"max-w-4xl mx-auto","children":[["$","div",null,{"className":"mb-6","children":["$","$L5",null,{"href":"/blog","className":"text-gray-400 hover:text-white inline-flex items-center transition-colors","children":[["$","svg",null,{"className":"w-5 h-5 mr-2","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M15 19l-7-7 7-7"}]}],"ブログに戻る"]}]}],["$","span",null,{"className":"inline-block px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium mb-4","children":"導入事例"}],["$","h1",null,{"className":"text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6","children":"リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例"}],["$","div",null,{"className":"flex items-center text-gray-300 space-x-6","children":[["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"className":"w-5 h-5 mr-2","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"}]}],["$","time",null,{"dateTime":"2024-12-27","children":"2024年12月27日"}]]}],["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"className":"w-5 h-5 mr-2","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"}]}],"XGRIDS編集部"]}]]}]]}]}]}],["$","article",null,{"className":"py-16 md:py-24 bg-white","children":["$","div",null,{"className":"container mx-auto px-4 sm:px-6 lg:px-8","children":["$","div",null,{"className":"max-w-4xl mx-auto","children":[["$","div",null,{"className":"mb-12","children":["$","img",null,{"src":"/images/blog/lithium-measurement/image_001.webp","alt":"リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例のメイン画像","className":"w-full h-auto rounded-xl shadow-lg"}]}],["$","div",null,{"className":"mb-12 pb-8 border-b border-gray-200","children":["$","$L14",null,{"url":"https://xgrids.uphash.net/blog/lithium-mica-measurement-revolution","title":"リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例","description":"はじめに\n\n      新エネルギー分野の中核資源として注目されるリチウム。中でも「リチウム雲母」は重要な鉱物資源であり、その採掘・運用の精度は業界全体の効率を左右します。本記事では、中国のリチウム工場におけるLixel携帯型スキャンシステムの導入"}]}],["$","div",null,{"className":"prose prose-lg max-w-none","dangerouslySetInnerHTML":{"__html":"$15"}}],["$","div",null,{"className":"mt-12 p-6 bg-gray-50 rounded-xl","children":[["$","p",null,{"className":"text-gray-600 mb-2","children":"この記事はXgrids社のブログ記事を日本語に翻訳したものです。"}],["$","a",null,{"href":"https://www.xgrids.com/newsdetails?id=105","target":"_blank","rel":"noopener noreferrer","className":"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center","children":["原文を読む（英語）",["$","svg",null,{"className":"w-4 h-4 ml-2","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"}]}]]}]]}],["$","div",null,{"className":"mt-12 pt-8 border-t border-gray-200","children":[["$","p",null,{"className":"text-center text-gray-600 mb-6","children":"この記事が役に立ちましたか？ぜひシェアしてください！"}],["$","div",null,{"className":"flex justify-center","children":["$","$L14",null,{"url":"https://xgrids.uphash.net/blog/lithium-mica-measurement-revolution","title":"リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例","description":"はじめに\n\n      新エネルギー分野の中核資源として注目されるリチウム。中でも「リチウム雲母」は重要な鉱物資源であり、その採掘・運用の精度は業界全体の効率を左右します。本記事では、中国のリチウム工場におけるLixel携帯型スキャンシステムの導入"}]}]]}]]}]}]}],["$","section",null,{"className":"py-16 md:py-24 bg-gray-50","children":["$","div",null,{"className":"container mx-auto px-4 sm:px-6 lg:px-8","children":[["$","h2",null,{"className":"text-3xl font-bold text-center mb-12","children":"関連記事"}],["$","div",null,{"className":"max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8","children":[["$","article","underground-utility-corridor",{"className":"bg-white rounded-xl shadow-lg overflow-hidden","children":[["$","$L5",null,{"href":"/blog/underground-utility-corridor","children":["$","div",null,{"className":"relative aspect-video bg-gray-200","children":["$","img",null,{"src":"/images/blog/optimized/underground-survey-main.webp","alt":"都市の「ライフライン」を可視化：Lixel L2 Proが全長8kmの地下管路調査を支援のサムネイル画像","className":"w-full h-full object-cover"}]}]}],["$","div",null,{"className":"p-6","children":[["$","span",null,{"className":"text-blue-600 text-sm font-medium","children":"導入事例"}],["$","h3",null,{"className":"text-xl font-semibold mt-2 mb-3","children":["$","$L5",null,{"href":"/blog/underground-utility-corridor","className":"hover:text-blue-600 transition-colors","children":"都市の「ライフライン」を可視化：Lixel L2 Proが全長8kmの地下管路調査を支援"}]}],["$","time",null,{"className":"text-gray-500 text-sm","children":"2025年2月21日"}]]}]]}],["$","article","mining-digital-twin",{"className":"bg-white rounded-xl shadow-lg overflow-hidden","children":[["$","$L5",null,{"href":"/blog/mining-digital-twin","children":["$","div",null,{"className":"relative aspect-video bg-gray-200","children":["$","img",null,{"src":"/images/blog/optimized/mining-digital-twin-hero.webp","alt":"地下100メートルでのデジタルツイン：高精度3Dマッピングが鉱山作業を変革するのサムネイル画像","className":"w-full h-full object-cover"}]}]}],["$","div",null,{"className":"p-6","children":[["$","span",null,{"className":"text-blue-600 text-sm font-medium","children":"導入事例"}],["$","h3",null,{"className":"text-xl font-semibold mt-2 mb-3","children":["$","$L5",null,{"href":"/blog/mining-digital-twin","className":"hover:text-blue-600 transition-colors","children":"地下100メートルでのデジタルツイン：高精度3Dマッピングが鉱山作業を変革する"}]}],["$","time",null,{"className":"text-gray-500 text-sm","children":"2025年3月13日"}]]}]]}]]}]]}]}]]}]
+9:null
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+b:{"metadata":[["$","title","0",{"children":"リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例 | 株式会社UPHASH"}],["$","meta","1",{"name":"description","content":"従来の山積測定方法（トータルステーションやGPS/RTK）は、次のような問題を抱えていました："}],["$","meta","2",{"name":"author","content":"株式会社UPHASH"}],["$","meta","3",{"name":"keywords","content":"XGRIDS,Lixel,LiDAR,3Dスキャナー,SLAM,Lixel L2 Pro,Lixel K1,Lixel Studio,Lixel Cyber Color,点群処理,3D計測,測量,UP HASH,日本"}],["$","meta","4",{"name":"creator","content":"株式会社UPHASH"}],["$","meta","5",{"name":"publisher","content":"株式会社UPHASH"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","8",{"name":"category","content":"technology"}],["$","link","9",{"rel":"canonical","href":"https://xgrids.uphash.net/blog/lithium-mica-measurement-revolution"}],["$","meta","10",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","11",{"property":"og:title","content":"リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例"}],["$","meta","12",{"property":"og:description","content":"従来の山積測定方法（トータルステーションやGPS/RTK）は、次のような問題を抱えていました："}],["$","meta","13",{"property":"og:url","content":"https://xgrids.uphash.net/blog/lithium-mica-measurement-revolution"}],["$","meta","14",{"property":"og:site_name","content":"UP HASH"}],["$","meta","15",{"property":"og:locale","content":"ja_JP"}],["$","meta","16",{"property":"og:image","content":"https://xgrids.uphash.net/images/blog/lithium-measurement/image_001.webp"}],["$","meta","17",{"property":"og:image:width","content":"1200"}],["$","meta","18",{"property":"og:image:height","content":"630"}],["$","meta","19",{"property":"og:image:alt","content":"リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例"}],["$","meta","20",{"property":"og:type","content":"article"}],["$","meta","21",{"property":"article:published_time","content":"2024-12-27"}],["$","meta","22",{"property":"article:author","content":"XGRIDS編集部"}],["$","meta","23",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","24",{"name":"twitter:site","content":"@uphash"}],["$","meta","25",{"name":"twitter:creator","content":"@uphash"}],["$","meta","26",{"name":"twitter:title","content":"リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例"}],["$","meta","27",{"name":"twitter:description","content":"従来の山積測定方法（トータルステーションやGPS/RTK）は、次のような問題を抱えていました："}],["$","meta","28",{"name":"twitter:image","content":"https://xgrids.uphash.net/images/blog/lithium-measurement/image_001.webp"}],["$","link","29",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","link","30",{"rel":"icon","href":"/icon.ico?1e3b9dc0c62dade2","type":"image/x-icon","sizes":"100x100"}]],"error":null,"digest":"$undefined"}
+13:{"metadata":"$b:metadata","error":null,"digest":"$undefined"}
