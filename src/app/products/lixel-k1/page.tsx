@@ -63,7 +63,7 @@ export default function LixelK1Page() {
             <div className="relative h-[500px] rounded-xl overflow-hidden">
               <img 
                 src={getImagePath('/images/products/k1/k1_2_1.jpg')} 
-                alt="Lixel K1"
+                alt="Lixel K1超軽量ハンドヘルド3Dスキャナー製品画像"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -133,7 +133,7 @@ export default function LixelK1Page() {
               <div>
                 <img 
                   src={getImagePath('/images/products/k1/k1_3_1.jpg')} 
-                  alt="Lixel K1 Compact Design"
+                  alt="Lixel K1のコンパクトなデザインを示す製品画像"
                   className="w-full rounded-xl shadow-lg"
                 />
               </div>

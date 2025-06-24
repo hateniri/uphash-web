@@ -51,7 +51,7 @@ export default function LixelGoPage() {
             <div className="relative">
               <img 
                 src={getImagePath('/images/products/lixel-go/lixell2pro_4_2_img_6.png')} 
-                alt="Lixel Go App"
+                alt="Lixel Goモバイルアプリの操作画面"
                 className="w-full h-auto rounded-xl shadow-2xl"
               />
             </div>
@@ -87,7 +87,7 @@ export default function LixelGoPage() {
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <img 
                   src={getImagePath('/images/products/lixel-go/lixell2pro_4_2_img_5.png')} 
-                  alt="スキャナー制御画面"
+                  alt="Lixel Goでスキャナーを制御しているアプリ画面"
                   className="w-full h-auto"
                 />
               </div>
@@ -357,7 +357,7 @@ export default function LixelGoPage() {
             <div className="mt-8 relative overflow-hidden rounded-xl shadow-lg">
               <img 
                 src={getImagePath('/images/products/lixel-go/lixell2pro_4_2_img_5.png')} 
-                alt="現場利用風景"
+                alt="現場でLixel Goを使用してスキャン作業を行っている様子"
                 className="w-full h-auto"
               />
             </div>

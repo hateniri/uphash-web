@@ -1,11 +1,15 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'LCC for Revit | 株式会社UPHASH',
-  description: 'AI搭載3D Gaussian Splatting BIMモデリングツール。Scan-to-BIMワークフローを70-90%短縮。',
-}
+export const metadata = generatePageMetadata({
+  title: 'LCC for Revit - AI搭載BIMモデリングツール',
+  description: 'AI搭載3D Gaussian Splatting BIMモデリングツール。Scan-to-BIMワークフローを70-90%短縮。Revit内で直接3DGSモデルを表示・編集。',
+  path: '/products/revit-plugin',
+  image: '/images/logos/revit-logo.png',
+  keywords: ['LCC for Revit', 'Revitプラグイン', 'Scan-to-BIM', '3D Gaussian Splatting', 'BIMモデリング', 'AI BIM']
+})
 
 export default function RevitPluginPage() {
   return (
@@ -162,7 +166,7 @@ export default function RevitPluginPage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-6">
               <img 
                 src={getImagePath('/images/products/revit/ai-bim-generation.jpg')} 
-                alt="AI BIM Generation"
+                alt="AIが壁やドアを自動認識しBIMモデルを生成する様子"
                 className="w-full"
               />
             </div>
@@ -191,7 +195,7 @@ export default function RevitPluginPage() {
             <div className="bg-gray-100 rounded-xl overflow-hidden shadow-lg">
               <img 
                 src={getImagePath('/images/products/revit/realtime-sync.jpg')} 
-                alt="Real-time Sync"
+                alt="RevitとLCCがリアルタイムで同期している画面"
                 className="w-full"
               />
             </div>
@@ -207,7 +211,7 @@ export default function RevitPluginPage() {
               <div className="bg-gray-100 rounded-xl overflow-hidden shadow-lg">
                 <img 
                   src={getImagePath('/images/products/revit/camera-sync.jpg')} 
-                  alt="Camera Sync"
+                  alt="RevitとLCC Viewer間でカメラ位置が同期されている画面"
                   className="w-full"
                 />
               </div>
@@ -241,7 +245,7 @@ export default function RevitPluginPage() {
             <div className="bg-gray-100 rounded-xl overflow-hidden shadow-lg">
               <img 
                 src={getImagePath('/images/products/revit/semantic-grouping.jpg')} 
-                alt="Semantic Grouping"
+                alt="点群データが建築要素ごとに色分けされた3Dモデル"
                 className="w-full"
               />
             </div>

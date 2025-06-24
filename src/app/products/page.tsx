@@ -1,11 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: '製品一覧 - XGRIDS Field Scanner | 株式会社UPHASH',
-  description: 'プロフェッショナル向け3Dレーザースキャナー製品ラインナップ。Lixel L2 Pro、K1、アクセサリーをご紹介。',
-}
+export const metadata: Metadata = generatePageMetadata({
+  title: '製品ラインナップ - ハードウェア',
+  description: 'Lixel L2 Pro・K1などプロフェッショナル向け3Dスキャナー。高精度LiDARと視覚SLAMを融合した次世代スキャニングデバイス。',
+  path: '/products',
+  keywords: ['Lixel L2 Pro', 'Lixel K1', 'ハンドヘルドスキャナー', 'ドローン搭載', '3Dレーザースキャナー']
+})
 
 export default function ProductsPage() {
   return (
@@ -33,7 +36,7 @@ export default function ProductsPage() {
               <div className="h-64 bg-gray-100 flex items-center justify-center">
                 <img 
                   src={getImagePath('/images/l2pro_product.png')} 
-                  alt="Lixel L2 Pro"
+                  alt="Lixel L2 Proプロフェッショナル3Dスキャナー"
                   className="w-full h-full object-contain p-8"
                 />
               </div>
@@ -55,7 +58,7 @@ export default function ProductsPage() {
               <div className="h-64 bg-gray-100 flex items-center justify-center">
                 <img 
                   src={getImagePath('/images/k1_product.png')} 
-                  alt="Lixel K1"
+                  alt="Lixel K1ハンドヘルド3Dスキャナー"
                   className="w-full h-full object-contain p-8"
                 />
               </div>

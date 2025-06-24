@@ -5,10 +5,29 @@ export const revalidate = false
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-    },
-    sitemap: 'https://uphash.github.io/uphash-web/sitemap.xml',
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/admin/',
+          '/_next/',
+          '/*.json$',
+        ],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        crawlDelay: 0,
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+        crawlDelay: 1,
+      },
+    ],
+    sitemap: 'https://xgrids.uphash.net/sitemap.xml',
+    host: 'https://xgrids.uphash.net',
   }
 }

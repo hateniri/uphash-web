@@ -1,11 +1,15 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Lixel Studio - 次世代3D点群処理ソフトウェア | UP HASH',
+export const metadata = generatePageMetadata({
+  title: 'Lixel Studio - 次世代3D点群処理ソフトウェア',
   description: 'AI × 3D × 一発変換。Lixel LiDARデバイス専用のオールインワン3Dデータ処理プラットフォーム。ワンクリック処理、地図融合、パノラマ合成などプロ向け機能を搭載。',
-}
+  path: '/products/lixel-studio',
+  image: '/images/logos/lixel-studio-logo.png',
+  keywords: ['Lixel Studio', '点群処理', '3Dデータ処理', 'AI処理', 'ワンクリック', 'パノラマ合成', '地図融合']
+})
 
 export default function LixelStudioPage() {
   return (

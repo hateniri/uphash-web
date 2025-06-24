@@ -1,11 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'ブログ - 最新技術情報 | UP HASH',
+export const metadata = generatePageMetadata({
+  title: 'ブログ - 最新技術情報',
   description: 'Xgrids社の最新技術情報、製品アップデート、業界トレンドを日本語でお届けします。',
-}
+  path: '/blog',
+  keywords: ['ブログ', '技術情報', '製品アップデート', '業界トレンド', '3Dスキャニング']
+})
 
 const blogPosts = [
   {

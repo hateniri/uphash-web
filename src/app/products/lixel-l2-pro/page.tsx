@@ -100,7 +100,7 @@ export default function LixelL2ProPage() {
             <div className="relative h-[500px] bg-gray-700 rounded-xl overflow-hidden">
               <img 
                 src={getImagePath('/images/lixel_l2_pro.jpg')} 
-                alt="Lixel L2 Pro"
+                alt="Lixel L2 Proプロフェッショナル3Dレーザースキャナー製品画像"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -152,7 +152,7 @@ export default function LixelL2ProPage() {
             <div className="bg-gray-100 rounded-xl p-8">
               <img 
                 src={getImagePath('/images/products/l2pro-pointcloud.jpg')} 
-                alt="高密度点群データ"
+                alt="Lixel L2 Proで取得した高密度点群データの表示例"
                 className="w-full h-auto rounded-lg"
               />
             </div>
@@ -167,7 +167,7 @@ export default function LixelL2ProPage() {
             <div className="order-2 lg:order-1 bg-gray-200 rounded-xl p-8">
               <img 
                 src={getImagePath('/images/products/l2pro-3dgs.jpg')} 
-                alt="3D Gaussian Splatting"
+                alt="3D Gaussian Splatting技術で生成されたフォトリアルな3Dモデル"
                 className="w-full h-auto rounded-lg"
               />
             </div>
@@ -294,7 +294,7 @@ export default function LixelL2ProPage() {
             <div className="bg-gray-200 rounded-xl p-8">
               <img 
                 src={getImagePath('/images/products/l2pro-slam.jpg')} 
-                alt="SLAM性能"
+                alt="Lixel L2 ProのSLAM技術によるリアルタイム地図生成の様子"
                 className="w-full h-auto rounded-lg"
               />
             </div>
@@ -318,7 +318,7 @@ export default function LixelL2ProPage() {
             <div className="bg-gray-100 rounded-xl p-8">
               <img 
                 src={getImagePath('/images/products/l2pro-drone.jpg')} 
-                alt="ドローン搭載"
+                alt="ドローンにLixel L2 Proを搭載した空中スキャンの様子"
                 className="w-full h-auto rounded-lg"
               />
             </div>
@@ -368,7 +368,7 @@ export default function LixelL2ProPage() {
                 <div className="h-48 bg-gray-200">
                   <img 
                     src={getImagePath(model.image)} 
-                    alt={model.name}
+                    alt={`${model.name} 3Dスキャナー製品画像`}
                     className="w-full h-full object-contain p-4"
                   />
                 </div>
@@ -421,7 +421,7 @@ export default function LixelL2ProPage() {
                 <div className="h-40 bg-gray-200">
                   <img 
                     src={getImagePath(accessory.image)} 
-                    alt={accessory.name}
+                    alt={`${accessory.name}アクセサリー製品画像`}
                     className="w-full h-full object-cover"
                   />
                 </div>

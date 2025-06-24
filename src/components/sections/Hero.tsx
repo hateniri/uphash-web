@@ -58,7 +58,7 @@ export default function Hero() {
                     <div className="w-full">
                       <img 
                         src={getImagePath('/images/l2pro_product.png')} 
-                        alt="Lixel L2 Pro Product"
+                        alt="Lixel L2 Pro高精度リアルタイム3Dモデリングデバイス"
                         className="w-full h-auto object-contain"
                       />
                     </div>
@@ -68,7 +68,7 @@ export default function Hero() {
                   <div className="flex justify-center pt-8">
                     <img 
                       src={getImagePath('/images/l2Pro_name_en.png')} 
-                      alt="Lixel L2 Pro Logo"
+                      alt="Lixel L2 Pro製品ロゴ"
                       className="max-w-full h-auto object-contain ml-20"
                     />
                   </div>
@@ -110,7 +110,7 @@ export default function Hero() {
                     <div className="w-full">
                       <img 
                         src={getImagePath('/images/k1_product.png')} 
-                        alt="Lixel K1 Product"
+                        alt="Lixel K1コンパクトハンドヘルド3Dスキャナー"
                         className="w-full h-auto object-contain"
                       />
                     </div>
@@ -120,7 +120,7 @@ export default function Hero() {
                   <div className="flex justify-center pt-8">
                     <img 
                       src={getImagePath('/images/k1_name_en.png')} 
-                      alt="Lixel K1 Logo"
+                      alt="Lixel K1製品ロゴ"
                       className="max-w-full h-auto object-contain ml-20"
                     />
                   </div>

@@ -1,11 +1,15 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Lixel Cyber Color (LCC Studio) - フォトリアルな3D空間再構築ソフトウェア | UP HASH',
+export const metadata = generatePageMetadata({
+  title: 'Lixel Cyber Color (LCC Studio) - フォトリアル3D空間再構築',
   description: '"見る" を超えて "没入する" 3Dへ。Lixelのスキャンデータをフォトリアルかつ軽量に変換する次世代3DGSエンジン。AI + Gaussian Splattingによる高速・高精細な3Dモデル生成。',
-}
+  path: '/products/lixel-cyber-color',
+  image: '/images/logos/lcc-studio-logo.png',
+  keywords: ['Lixel Cyber Color', 'LCC Studio', '3D Gaussian Splatting', 'フォトリアル3D', 'AI処理', '3DGS', '空間再構築']
+})
 
 export default function LixelCyberColorPage() {
   return (

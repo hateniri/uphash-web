@@ -1,10 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'サポート - マニュアル・FAQ・お問い合わせ | 株式会社UPHASH',
-  description: 'Lixelシリーズのサポート情報。マニュアル、FAQ、チュートリアル、技術サポートへのアクセス。',
-}
+export const metadata = generatePageMetadata({
+  title: 'サポート・技術支援',
+  description: 'Lixelシリーズのサポート情報。マニュアル、FAQ、チュートリアル、技術サポートへのアクセス。お困りの際はお気軽にご相談ください。',
+  path: '/support',
+  keywords: ['サポート', '技術支援', 'マニュアル', 'FAQ', 'トラブルシューティング']
+})
 
 export default function SupportPage() {
   return (

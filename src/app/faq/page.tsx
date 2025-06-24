@@ -1,10 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'よくある質問 (FAQ) | UP HASH',
-  description: 'Lixelシリーズに関するよくある質問と回答集。製品仕様、使い方、トラブルシューティングなど。',
-}
+export const metadata = generatePageMetadata({
+  title: 'よくある質問 - FAQ',
+  description: 'XGRIDS製品に関するよくある質問と回答。技術仕様、価格、サポート体制などについて詳しく解説。',
+  path: '/faq',
+  keywords: ['FAQ', 'よくある質問', '技術仕様', 'サポート']
+})
 
 const faqCategories = [
   {

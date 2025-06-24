@@ -495,7 +495,7 @@ export default function TutorialsPage() {
               <h2 className="text-3xl font-bold flex items-center gap-4">
                 <img 
                   src={getImagePath(category.icon)} 
-                  alt={category.title}
+                  alt={`${category.title}製品カテゴリーアイコン`}
                   className="w-12 h-12 object-contain"
                 />
                 {category.title}
@@ -514,7 +514,7 @@ export default function TutorialsPage() {
                     <div className="relative aspect-video bg-gray-200">
                       <img
                         src={getImagePath(tutorial.thumbnail)}
-                        alt={tutorial.title}
+                        alt={`${tutorial.title}チュートリアルのサムネイル`}
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           // YouTubeのサムネイルにフォールバック

@@ -1,9 +1,13 @@
 import { Metadata } from 'next'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'プライバシーポリシー | 株式会社UPHASH',
+export const metadata = generatePageMetadata({
+  title: 'プライバシーポリシー',
   description: '株式会社UPHASHのプライバシーポリシーです。お客様の個人情報の取り扱いについて説明しています。',
-}
+  path: '/privacy',
+  keywords: ['プライバシーポリシー', '個人情報保護', '情報セキュリティ'],
+  noindex: true
+})
 
 export default function PrivacyPage() {
   return (

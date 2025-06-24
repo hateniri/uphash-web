@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { COMPANY_INFO, SOCIAL_LINKS } from './constants'
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://uphash.net'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://xgrids.uphash.net'
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(baseUrl),

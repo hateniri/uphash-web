@@ -1,11 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { newsPosts } from '@/lib/news'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'ニュース - XGRIDS製品情報・イベント | UP HASH',
+export const metadata = generatePageMetadata({
+  title: 'ニュース - 製品情報・イベント',
   description: 'XGRIDS製品の最新情報、技術アップデート、イベント情報をお届けします。',
-}
+  path: '/news',
+  keywords: ['ニュース', '製品情報', 'イベント', 'アップデート', '新製品']
+})
 
 const categoryLabels = {
   product: '製品情報',

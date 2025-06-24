@@ -1,12 +1,9 @@
-import { Metadata } from 'next'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Lixel L2 Pro - プロフェッショナル3D LiDARスキャナー | XGRIDS',
-  description: 'XGRIDS Lixel L2 Pro - シリーズ最上位モデル。32チャンネルLiDAR、300m測定範囲、SLAM技術搭載。建設・測量・インフラ点検に最適な高精度3Dスキャナー。',
-  keywords: 'Lixel L2 Pro, XGRIDS, LiDAR, 3Dスキャナー, SLAM, 点群, 測量, 建設, BIM, 高精度測定',
-  openGraph: {
-    title: 'Lixel L2 Pro - プロフェッショナル3D LiDARスキャナー',
-    description: 'XGRIDS最上位モデル。32チャンネルLiDAR搭載、最大300m測定可能。',
-    images: ['/images/l2pro_product.png'],
-  },
-}
+export const metadata = generatePageMetadata({
+  title: 'Lixel L2 Pro - プロフェッショナル3Dスキャナー',
+  description: 'シリーズ最上位モデル。16/120、32/120、32/300の3モデルをラインナップ。高精度LiDARと視覚SLAMを融合し、建設・測量・インフラ点検に最適な次世代スキャニングデバイス。',
+  path: '/products/lixel-l2-pro',
+  image: '/images/l2pro_product.png',
+  keywords: ['Lixel L2 Pro', 'プロフェッショナルスキャナー', '高精度LiDAR', 'SLAM技術', '建設DX', 'インフラ点検']
+})

@@ -1,11 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import AccessoryCard from '@/components/products/AccessoryCard'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'オプションパーツ・アクセサリー | 株式会社UPHASH',
+export const metadata = generatePageMetadata({
+  title: 'オプションパーツ・アクセサリー',
   description: 'Lixelシリーズ用のオプションパーツとアクセサリー。RTKキット、バッテリー、マウント、保護ケースなど、作業効率を向上させる豊富なラインナップ。',
-}
+  path: '/products/accessories',
+  keywords: ['アクセサリー', 'RTKキット', 'バッテリー', 'マウント', '保護ケース', 'オプションパーツ']
+})
 
 const accessories = [
   {

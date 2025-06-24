@@ -1,9 +1,13 @@
 import Hero from '@/components/sections/Hero'
 import ContactForm from '@/components/sections/ContactForm'
+import StructuredData, { organizationSchema, websiteSchema } from '@/components/StructuredData'
 
 export default function Home() {
   return (
-    <main id="main-content">
+    <>
+      <StructuredData data={organizationSchema} />
+      <StructuredData data={websiteSchema} />
+      <main id="main-content">
       {/* ヒーローセクション */}
       <Hero />
       
@@ -188,5 +192,6 @@ export default function Home() {
       {/* お問い合わせセクション */}
       <ContactForm />
     </main>
+    </>
   )
 }

@@ -1,11 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'ソフトウェア | 株式会社UPHASH',
-  description: 'Lixelスキャナー用ソフトウェア製品。Lixel Studio、Lixel Cyber Color、Lixel GOをご紹介。',
-}
+export const metadata = generatePageMetadata({
+  title: 'ソフトウェアソリューション',
+  description: 'Lixel Studio・Lixel GO・LCC for Revitなど、点群処理から3DGS生成まで統合されたソフトウェアエコシステム。',
+  path: '/software',
+  keywords: ['Lixel Studio', 'Lixel GO', '点群処理ソフト', 'Revitプラグイン']
+})
 
 export default function SoftwarePage() {
   return (
@@ -38,7 +41,7 @@ export default function SoftwarePage() {
                   <div className="h-48 bg-gray-100 flex items-center justify-center p-8">
                     <img 
                       src={getImagePath('/images/logos/lixel-studio-logo.png')} 
-                      alt="Lixel Studio"
+                      alt="Lixel Studio点群処理ソフトウェアロゴ"
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>
@@ -71,7 +74,7 @@ export default function SoftwarePage() {
                   <div className="h-48 bg-gray-100 flex items-center justify-center p-8">
                     <img 
                       src={getImagePath('/images/logos/lcc-studio-logo.png')} 
-                      alt="Lixel Cyber Color Studio"
+                      alt="Lixel Cyber Color Studio 3D再構築ソフトウェアロゴ"
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>
@@ -101,7 +104,7 @@ export default function SoftwarePage() {
                   <div className="h-48 bg-gray-100 flex items-center justify-center p-8">
                     <img 
                       src={getImagePath('/images/logos/lixel-go-logo.png')} 
-                      alt="Lixel GO"
+                      alt="Lixel GOモバイルアプリロゴ"
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>
@@ -141,7 +144,7 @@ export default function SoftwarePage() {
                   <div className="w-24 h-24 bg-gray-100 rounded-xl flex items-center justify-center p-4 mr-6">
                     <img 
                       src={getImagePath('/images/logos/lcc-viewer-logo.png')} 
-                      alt="LCC Viewer"
+                      alt="LCC Viewer 3Dモデルビューアーロゴ"
                       className="w-full h-full object-contain"
                     />
                   </div>
@@ -163,7 +166,7 @@ export default function SoftwarePage() {
                     <div className="w-24 h-24 bg-gray-100 rounded-xl flex items-center justify-center p-4 mr-6">
                       <img 
                         src={getImagePath('/images/logos/revit-logo.png')} 
-                        alt="LCC for Revit"
+                        alt="LCC for Revit BIMプラグインロゴ"
                         className="w-full h-full object-contain"
                       />
                     </div>

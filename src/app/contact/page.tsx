@@ -1,11 +1,14 @@
 import { Metadata } from 'next'
 import ContactForm from '@/components/sections/ContactForm'
 import { getImagePath } from '@/lib/utils'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'お問い合わせ | 株式会社UPHASH',
-  description: 'XGRIDS製品に関するお問い合わせ、デモ依頼、技術相談など、お気軽にご連絡ください。',
-}
+export const metadata = generatePageMetadata({
+  title: 'お問い合わせ・無料相談',
+  description: 'XGRIDSの導入相談、デモンストレーション、技術サポートなど、お気軽にお問い合わせください。',
+  path: '/contact',
+  keywords: ['お問い合わせ', '無料相談', 'デモ申込み', '技術サポート']
+})
 
 export default function ContactPage() {
   return (

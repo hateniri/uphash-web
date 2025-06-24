@@ -1,9 +1,13 @@
 import { Metadata } from 'next'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: '利用規約 | 株式会社UPHASH',
+export const metadata = generatePageMetadata({
+  title: '利用規約',
   description: '株式会社UPHASHのウェブサイト利用規約です。',
-}
+  path: '/terms',
+  keywords: ['利用規約', 'サービス利用条件'],
+  noindex: true
+})
 
 export default function TermsPage() {
   return (

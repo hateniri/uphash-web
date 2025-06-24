@@ -47,7 +47,7 @@ export default function ProductShowcase() {
                 {product.image ? (
                   <img 
                     src={getImagePath(product.image)} 
-                    alt={product.name}
+                    alt={`${product.name} 3Dスキャナー製品画像`}
                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 relative z-10 p-4"
                   />
                 ) : (

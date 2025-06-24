@@ -30,7 +30,7 @@ export default function AccessoryCard({
       <div className="aspect-square bg-gray-100 flex items-center justify-center">
         <img 
           src={imgError ? placeholderImage : getImagePath(image)} 
-          alt={name}
+          alt={`${name}アクセサリー製品画像`}
           className="w-full h-full object-contain p-4"
           onError={() => setImgError(true)}
         />

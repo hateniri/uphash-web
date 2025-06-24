@@ -1,11 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: '業界別使用例 | 株式会社UPHASH',
-  description: 'XGRIDSソリューションの業界別活用事例。地形測量、トンネル・インフラ、森林管理、建築BIM、映像制作、公共安全、エネルギー・鉱業など幅広い分野での3Dスキャニング活用をご紹介。',
-}
+export const metadata = generatePageMetadata({
+  title: '業界別使用例・導入事例',
+  description: '建設・土木、測量・地図作成、不動産・施設管理など、様々な業界でのXGRIDS活用事例をご紹介。',
+  path: '/case-studies',
+  keywords: ['導入事例', '建設DX', '測量効率化', 'BIM活用']
+})
 
 const industryUseCases = [
   // 測量・地理空間（Surveying & Geospatial）

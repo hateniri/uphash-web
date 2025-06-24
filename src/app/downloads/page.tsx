@@ -1,11 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'ダウンロード - マニュアル・ソフトウェア | UP HASH',
+export const metadata = generatePageMetadata({
+  title: 'ダウンロード - マニュアル・ソフトウェア',
   description: 'Lixelシリーズのマニュアル、ソフトウェア、技術資料のダウンロードページ。最新版のソフトウェアとドキュメントをご提供。',
-}
+  path: '/downloads',
+  keywords: ['ダウンロード', 'マニュアル', 'ソフトウェア', '技術資料', 'カタログ']
+})
 
 const downloads = {
   manuals: [

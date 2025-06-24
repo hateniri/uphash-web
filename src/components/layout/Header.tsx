@@ -18,7 +18,7 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               <img 
                 src={getImagePath('/images/uphash_logo.png')} 
-                alt={COMPANY_INFO.name} 
+                alt="UP HASH会社ロゴ" 
                 className="h-10 w-auto"
               />
             </Link>

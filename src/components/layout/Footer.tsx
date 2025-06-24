@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="col-span-1 md:col-span-2">
               <img 
                 src={getImagePath('/images/uphash_footer_logo.png')} 
-                alt={COMPANY_INFO.name} 
+                alt="UP HASHフッターロゴ" 
                 className="h-12 w-auto mb-4"
               />
               <p className="text-gray-600 mb-4 max-w-md">

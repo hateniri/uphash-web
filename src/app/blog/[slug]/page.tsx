@@ -801,7 +801,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="mb-12">
               <img
                 src={getImagePath(post.image)}
-                alt={post.title}
+                alt={`${post.title}のメイン画像`}
                 className="w-full h-auto rounded-xl shadow-lg"
               />
             </div>
@@ -845,7 +845,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <div className="relative aspect-video bg-gray-200">
                       <img
                         src={relatedPost.image}
-                        alt={relatedPost.title}
+                        alt={`${relatedPost.title}のサムネイル画像`}
                         className="w-full h-full object-cover"
                       />
                     </div>

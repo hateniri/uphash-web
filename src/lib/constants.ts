@@ -53,6 +53,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     label: 'サポート', 
     href: '/support',
     submenu: [
+      { label: 'XGRIDSとは', href: '/about-xgrids' },
       { label: 'チュートリアル', href: '/tutorials' },
       { label: 'FAQ', href: '/faq' }
     ]
@@ -157,7 +158,7 @@ export const PRODUCTS = [
 
 export const SEO_CONFIG = {
   siteName: 'UP HASH',
-  siteUrl: 'https://uphash.net',
+  siteUrl: 'https://xgrids.uphash.net',
   defaultTitle: 'UP HASH - 空間をスキャンし、コンテンツに変える',
   defaultDescription: 'XGRIDS Field Scannerで点群データをリアルタイムで表示。空間スキャニングと3Dコンテンツ作成の革新的ソリューション。',
   defaultKeywords: 'technology,innovation,software,solutions,business,Japan,Tokyo',
