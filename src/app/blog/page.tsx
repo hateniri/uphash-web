@@ -12,12 +12,30 @@ export const metadata = generatePageMetadata({
 
 const blogPosts = [
   {
+    id: 'lcc-for-revit-announcement',
+    title: '業界初：XGRIDS、Autodesk DevCon Europe 2025にてRevit向けAI搭載「LCC for Revit」プラグインを発表',
+    date: '2025-05-21',
+    category: '製品発表',
+    excerpt: 'BIMモデリングを70〜90%高速化、センチメートル単位の精度で現場からRevitにリアルタイム連携。SLAMベースの3D Gaussian Splatting技術をAutodesk Revitワークフローに直接統合。',
+    image: '/images/blog/optimized/lcc-for-revit.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=120'
+  },
+  {
+    id: 'virtual-preproduction',
+    title: 'バーチャル・プリプロダクションの未来：XGRIDS × Global Objects',
+    date: '2025-05-12',
+    category: 'ケーススタディ',
+    excerpt: '映像制作におけるロケスキャンと3Dプリビズの革新。XGRIDSのLixelスキャナーとGlobal Objectsの事例を紹介します。',
+    image: '/images/blog/optimized/virtual-preproduction-hero.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=109'
+  },
+  {
     id: 'mining-digital-twin',
     title: '地下100メートルでのデジタルツイン：高精度3Dマッピングが鉱山作業を変革する',
     date: '2025-03-13',
     category: '導入事例',
     excerpt: '中国・広東省の石灰岩鉱山で、Lixel L2 ProのMulti-SLAM技術により垂直100m超の坑道や地下河川を含む危険地帯の完全な3Dデジタルツインを実現。測量時間80%短縮と±4.8mmの高精度を達成。',
-    image: '/images/blog/mining-digital-twin-hero.png',
+    image: '/images/blog/optimized/mining-digital-twin-hero.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=96'
   },
   {
@@ -26,17 +44,8 @@ const blogPosts = [
     date: '2025-02-21',
     category: '導入事例',
     excerpt: '中国・寧波市の全長8km地下管路において、Lixel L2 Proによる高精度3Dマッピングを実施。狭小空間での効率的な測量と、CADへのシームレスな連携を実現しました。',
-    image: '/images/blog/underground-survey-main.jpg',
+    image: '/images/blog/optimized/underground-survey-main.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=123'
-  },
-  {
-    id: 'lcc-for-revit-announcement',
-    title: '業界初：XGRIDS、Autodesk DevCon Europe 2025にてRevit向けAI搭載「LCC for Revit」プラグインを発表',
-    date: '2025-05-21',
-    category: '製品発表',
-    excerpt: 'BIMモデリングを70〜90%高速化、センチメートル単位の精度で現場からRevitにリアルタイム連携。SLAMベースの3D Gaussian Splatting技術をAutodesk Revitワークフローに直接統合。',
-    image: '/images/blog/lcc-for-revit.jpg',
-    originalUrl: 'https://www.xgrids.com/newsdetails?id=120'
   },
   {
     id: '3d-gaussian-splatting-webinar',
@@ -44,18 +53,9 @@ const blogPosts = [
     date: '2024-12-30',
     category: 'イベント',
     excerpt: 'XGRIDSのMindy Li氏らが登壇した3DGSとSLAM技術に関するウェビナーから、映画制作、都市計画、建設業界における革新的な活用事例と最新トレンドを紹介します。',
-    image: '/images/blog/3dgs-webinar-main.jpg',
+    image: '/images/blog/optimized/3dgs-webinar-main.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=68'
   },
-  {
-    id: 'lixel-l1-centimeter-accuracy',
-    title: 'Lixel L1ハンドヘルドスキャナー：センチメートル級精度を実現する革新的技術',
-    date: '2024-12-20',
-    category: '製品技術',
-    excerpt: 'Lixel L1は±1.2cmの相対精度と毎秒32万点のスキャン速度を実現。建設、測量、文化財保護など幅広い分野で活用されている次世代3Dスキャナーの技術詳細を解説します。',
-    image: '/images/blog/lixel-l1-accuracy.jpg',
-    originalUrl: 'https://www.xgrids.com/newsdetails?id=114'
-  }
 ]
 
 export default function BlogPage() {

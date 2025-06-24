@@ -10,14 +10,14 @@ const blogPosts = {
     date: '2025-02-21',
     category: '導入事例',
     author: 'UP HASH Team',
-    image: '/images/blog/underground-survey-main.jpg',
+    image: '/images/blog/optimized/underground-survey-main.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=123',
     content: `
       <p class="lead">電力、通信、水道などのインフラを収容する「共同溝（ユーティリティ・コリドー）」は、都市機能を支えるまさに"ライフライン"です。こうした複雑な地下ネットワークは、正確な測量とマッピングが施工・保守の両面で不可欠です。</p>
       
       <p>中国・寧波市で完成した全長8kmの地下管路において、精密な竣工測量が求められました。地中15〜20メートルという深さと、狭小な空間により技術的なハードルは高く、XGRIDSのパートナー企業はLixel L2 Proハンドヘルド3Dスキャナーを導入。高精度なマッピングを可能にし、プロジェクトの検収作業をサポートしました。</p>
 
-      <img src="${getImagePath('/images/blog/underground-survey-1.gif')}" alt="地下管路スキャン作業" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/underground-survey-1.webm')}" alt="地下管路スキャン作業" class="w-full rounded-lg my-8" />
 
       <h2>01｜現場での課題</h2>
       
@@ -30,7 +30,7 @@ const blogPosts = {
       <h3>■ 大規模空間の測量負荷</h3>
       <p>8kmに及ぶ距離を従来方式で測量するには、膨大な人員と時間が必要。また、長距離のSLAM走行では誤差の蓄積による精度低下も懸念されます。</p>
 
-      <img src="${getImagePath('/images/blog/underground-survey-2.gif')}" alt="狭小空間でのスキャニング" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/underground-survey-2.webm')}" alt="狭小空間でのスキャニング" class="w-full rounded-lg my-8" />
 
       <h2>02｜Lixel L2 Proによる解決アプローチ</h2>
       
@@ -40,7 +40,7 @@ const blogPosts = {
       <h3>2. 絶対精度を担保する地上基準点の設置</h3>
       <p>正確な位置合わせのため、レーザー鉛直照射装置を用いて地下に<strong>75点の基準点（100m間隔）</strong>を設置。相対座標をトータルステーションで取得した絶対座標に変換することで、地図としての正確性を担保しました。</p>
 
-      <img src="${getImagePath('/images/blog/underground-survey-3.gif')}" alt="基準点設置作業" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/underground-survey-3.webm')}" alt="基準点設置作業" class="w-full rounded-lg my-8" />
       
       <h3>3. セクション分割による段階的なスキャンと即時検証</h3>
       <p>管路を13のセクションに分割し、各セクションをLixel L2 Proで順にスキャン。カラー点群をリアルタイムで確認し、ズレや抜けのない状態で次工程へ進めました。</p>
@@ -48,7 +48,7 @@ const blogPosts = {
       <h3>4. RCS形式での出力によりCADとのシームレスな連携</h3>
       <p>取得した点群データはLixelStudioで整合処理を行い、カラー点群として忠実な地下空間の再現を実現。さらにRCS形式に直接変換し、CADソフトへの取り込み・平面図作成をスムーズにしました。</p>
 
-      <img src="${getImagePath('/images/blog/underground-survey-screenshot.png')}" alt="LixelStudioでの点群処理" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/underground-survey-screenshot.webp')}" alt="LixelStudioでの点群処理" class="w-full rounded-lg my-8" />
 
       <h2>03｜Lixel L2 Proソリューションの特長</h2>
       
@@ -61,7 +61,7 @@ const blogPosts = {
       <h3>■ ソフトウェアとの統合による効率化</h3>
       <p>リアルタイムの点群はその場でモバイルやPCから確認可能。LixelStudioによる後処理も効率化され、RCP形式での出力により、即CAD連携が可能です。</p>
 
-      <img src="${getImagePath('/images/blog/underground-survey-4.gif')}" alt="点群データの可視化" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/underground-survey-4.webm')}" alt="点群データの可視化" class="w-full rounded-lg my-8" />
 
       <h2>04｜顧客からの評価</h2>
       
@@ -78,7 +78,7 @@ const blogPosts = {
     date: '2025-03-13',
     category: '導入事例',
     author: 'UP HASH Team',
-    image: '/images/blog/mining-digital-twin-hero.png',
+    image: '/images/blog/optimized/mining-digital-twin-hero.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=96',
     content: `
       <h2>光が届かず、人の立ち入りが困難な場所で</h2>
@@ -87,7 +87,7 @@ const blogPosts = {
       
       <p>その課題を解決したのが、XGRIDS製の「Lixel L2 Pro」。Multi-SLAM技術を搭載したこの3Dスキャナーは、従来比で80%の時間短縮を実現しながら、安全かつ高精度な3Dモデルを作成。このデジタルツインは現在、安全管理、体積解析、作業計画に活用され、鉱山業界における"不可能"を"日常"へと変えています。</p>
 
-      <img src="${getImagePath('/images/blog/mining-site-overview.png')}" alt="鉱山全体の概観" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-site-overview.webp')}" alt="鉱山全体の概観" class="w-full rounded-lg my-8" />
 
       <h2>従来測量の限界</h2>
       
@@ -108,7 +108,7 @@ const blogPosts = {
         <cite>—鉱山プランニングエンジニア</cite>
       </blockquote>
 
-      <img src="${getImagePath('/images/blog/mining-point-cloud-1.png')}" alt="従来手法での測量結果" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-point-cloud-1.webp')}" alt="従来手法での測量結果" class="w-full rounded-lg my-8" />
 
       <h2>地下環境におけるSLAM技術の課題</h2>
       
@@ -137,7 +137,7 @@ const blogPosts = {
       
       <p>重量はわずか1.98kg。手持ちでの長時間運用が可能です。</p>
 
-      <img src="${getImagePath('/images/blog/mining-equipment-scan.png')}" alt="Lixel L2 Proによるスキャン作業" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-equipment-scan.webp')}" alt="Lixel L2 Proによるスキャン作業" class="w-full rounded-lg my-8" />
 
       <h2>スキャンの実施手順</h2>
       
@@ -154,7 +154,7 @@ const blogPosts = {
         <li>手持ち操作で揺れる環境にも対応</li>
       </ul>
 
-      <img src="${getImagePath('/images/blog/mining-scan-animation.gif')}" alt="地下河川のスキャン作業" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-scan-animation.webm')}" alt="地下河川のスキャン作業" class="w-full rounded-lg my-8" />
       
       <h3>④ 垂直坑道のスキャン</h3>
       <ul>
@@ -163,7 +163,7 @@ const blogPosts = {
         <li>縦壁を完全にカバーするよう重ねて撮影</li>
       </ul>
 
-      <img src="${getImagePath('/images/blog/mining-3d-model-1.png')}" alt="垂直坑道の3Dモデル" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-3d-model-1.webp')}" alt="垂直坑道の3Dモデル" class="w-full rounded-lg my-8" />
 
       <h2>データ処理と統合</h2>
       
@@ -177,14 +177,14 @@ const blogPosts = {
       <h3>2. 点群統合</h3>
       <p>Lixel L2 ProとTrimble SX10のデータを完全統合。ずれは目視では確認不可能なレベルに。</p>
 
-      <img src="${getImagePath('/images/blog/mining-point-cloud-2.png')}" alt="統合された点群データ" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-point-cloud-2.webp')}" alt="統合された点群データ" class="w-full rounded-lg my-8" />
 
       <h2>メッシュ化と体積解析</h2>
       
       <p>GeoMagicで後処理を行い、Trimble RealWorksでメッシュ作成。<br>
       最終的な空間体積は<strong>114,548.34㎥</strong>と算出されました。</p>
 
-      <img src="${getImagePath('/images/blog/mining-volumetric-analysis.png')}" alt="体積解析結果" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-volumetric-analysis.webp')}" alt="体積解析結果" class="w-full rounded-lg my-8" />
 
       <h2>成果と定量的効果</h2>
       <ul>
@@ -201,7 +201,7 @@ const blogPosts = {
         <li>将来のアーカイブ・記録としても有効</li>
       </ul>
 
-      <img src="${getImagePath('/images/blog/mining-safety-zones.png')}" alt="安全区域の可視化" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-safety-zones.webp')}" alt="安全区域の可視化" class="w-full rounded-lg my-8" />
 
       <h2>ビジネスインパクト</h2>
       
@@ -224,7 +224,7 @@ const blogPosts = {
         <li>文書提出用の信頼できる空間記録</li>
       </ul>
 
-      <img src="${getImagePath('/images/blog/mining-dashboard-view.png')}" alt="統合管理ダッシュボード" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-dashboard-view.webp')}" alt="統合管理ダッシュボード" class="w-full rounded-lg my-8" />
 
       <h2>今後の展望：デジタルマインのエコシステムへ</h2>
       
@@ -236,7 +236,7 @@ const blogPosts = {
         <li>状況変化のモニタリングと異常検知によるリアルタイム管理</li>
       </ul>
 
-      <img src="${getImagePath('/images/blog/mining-digital-twin-process.png')}" alt="デジタルツインプロセス" class="w-full rounded-lg my-8" />
+      <img src="${getImagePath('/images/blog/optimized/mining-digital-twin-process.webp')}" alt="デジタルツインプロセス" class="w-full rounded-lg my-8" />
 
       <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
         <h3 class="text-lg font-semibold mb-2">結論｜"地下"の限界を再定義する</h3>
@@ -251,10 +251,10 @@ const blogPosts = {
     date: '2024-12-30',
     category: 'イベント',
     author: 'UP HASH Team',
-    image: '/images/blog/3dgs-webinar-main.jpg',
+    image: '/images/blog/optimized/3dgs-webinar-main.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=68',
     content: `
-      <img src="${getImagePath('/images/blog/3dgs-webinar-main.jpg')}" alt="3D Gaussian Splattingウェビナー" class="w-full rounded-lg mb-8" />
+      <img src="${getImagePath('/images/blog/optimized/3dgs-webinar-main.webp')}" alt="3D Gaussian Splattingウェビナー" class="w-full rounded-lg mb-8" />
 
       <h2>はじめに</h2>
       
@@ -274,7 +274,7 @@ const blogPosts = {
 
       <h3>1｜SLAM技術が"伝統"と"革新"をつなぐ架け橋に</h3>
       
-      <img src="${getImagePath('/images/blog/3dgs-webinar-1.png')}" alt="SLAM技術の説明" class="w-full rounded-lg my-6" />
+      <img src="${getImagePath('/images/blog/optimized/3dgs-webinar-1.webp')}" alt="SLAM技術の説明" class="w-full rounded-lg my-6" />
       
       <p>XGRIDSのMindy氏は、SLAMがトータルステーションや航空LiDARといった従来技術と、3DGSのような次世代技術をつなぐ役割を担っていると説明。</p>
       
@@ -294,7 +294,7 @@ const blogPosts = {
 
       <h3>3｜LiDARは3DGSの精度を支える基盤</h3>
       
-      <img src="${getImagePath('/images/blog/3dgs-webinar-2.png')}" alt="LiDARと3DGSの連携" class="w-full rounded-lg my-6" />
+      <img src="${getImagePath('/images/blog/optimized/3dgs-webinar-2.webp')}" alt="LiDARと3DGSの連携" class="w-full rounded-lg my-6" />
       
       <p>Mindy氏は、LiDARのジオメトリ把握力が3DGSの正確な描画に欠かせないと強調。</p>
       
@@ -309,7 +309,7 @@ const blogPosts = {
 
       <h3>5｜リアルタイムなフィードバックで制作の試行錯誤が加速</h3>
       
-      <img src="${getImagePath('/images/blog/3dgs-webinar-3.png')}" alt="リアルタイムフィードバック" class="w-full rounded-lg my-6" />
+      <img src="${getImagePath('/images/blog/optimized/3dgs-webinar-3.webp')}" alt="リアルタイムフィードバック" class="w-full rounded-lg my-6" />
       
       <blockquote class="border-l-4 border-blue-500 pl-4 my-4 italic">
         <p>「モデルをその場で微調整できることで、反復作業のサイクルが大きく短縮されます」</p>
@@ -323,7 +323,7 @@ const blogPosts = {
 
       <h3>7｜広範な都市空間も短時間でカバー</h3>
       
-      <img src="${getImagePath('/images/blog/3dgs-webinar-4.png')}" alt="都市スケールのスキャン" class="w-full rounded-lg my-6" />
+      <img src="${getImagePath('/images/blog/optimized/3dgs-webinar-4.webp')}" alt="都市スケールのスキャン" class="w-full rounded-lg my-6" />
       
       <p>Tomas氏は、都市スケールのスキャン事例を紹介し、</p>
       
@@ -343,7 +343,7 @@ const blogPosts = {
 
       <h3>10｜3D視覚技術が当たり前になる未来へ</h3>
       
-      <img src="${getImagePath('/images/blog/3dgs-webinar-5.png')}" alt="3D技術の未来" class="w-full rounded-lg my-6" />
+      <img src="${getImagePath('/images/blog/optimized/3dgs-webinar-5.webp')}" alt="3D技術の未来" class="w-full rounded-lg my-6" />
       
       <p>最後にMicha氏はこう締めくくりました。</p>
       
@@ -365,7 +365,7 @@ const blogPosts = {
     date: '2025-05-21',
     category: '製品発表',
     author: 'Xgrids Team',
-    image: '/images/blog/lcc-for-revit.jpg',
+    image: '/images/blog/optimized/lcc-for-revit.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=120',
     content: `
       <p class="lead">〜BIMモデリングを70〜90%高速化、センチメートル単位の精度で現場からRevitにリアルタイム連携〜</p>
@@ -431,81 +431,12 @@ const blogPosts = {
       <p>AI技術の浸透により、BIMは"描くもの"から"理解し導くもの"へと進化します。LCC for Revitは、スキャンデータが単なる参考情報ではなく、"設計の知性"として機能することを証明する実例です。</p>
     `
   },
-  'lixel-l1-centimeter-accuracy': {
-    title: 'Lixel L1ハンドヘルドスキャナー：センチメートル級精度を実現する革新的技術',
-    date: '2024-12-20',
-    category: '製品技術',
-    author: 'Xgrids Team',
-    image: '/images/blog/lixel-l1-accuracy.jpg',
-    originalUrl: 'https://www.xgrids.com/newsdetails?id=114',
-    content: `
-      <p>3D空間データの取得は、建設、測量、文化財保護、都市計画など、様々な分野で重要性を増しています。XGRIDSが開発したLixel L1ハンドヘルドスキャナーは、プロフェッショナルグレードの精度と使いやすさを両立させた革新的な製品です。</p>
-
-      <h2>Lixel L1の主要技術仕様</h2>
-      
-      <h3>高精度スキャニング性能</h3>
-      <p>Lixel L1は以下の優れた技術仕様を持っています：</p>
-      <ul>
-        <li><strong>相対精度</strong>: ±1.2cm</li>
-        <li><strong>再現性</strong>: ≤2cm</li>
-        <li><strong>スキャン速度</strong>: 毎秒320,000点</li>
-        <li><strong>動作時間</strong>: 1.5時間（46.8Whバッテリー）</li>
-        <li><strong>ストレージ容量</strong>: 1TB</li>
-        <li><strong>カメラ数</strong>: 4台</li>
-        <li><strong>消費電力</strong>: 30W</li>
-      </ul>
-      <p>これらの仕様により、Lixel L1は複雑な環境でも高精度な3Dデータを効率的に取得することができます。</p>
-
-      <h2>革新的な技術特徴</h2>
-
-      <h3>1. リアルタイムSLAM技術</h3>
-      <p>Lixel L1は最先端のSLAM（Simultaneous Localization and Mapping）技術を搭載しています。これにより、GPSが利用できない屋内環境でも正確な位置推定と地図作成が可能です。</p>
-
-      <h3>2. マルチセンサー融合</h3>
-      <p>4台のカメラとLiDARセンサーを統合することで、より豊富な空間情報を取得できます。この技術により、単なる点群データだけでなく、色情報を含む高品質な3Dモデルの生成が可能になります。</p>
-
-      <h3>3. 高速データ処理</h3>
-      <p>毎秒32万点という高速スキャン性能により、大規模な空間でも短時間でデータ取得が完了します。これは従来の静的スキャナーと比較して、作業効率を大幅に向上させます。</p>
-
-      <h2>実際の活用事例</h2>
-
-      <h3>建設現場での進捗管理</h3>
-      <p>建設プロジェクトでは、Lixel L1を使用して定期的に現場をスキャンし、設計図面との比較を行います。±1.2cmの精度により、施工誤差を早期に発見し、修正コストを削減できます。</p>
-
-      <h3>文化財のデジタルアーカイブ</h3>
-      <p>歴史的建造物や文化財の3Dデータ化において、Lixel L1の高精度スキャニングは貴重な記録を残すことができます。特に、アクセスが困難な場所でもハンドヘルド型の利点を活かして詳細なデータ取得が可能です。</p>
-
-      <h3>工場・倉庫の最適化</h3>
-      <p>製造業や物流業界では、Lixel L1を使用して既存施設の正確な3Dモデルを作成し、レイアウトの最適化や設備更新の計画に活用しています。</p>
-
-      <h2>競合製品との比較</h2>
-      <p>Lixel L1の±1.2cmという相対精度は、同クラスのハンドヘルドスキャナーの中でもトップレベルです。また、1.5時間という長時間動作と1TBの大容量ストレージにより、大規模プロジェクトでも途中でバッテリー交換やデータ転送の必要がありません。</p>
-
-      <h2>導入のメリット</h2>
-      <ol>
-        <li><strong>作業時間の短縮</strong>: 従来の測量方法と比較して、データ取得時間を最大80%削減</li>
-        <li><strong>人的エラーの削減</strong>: 自動化されたスキャニングプロセスにより、測定ミスを最小化</li>
-        <li><strong>安全性の向上</strong>: 危険な場所への立ち入りを最小限に抑えながらデータ取得が可能</li>
-        <li><strong>ROIの向上</strong>: 初期投資は高額ですが、作業効率の向上により短期間で投資回収が可能</li>
-      </ol>
-
-      <h2>今後の展望</h2>
-      <p>XGRIDSは継続的にLixel L1のソフトウェアアップデートを提供しており、AIを活用した自動物体認識機能や、クラウドベースのデータ処理サービスなど、新機能の追加が予定されています。</p>
-
-      <p>また、5G通信技術との統合により、リアルタイムでのデータ転送と遠隔協業が可能になることで、さらなる活用シーンの拡大が期待されています。</p>
-
-      <h2>まとめ</h2>
-      <p>Lixel L1ハンドヘルドスキャナーは、センチメートル級の精度と優れた操作性を兼ね備えた、プロフェッショナル向けの3Dスキャニングソリューションです。建設、測量、文化財保護など、様々な分野での活用が進んでおり、デジタルトランスフォーメーションを推進する重要なツールとなっています。</p>
-
-      <p>高精度な3D空間データの取得をお考えの方は、ぜひLixel L1の導入をご検討ください。詳細な仕様や価格については、お気軽にお問い合わせください。</p>
-    `
-  },
   'lixel-go-1-1-9': {
     title: 'Lixel Go 1.1.9リリース - 3D空間データ取得がさらに簡単に',
     date: '2024-12-13',
     category: 'ソフトウェアアップデート',
     author: 'Xgrids Team',
-    image: '/images/blog/lixel-go-119.jpg',
+    image: '/images/blog/optimized/lixel-go-119.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=114',
     content: `
       <p>Lixel Goの最新バージョン1.1.9がリリースされました。このアップデートにより、フィールドでの3D空間データ取得がより効率的で使いやすくなりました。</p>
@@ -544,7 +475,7 @@ const blogPosts = {
     date: '2024-10-18',
     category: '市場動向',
     author: 'Xgrids Team',
-    image: '/images/blog/vietnam-urbanization.jpg',
+    image: '/images/blog/optimized/vietnam-urbanization.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=96',
     content: `
       <p>ベトナムは東南アジアで最も急速に都市化が進む国の一つです。2045年までに都市化率は57%に達すると予測されており、この変化は建設業界と都市計画に大きな影響を与えています。</p>
@@ -585,7 +516,7 @@ const blogPosts = {
     date: '2024-09-05',
     category: 'イベント',
     author: 'Xgrids Team',
-    image: '/images/blog/construction-expo.jpg',
+    image: '/images/blog/optimized/construction-expo.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=74',
     content: `
       <p>2024年9月5日から7日まで開催された建設技術博覧会2024において、Xgridsは最新の3Dスキャニング技術とBIM統合ソリューションを発表し、大きな注目を集めました。</p>
@@ -633,7 +564,7 @@ const blogPosts = {
     date: '2024-08-22',
     category: '技術解説',
     author: 'Xgrids Team',
-    image: '/images/blog/lidar-innovation.jpg',
+    image: '/images/blog/optimized/lidar-innovation.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=68',
     content: `
       <p>LiDAR（Light Detection and Ranging）技術は、過去10年間で劇的な進化を遂げました。最新のLiDAR技術により、従来の5倍の速度で高精度な3Dマッピングが可能になり、建設、測量、都市計画など幅広い分野での活用が進んでいます。</p>
@@ -706,6 +637,88 @@ const blogPosts = {
       </ul>
 
       <p>Xgridsは、これらの最新技術を積極的に取り入れ、お客様により価値の高いソリューションを提供していきます。</p>
+    `
+  },
+  'virtual-preproduction': {
+    title: 'バーチャル・プリプロダクションの未来：XGRIDS × Global Objects',
+    date: '2025-05-12',
+    category: 'ケーススタディ',
+    author: 'UP HASH Team',
+    image: '/images/blog/optimized/virtual-preproduction-hero.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=109',
+    content: `
+      <p class="lead">映像制作におけるロケスキャンと3Dプリビズの革新。XGRIDSのLixelスキャナーとGlobal Objectsの事例を紹介します。</p>
+
+      <img src="${getImagePath('/images/blog/optimized/virtual-preproduction-hero.webp')}" alt="バーチャルプリプロダクション" class="w-full rounded-lg my-8" />
+
+      <p>映像制作の現場では、技術の進化により「バーチャル・プリプロダクション」の活用が加速しています。</p>
+      
+      <p><strong>Global Objects</strong> は、<strong>XGRIDSのLixelシリーズ</strong>を導入し、ガウシアンスプラッティングによるリアルなデジタルツインを構築。現場ロケのスキャンからUnreal Engineへの連携まで、従来のワークフローを根本から見直す革新的な方法を確立しました。</p>
+
+      <h2>🎬 動画で見る：Global Objectsのワークフロー</h2>
+      
+      <div class="my-8">
+        <iframe 
+          width="100%" 
+          style="aspect-ratio: 16/9;" 
+          src="https://www.youtube.com/embed/jIvmm3noB_s" 
+          title="Global Objects Virtual Production Workflow" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h2>活用シーン</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">ロケーション記録</h3>
+          <p>現地でのスキャンから詳細な3Dロケーションを作成。注釈や寸法も含め、チーム全体で共有可能。</p>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">バーチャル・カメラプラン</h3>
+          <p>現場に行く前にレンズ選びやカメラポジションを仮想空間で検証。</p>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">セットデザイン計画</h3>
+          <p>正確な寸法情報で、セットが現場にフィットしないトラブルを排除。</p>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">Unreal/Unityとの連携</h3>
+          <p>スキャンデータをそのままゲームエンジンに投入可能で、プリビズが高速に。</p>
+        </div>
+      </div>
+
+      <h2>解決される課題</h2>
+      
+      <ul class="space-y-3 my-6">
+        <li>✓ ロケ地情報の欠落を防ぎ、事前にあらゆる空間要素を把握。</li>
+        <li>✓ 遠隔チームとの情報共有がスムーズになり、意思決定が迅速に。</li>
+        <li>✓ VFXチームへの即時データ提供で、再撮やプレート撮影の手間を削減。</li>
+        <li>✓ 技術スタッフの移動・拘束時間を削減し、ロケ準備のコストを圧縮。</li>
+      </ul>
+
+      <h2>XGRIDSの優位性</h2>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <h3 class="text-lg font-semibold mb-4">センチメートル精度</h3>
+        <p class="mb-4">LiDARと3D Gaussian Splattingの組み合わせにより、高精度かつリアルな空間再現が可能。</p>
+        
+        <h3 class="text-lg font-semibold mb-4">広範囲のロケーション対応</h3>
+        <p class="mb-4">都市部から大型ステージまで、スピードとカバレッジで視覚スキャンを凌駕。</p>
+        
+        <h3 class="text-lg font-semibold mb-4">Unreal Engine連携</h3>
+        <p>CyberColor SDK経由での直接インポートにより、変換不要でシームレスなワークフローを実現。</p>
+      </div>
+
+      <hr class="my-12" />
+
+      <p class="text-lg">映像制作の効率化・高品質化・脱炭素化へ。</p>
+      <p class="text-lg font-semibold">XGRIDSとGlobal Objectsの連携は、ロケーションベースの映像制作を根本から変えています。</p>
     `
   }
 }

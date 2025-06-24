@@ -1,0 +1,729 @@
+=== 画像・動画変換ログ Tue Jun 24 12:41:04 JST 2025 ===
+Error! Could not process file public/images/blog/lixel-go-119.jpg
+Error! Cannot read input picture file 'public/images/blog/lixel-go-119.jpg'
+  変換のみ（幅: px）
+  サイズ: 291B → 
+Saving file 'public/images/blog/optimized/lixel-l1-accuracy.webp'
+File:      public/images/blog/lixel-l1-accuracy.jpg
+Dimension: 768 x 676 (with alpha)
+Output:    20678 bytes Y-U-V-All-PSNR 47.51 57.82 58.32   49.09 dB
+           (0.32 bpp)
+block count:  intra4:        358  (17.34%)
+              intra16:      1706  (82.66%)
+              skipped:      1673  (81.06%)
+bytes used:  header:            156  (0.8%)
+             mode-partition:   2585  (12.5%)
+             transparency:     6120 (99.0 dB)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|       6%|      10%|      83%|    2064
+      quantizer:  |      20 |      20 |      17 |      13 |
+   filter level:  |       7 |       5 |       3 |       6 |
+Lossless-alpha compressed size: 6119 bytes
+  * Header size: 65 bytes, image data size: 6054
+  * Precision Bits: histogram=5 cache=0
+  * Palette size:   255
+  変換のみ（幅: 768px）
+  サイズ: 187K → 20K
+Saving file 'public/images/blog/optimized/lcc-for-revit.webp'
+File:      public/images/blog/lcc-for-revit.jpg
+Dimension: 1116 x 628
+Output:    62876 bytes Y-U-V-All-PSNR 44.35 47.11 47.75   45.16 dB
+           (0.72 bpp)
+block count:  intra4:       1533  (54.75%)
+              intra16:      1267  (45.25%)
+              skipped:        21  (0.75%)
+bytes used:  header:            415  (0.7%)
+             mode-partition:   6730  (10.7%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       2%|       6%|      22%|      71%|    2800
+      quantizer:  |      20 |      20 |      16 |      12 |
+   filter level:  |       7 |       5 |       3 |      42 |
+  変換のみ（幅: px）
+  サイズ: 127K → 61K
+Saving file 'public/images/blog/optimized/mining-excavation-planning.webp'
+File:      public/images/blog/mining-excavation-planning.png
+Dimension: 1080 x 607
+Output:    31096 bytes Y-U-V-All-PSNR 48.11 52.18 54.04   49.22 dB
+           (0.38 bpp)
+block count:  intra4:       1272  (49.23%)
+              intra16:      1312  (50.77%)
+              skipped:       341  (13.20%)
+bytes used:  header:            193  (0.6%)
+             mode-partition:   6144  (19.8%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|       7%|      20%|      72%|    2584
+      quantizer:  |      20 |      19 |      16 |      12 |
+   filter level:  |       7 |       4 |       3 |      15 |
+  変換のみ（幅: 1080px）
+  サイズ: 375K → 30K
+Saving file 'public/images/blog/optimized/mining-compliance-reporting.webp'
+File:      public/images/blog/mining-compliance-reporting.png
+Dimension: 1080 x 553
+Output:    51980 bytes Y-U-V-All-PSNR 46.82 48.94 48.17   47.32 dB
+           (0.70 bpp)
+block count:  intra4:        927  (38.95%)
+              intra16:      1453  (61.05%)
+              skipped:      1262  (53.03%)
+bytes used:  header:            363  (0.7%)
+             mode-partition:   5268  (10.1%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       5%|      14%|      21%|      59%|    2380
+      quantizer:  |      20 |      19 |      16 |      11 |
+   filter level:  |       7 |       4 |       3 |       2 |
+  変換のみ（幅: 1080px）
+  サイズ: 386K → 51K
+Error! Could not process file public/images/blog/virtual-preproduction-hero.jpg
+Error! Cannot read input picture file 'public/images/blog/virtual-preproduction-hero.jpg'
+  変換のみ（幅: px）
+  サイズ: 24B → 
+Error! Could not process file public/images/blog/lidar-innovation.jpg
+Error! Cannot read input picture file 'public/images/blog/lidar-innovation.jpg'
+  変換のみ（幅: px）
+  サイズ: 291B → 
+Saving file 'public/images/blog/optimized/mining-progress-tracking.webp'
+File:      public/images/blog/mining-progress-tracking.png
+Dimension: 1100 x 601
+Output:    47224 bytes Y-U-V-All-PSNR 45.74 48.29 46.18   46.15 dB
+           (0.57 bpp)
+block count:  intra4:       1366  (52.10%)
+              intra16:      1256  (47.90%)
+              skipped:       888  (33.87%)
+bytes used:  header:            294  (0.6%)
+             mode-partition:   6858  (14.5%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|      11%|      29%|      60%|    2622
+      quantizer:  |      20 |      19 |      15 |      12 |
+   filter level:  |       7 |       4 |       7 |       3 |
+  リサイズ: 1280px → 1100px
+  サイズ: 590K → 46K
+Saving file 'public/images/blog/optimized/underground-survey-screenshot.webp'
+File:      public/images/blog/underground-survey-screenshot.png
+Dimension: 1100 x 596
+Output:    35250 bytes Y-U-V-All-PSNR 45.23 48.25 49.96   46.17 dB
+           (0.43 bpp)
+block count:  intra4:       1235  (47.10%)
+              intra16:      1387  (52.90%)
+              skipped:       949  (36.19%)
+bytes used:  header:            217  (0.6%)
+             mode-partition:   5289  (15.0%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|       4%|       8%|      88%|    2622
+      quantizer:  |      20 |      20 |      16 |      13 |
+   filter level:  |       7 |       4 |       3 |       9 |
+  リサイズ: 1826px → 1100px
+  サイズ: 1.3M → 34K
+Saving file 'public/images/blog/optimized/mining-environmental-monitoring.webp'
+File:      public/images/blog/mining-environmental-monitoring.png
+Dimension: 1080 x 635
+Output:    77566 bytes Y-U-V-All-PSNR 45.96 47.11 47.13   46.31 dB
+           (0.90 bpp)
+block count:  intra4:       1292  (47.50%)
+              intra16:      1428  (52.50%)
+              skipped:       978  (35.96%)
+bytes used:  header:            475  (0.6%)
+             mode-partition:   6966  (9.0%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       4%|      16%|      29%|      51%|    2720
+      quantizer:  |      20 |      19 |      15 |      10 |
+   filter level:  |       7 |       4 |       7 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 555K → 76K
+Saving file 'public/images/blog/optimized/mining-safety-zones.webp'
+File:      public/images/blog/mining-safety-zones.png
+Dimension: 747 x 1280
+Output:    45884 bytes Y-U-V-All-PSNR 45.98 50.92 51.06   47.10 dB
+           (0.38 bpp)
+block count:  intra4:       1907  (50.72%)
+              intra16:      1853  (49.28%)
+              skipped:       427  (11.36%)
+bytes used:  header:            152  (0.3%)
+             mode-partition:   8609  (18.8%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       2%|       6%|      14%|      78%|    3760
+      quantizer:  |      20 |      20 |      17 |      12 |
+   filter level:  |       7 |       5 |       3 |      12 |
+  変換のみ（幅: 747px）
+  サイズ: 567K → 45K
+Saving file 'public/images/blog/optimized/mining-3d-model-1.webp'
+File:      public/images/blog/mining-3d-model-1.png
+Dimension: 960 x 1280
+Output:    55136 bytes Y-U-V-All-PSNR 45.75 53.78 55.63   47.24 dB
+           (0.36 bpp)
+block count:  intra4:       2829  (58.94%)
+              intra16:      1971  (41.06%)
+              skipped:      1026  (21.38%)
+bytes used:  header:            123  (0.2%)
+             mode-partition:  11855  (21.5%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       0%|       3%|      21%|      76%|    4800
+      quantizer:  |      20 |      19 |      16 |      13 |
+   filter level:  |       7 |       3 |       3 |      13 |
+  変換のみ（幅: 960px）
+  サイズ: 762K → 54K
+Saving file 'public/images/blog/optimized/mining-mesh-model.webp'
+File:      public/images/blog/mining-mesh-model.png
+Dimension: 1080 x 644
+Output:    154522 bytes Y-U-V-All-PSNR 44.00 44.30 42.68   43.80 dB
+           (1.78 bpp)
+block count:  intra4:       2464  (88.38%)
+              intra16:       324  (11.62%)
+              skipped:        14  (0.50%)
+bytes used:  header:            413  (0.3%)
+             mode-partition:  12564  (8.1%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       7%|      27%|      31%|      35%|    2788
+      quantizer:  |      20 |      17 |      14 |       9 |
+   filter level:  |       7 |       4 |       2 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 1.2M → 151K
+Error! Could not process file public/images/blog/vietnam-urbanization.jpg
+Error! Cannot read input picture file 'public/images/blog/vietnam-urbanization.jpg'
+  変換のみ（幅: px）
+  サイズ: 291B → 
+Saving file 'public/images/blog/optimized/mining-site-planning.webp'
+File:      public/images/blog/mining-site-planning.png
+Dimension: 1100 x 528
+Output:    47392 bytes Y-U-V-All-PSNR 44.99 46.55 45.48   45.29 dB
+           (0.65 bpp)
+block count:  intra4:       1069  (46.95%)
+              intra16:      1208  (53.05%)
+              skipped:       794  (34.87%)
+bytes used:  header:            296  (0.6%)
+             mode-partition:   6112  (12.9%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|      16%|      27%|      56%|    2277
+      quantizer:  |      20 |      18 |      16 |      11 |
+   filter level:  |       7 |       4 |       7 |       0 |
+  リサイズ: 1280px → 1100px
+  サイズ: 535K → 46K
+Saving file 'public/images/blog/optimized/mining-lidar-scan.webp'
+File:      public/images/blog/mining-lidar-scan.png
+Dimension: 1100 x 620
+Output:    73278 bytes Y-U-V-All-PSNR 44.79 45.20 44.87   44.87 dB
+           (0.86 bpp)
+block count:  intra4:       1795  (66.70%)
+              intra16:       896  (33.30%)
+              skipped:       338  (12.56%)
+bytes used:  header:            383  (0.5%)
+             mode-partition:   8047  (11.0%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|      23%|      40%|      37%|    2691
+      quantizer:  |      20 |      17 |      14 |      11 |
+   filter level:  |       7 |       3 |       6 |       2 |
+  リサイズ: 1214px → 1100px
+  サイズ: 1.1M → 72K
+Error! Could not process file public/images/blog/construction-expo.jpg
+Error! Cannot read input picture file 'public/images/blog/construction-expo.jpg'
+  変換のみ（幅: px）
+  サイズ: 291B → 
+Saving file 'public/images/blog/optimized/mining-3d-reconstruction.webp'
+File:      public/images/blog/mining-3d-reconstruction.png
+Dimension: 1080 x 810
+Output:    156658 bytes Y-U-V-All-PSNR 43.82 50.08 51.53   45.16 dB
+           (1.43 bpp)
+block count:  intra4:       3033  (87.46%)
+              intra16:       435  (12.54%)
+              skipped:         0  (0.00%)
+bytes used:  header:            377  (0.2%)
+             mode-partition:  15661  (10.0%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       5%|      16%|      35%|      44%|    3468
+      quantizer:  |      20 |      18 |      14 |      11 |
+   filter level:  |       7 |       4 |       2 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 1.3M → 153K
+Saving file 'public/images/blog/optimized/mining-stockpile-measurement.webp'
+File:      public/images/blog/mining-stockpile-measurement.png
+Dimension: 1080 x 640
+Output:    53324 bytes Y-U-V-All-PSNR 47.60 49.09 47.43   47.79 dB
+           (0.62 bpp)
+block count:  intra4:       1144  (42.06%)
+              intra16:      1576  (57.94%)
+              skipped:      1321  (48.57%)
+bytes used:  header:            281  (0.5%)
+             mode-partition:   6120  (11.5%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       4%|      15%|      17%|      64%|    2720
+      quantizer:  |      20 |      19 |      16 |      11 |
+   filter level:  |       7 |       4 |       3 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 494K → 52K
+Saving file 'public/images/blog/optimized/mining-point-cloud-1.webp'
+File:      public/images/blog/mining-point-cloud-1.png
+Dimension: 1080 x 795
+Output:    86538 bytes Y-U-V-All-PSNR 45.62 52.15 53.68   46.99 dB
+           (0.81 bpp)
+block count:  intra4:       2654  (78.06%)
+              intra16:       746  (21.94%)
+              skipped:       108  (3.18%)
+bytes used:  header:            240  (0.3%)
+             mode-partition:  11845  (13.7%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|       8%|      42%|      49%|    3400
+      quantizer:  |      20 |      18 |      15 |      12 |
+   filter level:  |       7 |       4 |       2 |       2 |
+  変換のみ（幅: 1080px）
+  サイズ: 949K → 85K
+Saving file 'public/images/blog/optimized/mining-digital-twin-process.webp'
+File:      public/images/blog/mining-digital-twin-process.png
+Dimension: 1080 x 810
+Output:    101342 bytes Y-U-V-All-PSNR 45.16 51.10 52.23   46.46 dB
+           (0.93 bpp)
+block count:  intra4:       2701  (77.88%)
+              intra16:       767  (22.12%)
+              skipped:       146  (4.21%)
+bytes used:  header:            304  (0.3%)
+             mode-partition:  13126  (13.0%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|      14%|      40%|      45%|    3468
+      quantizer:  |      20 |      18 |      15 |      11 |
+   filter level:  |       7 |       4 |       2 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 927K → 99K
+Saving file 'public/images/blog/optimized/underground-survey-main.webp'
+File:      public/images/blog/underground-survey-main.jpg
+Dimension: 1080 x 613
+Output:    73444 bytes Y-U-V-All-PSNR 44.84 51.91 53.73   46.26 dB
+           (0.89 bpp)
+block count:  intra4:       2158  (81.37%)
+              intra16:       494  (18.63%)
+              skipped:        21  (0.79%)
+bytes used:  header:            316  (0.4%)
+             mode-partition:  10178  (13.9%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       2%|      11%|      42%|      45%|    2652
+      quantizer:  |      20 |      18 |      15 |      11 |
+   filter level:  |       7 |       4 |       2 |       5 |
+  変換のみ（幅: px）
+  サイズ: 349K → 72K
+Saving file 'public/images/blog/optimized/3dgs-webinar-main.webp'
+File:      public/images/blog/3dgs-webinar-main.jpg
+Dimension: 844 x 474
+Output:    90310 bytes Y-U-V-All-PSNR 41.44 42.11 45.57   42.03 dB
+           (1.81 bpp)
+block count:  intra4:       1427  (89.75%)
+              intra16:       163  (10.25%)
+              skipped:        10  (0.63%)
+bytes used:  header:            369  (0.4%)
+             mode-partition:   7804  (8.6%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |      21%|      17%|      33%|      29%|    1590
+      quantizer:  |      20 |      16 |      12 |       9 |
+   filter level:  |       7 |       4 |       2 |       2 |
+  変換のみ（幅: px）
+  サイズ: 324K → 88K
+Saving file 'public/images/blog/optimized/mining-3d-visualization.webp'
+File:      public/images/blog/mining-3d-visualization.png
+Dimension: 1080 x 720
+Output:    154658 bytes Y-U-V-All-PSNR 44.77 44.78 44.66   44.75 dB
+           (1.59 bpp)
+block count:  intra4:       2999  (98.01%)
+              intra16:        61  (1.99%)
+              skipped:         0  (0.00%)
+bytes used:  header:            364  (0.2%)
+             mode-partition:  15437  (10.0%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       6%|      22%|      39%|      33%|    3060
+      quantizer:  |      20 |      17 |      14 |      10 |
+   filter level:  |       7 |       4 |       2 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 1.3M → 151K
+Saving file 'public/images/blog/optimized/mining-gaussian-splatting.webp'
+File:      public/images/blog/mining-gaussian-splatting.png
+Dimension: 1080 x 720
+Output:    157306 bytes Y-U-V-All-PSNR 44.85 44.94 44.66   44.83 dB
+           (1.62 bpp)
+block count:  intra4:       3027  (98.92%)
+              intra16:        33  (1.08%)
+              skipped:         0  (0.00%)
+bytes used:  header:            337  (0.2%)
+             mode-partition:  15635  (9.9%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |      12%|      29%|      35%|      24%|    3060
+      quantizer:  |      20 |      16 |      13 |       8 |
+   filter level:  |       7 |       4 |       2 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 1.3M → 154K
+Saving file 'public/images/blog/optimized/mining-point-cloud-2.webp'
+File:      public/images/blog/mining-point-cloud-2.png
+Dimension: 1080 x 483
+Output:    77248 bytes Y-U-V-All-PSNR 44.02 48.34 48.77   45.07 dB
+           (1.18 bpp)
+block count:  intra4:       1162  (55.12%)
+              intra16:       946  (44.88%)
+              skipped:       578  (27.42%)
+bytes used:  header:            407  (0.5%)
+             mode-partition:   6022  (7.8%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       8%|      20%|      20%|      52%|    2108
+      quantizer:  |      20 |      18 |      15 |      10 |
+   filter level:  |       7 |       4 |       2 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 615K → 75K
+Saving file 'public/images/blog/optimized/3dgs-webinar-4.webp'
+File:      public/images/blog/3dgs-webinar-4.png
+Dimension: 1100 x 639
+Output:    65908 bytes Y-U-V-All-PSNR 44.17 48.92 49.34   45.29 dB
+           (0.75 bpp)
+block count:  intra4:       1710  (61.96%)
+              intra16:      1050  (38.04%)
+              skipped:       796  (28.84%)
+bytes used:  header:            302  (0.5%)
+             mode-partition:   9267  (14.1%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       2%|      13%|      46%|      39%|    2760
+      quantizer:  |      20 |      18 |      15 |      11 |
+   filter level:  |       7 |       4 |       3 |       8 |
+  リサイズ: 1109px → 1100px
+  サイズ: 1.0M → 64K
+Saving file 'public/images/blog/optimized/mining-dashboard-view.webp'
+File:      public/images/blog/mining-dashboard-view.png
+Dimension: 1080 x 577
+Output:    27596 bytes Y-U-V-All-PSNR 48.91 51.59 50.73   49.54 dB
+           (0.35 bpp)
+block count:  intra4:        570  (22.66%)
+              intra16:      1946  (77.34%)
+              skipped:      1487  (59.10%)
+bytes used:  header:            327  (1.2%)
+             mode-partition:   4034  (14.6%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       6%|      12%|      17%|      65%|    2516
+      quantizer:  |      20 |      20 |      16 |      11 |
+   filter level:  |       7 |       5 |       7 |       2 |
+  変換のみ（幅: 1080px）
+  サイズ: 222K → 27K
+Saving file 'public/images/blog/optimized/3dgs-webinar-5.webp'
+File:      public/images/blog/3dgs-webinar-5.png
+Dimension: 1071 x 609
+Output:    56376 bytes Y-U-V-All-PSNR 44.69 47.24 47.35   45.40 dB
+           (0.69 bpp)
+block count:  intra4:       1764  (67.51%)
+              intra16:       849  (32.49%)
+              skipped:       259  (9.91%)
+bytes used:  header:            382  (0.7%)
+             mode-partition:   8604  (15.3%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       2%|      11%|      41%|      46%|    2613
+      quantizer:  |      20 |      18 |      15 |      11 |
+   filter level:  |       7 |       4 |      29 |      20 |
+  変換のみ（幅: 1071px）
+  サイズ: 1.0M → 55K
+Saving file 'public/images/blog/optimized/mining-point-cloud-3.webp'
+File:      public/images/blog/mining-point-cloud-3.png
+Dimension: 1080 x 810
+Output:    139518 bytes Y-U-V-All-PSNR 43.50 49.76 51.14   44.84 dB
+           (1.28 bpp)
+block count:  intra4:       2909  (83.88%)
+              intra16:       559  (16.12%)
+              skipped:        64  (1.85%)
+bytes used:  header:            285  (0.2%)
+             mode-partition:  15969  (11.4%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       5%|      26%|      32%|      37%|    3468
+      quantizer:  |      20 |      18 |      14 |       9 |
+   filter level:  |       7 |       4 |       3 |       7 |
+  変換のみ（幅: 1080px）
+  サイズ: 1.2M → 136K
+Saving file 'public/images/blog/optimized/3dgs-webinar-1.webp'
+File:      public/images/blog/3dgs-webinar-1.png
+Dimension: 1100 x 580
+Output:    44354 bytes Y-U-V-All-PSNR 45.63 48.52 48.58   46.40 dB
+           (0.56 bpp)
+block count:  intra4:       1453  (56.91%)
+              intra16:      1100  (43.09%)
+              skipped:       298  (11.67%)
+bytes used:  header:            301  (0.7%)
+             mode-partition:   7229  (16.3%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       0%|       5%|      38%|      56%|    2553
+      quantizer:  |      20 |      19 |      15 |      12 |
+   filter level:  |       7 |       4 |       7 |       9 |
+  リサイズ: 1109px → 1100px
+  サイズ: 920K → 43K
+Saving file 'public/images/blog/optimized/mining-heatmap-analysis.webp'
+File:      public/images/blog/mining-heatmap-analysis.png
+Dimension: 1080 x 638
+Output:    158862 bytes Y-U-V-All-PSNR 43.70 45.32 43.23   43.84 dB
+           (1.84 bpp)
+block count:  intra4:       2529  (92.98%)
+              intra16:       191  (7.02%)
+              skipped:        22  (0.81%)
+bytes used:  header:            430  (0.3%)
+             mode-partition:  12903  (8.1%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       8%|      20%|      33%|      38%|    2720
+      quantizer:  |      20 |      17 |      14 |      10 |
+   filter level:  |       7 |       4 |       2 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 1.2M → 155K
+Saving file 'public/images/blog/optimized/mining-point-cloud-4.webp'
+File:      public/images/blog/mining-point-cloud-4.png
+Dimension: 1080 x 607
+Output:    115332 bytes Y-U-V-All-PSNR 44.33 46.75 45.13   44.78 dB
+           (1.41 bpp)
+block count:  intra4:       1906  (73.76%)
+              intra16:       678  (26.24%)
+              skipped:       479  (18.54%)
+bytes used:  header:            435  (0.4%)
+             mode-partition:   9934  (8.6%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       6%|      23%|      30%|      40%|    2584
+      quantizer:  |      20 |      18 |      14 |      10 |
+   filter level:  |       7 |       4 |       2 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 955K → 113K
+Saving file 'public/images/blog/optimized/mining-resource-mapping.webp'
+File:      public/images/blog/mining-resource-mapping.png
+Dimension: 1080 x 693
+Output:    48904 bytes Y-U-V-All-PSNR 48.58 49.19 48.50   48.66 dB
+           (0.52 bpp)
+block count:  intra4:        942  (31.48%)
+              intra16:      2050  (68.52%)
+              skipped:      1822  (60.90%)
+bytes used:  header:            322  (0.7%)
+             mode-partition:   5522  (11.3%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       4%|      14%|      14%|      68%|    2992
+      quantizer:  |      20 |      20 |      16 |      11 |
+   filter level:  |       7 |       5 |       3 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 417K → 48K
+Saving file 'public/images/blog/optimized/3dgs-webinar-2.webp'
+File:      public/images/blog/3dgs-webinar-2.png
+Dimension: 1100 x 660
+Output:    87298 bytes Y-U-V-All-PSNR 43.30 48.87 49.38   44.53 dB
+           (0.96 bpp)
+block count:  intra4:       2003  (69.12%)
+              intra16:       895  (30.88%)
+              skipped:       493  (17.01%)
+bytes used:  header:            337  (0.4%)
+             mode-partition:  10728  (12.3%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       5%|      14%|      44%|      37%|    2898
+      quantizer:  |      20 |      18 |      14 |      10 |
+   filter level:  |       7 |       4 |      13 |       2 |
+  リサイズ: 1105px → 1100px
+  サイズ: 1.2M → 85K
+Saving file 'public/images/blog/optimized/3dgs-webinar-3.webp'
+File:      public/images/blog/3dgs-webinar-3.png
+Dimension: 1097 x 612
+Output:    31900 bytes Y-U-V-All-PSNR 47.02 49.97 50.14   47.82 dB
+           (0.38 bpp)
+block count:  intra4:        801  (29.77%)
+              intra16:      1890  (70.23%)
+              skipped:      1713  (63.66%)
+bytes used:  header:            302  (0.9%)
+             mode-partition:   4788  (15.0%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       2%|       7%|      16%|      75%|    2691
+      quantizer:  |      20 |      20 |      16 |      12 |
+   filter level:  |       7 |       5 |       3 |       6 |
+  変換のみ（幅: 1097px）
+  サイズ: 513K → 31K
+Saving file 'public/images/blog/optimized/mining-change-detection.webp'
+File:      public/images/blog/mining-change-detection.png
+Dimension: 1080 x 647
+Output:    64590 bytes Y-U-V-All-PSNR 47.21 48.28 46.40   47.22 dB
+           (0.74 bpp)
+block count:  intra4:       1174  (42.11%)
+              intra16:      1614  (57.89%)
+              skipped:      1400  (50.22%)
+bytes used:  header:            305  (0.5%)
+             mode-partition:   6688  (10.4%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       3%|      16%|      20%|      61%|    2788
+      quantizer:  |      20 |      19 |      16 |      11 |
+   filter level:  |       7 |       4 |       3 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 556K → 63K
+Saving file 'public/images/blog/optimized/mining-equipment-scan.webp'
+File:      public/images/blog/mining-equipment-scan.png
+Dimension: 1000 x 562
+Output:    58574 bytes Y-U-V-All-PSNR 45.40 50.70 51.80   46.63 dB
+           (0.83 bpp)
+block count:  intra4:       1837  (81.00%)
+              intra16:       431  (19.00%)
+              skipped:        12  (0.53%)
+bytes used:  header:            237  (0.4%)
+             mode-partition:   8169  (13.9%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|       9%|      35%|      55%|    2268
+      quantizer:  |      20 |      19 |      15 |      12 |
+   filter level:  |       7 |       4 |       2 |      18 |
+  変換のみ（幅: 1000px）
+  サイズ: 593K → 57K
+Saving file 'public/images/blog/optimized/mining-terrain-model.webp'
+File:      public/images/blog/mining-terrain-model.png
+Dimension: 1080 x 719
+Output:    43806 bytes Y-U-V-All-PSNR 47.82 52.22 53.07   48.92 dB
+           (0.45 bpp)
+block count:  intra4:       1579  (51.60%)
+              intra16:      1481  (48.40%)
+              skipped:       403  (13.17%)
+bytes used:  header:            245  (0.6%)
+             mode-partition:   7308  (16.7%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       0%|       6%|      23%|      71%|    3060
+      quantizer:  |      20 |      17 |      16 |      13 |
+   filter level:  |       7 |       3 |       3 |       9 |
+  変換のみ（幅: 1080px）
+  サイズ: 472K → 43K
+Saving file 'public/images/blog/optimized/mining-volumetric-analysis.webp'
+File:      public/images/blog/mining-volumetric-analysis.png
+Dimension: 1080 x 810
+Output:    108536 bytes Y-U-V-All-PSNR 44.95 52.37 53.90   46.39 dB
+           (0.99 bpp)
+block count:  intra4:       2978  (85.87%)
+              intra16:       490  (14.13%)
+              skipped:        43  (1.24%)
+bytes used:  header:            288  (0.3%)
+             mode-partition:  15127  (13.9%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       2%|      18%|      41%|      40%|    3468
+      quantizer:  |      20 |      18 |      15 |      10 |
+   filter level:  |       7 |       4 |       2 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 1.0M → 106K
+Saving file 'public/images/blog/optimized/mining-site-overview.webp'
+File:      public/images/blog/mining-site-overview.png
+Dimension: 1000 x 562
+Output:    61796 bytes Y-U-V-All-PSNR 45.39 50.05 51.07   46.53 dB
+           (0.88 bpp)
+block count:  intra4:       1797  (79.23%)
+              intra16:       471  (20.77%)
+              skipped:        18  (0.79%)
+bytes used:  header:            204  (0.3%)
+             mode-partition:   8847  (14.3%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       1%|       9%|      44%|      46%|    2268
+      quantizer:  |      20 |      18 |      15 |      12 |
+   filter level:  |       7 |       3 |       2 |       2 |
+  変換のみ（幅: 1000px）
+  サイズ: 693K → 60K
+Saving file 'public/images/blog/optimized/mining-digital-twin-hero.webp'
+File:      public/images/blog/mining-digital-twin-hero.png
+Dimension: 1080 x 695
+Output:    104762 bytes Y-U-V-All-PSNR 45.36 46.15 45.28   45.47 dB
+           (1.12 bpp)
+block count:  intra4:       1703  (56.92%)
+              intra16:      1289  (43.08%)
+              skipped:      1016  (33.96%)
+bytes used:  header:            401  (0.4%)
+             mode-partition:   9700  (9.3%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       5%|      22%|      28%|      45%|    2992
+      quantizer:  |      20 |      18 |      15 |      10 |
+   filter level:  |       7 |       4 |       3 |       0 |
+  変換のみ（幅: 1080px）
+  サイズ: 800K → 102K
+ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 17.0.0 (clang-1700.0.13.3)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1.1_3 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, gif, from 'public/images/blog/underground-survey-4.gif':
+  Duration: 00:00:05.52, start: 0.000000, bitrate: 4901 kb/s
+  Stream #0:0: Video: gif, bgra, 600x260, 16.67 fps, 16.67 tbr, 100 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (gif (native) -> vp9 (libvpx-vp9))
+Press [q] to stop, [?] for help
+[libvpx-vp9 @ 0x141f06600] v1.15.1
+Output #0, webm, to 'public/images/blog/optimized/underground-survey-4.webm':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: vp9, yuva420p(tv, progressive), 600x260, q=2-31, 16.67 fps, 1k tbn
+      Metadata:
+        encoder         : Lavc61.19.101 libvpx-vp9
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=   32 fps=0.0 q=30.0 size=       0KiB time=00:00:01.92 bitrate=   2.0kbits/s speed= 3.8x    frame=   68 fps= 68 q=30.0 size=       0KiB time=00:00:04.08 bitrate=   0.9kbits/s speed=4.05x    [out#0/webm @ 0x600002bf8000] video:187KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 2.778401%
+frame=   92 fps= 65 q=30.0 Lsize=     192KiB time=00:00:05.52 bitrate= 285.6kbits/s speed=3.92x    
+  サイズ: 3.2M → 192K
+ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 17.0.0 (clang-1700.0.13.3)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1.1_3 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[in#0 @ 0x6000023bca00] Error opening input: No such file or directory
+Error opening input file blic/images/blog/underground-survey-2.gif.
+Error opening input files: No such file or directory
+  サイズ:  → 
+ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 17.0.0 (clang-1700.0.13.3)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1.1_3 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, gif, from 'public/images/blog/underground-survey-3.gif':
+  Duration: 00:00:04.55, start: 0.000000, bitrate: 5586 kb/s
+  Stream #0:0: Video: gif, bgra, 600x337, 14.29 fps, 14.29 tbr, 100 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (gif (native) -> vp9 (libvpx-vp9))
+Press [q] to stop, [?] for help
+[libvpx-vp9 @ 0x1256084f0] v1.15.1
+Output #0, webm, to 'public/images/blog/optimized/underground-survey-3.webm':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: vp9, yuva420p(tv, progressive), 600x337, q=2-31, 14.29 fps, 1k tbn
+      Metadata:
+        encoder         : Lavc61.19.101 libvpx-vp9
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=   15 fps=0.0 q=28.0 size=       0KiB time=00:00:01.05 bitrate=   3.6kbits/s speed=2.09x    frame=   27 fps= 27 q=28.0 size=       0KiB time=00:00:01.89 bitrate=   2.0kbits/s speed=1.87x    frame=   35 fps= 23 q=28.0 size=       0KiB time=00:00:02.45 bitrate=   1.6kbits/s speed=1.62x    frame=   41 fps= 20 q=18.0 size=       0KiB time=00:00:02.87 bitrate=   1.3kbits/s speed=1.42x    frame=   41 fps= 16 q=18.0 size=       0KiB time=00:00:02.87 bitrate=   1.3kbits/s speed=1.14x    
+Enter command: <target>|all <time>|-1 <command>[ <argument>]
+
+Parse error, at least 3 arguments were expected, only 1 given in string '/images/blog/mining-scan-animation.gif'
+frame=   41 fps= 14 q=18.0 size=       0KiB time=00:00:02.87 bitrate=   1.3kbits/s speed=0.949x    [out#0/webm @ 0x600003be03c0] video:637KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.576234%
+frame=   65 fps= 19 q=18.0 Lsize=     640KiB time=00:00:04.55 bitrate=1152.7kbits/s speed=1.34x    
+  サイズ: 3.0M → 640K
+ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 17.0.0 (clang-1700.0.13.3)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1.1_3 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, gif, from 'public/images/blog/underground-survey-1.gif':
+  Duration: 00:00:04.02, start: 0.000000, bitrate: 11116 kb/s
+  Stream #0:0: Video: gif, bgra, 561x324, 16.67 fps, 16.67 tbr, 100 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (gif (native) -> vp9 (libvpx-vp9))
+Press [q] to stop, [?] for help
+[libvpx-vp9 @ 0x139607920] v1.15.1
+Output #0, webm, to 'public/images/blog/optimized/underground-survey-1.webm':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: vp9, yuva420p(tv, progressive), 561x324, q=2-31, 16.67 fps, 1k tbn
+      Metadata:
+        encoder         : Lavc61.19.101 libvpx-vp9
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=   16 fps=0.0 q=30.0 size=       0KiB time=00:00:00.96 bitrate=   4.0kbits/s speed= 1.9x    frame=   29 fps= 29 q=25.0 size=       0KiB time=00:00:01.74 bitrate=   2.2kbits/s speed=1.72x    frame=   43 fps= 28 q=28.0 size=       0KiB time=00:00:02.58 bitrate=   1.5kbits/s speed= 1.7x    frame=   43 fps= 21 q=28.0 size=       0KiB time=00:00:02.58 bitrate=   1.5kbits/s speed=1.28x    [out#0/webm @ 0x6000003483c0] video:321KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.167761%
+frame=   67 fps= 30 q=28.0 Lsize=     324KiB time=00:00:04.02 bitrate= 660.8kbits/s speed=1.82x    
+  サイズ: 5.3M → 324K
+
+=== 変換結果サマリー ===
+WebPファイル数:       37
+WebMファイル数:        3
+合計サイズ: 3.9M

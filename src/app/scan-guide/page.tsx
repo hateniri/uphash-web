@@ -18,9 +18,18 @@ export default function ScanGuidePage() {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Lixel スキャニングガイドライン
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl">
+          <p className="text-lg text-gray-600 max-w-3xl mb-6">
             Lixelシリーズ製品を用いたスキャニング業務における実践的なガイドライン。初期化、歩き方、カラー化、RTK、精度検証、マップ統合までを網羅。
           </p>
+          <a 
+            href="/advanced-scan-guide" 
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
+          >
+            上級者向けガイドはこちら
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </section>
 

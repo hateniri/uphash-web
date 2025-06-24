@@ -270,7 +270,41 @@ export default function SupportPage() {
         </div>
       </section>
 
-
+      {/* Scan Guides Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">スキャンガイド</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Link
+              href="/scan-guide"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group"
+            >
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">初心者向けガイド</h3>
+              <p className="text-gray-600 mb-4">基本的なスキャン方法、初期化、歩き方、カラー化まで</p>
+              <p className="text-blue-600 font-medium group-hover:text-blue-700">ガイドを見る →</p>
+            </Link>
+            
+            <Link
+              href="/advanced-scan-guide"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group"
+            >
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">上級者向けガイド</h3>
+              <p className="text-gray-600 mb-4">Map Fusion、HD Enhancement、ドローン統合など</p>
+              <p className="text-purple-600 font-medium group-hover:text-purple-700">詳細を見る →</p>
+            </Link>
+          </div>
+        </div>
+      </section>
 
     </main>
   )
