@@ -2,9 +2,81 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getImagePath } from '@/lib/utils'
+import ShareButtons from '@/components/blog/ShareButtons'
+import StructuredData, { articleSchema, breadcrumbSchema } from '@/components/StructuredData'
 
 // ブログ記事のデータ
 const blogPosts = {
+  'lixel-studio-3-3-1-release': {
+    title: 'LixelStudio 3.3.1 & L2 Pro / K1 ファームウェア3.0 リリースのお知らせ',
+    date: '2025-06-25',
+    category: '製品発表',
+    author: 'XGRIDS編集部',
+    image: '/images/blog/lixel-studio-release/image_001.webp',
+    originalUrl: 'https://xgrids.com/support/download?page=LixelStudio',
+    content: `
+      <p class="lead">最新バージョンの<strong>LixelStudio 3.3.1</strong>と、<strong>Lixel L2 Pro / K1用のファームウェア3.0</strong>が正式リリースされました。今回のアップデートでは、<strong>点群の品質向上</strong>と<strong>作業効率の大幅な改善</strong>が実現されています。</p>
+
+      <img src="${getImagePath('/images/blog/lixel-studio-release/image_002.webp')}" alt="LixelStudioとファームウェア更新のイメージ" class="w-full rounded-lg my-8" />
+
+      <h2>✅ ファイルサイズを最大5分の1に削減：スマートなデータ管理</h2>
+
+      <h3>1. 最適化されたファイル圧縮（.xbin形式）</h3>
+      <p>L2 ProおよびK1（Firmware 3.0以降）で収集したデータを、従来より<strong>4〜5倍の効率</strong>で保存・管理可能。</p>
+
+      <h3>2. リモートスキャン制御</h3>
+      <p>現場に行かずに<strong>スキャンの進捗確認・制御</strong>が可能。現場訪問を減らしつつ、プロジェクト全体の可視性が向上。</p>
+
+      <img src="${getImagePath('/images/blog/lixel-studio-release/image_003.webp')}" alt="ファイル圧縮とリモート制御機能" class="w-full rounded-lg my-8" />
+
+      <h2>🧠 点群品質と信頼性を強化</h2>
+
+      <h3>1. PPK-SLAMの最適化</h3>
+      <p>RTK信号が弱い<strong>トンネルや山間部</strong>でも高精度な後処理が可能に。</p>
+
+      <h3>2. 高度なグローバル最適化</h3>
+      <p>複雑な室内構造や大規模空間でも<strong>点群精度が向上</strong>。建築・内装業界にとって理想的なアップグレード。</p>
+
+      <h3>3. ノイズフィルターの強化</h3>
+      <p>壁や床などの重要構造を残しつつ、<strong>不要なノイズを除去</strong>。後処理作業の負担を大幅軽減。</p>
+
+      <img src="${getImagePath('/images/blog/lixel-studio-release/image_004.webp')}" alt="点群品質の向上例" class="w-full rounded-lg my-8" />
+
+      <h2>✏️ 新しい編集ツールを搭載</h2>
+
+      <h3>1. 点群の軸合わせ</h3>
+      <p>X, Y, Z軸に対する回転・整列が簡単に。建築設計の前段階としての整備が迅速に。</p>
+
+      <h3>2. スライスツール</h3>
+      <p>水平／垂直スライスで<strong>フロアプランや立面図、断面図</strong>の作成を瞬時に実行可能。</p>
+
+      <img src="${getImagePath('/images/blog/lixel-studio-release/image_005.webp')}" alt="新しい編集ツールの使用例" class="w-full rounded-lg my-8" />
+
+      <h2>📏 品質管理と効率を両立</h2>
+
+      <h3>時間選択による処理対象の絞り込み</h3>
+      <p>収集データの中から<strong>必要な時間帯のみを選択処理</strong>。無駄なデータ処理を回避し、計算リソースを節約。</p>
+
+      <img src="${getImagePath('/images/blog/lixel-studio-release/image_006.webp')}" alt="時間選択機能のインターフェース" class="w-full rounded-lg my-8" />
+
+      <h2>📥 ダウンロードはこちら</h2>
+
+      <ul class="space-y-2 my-6">
+        <li>👉 <a href="https://xgrids.com/support/download?page=LixelStudio" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">LixelStudio 3.3.1 ダウンロードページ</a></li>
+        <li>👉 <a href="https://xgrids.com/support/download?page=L2Pro" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Lixel L2 Pro ファームウェア3.0</a></li>
+        <li>👉 <a href="https://xgrids.com/support/download?page=K1" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Lixel K1 ファームウェア3.0</a></li>
+      </ul>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <h3 class="text-lg font-semibold mb-2">関連記事もぜひご覧ください</h3>
+        <ul class="space-y-2">
+          <li>• <a href="/blog/3d-gaussian-splatting-webinar" class="text-blue-600 hover:underline">3D Gaussian Splattingウェビナー ハイライト</a></li>
+          <li>• <a href="/blog/lcc-for-revit-announcement" class="text-blue-600 hover:underline">AI搭載 3DGS Scan-to-BIM Revitプラグイン 発表</a></li>
+          <li>• <a href="/blog/mining-digital-twin" class="text-blue-600 hover:underline">100m地下の鉱山スキャン：高リスク環境でのデジタルツイン構築</a></li>
+        </ul>
+      </div>
+    `
+  },
   'underground-utility-corridor': {
     title: '都市の「ライフライン」を可視化：Lixel L2 Proが全長8kmの地下管路調査を支援',
     date: '2025-02-21',
@@ -254,8 +326,6 @@ const blogPosts = {
     image: '/images/blog/optimized/3dgs-webinar-main.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=68',
     content: `
-      <img src="${getImagePath('/images/blog/optimized/3dgs-webinar-main.webp')}" alt="3D Gaussian Splattingウェビナー" class="w-full rounded-lg mb-8" />
-
       <h2>はじめに</h2>
       
       <p>2024年12月18日、3DISEのMicha Gula氏が主催するウェビナー「Gaussian splatting + SLAM ― 現実を捉える究極のツールとは？」が開催されました。登壇者には、リアリティキャプチャの専門家であるMindy Li（XGRIDS）、Tomas Barnas（Overhead4D）、Michael Rubloff（Radiance Fields）が参加し、急速に進化する3D技術の最前線について貴重な知見が共有されました。</p>
@@ -644,12 +714,10 @@ const blogPosts = {
     date: '2025-05-12',
     category: 'ケーススタディ',
     author: 'UP HASH Team',
-    image: '/images/blog/optimized/virtual-preproduction-hero.webp',
+    image: '/images/blog/optimized/virtual-preproduction-single.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=109',
     content: `
       <p class="lead">映像制作におけるロケスキャンと3Dプリビズの革新。XGRIDSのLixelスキャナーとGlobal Objectsの事例を紹介します。</p>
-
-      <img src="${getImagePath('/images/blog/optimized/virtual-preproduction-hero.webp')}" alt="バーチャルプリプロダクション" class="w-full rounded-lg my-8" />
 
       <p>映像制作の現場では、技術の進化により「バーチャル・プリプロダクション」の活用が加速しています。</p>
       
@@ -720,6 +788,1171 @@ const blogPosts = {
       <p class="text-lg">映像制作の効率化・高品質化・脱炭素化へ。</p>
       <p class="text-lg font-semibold">XGRIDSとGlobal Objectsの連携は、ロケーションベースの映像制作を根本から変えています。</p>
     `
+  },
+  '3dgs-best-practices': {
+    title: '3D Gaussian Splatting（3DGS）の実践活用とベストプラクティス',
+    date: '2025-06-25',
+    category: '技術解説',
+    author: 'XGRIDS 編集部',
+    image: '/images/blog/3dgs-best-practices/image_001.webp',
+    originalUrl: 'https://xgrids.com',
+    content: `
+      <img src="${getImagePath('/images/blog/3dgs-best-practices/image_001.webp')}" alt="3DGS比較図" class="w-full rounded-lg my-8" />
+
+      <h3>3DGSとは？</h3>
+
+      <p>3D Gaussian Splatting（3DGS）は、最新の3Dビジュアライゼーション手法として注目されている技術です。従来のメッシュベースの3Dモデルとは異なり、点群と画像ベースの表現を融合させた非メッシュのアプローチにより、軽量でフォトリアリスティックな3D表現が可能になります。</p>
+
+      <h2>技術比較と選定のベストプラクティス</h2>
+
+      <img src="${getImagePath('/images/blog/3dgs-best-practices/image_002.webp')}" alt="技術比較図" class="w-full rounded-lg my-8" />
+
+      <h3>📷 フォトグラメトリー／従来型3Dモデリング</h3>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li>正確な幾何形状を取得できるが、反射・低光量・複雑形状などには弱い</li>
+        <li>処理と再構築に時間がかかる</li>
+      </ul>
+
+      <h3>🔍 NeRF（ニューラルラディアンスフィールド）</h3>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li>距離・空・反射を含む多様な情報を表現可能</li>
+        <li>低照明や光変化に強い</li>
+        <li>しかし幾何的な精度が低く、トレーニングに時間とリソースを要する</li>
+      </ul>
+
+      <h3>🟡 3D Gaussian Splatting（3DGS）</h3>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li>高品質な視覚表現と軽量性を両立</li>
+        <li>ゲームエンジン（Unity/Unreal）や3Dツール（Blender、Cinema 4D）で使用可能</li>
+        <li>ただしジオメトリ精度には限界があり、リアルタイム物理シミュレーションには不向き</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/3dgs-best-practices/image_003.webp')}" alt="3DGSの特徴" class="w-full rounded-lg my-8" />
+
+      <h2>3DGSの応用事例とベストプラクティス</h2>
+
+      <h3>🎬 映画制作における3DGSの活用</h3>
+
+      <div class="bg-gray-50 p-6 rounded-lg my-8">
+        <p class="font-semibold mb-3">講演者：Kai Christmann（モーションデザイナー）</p>
+        
+        <ul class="space-y-4">
+          <li>
+            <strong>After Effectsでの背景置換</strong><br>
+            グリーンスクリーン不要でフォトリアルな背景を合成可能
+          </li>
+          <li>
+            <strong>カメラモーションとの統合</strong><br>
+            Lixel K1で大規模環境をスキャン後に仮想カメラを合成し、自然な動きを実現
+          </li>
+          <li>
+            <strong>ツール例</strong>
+            <ul class="list-disc pl-6 mt-2">
+              <li>CamTrack AR（iOSで仮想カメラトラッキング）</li>
+              <li>Jetset（スマホでGSプレビュー可能）</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <img src="${getImagePath('/images/blog/3dgs-best-practices/image_004.webp')}" alt="映画制作での活用例" class="w-full rounded-lg my-8" />
+
+      <h3>🏞 バーチャルプロダクションでの3DGS活用</h3>
+
+      <div class="bg-blue-50 p-6 rounded-lg my-8">
+        <p class="font-semibold mb-3">講演者：Andrii Shramko（バーチャルプロダクションプロデューサー）</p>
+        
+        <ul class="space-y-4">
+          <li>
+            <strong>Unreal Engine連携</strong><br>
+            背景シーンとしてXGRIDSスキャンを取り込み、役者の動線設計に活用
+          </li>
+          <li>
+            <strong>環境効果の演出</strong><br>
+            層ごとの深度調整で昼夜表現や照明効果を付加
+          </li>
+          <li>
+            <strong>スキャナ比較</strong>
+            <ul class="list-disc pl-6 mt-2">
+              <li>XGRIDS：屋外や広域スキャンに最適</li>
+              <li>GoPro多眼リグ：高密度小空間向け</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <img src="${getImagePath('/images/blog/3dgs-best-practices/image_005.webp')}" alt="バーチャルプロダクション" class="w-full rounded-lg my-8" />
+
+      <h3>🕹 ゲームエンジンを活用した文化財の保存と体験</h3>
+
+      <div class="bg-green-50 p-6 rounded-lg my-8">
+        <p class="font-semibold mb-3">講演者：Dr. Lukasz Mirocha（XRビジュアライゼーション研究者）</p>
+        
+        <h4 class="font-semibold mt-4 mb-2">プロジェクト①：ヘリテージマンションのデジタルツイン</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Lixel K1で25分間のウォークスルースキャン</li>
+          <li>UnityとXGRIDS 3DGSプラグインでアノテーション付きのインタラクティブ空間を構築</li>
+        </ul>
+        
+        <h4 class="font-semibold mt-4 mb-2">プロジェクト②：戦前ワルシャワの街並み再現</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>夜間・低照度下でスマホ250枚撮影→3DGS再構成</li>
+          <li>実在した街並みの雰囲気を忠実に再現した文化アーカイブをUnityで実現</li>
+        </ul>
+      </div>
+
+      <img src="${getImagePath('/images/blog/3dgs-best-practices/image_006.webp')}" alt="文化財保存プロジェクト" class="w-full rounded-lg my-8" />
+
+      <h2>3DGSワークフローのベストプラクティス</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">撮影・スキャニング</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• 均一な照明条件を確保</li>
+            <li>• オーバーラップ率60-80%を維持</li>
+            <li>• 反射面や透明素材は避ける</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-green-600">処理・最適化</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• 点群密度の適切な調整</li>
+            <li>• ガウシアンの数を用途に応じて制限</li>
+            <li>• ビューポートに応じた LOD 設定</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-purple-600">インテグレーション</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• ゲームエンジンのプラグイン活用</li>
+            <li>• ライティング設定の調整</li>
+            <li>• パフォーマンス最適化</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-orange-600">配信・公開</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• 適切な圧縮形式の選択</li>
+            <li>• プラットフォーム対応の確認</li>
+            <li>• ストリーミング設定の最適化</li>
+          </ul>
+        </div>
+      </div>
+
+      <img src="${getImagePath('/images/blog/3dgs-best-practices/image_007.webp')}" alt="ワークフロー図" class="w-full rounded-lg my-8" />
+
+      <h2>実装例：セッション風景と3D表示</h2>
+
+      <img src="${getImagePath('/images/blog/3dgs-best-practices/image_008.webp')}" alt="セッション風景" class="w-full rounded-lg my-8" />
+
+      <h2>まとめ：3DGSが開く新しいクリエイティブの地平</h2>
+
+      <p>3D Gaussian Splattingは、従来の物理ベースレンダリングとは異なるアプローチで、次世代のリアルタイム視覚表現を可能にします。特に以下のような領域で大きな可能性を持っています：</p>
+
+      <ul class="list-disc pl-6 space-y-2 my-6">
+        <li>映像制作・VFX</li>
+        <li>XR（AR/VR/MR）</li>
+        <li>デジタルツイン</li>
+        <li>Webホスト型コンテンツ</li>
+        <li>文化保存・展示インターフェース</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/3dgs-best-practices/image_009.webp')}" alt="3DGSの未来" class="w-full rounded-lg my-8" />
+
+      <p>今後もXGRIDSでは、3DGSに関する実践的な事例や最新ワークフローを継続的に発信していきます。</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <h3 class="text-lg font-semibold mb-2">関連リンク</h3>
+        <ul class="space-y-2">
+          <li>📺 <a href="https://lcc-viewer.xgrids.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LCC Viewerでモデルを見る</a></li>
+          <li>📖 <a href="https://xgrids.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">オリジナル記事はこちら</a></li>
+        </ul>
+      </div>
+
+      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg my-8">
+        <h3 class="text-xl font-bold mb-4">3DGSであなたのプロジェクトを次のレベルへ</h3>
+        <p class="mb-4">XGRIDSのLixelスキャナーと3D Gaussian Splatting技術で、フォトリアリスティックな3D体験を実現しませんか？</p>
+        <a href="/contact" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          お問い合わせはこちら
+        </a>
+      </div>
+    `
+  },
+  'turkish-hybrid-lidar-workflow': {
+    title: 'トルコ測量会社、ハンドヘルドと地上型LiDARを組み合わせた高速プロジェクト納品を実現',
+    date: '2025-06-20',
+    category: '導入事例',
+    author: 'XGRIDS公式ブログ',
+    image: '/images/blog/turkish-hybrid-workflow/image_000.webp',
+    originalUrl: 'https://www.xgrids.com/blog/turkish-surveying-firm-combines-handheld-and-terrestrial-lidar',
+    content: `
+      <h2>概要</h2>
+
+      <p>トルコの測量会社「Atlıhan Surveying Engineering」は、XGRIDSのLixel L2 ProハンドヘルドLiDARと地上型スキャナー（Leica RTC360）を組み合わせることで、3Dドキュメント作成の時間を「数日から数時間」へと大幅に短縮しました。</p>
+      
+      <p>7分で1,000㎡を記録し、2〜3cmの実用的な精度を維持するハイブリッドワークフローは、測量の効率・精度・コストのバランスを見直す一例です。</p>
+
+      <img src="${getImagePath('/images/blog/turkish-hybrid-workflow/image_000.webp')}" alt="トルコの測量現場" class="w-full rounded-lg my-8" />
+
+      <h2>技術比較：L2 Proと地上型スキャナー</h2>
+
+      <div class="overflow-x-auto my-8">
+        <table class="min-w-full bg-white border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-2 text-left">判断基準</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">地上型スキャナー</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">XGRIDS L2 Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2 font-semibold">現場作業時間</td>
+              <td class="border border-gray-300 px-4 py-2">数時間〜数日（専門知識が必要）</td>
+              <td class="border border-gray-300 px-4 py-2 text-green-600 font-semibold">7分で1,000㎡（徒歩でスキャン）</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-2 font-semibold">測定精度</td>
+              <td class="border border-gray-300 px-4 py-2">サブセンチ（mm単位）</td>
+              <td class="border border-gray-300 px-4 py-2">2〜3cm（図面用途には十分）</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2 font-semibold">出力フォーマット</td>
+              <td class="border border-gray-300 px-4 py-2">点群のみ</td>
+              <td class="border border-gray-300 px-4 py-2 text-blue-600 font-semibold">点群 + フォトリアリスティック3D（LCC経由）</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-2 font-semibold">初期投資</td>
+              <td class="border border-gray-300 px-4 py-2">高コスト</td>
+              <td class="border border-gray-300 px-4 py-2 text-green-600 font-semibold">低コストで短期間回収</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <img src="${getImagePath('/images/blog/turkish-hybrid-workflow/image_001.webp')}" alt="技術比較図" class="w-full rounded-lg my-8" />
+
+      <h2>ハイブリッドワークフローの実際</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
+        <div class="bg-blue-50 rounded-lg p-6">
+          <h3 class="text-lg font-bold mb-3 text-blue-800">1. Capture（取得）</h3>
+          <p class="text-sm"><strong>L2 Pro</strong>: 現場全体を短時間でマクロスキャン</p>
+          <p class="text-sm mt-2"><strong>RTC360</strong>: 高精度が求められる機器や構造物を固定スキャン</p>
+        </div>
+
+        <div class="bg-green-50 rounded-lg p-6">
+          <h3 class="text-lg font-bold mb-3 text-green-800">2. Process（処理）</h3>
+          <p class="text-sm"><strong>LixelStudio</strong>: SLAMデータをLAS/E57形式へ変換、地上型と同等時間で処理</p>
+        </div>
+
+        <div class="bg-yellow-50 rounded-lg p-6">
+          <h3 class="text-lg font-bold mb-3 text-yellow-800">3. Integrate（統合）</h3>
+          <p class="text-sm"><strong>Leica Cyclone Core</strong>: 平面・断面・立面を仕上げる</p>
+        </div>
+
+        <div class="bg-purple-50 rounded-lg p-6">
+          <h3 class="text-lg font-bold mb-3 text-purple-800">4. Visualize（可視化）</h3>
+          <p class="text-sm"><strong>LCC Studio Web Link</strong>: 3D Gaussian Splattingによるフォトリアルモデルでバーチャルツアー・空間把握を実現</p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-semibold mb-2">🔗 LCC Viewerでモデルを見る</p>
+        <a href="https://lcc-viewer.xgrids.com" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-blue-600 hover:text-blue-800 underline">
+          ハイブリッドワークフローの成果物を確認
+        </a>
+      </div>
+
+      <img src="${getImagePath('/images/blog/turkish-hybrid-workflow/image_002.webp')}" alt="ワークフロー図" class="w-full rounded-lg my-8" />
+
+      <h2>実証事例：歴史的駅舎の記録</h2>
+
+      <div class="bg-gray-50 p-6 rounded-lg my-8">
+        <ul class="space-y-2">
+          <li><strong>面積</strong>: 1,000㎡</li>
+          <li><strong>スキャン時間</strong>: 約7分（徒歩0.9m/s）</li>
+          <li><strong>環境</strong>: 低照度・複雑な装飾</li>
+          <li><strong>出力</strong>: 点群 + フォトリアル3Dモデル（LCC Studio使用）</li>
+          <li><strong>評価</strong>: 幾何学的な破綻なし、高天井でも高品質データを保持</li>
+        </ul>
+      </div>
+
+      <img src="${getImagePath('/images/blog/turkish-hybrid-workflow/image_003.webp')}" alt="歴史的駅舎のスキャン結果" class="w-full rounded-lg my-8" />
+
+      <h2>応用事例：ケルケネス遺跡の学術スキャン</h2>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li>大規模屋外現場にてハイブリッドスキャンを実施</li>
+        <li>地上型 vs L2 Proの品質比較を実施</li>
+        <li>学術的にも高評価：「L2 Proの使いやすさと品質に感銘を受けた」</li>
+      </ul>
+
+      <h2>導入効果</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✅ 経済性の向上</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• L2 Proは低価格かつROIが早い</li>
+            <li>• これまで予算外だったプロジェクトが実現可能に</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-green-600">✅ 新たな市場開拓</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• ホテル・工場・森林・橋梁など大規模構造物のスキャンが容易に</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-purple-600">✅ 顧客満足度</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• プロの測量士：高品質SLAMとして好評価</li>
+            <li>• 初心者：ミリ精度への期待に要調整（教育必要）</li>
+          </ul>
+        </div>
+      </div>
+
+      <img src="${getImagePath('/images/blog/turkish-hybrid-workflow/image_004.webp')}" alt="導入効果のグラフ" class="w-full rounded-lg my-8" />
+
+      <h2>XGRIDSのLCC & 3D Gaussian Splatting技術</h2>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li>フォトリアル出力は従来点群より「圧倒的に優れる」</li>
+        <li>自動処理に対応し、バーチャルツアーなど活用範囲も広い</li>
+      </ul>
+
+      <div class="bg-gray-50 p-6 rounded-lg my-8">
+        <h3 class="text-lg font-semibold mb-3">必要スペック例</h3>
+        <ul class="space-y-2">
+          <li><strong>RAM</strong>: 128GB</li>
+          <li><strong>GPU</strong>: RTX 4080</li>
+          <li><strong>CPU</strong>: Intel Core i9</li>
+          <li><strong>処理時間</strong>: 10分スキャン×5回で約24時間</li>
+        </ul>
+      </div>
+
+      <h2>専門家の見解</h2>
+
+      <blockquote class="border-l-4 border-blue-500 pl-6 my-8 italic">
+        <p class="text-lg mb-4">「迅速なドキュメント化が必要な現場では、精密測量を完全に求めるのではなく、L2 Proによるスピードと精度のバランスが最適解です。」</p>
+      </blockquote>
+
+      <blockquote class="border-l-4 border-green-500 pl-6 my-8 italic">
+        <p class="text-lg mb-4">「XGRIDS製品はSLAMの枠を超え、LCCや3DGSといった唯一無二の技術を備えています。」</p>
+      </blockquote>
+
+      <h2>関連記事もチェック！</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <a href="/blog/skender-construction-workflow" class="block bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+          <h3 class="font-semibold text-blue-600 mb-2">Skender社のバーチャル現場記録事例</h3>
+          <p class="text-sm text-gray-600">建設現場のデジタル化で作業時間を最大97%削減</p>
+        </a>
+
+        <a href="/blog/mexico-digital-conservation" class="block bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+          <h3 class="font-semibold text-blue-600 mb-2">メキシコ密林の生態系デジタル保存プロジェクト</h3>
+          <p class="text-sm text-gray-600">熱帯雨林を3Dツインで未来へ残す</p>
+        </a>
+
+        <a href="/blog/submarine-tunnel-revolution" class="block bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+          <h3 class="font-semibold text-blue-600 mb-2">世界最長の海底トンネル建設</h3>
+          <p class="text-sm text-gray-600">海面下115.4mの極限環境での3Dスキャン革命</p>
+        </a>
+      </div>
+
+      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg my-8">
+        <h3 class="text-xl font-bold mb-4">ハイブリッドワークフローで測量を革新</h3>
+        <p class="mb-4">地上型スキャナーとLixel L2 Proの組み合わせで、効率と精度の最適なバランスを実現しませんか？</p>
+        <a href="/contact" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          お問い合わせはこちら
+        </a>
+      </div>
+    `
+  },
+  'slam-gaussian-splatting': {
+    title: 'SLAM × Gaussian Splatting が切り拓く3Dインタラクティブ体験の未来',
+    date: '2024-11-13',
+    category: '技術トレンド',
+    author: 'XGRIDS編集部',
+    image: '/images/blog/slam-gaussian-splatting/image_001.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=108',
+    content: `
+      <h2>SLAMとGaussian Splattingの融合が創る新しい3D体験</h2>
+      
+      <p>3D技術の最前線で、2つの革新的な技術が融合し、まったく新しい可能性を生み出しています。リアルタイムSLAM（Simultaneous Localization and Mapping）と3D Gaussian Splatting（3DGS）の組み合わせにより、これまで実現不可能だった高品質な3Dインタラクティブ体験が現実のものとなりつつあります。</p>
+
+      <img src="${getImagePath('/images/blog/slam-gaussian-splatting/image_001.webp')}" alt="SLAM × Gaussian Splattingの概念図" class="w-full rounded-lg my-8" />
+
+      <h2>Lixel CyberColor：高精度点群と自動統合</h2>
+      
+      <p>XGRIDSが開発した「Lixel CyberColor」は、SLAMと3DGSを統合した画期的なソフトウェアです。Multi-SLAMアルゴリズムにより取得した高精度な点群データとカメラ画像を自動的に統合し、フォトリアリスティックな3Dモデルを生成します。</p>
+      
+      <h3>主な特徴：</h3>
+      <ul>
+        <li><strong>リアルタイム処理：</strong>スキャンしながら3Dモデルが生成され、現場で即座に確認可能</li>
+        <li><strong>高精度な位置合わせ：</strong>SLAMによる正確な軌道推定により、センチメートル単位の精度を実現</li>
+        <li><strong>自動最適化：</strong>AIアルゴリズムが点群とGaussian Splattingの最適な統合を自動実行</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/slam-gaussian-splatting/image_002.webp')}" alt="Lixel CyberColorのインターフェース" class="w-full rounded-lg my-8" />
+
+      <h2>国際的なミートアップでの発表</h2>
+      
+      <p>2024年10月、サンフランシスコで開催された「3D Gaussian Splatting Meetup」において、XGRIDSのチームがSLAMと3DGSの統合技術について発表を行いました。参加者からは、特に以下の点について高い関心が寄せられました：</p>
+      
+      <blockquote class="border-l-4 border-blue-500 pl-6 my-6 italic">
+        「SLAMによる正確な軌道推定とGaussian Splattingの高品質なレンダリングを組み合わせることで、建設現場のデジタルツイン作成や文化財のアーカイブなど、幅広い分野での活用が期待できる」
+        <cite class="block mt-2 text-sm text-gray-600">- ミートアップ参加者のコメント</cite>
+      </blockquote>
+
+      <img src="${getImagePath('/images/blog/slam-gaussian-splatting/image_003.webp')}" alt="サンフランシスコでのミートアップの様子" class="w-full rounded-lg my-8" />
+
+      <h2>実践的な活用事例</h2>
+      
+      <h3>1. 建設現場のリアルタイムモニタリング</h3>
+      <p>Lixelハンドヘルドスキャナーで取得したSLAMデータを、その場でGaussian Splattingモデルに変換。プロジェクト関係者は、高品質な3Dビジュアライゼーションを通じて現場の状況を即座に把握できます。</p>
+      
+      <h3>2. 文化財のインタラクティブアーカイブ</h3>
+      <p>歴史的建造物や美術品を高精度でスキャンし、Gaussian Splattingによりフォトリアリスティックな3Dモデルを作成。VR/ARデバイスでの鑑賞や、教育コンテンツとしての活用が進んでいます。</p>
+      
+      <h3>3. 映画制作におけるバーチャルプロダクション</h3>
+      <p>ロケ地のスキャンデータをリアルタイムで3DGSモデルに変換し、撮影現場でのプレビズやポストプロダクションでの合成作業に活用。制作期間の大幅な短縮を実現しています。</p>
+
+      <img src="${getImagePath('/images/blog/slam-gaussian-splatting/image_004.webp')}" alt="実践的な活用事例のイメージ" class="w-full rounded-lg my-8" />
+
+      <h2>技術的な課題と今後の展望</h2>
+      
+      <p>SLAM × Gaussian Splattingの統合は大きな可能性を秘めていますが、いくつかの技術的課題も存在します：</p>
+      
+      <ul>
+        <li><strong>処理負荷の最適化：</strong>高品質な3DGSモデルの生成には依然として高い計算能力が必要</li>
+        <li><strong>データ容量の管理：</strong>大規模な空間をスキャンした場合のデータ管理とストリーミング技術の改善</li>
+        <li><strong>エッジケースへの対応：</strong>反射面や透明な物体など、特殊な材質への対応強化</li>
+      </ul>
+      
+      <p>XGRIDSでは、これらの課題に対して継続的な研究開発を進めており、より使いやすく、より高品質な3Dキャプチャソリューションの提供を目指しています。</p>
+
+      <div class="bg-gray-100 p-6 rounded-lg my-8">
+        <h3 class="text-xl font-bold mb-4">関連リンク</h3>
+        <ul class="space-y-2">
+          <li>• <a href="https://www.xgrids.com/lixel-cybercolor" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Lixel CyberColor製品ページ</a></li>
+          <li>• <a href="https://www.xgrids.com/resources/3dgs-meetup-sf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">3D Gaussian Splatting Meetup発表資料</a></li>
+          <li>• <a href="https://arxiv.org/abs/2308.14737" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">3D Gaussian Splatting論文（arXiv）</a></li>
+        </ul>
+      </div>
+
+      <p>SLAM × Gaussian Splattingの融合技術は、3Dキャプチャと可視化の未来を大きく変える可能性を秘めています。XGRIDSは、この革新的な技術をより多くの人々が活用できるよう、今後も開発を続けてまいります。</p>
+    `
+  },
+  'lithium-mica-measurement-revolution': {
+    title: 'リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例',
+    date: '2024-12-27',
+    category: '導入事例',
+    author: 'XGRIDS編集部',
+    image: '/images/blog/lithium-measurement/image_001.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=105',
+    content: `
+      <h2>はじめに</h2>
+
+      <p>新エネルギー分野の中核資源として注目されるリチウム。中でも「リチウム雲母」は重要な鉱物資源であり、その採掘・運用の精度は業界全体の効率を左右します。本記事では、中国のリチウム工場における<strong>Lixel携帯型スキャンシステム</strong>の導入事例を紹介します。これにより、リチウム雲母の山積測定がどのように効率化・高精度化されたのかを解説します。</p>
+
+      <img src="${getImagePath('/images/blog/lithium-measurement/image_001.webp')}" alt="リチウム雲母の山積測定現場" class="w-full rounded-lg my-8" />
+
+      <h2>クライアント概要</h2>
+
+      <div class="bg-gray-50 p-6 rounded-lg my-8">
+        <ul class="space-y-2">
+          <li><strong>所在地</strong>：中国</li>
+          <li><strong>業種</strong>：リチウム炭酸塩の製造工場</li>
+          <li><strong>生産能力</strong>：年間20,000トンのバッテリーグレード・リチウム炭酸塩を製造</li>
+          <li><strong>設備</strong>：鉱山採掘、選鉱、リチウム塩製造、リサイクルまでを統合</li>
+        </ul>
+      </div>
+
+      <h2>従来の課題</h2>
+
+      <p>従来の山積測定方法（トータルステーションやGPS/RTK）は、次のような問題を抱えていました：</p>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li>作業が<strong>手間と時間</strong>を要する</li>
+        <li><strong>人為的誤差</strong>が生じやすい</li>
+        <li>計算精度の制限により<strong>生産計画への影響大</strong></li>
+      </ul>
+
+      <h2>導入されたソリューション</h2>
+
+      <h3>使用機材・技術</h3>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <ul class="space-y-2">
+          <li>• <strong>Lixel 携帯型スキャンシステム</strong></li>
+          <li>• <strong>LiDAR + パノラマカメラ + 高精度IMU</strong></li>
+          <li>• <strong>リアルタイムモデリング</strong></li>
+          <li>• <strong>TRW点群処理ソフトウェア</strong></li>
+        </ul>
+      </div>
+
+      <img src="${getImagePath('/images/blog/lithium-measurement/image_002.webp')}" alt="Lixel L2 Proの使用風景" class="w-full rounded-lg my-8" />
+
+      <h2>現場での運用手順</h2>
+
+      <h3>① プランニング</h3>
+
+      <p>スキャン範囲を確認し、<strong>山積体の全体をカバー</strong>するようなスキャンルートを事前に設計。</p>
+
+      <img src="${getImagePath('/images/blog/lithium-measurement/image_003.webp')}" alt="スキャンルート設計図" class="w-full rounded-lg my-8" />
+
+      <h3>② データ収集</h3>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>Lixel L1 / L2 Pro</strong>を使用（延長ロッド付き）</li>
+        <li><strong>リアルタイムプレビュー</strong>により、現場で即座にスキャン範囲やノイズを確認</li>
+        <li><strong>一人作業が可能</strong>で、スキャン中のシャドウノイズも軽減</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/lithium-measurement/image_004.webp')}" alt="スキャン作業とリアルタイムプレビュー" class="w-full rounded-lg my-8" />
+
+      <h3>③ ポストプロセッシング</h3>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>LixelStudio</strong>にて点群の整理と山積体のセグメント化</li>
+        <li>自動で<strong>埋め戻し体積・掘削体積</strong>を計算し、レポートとして出力</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/lithium-measurement/image_005.webp')}" alt="点群処理と体積計算画面" class="w-full rounded-lg my-8" />
+
+      <h2>測定結果の詳細（Pile 1〜4）</h2>
+
+      <p>以下の画像は、4つのリチウム雲母山に対してスキャンおよび解析した体積・面積データの概要を示しています。</p>
+
+      <img src="${getImagePath('/images/blog/lithium-measurement/image_006.webp')}" alt="Pile 1〜4の測定データ" class="w-full rounded-lg my-8" />
+
+      <h2>導入成果</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✔ 効率性</h3>
+          <p>最長90分のスキャンで<strong>追加設置・校正なし</strong></p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✔ 精度</h3>
+          <p><strong>センチメートル単位の精度</strong>により、測定誤差を大幅に低減</p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✔ 操作性</h3>
+          <p>一体型で<strong>直感的な操作</strong>、リアルタイムで確認しながらスムーズに進行</p>
+        </div>
+      </div>
+
+      <img src="${getImagePath('/images/blog/lithium-measurement/image_007.webp')}" alt="体積レポート画面" class="w-full rounded-lg my-8" />
+
+      <h2>顧客の声</h2>
+
+      <blockquote class="border-l-4 border-blue-500 pl-6 my-8 italic">
+        <p class="text-lg mb-4">「Lixelモバイルスキャニングシステムは、在庫測定の精度と効率性を劇的に改善してくれました。簡単で信頼性も高く、我々の業務の基盤を支える技術です」</p>
+        <cite class="text-sm text-gray-600">—— プロジェクトマネージャー（リチウム工場）</cite>
+      </blockquote>
+
+      <h2>関連製品紹介</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-3">📦 ハードウェア</h3>
+          <ul class="space-y-1 text-gray-700">
+            <li>• Lixel L2 Pro</li>
+            <li>• LixelKit K1</li>
+            <li>• Lixel L2-16 / L2-32</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3">🖥 ソフトウェア</h3>
+          <ul class="space-y-1 text-gray-700">
+            <li>• LixelStudio</li>
+            <li>• Lixel CyberColor</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3">🔌 プラグイン</h3>
+          <ul class="space-y-1 text-gray-700">
+            <li>• LCC for Revit</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>関連業種</h2>
+
+      <div class="flex flex-wrap gap-3 my-6">
+        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full">エネルギー・鉱業</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full">測量・地理空間情報</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full">建築・都市設計</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full">公共安全</span>
+      </div>
+
+      <h2>モデルを確認する</h2>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <p class="font-semibold mb-2">LCC Viewerでモデルを見る</p>
+        <a href="https://lcc-viewer.xgrids.com" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-blue-600 hover:text-blue-800 underline">
+          リチウム雲母山積の3Dモデルを確認
+        </a>
+      </div>
+
+      <img src="${getImagePath('/images/blog/lithium-measurement/image_008.webp')}" alt="LCC Viewer画面" class="w-full rounded-lg my-8" />
+
+      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg my-8">
+        <h3 class="text-xl font-bold mb-4">リチウム資源管理の最適化を実現</h3>
+        <p class="mb-4">Lixelスキャンシステムで、あなたの鉱山・工場の在庫管理を革新しませんか？</p>
+        <a href="/contact" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          導入のご相談はこちら
+        </a>
+      </div>
+    `
+  },
+  'skender-construction-workflow': {
+    title: '仮想現場が変える建設業務：Skender社のフォトリアリスティックかつ測定可能な施工ドキュメント化ワークフロー',
+    date: '2025-05-16',
+    category: '導入事例',
+    author: 'XGRIDS編集部',
+    image: '/images/blog/skender-workflow/construction-site-measurements.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=86',
+    content: `
+      <h2>実装事例とLCC Viewerリンク付き紹介</h2>
+
+      <img src="${getImagePath('/images/blog/skender-workflow/construction-site-measurements.webp')}" alt="建設現場の測定可能な3Dスキャン" class="w-full rounded-lg my-8" />
+
+      <h3>🏢 オフィス改修プロジェクト</h3>
+
+      <p>以前のテナントが退去した2フロアのオフィス空間を、新テナントの内装準備前に記録。</p>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>課題</strong>：複数人が数時間かけて撮影・メモを行う非効率な作業</li>
+        <li><strong>解決策</strong>：K1スキャナーで1フロア12分、全体30分未満で完了</li>
+        <li><strong>成果</strong>：全室・階段・ヨガルームを含む完全記録を共有可能に</li>
+      </ul>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-semibold mb-2">🔗 LCC Viewerでモデルを見る</p>
+        <a href="https://lcc-viewer.xgrids.com/?data=https://da9i2vj1xvtoc.cloudfront.net/prdfr/user-pub/18923282/18923282522136624/1673/Vital+Proteins+L2.lcc" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-blue-600 hover:text-blue-800 underline break-all">
+          Vital Proteinsオフィスの3Dモデル
+        </a>
+      </div>
+
+      <h3>🏗️ Preconstruction Scan-to-BIM 記録</h3>
+
+      <p>50,000 sq ft × 4階の大型商業ビルの内部空間を全記録。</p>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>課題</strong>：従来の三脚スキャンでは5日＋長時間の後処理が必要</li>
+        <li><strong>解決策</strong>：K1で各フロア17分、総作業時間を数時間に短縮</li>
+        <li><strong>成果</strong>：Revitで利用可能なBIMモデルに変換可能な品質</li>
+      </ul>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-semibold mb-2">🔗 LCC Viewerでモデルを見る</p>
+        <a href="https://lcc-viewer.xgrids.com/?data=https://da9i2vj1xvtoc.cloudfront.net/prdfr/user-pub/18891609/18891609522644641/1794/meta.lcc" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-blue-600 hover:text-blue-800 underline break-all">
+          Scan-to-BIMプロジェクトの3Dモデル
+        </a>
+      </div>
+
+      <h3>🧱 テナント拡張プロジェクト</h3>
+
+      <p>空室40,000 sq ftのエリアを1回のスキャンで記録し、全業者と即時共有。</p>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>課題</strong>：各社が別々に現場を記録し、情報の食い違いや漏れが発生</li>
+        <li><strong>解決策</strong>：K1で短時間スキャン、LCC Viewerリンクを全社に提供</li>
+        <li><strong>成果</strong>：見積もり精度と施工効率が大幅向上</li>
+      </ul>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-semibold mb-2">🔗 LCC Viewerでモデルを見る</p>
+        <a href="https://lcc-viewer.xgrids.com/?data=https://da9i2vj1xvtoc.cloudfront.net/prdfr/user-pub/18923282/18923282511660680/1025" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-blue-600 hover:text-blue-800 underline break-all">
+          テナント拡張エリアの3Dモデル
+        </a>
+      </div>
+
+      <h3>🏗️ コンクリ打設前の新築記録</h3>
+
+      <p>コンクリートで埋設される前のスリーブや配筋等をL2 Proで可視化。</p>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>課題</strong>：施工完了は深夜、打設は翌朝という限られた記録時間</li>
+        <li><strong>解決策</strong>：11,000 sq ftを15分でスキャン</li>
+        <li><strong>成果</strong>：今後の配線・点検作業に利用可能な精緻なアーカイブを作成</li>
+      </ul>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-semibold mb-2">🔗 LCC Viewerでモデルを見る</p>
+        <a href="https://lcc-viewer.xgrids.com/pub/dbaxkd-jpmc-l1-deck" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-blue-600 hover:text-blue-800 underline break-all">
+          打設前床下の3Dモデル
+        </a>
+      </div>
+
+      <h3>🏥 病院天井裏スキャン</h3>
+
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>課題</strong>：衛生制限により1枚ずつしか天井タイルを開けられない</li>
+        <li><strong>解決策</strong>：L2 Proを使い開口部から上向きスキャンを実施</li>
+        <li><strong>成果</strong>：構造材を精緻に記録し、補強設計の資料として活用</li>
+      </ul>
+
+      <h2>📊 数値で見るXGRIDSの効果</h2>
+
+      <div class="overflow-x-auto my-8">
+        <table class="min-w-full bg-white border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-2 text-left">項目</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">変化</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">スキャン時間</td>
+              <td class="border border-gray-300 px-4 py-2">最大97%削減（8時間 → 17分）</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-2">処理スピード</td>
+              <td class="border border-gray-300 px-4 py-2">データ取得から数時間で共有可能に</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">モデル精度</td>
+              <td class="border border-gray-300 px-4 py-2">Revit対応、BIM用に即活用可能</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-2">情報共有</td>
+              <td class="border border-gray-300 px-4 py-2">全関係者に同一モデルで一括提供可能</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>💡 教育と導入ステップ</h2>
+
+      <ol class="list-decimal pl-6 space-y-2 my-6">
+        <li><strong>PoC段階</strong>：K1・L2 Proの試験導入</li>
+        <li><strong>基本導入</strong>：K1を標準装備に</li>
+        <li><strong>専門用途</strong>：L2 Proは天井裏・設備用に利用</li>
+        <li><strong>教育方法</strong>：Ben氏がプロジェクトごとの説明動画を制作・配信</li>
+      </ol>
+
+      <h2>🧠 導入の決め手</h2>
+
+      <ul class="list-disc pl-6 space-y-2 my-6">
+        <li>非技術者でも使いやすいフォトリアルなモデル表示</li>
+        <li>点群＋画像による圧倒的な視認性と測定精度</li>
+        <li>スピードと共有性を両立したワークフロー</li>
+      </ul>
+
+      <h2>💬 コメント</h2>
+
+      <blockquote class="border-l-4 border-blue-500 pl-6 my-8 italic">
+        <p class="text-lg mb-4">「この機能の多くは、1年前には存在していなかった。<br>建設の未来が今、目の前で動いている」</p>
+        <cite class="text-sm text-gray-600">— Ben Stocker（Skender Construction）</cite>
+      </blockquote>
+
+      <h2>🔗 関連リンク</h2>
+
+      <ul class="list-disc pl-6 space-y-2 my-6">
+        <li><a href="https://www.xgrids.com/newsdetails?id=86" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">オリジナル英語記事</a></li>
+        <li><a href="https://www.linkedin.com/in/bstocker/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Ben Stocker氏のLinkedIn</a></li>
+      </ul>
+
+      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg my-8">
+        <h3 class="text-xl font-bold mb-4">XGRIDSで建設現場をデジタル化</h3>
+        <p class="mb-4">Skender社のような革新的なワークフローを、あなたの現場でも実現できます。</p>
+        <a href="/contact" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          お問い合わせはこちら
+        </a>
+      </div>
+    `
+  },
+  'submarine-tunnel-revolution': {
+    title: '世界最長の海底トンネル建設を支える3Dスキャン革命：Lixel L2 Proの挑戦',
+    date: '2025-02-13',
+    category: '導入事例',
+    author: 'XGRIDS公式ブログチーム',
+    image: '/images/blog/submarine-tunnel/underground-001.webp',
+    originalUrl: 'https://www.xgrids.com/insights/breaking-depth-records-lixel-l2',
+    content: `
+      <h2>はじめに：海底115.4mの極限へ</h2>
+
+      <p>中国・青島の<strong>膠州湾第二海底トンネル</strong>は、全長17.48km（うち海底掘削9.95km）を誇る、世界最長となる高速道路海底トンネルです。この巨大インフラの建設において、安全・正確・効率を両立するには、かつてないレベルの<strong>リアルタイム三次元データ取得技術</strong>が求められました。</p>
+
+      <p>この課題に対し、<strong>XGRIDSのLixel L2 Pro</strong>が採用され、<strong>世界で最も深く使用されたハンドヘルドLiDARスキャナ</strong>として記録を打ち立てました。</p>
+
+      <img src="${getImagePath('/images/blog/submarine-tunnel/underground-001.webp')}" alt="海底トンネル建設現場" class="w-full rounded-lg my-8" />
+
+      <h2>プロジェクト概要</h2>
+
+      <div class="bg-gray-50 p-6 rounded-lg my-8">
+        <h3 class="text-lg font-semibold mb-4">クライアント</h3>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>百歳建設（Baisui）</li>
+          <li>西南交通大学</li>
+          <li>西南鉄道研究院</li>
+        </ul>
+
+        <h3 class="text-lg font-semibold mt-6 mb-4">産業分野</h3>
+        <p>トンネル建設／インフラ開発</p>
+
+        <h3 class="text-lg font-semibold mt-6 mb-4">課題</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>海面下115.4mの高水圧環境（最大1.1兆パスカル＝1㎡あたり車40台分の圧力）</li>
+          <li>硬質花崗岩による掘削困難地形</li>
+          <li>従来の測量手法では非効率：トータルステーションや据え置き型スキャナは頻繁な機材移動が必要</li>
+        </ul>
+      </div>
+
+      <img src="${getImagePath('/images/blog/submarine-tunnel/underground-002.webp')}" alt="Lixel L2 Proによるスキャン作業" class="w-full rounded-lg my-8" />
+
+      <h2>導入技術とワークフロー</h2>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <h3 class="text-lg font-semibold mb-4">使用機材：</h3>
+        <ul class="space-y-2">
+          <li>✔ Lixel L2 Pro ハンドヘルドスキャナ</li>
+          <li>✔ オンデバイスのリアルタイム3Dモデリング</li>
+          <li>✔ 2cm精度の点群取得（ポスト処理不要）</li>
+        </ul>
+      </div>
+
+      <h3>実施プロセス：</h3>
+
+      <div class="space-y-6 my-8">
+        <div class="flex items-start space-x-4">
+          <span class="text-2xl font-bold text-blue-600">1️⃣</span>
+          <div>
+            <h4 class="font-semibold mb-2">迅速なデータ取得</h4>
+            <p>掘削現場にて複数地点をスピーディーにスキャンし、精密な3Dデータを即時取得。</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <span class="text-2xl font-bold text-blue-600">2️⃣</span>
+          <div>
+            <h4 class="font-semibold mb-2">現場でのリアルタイム評価</h4>
+            <p>掘削の過不足を即座に確認・修正、過掘削リスクを低減。</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <span class="text-2xl font-bold text-blue-600">3️⃣</span>
+          <div>
+            <h4 class="font-semibold mb-2">シームレスなデータ統合</h4>
+            <p>生成された点群はCAD用の断面図やベクターデータに変換され、次工程の計画に直結。</p>
+          </div>
+        </div>
+      </div>
+
+      <img src="${getImagePath('/images/blog/submarine-tunnel/underground-003.webp')}" alt="リアルタイム点群データの可視化" class="w-full rounded-lg my-8" />
+
+      <h2>導入効果</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✅ 効率性と機動力の向上</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• スキャナの移動・設置不要、ハンドヘルドで迅速に取得可能</li>
+            <li>• 作業員1名で運用可能な省人化構成</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✅ データ可視化の即時化</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• 点群をリアルタイムで表示、ポスト処理なしで即座に活用</li>
+            <li>• 掘削計画の意思決定をスピードアップ</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3 text-blue-600">✅ コスト・工期削減</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• ステーションの移設回数を削減し、内部コストを最小化</li>
+            <li>• 人的リソース削減と同時に安全性向上</li>
+          </ul>
+        </div>
+      </div>
+
+      <img src="${getImagePath('/images/blog/submarine-tunnel/underground-004.webp')}" alt="トンネル内部の3Dマッピング" class="w-full rounded-lg my-8" />
+
+      <h2>実績：ハンドヘルドLiDARの新記録</h2>
+
+      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg my-8">
+        <div class="space-y-4">
+          <p class="text-xl">📌 <strong>世界で最も深い海底トンネルにおけるLiDARスキャニング（115.4m）</strong></p>
+          <p class="text-xl">📌 <strong>リアルタイム×2cm精度×省力化を同時に実現</strong></p>
+        </div>
+        <p class="mt-6">この事例は、Lixel L2 Proが<strong>従来の測量概念を塗り替える存在</strong>であることを示す象徴的な成功事例です。</p>
+      </div>
+
+      <img src="${getImagePath('/images/blog/submarine-tunnel/underground-005.webp')}" alt="作業員によるスキャニング" class="w-full rounded-lg my-8" />
+
+      <h2>技術詳細：極限環境での性能</h2>
+
+      <div class="overflow-x-auto my-8">
+        <table class="min-w-full bg-white border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-2 text-left">環境条件</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">課題</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Lixel L2 Proの対応</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">高湿度環境</td>
+              <td class="border border-gray-300 px-4 py-2">機器の結露・故障リスク</td>
+              <td class="border border-gray-300 px-4 py-2">IP54防塵防水設計で安定動作</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-2">狭小空間</td>
+              <td class="border border-gray-300 px-4 py-2">大型機器の設置困難</td>
+              <td class="border border-gray-300 px-4 py-2">ハンドヘルド設計で自在に移動</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">低照度環境</td>
+              <td class="border border-gray-300 px-4 py-2">視覚的な特徴点不足</td>
+              <td class="border border-gray-300 px-4 py-2">LiDARベースで照明不要</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-2">振動・粉塵</td>
+              <td class="border border-gray-300 px-4 py-2">測定精度への影響</td>
+              <td class="border border-gray-300 px-4 py-2">IMU補正で安定した軌跡推定</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <img src="${getImagePath('/images/blog/submarine-tunnel/underground-006.webp')}" alt="点群データの詳細" class="w-full rounded-lg my-8" />
+
+      <h2>建設現場の声</h2>
+
+      <blockquote class="border-l-4 border-blue-500 pl-6 my-8 italic">
+        <p class="text-lg mb-4">「従来の測量方法では1日がかりだった作業が、Lixel L2 Proなら2時間で完了。しかも精度は向上している。これは現場の常識を変える技術だ。」</p>
+        <cite class="text-sm text-gray-600">— 百歳建設 プロジェクトマネージャー</cite>
+      </blockquote>
+
+      <img src="${getImagePath('/images/blog/submarine-tunnel/underground-007.webp')}" alt="データ処理と解析" class="w-full rounded-lg my-8" />
+
+      <h2>今後の展望：インフラ測量の新時代</h2>
+
+      <p>膠州湾第二海底トンネルでの成功は、極限環境におけるLixel L2 Proの信頼性を証明しました。今後期待される応用分野：</p>
+
+      <ul class="list-disc pl-6 space-y-2 my-6">
+        <li>深海油田・ガス田の施設点検</li>
+        <li>地下鉄・地下都市開発</li>
+        <li>災害時の緊急測量（地震後のトンネル点検等）</li>
+        <li>原子力施設等の高リスク環境での遠隔測量</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/submarine-tunnel/underground-008.webp')}" alt="未来のインフラ測量" class="w-full rounded-lg my-8" />
+
+      <h2>おわりに</h2>
+
+      <p>大規模かつ高精度を求められる現代のインフラプロジェクトにおいて、「即時」「可搬」「高精度」な3Dスキャン技術は、現場のあり方そのものを変革しつつあります。</p>
+
+      <p>XGRIDSのLixel L2 Proは、<strong>次世代のインフラ測量のスタンダード</strong>として、今後ますますその存在感を高めていくでしょう。</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+        <h3 class="text-lg font-semibold mb-2">関連リンク</h3>
+        <ul class="space-y-2">
+          <li>• <a href="/products/lixel-l2-pro" class="text-blue-600 hover:underline">Lixel L2 Pro製品詳細</a></li>
+          <li>• <a href="/case-studies" class="text-blue-600 hover:underline">その他の導入事例</a></li>
+          <li>• <a href="/contact" class="text-blue-600 hover:underline">お問い合わせ</a></li>
+        </ul>
+      </div>
+    `
+  },
+  'mexico-digital-conservation': {
+    title: 'メキシコの秘境を守るデジタル保存技術',
+    date: '2025-05-12',
+    category: 'ケーススタディ',
+    author: 'XGRIDS / Carlos Bausa Martinez',
+    image: '/images/blog/mexico-conservation/Arquiavis_Veracruz_Waterfall001.webp',
+    originalUrl: 'https://www.arquiavis.com/digitizing-the-wild',
+    content: `
+      <p class="lead">消えゆく熱帯雨林を3Dツインで未来へ残す</p>
+
+      <h2>🌳 時が忘れた森：ベラクルスの未踏熱帯林</h2>
+      
+      <p>地球上では毎年1,000万ヘクタールもの森林が姿を消しています。そんな中、メキシコ・ベラクルス州の秘境に広がる原生林は、手つかずの生物多様性を保つ最後の聖域のひとつです。</p>
+      
+      <p>この地には、いまだ文献に記録されていない動植物や、古来からの生態系の関係性、そして気候変動に耐えるカーボンストレージシステムが存在しています。</p>
+
+      <img src="${getImagePath('/images/blog/mexico-conservation/Arquiavis_Veracruz_Waterfall002.webp')}" alt="ベラクルスの熱帯雨林" class="w-full rounded-lg my-8" />
+
+      <h2>🧠 デジタルで「保存ボタン」を押すという選択</h2>
+      
+      <p>アマゾン上層の1ヘクタールには、約300種の樹木が存在すると言われています。こうした植物からは、現代の処方薬トップ150のうち74%が生まれました。</p>
+      
+      <p>しかしメキシコでは2001年から2023年の間に約489万ヘクタール（9.2%）もの樹木が失われ、ベラクルスも国内有数の森林消失ホットスポットとなっています。</p>
+
+      <h2>🎥 現地の映像：ベラクルスの熱帯雨林デジタル保存プロジェクト</h2>
+
+      <div class="relative aspect-video my-8">
+        <iframe 
+          src="https://www.youtube.com/embed/V0QfkIumpBM"
+          title="メキシコ・ベラクルスの熱帯雨林デジタル保存プロジェクト"
+          class="absolute inset-0 w-full h-full rounded-lg"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h2>🌐 生きた「デジタルツイン」が世界を変える</h2>
+      
+      <p>XGRIDSの技術「Green Cubes」プロジェクトでは、森林を空中LiDARと地上センサーでスキャンし、センチメートル精度の3Dモデル＝"生きたアーカイブ"を生成します。</p>
+      
+      <p>これにより以下が可能となります：</p>
+      
+      <ul class="list-disc ml-6 my-4">
+        <li>生態系の詳細な構造把握</li>
+        <li>カーボン計測やアラート分析の基盤構築</li>
+        <li>ストーリーテリングによる保護活動の促進</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/mexico-conservation/Arquiavis_Veracruz_Waterfall003.webp')}" alt="3Dスキャンされた森林" class="w-full rounded-lg my-8" />
+
+      <h2>🛠 技術詳細：ArquiaVisが取り組んだ現地収録</h2>
+      
+      <h3>使用機材</h3>
+      
+      <ul class="list-disc ml-6 my-4">
+        <li><strong>カメラ</strong>：XGRIDS「Lixel K1」空間カメラ</li>
+        <li><strong>処理技術</strong>：LCC + 3D Gaussian Splatting（3DGS）</li>
+      </ul>
+      
+      <h3>特徴</h3>
+      
+      <ul class="list-disc ml-6 my-4">
+        <li>機材重量：約1kg、バックパックで携行可能</li>
+        <li>操作：ワンボタン、単独オペレーション</li>
+        <li>ファイル形式：軽量・高精度の3Dデータ</li>
+        <li>ソフトウェア：複数のスキャンを自動統合するMap Fusion搭載LCC</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/mexico-conservation/Arquiavis_Veracruz_Waterfall004.webp')}" alt="現地スキャン中の様子" class="w-full rounded-lg my-8" />
+
+      <h2>🧭 フィールドにおける課題とその克服</h2>
+      
+      <p>過酷な自然環境でのスキャンには、多くの工夫と対策が求められました。</p>
+      
+      <h3>📊 フィールド課題と技術解決の対応表</h3>
+
+      <div class="overflow-x-auto my-8">
+        <table class="min-w-full bg-white border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-2">課題</th>
+              <th class="border border-gray-300 px-4 py-2">解決策</th>
+              <th class="border border-gray-300 px-4 py-2">成果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">密集した植生</td>
+              <td class="border border-gray-300 px-4 py-2">3DGS処理アルゴリズム</td>
+              <td class="border border-gray-300 px-4 py-2">メッシュの複雑さを排し、正確な植生表現を実現</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-2">変化する照明条件</td>
+              <td class="border border-gray-300 px-4 py-2">曇天時の撮影スケジューリング</td>
+              <td class="border border-gray-300 px-4 py-2">均一で高品質なテクスチャ再現</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">遠隔地での作業</td>
+              <td class="border border-gray-300 px-4 py-2">軽量かつ自律型の機材</td>
+              <td class="border border-gray-300 px-4 py-2">困難な地形でも完全なデータ取得を実現</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-2">動的な自然要素</td>
+              <td class="border border-gray-300 px-4 py-2">動きのある対象のキャプチャ機能</td>
+              <td class="border border-gray-300 px-4 py-2">滝や水流を自然に再現した3D表現</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <img src="${getImagePath('/images/blog/mexico-conservation/Arquiavis_Veracruz_Waterfall005.webp')}" alt="滝のデジタルツイン" class="w-full rounded-lg my-8" />
+
+      <h2>🔬 活用例：環境保全への応用</h2>
+      
+      <p>このデジタルツインは、以下のような幅広い分野での利用が期待されています：</p>
+      
+      <ul class="list-disc ml-6 my-4">
+        <li>生態系の経年変化の科学的モニタリング</li>
+        <li>開発圧力の高い先住民地域の保全記録</li>
+        <li>教育現場での没入型自然体験</li>
+        <li>保護団体によるビジュアルアピール</li>
+      </ul>
+
+      <img src="${getImagePath('/images/blog/mexico-conservation/Arquiavis_Veracruz_Waterfall006.webp')}" alt="デジタルツインを活用した教育" class="w-full rounded-lg my-8" />
+
+      <h2>💡 プロジェクト実施への推奨事項</h2>
+      
+      <ol class="list-decimal ml-6 my-4">
+        <li>生態系が脅かされている場所を優先的にスキャン</li>
+        <li>専門家と提携して高品質な記録を実現</li>
+        <li>天候と時間（朝・曇天・無風）を重視</li>
+        <li>1回のスキャンは10分以内を目安に</li>
+        <li>ハーネスなどで両手を使える装備推奨</li>
+        <li>Unreal Engine等で再ライティング・編集推奨</li>
+      </ol>
+
+      <img src="${getImagePath('/images/blog/mexico-conservation/Arquiavis_Veracruz_Waterfall007.webp')}" alt="Unreal Engineで再構築された3D空間" class="w-full rounded-lg my-8" />
+
+      <h2>🌍 ArquiaVisの世界的活動</h2>
+      
+      <p>ベラクルスのプロジェクトは、建築家・写真家Carlos Bausa Martinez氏が率いる<strong>ArquiaVis</strong>の取り組みの一端にすぎません。彼らは以下のようなグローバルなプロジェクトにも関わっています：</p>
+      
+      <ul class="list-disc ml-6 my-4">
+        <li><strong>歴史保存</strong>：中世のスペイン要塞やロンドンの文化財</li>
+        <li><strong>島の記録</strong>：地中海の海岸浸食に直面する島々</li>
+        <li><strong>農村文化</strong>：クロアチアの石造小屋の保全</li>
+        <li><strong>城塞デジタル化</strong>：ヨーロッパ各地の要塞建築</li>
+      </ul>
+
+      <h2>🔭 未来へ向けて：失われる前に記録するという選択</h2>
+      
+      <p>写真や統計だけでは伝えきれない「場の記憶」を、3Dツイン技術は未来へと継承してくれます。今回のようなプロジェクトが世界中で普及すれば、より多くの人々が自然を知り、守ることができるのです。</p>
+
+      <img src="${getImagePath('/images/blog/mexico-conservation/Arquiavis_Veracruz_Waterfall008.webp')}" alt="デジタル保存技術の未来" class="w-full rounded-lg my-8" />
+    `
   }
 }
 
@@ -745,9 +1978,47 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://xgrids.uphash.net'
+  const pageUrl = `${baseUrl}/blog/${resolvedParams.slug}`
+  
+  // Extract first paragraph text for description
+  const descriptionMatch = post.content.match(/<p[^>]*>([^<]+)<\/p>/)
+  const description = descriptionMatch 
+    ? descriptionMatch[1].trim() 
+    : post.content.substring(0, 160).replace(/<[^>]*>/g, '').trim()
+
   return {
-    title: `${post.title} | UP HASH`,
-    description: post.content.substring(0, 160).replace(/<[^>]*>/g, ''),
+    title: post.title,
+    description: description,
+    openGraph: {
+      title: post.title,
+      description: description,
+      url: pageUrl,
+      siteName: 'UP HASH',
+      locale: 'ja_JP',
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
+      images: [
+        {
+          url: `${baseUrl}${post.image}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        }
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: description,
+      site: '@uphash',
+      creator: '@uphash',
+      images: [`${baseUrl}${post.image}`],
+    },
+    alternates: {
+      canonical: pageUrl,
+    },
   }
 }
 
@@ -760,7 +2031,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <main className="min-h-screen">
+    <>
+      <StructuredData 
+        data={articleSchema({
+          title: post.title,
+          description: post.content.substring(0, 160).replace(/<[^>]*>/g, '').trim(),
+          author: post.author,
+          datePublished: post.date,
+          image: post.image
+        })}
+      />
+      <StructuredData 
+        data={breadcrumbSchema([
+          { name: 'ホーム', url: 'https://xgrids.uphash.net' },
+          { name: 'ブログ', url: 'https://xgrids.uphash.net/blog' },
+          { name: post.title, url: `https://xgrids.uphash.net/blog/${resolvedParams.slug}` }
+        ])}
+      />
+      <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -819,6 +2107,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               />
             </div>
 
+            {/* Share Buttons */}
+            <div className="mb-12 pb-8 border-b border-gray-200">
+              <ShareButtons 
+                url={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://xgrids.uphash.net'}/blog/${resolvedParams.slug}`}
+                title={post.title}
+                description={post.content.substring(0, 160).replace(/<[^>]*>/g, '').trim()}
+              />
+            </div>
+
             {/* Article Body */}
             <div 
               className="prose prose-lg max-w-none"
@@ -839,6 +2136,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
+            </div>
+
+            {/* Share Buttons at Bottom */}
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <p className="text-center text-gray-600 mb-6">この記事が役に立ちましたか？ぜひシェアしてください！</p>
+              <div className="flex justify-center">
+                <ShareButtons 
+                  url={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://xgrids.uphash.net'}/blog/${resolvedParams.slug}`}
+                  title={post.title}
+                  description={post.content.substring(0, 160).replace(/<[^>]*>/g, '').trim()}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -886,5 +2195,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </section>
     </main>
+    </>
   )
 }

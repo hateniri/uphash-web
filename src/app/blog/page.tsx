@@ -12,6 +12,33 @@ export const metadata = generatePageMetadata({
 
 const blogPosts = [
   {
+    id: 'lixel-studio-3-3-1-release',
+    title: 'LixelStudio 3.3.1 & L2 Pro / K1 ファームウェア3.0 リリースのお知らせ',
+    date: '2025-06-25',
+    category: '製品発表',
+    excerpt: '最新バージョンのLixelStudio 3.3.1と、Lixel L2 Pro / K1用のファームウェア3.0が正式リリースされました。点群の品質向上と作業効率の大幅な改善が実現されています。',
+    image: '/images/blog/lixel-studio-release/image_001.webp',
+    originalUrl: 'https://xgrids.com/support/download?page=LixelStudio'
+  },
+  {
+    id: '3dgs-best-practices',
+    title: '3D Gaussian Splatting（3DGS）の実践活用とベストプラクティス',
+    date: '2025-06-25',
+    category: '技術解説',
+    excerpt: '最新の3Dビジュアライゼーション手法3DGSの技術比較、映画制作・バーチャルプロダクション・文化財保存での活用事例、実装のベストプラクティスを専門家の知見と共に徹底解説。',
+    image: '/images/blog/3dgs-best-practices/image_001.webp',
+    originalUrl: 'https://xgrids.com'
+  },
+  {
+    id: 'turkish-hybrid-lidar-workflow',
+    title: 'トルコ測量会社、ハンドヘルドと地上型LiDARを組み合わせた高速プロジェクト納品を実現',
+    date: '2025-06-20',
+    category: '導入事例',
+    excerpt: 'Atlıhan Surveying Engineering社がLixel L2 ProとLeica RTC360を組み合わせたハイブリッドワークフローで、3Dドキュメント作成時間を数日から数時間へ短縮。7分で1,000㎡を記録し、実用的な2〜3cm精度を実現。',
+    image: '/images/blog/turkish-hybrid-workflow/image_000.webp',
+    originalUrl: 'https://www.xgrids.com/blog/turkish-surveying-firm-combines-handheld-and-terrestrial-lidar'
+  },
+  {
     id: 'lcc-for-revit-announcement',
     title: '業界初：XGRIDS、Autodesk DevCon Europe 2025にてRevit向けAI搭載「LCC for Revit」プラグインを発表',
     date: '2025-05-21',
@@ -21,12 +48,21 @@ const blogPosts = [
     originalUrl: 'https://www.xgrids.com/newsdetails?id=120'
   },
   {
+    id: 'skender-construction-workflow',
+    title: '仮想現場が変える建設業務：Skender社のフォトリアリスティックかつ測定可能な施工ドキュメント化ワークフロー',
+    date: '2025-05-16',
+    category: '導入事例',
+    excerpt: '建設現場のデジタル化で作業時間を最大97%削減。Skender社がXGRIDSのK1・L2 Proを活用し、リアルタイムで共有可能な3Dモデルによる革新的なワークフローを確立。',
+    image: '/images/blog/skender-workflow/construction-site-measurements.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=86'
+  },
+  {
     id: 'virtual-preproduction',
     title: 'バーチャル・プリプロダクションの未来：XGRIDS × Global Objects',
     date: '2025-05-12',
     category: 'ケーススタディ',
     excerpt: '映像制作におけるロケスキャンと3Dプリビズの革新。XGRIDSのLixelスキャナーとGlobal Objectsの事例を紹介します。',
-    image: '/images/blog/optimized/virtual-preproduction-hero.webp',
+    image: '/images/blog/optimized/virtual-preproduction-single.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=109'
   },
   {
@@ -48,6 +84,24 @@ const blogPosts = [
     originalUrl: 'https://www.xgrids.com/newsdetails?id=123'
   },
   {
+    id: 'submarine-tunnel-revolution',
+    title: '世界最長の海底トンネル建設を支える3Dスキャン革命：Lixel L2 Proの挑戦',
+    date: '2025-02-13',
+    category: '導入事例',
+    excerpt: '海面下115.4mの極限環境で世界記録を樹立。中国・青島の膠州湾第二海底トンネルにおいて、Lixel L2 Proがリアルタイム×2cm精度×省力化を同時に実現し、インフラ測量の新時代を切り開きました。',
+    image: '/images/blog/submarine-tunnel/underground-001.webp',
+    originalUrl: 'https://www.xgrids.com/insights/breaking-depth-records-lixel-l2'
+  },
+  {
+    id: 'mexico-digital-conservation',
+    title: 'メキシコの秘境を守るデジタル保存技術',
+    date: '2025-05-12',
+    category: 'ケーススタディ',
+    excerpt: 'メキシコ・ベラクルス州の熱帯雨林における滝群を、Lixel K1スキャナーで高精度3Dデータ化。ArquiaVisとの協業により、環境保全と文化継承を実現する革新的なアプローチを紹介します。',
+    image: '/images/blog/mexico-conservation/Arquiavis_Veracruz_Waterfall001.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=110'
+  },
+  {
     id: '3d-gaussian-splatting-webinar',
     title: '3D技術の未来を探る：「3D Gaussian Splatting」ウェビナーの注目ポイント10選',
     date: '2024-12-30',
@@ -55,6 +109,24 @@ const blogPosts = [
     excerpt: 'XGRIDSのMindy Li氏らが登壇した3DGSとSLAM技術に関するウェビナーから、映画制作、都市計画、建設業界における革新的な活用事例と最新トレンドを紹介します。',
     image: '/images/blog/optimized/3dgs-webinar-main.webp',
     originalUrl: 'https://www.xgrids.com/newsdetails?id=68'
+  },
+  {
+    id: 'slam-gaussian-splatting',
+    title: 'SLAM × Gaussian Splatting が切り拓く3Dインタラクティブ体験の未来',
+    date: '2024-11-13',
+    category: '技術トレンド',
+    excerpt: 'リアルタイムSLAMと3D Gaussian Splattingの融合により、高品質な3Dインタラクティブ体験が現実に。Lixel CyberColorの革新的技術と実践的活用事例を紹介。',
+    image: '/images/blog/slam-gaussian-splatting/image_001.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=108'
+  },
+  {
+    id: 'lithium-mica-measurement-revolution',
+    title: 'リチウム雲母の山積測定に革命を──Lixel携帯型スキャンシステムの導入事例',
+    date: '2024-12-27',
+    category: '導入事例',
+    excerpt: '中国のリチウム工場でLixelスキャンシステムを導入し、山積測定の効率化と高精度化を実現。最長90分のスキャンでセンチメートル単位の精度を達成し、生産計画の最適化に貢献。',
+    image: '/images/blog/lithium-measurement/image_001.webp',
+    originalUrl: 'https://www.xgrids.com/newsdetails?id=105'
   },
 ]
 
@@ -145,23 +217,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">最新情報をお届けします</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Xgridsの最新技術情報や製品アップデートをメールでお知らせします
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              メールマガジンに登録
-            </Link>
-          </div>
-        </div>
-      </section>
     </main>
   )
 }

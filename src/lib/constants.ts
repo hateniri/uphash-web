@@ -39,30 +39,34 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     ]
   },
   { 
-    label: '業界別使用例', 
+    label: '事例紹介', 
     href: '/case-studies',
     submenu: [
-      { label: '建設・土木', href: '/case-studies#construction' },
-      { label: '測量・地図作成', href: '/case-studies#surveying' },
-      { label: '不動産・施設管理', href: '/case-studies#real-estate' },
-      { label: '製造業', href: '/case-studies#manufacturing' },
-      { label: '文化財保護', href: '/case-studies#heritage' }
+      { label: '測量・地理空間', href: '/case-studies#surveying' },
+      { label: '建築・都市計画', href: '/case-studies#architecture' },
+      { label: '映像・エンターテインメント', href: '/case-studies#entertainment' },
+      { label: 'エネルギー・鉱業', href: '/case-studies#energy' },
+      { label: '公共安全', href: '/case-studies#public-safety' }
     ]
   },
   { 
     label: 'サポート', 
     href: '/support',
     submenu: [
-      { label: 'XGRIDSとは', href: '/about-xgrids' },
-      { label: 'スキャンガイド', href: '/scan-guide' },
-      { label: '上級スキャンガイド', href: '/advanced-scan-guide' },
+      { label: 'マニュアル', href: '/downloads' },
       { label: 'カタログ', href: '/catalog' },
       { label: 'チュートリアル', href: '/tutorials' },
-      { label: 'FAQ', href: '/faq' }
+      { label: 'よくある質問', href: '/faq' },
+      { label: 'スキャンガイド', href: '/scan-guide' }
     ]
   },
-  { label: 'ブログ', href: '/blog' },
-  { label: 'お問い合わせ', href: '/contact' }
+  { 
+    label: 'XGRIDS',
+    submenu: [
+      { label: 'XGRIDSについて', href: '/about-xgrids' },
+      { label: 'ブログ', href: '/blog' }
+    ]
+  }
 ]
 
 export const SOCIAL_LINKS = {

@@ -12,6 +12,7 @@
     "deploy": "npm run build && touch docs/.nojekyll && cp public/CNAME docs/CNAME && npx gh-pages -d docs"
   },
   "dependencies": {
+    "@google-analytics/data": "^4.9.0",
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

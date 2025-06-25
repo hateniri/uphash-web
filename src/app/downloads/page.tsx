@@ -4,223 +4,205 @@ import { getImagePath } from '@/lib/utils'
 import { generatePageMetadata } from '@/lib/seo'
 
 export const metadata = generatePageMetadata({
-  title: 'ダウンロード - マニュアル・ソフトウェア',
-  description: 'Lixelシリーズのマニュアル、ソフトウェア、技術資料のダウンロードページ。最新版のソフトウェアとドキュメントをご提供。',
+  title: 'マニュアル',
+  description: 'XGRIDS製品のオンラインマニュアル、スキャンガイド、技術資料をご覧いただけます。',
   path: '/downloads',
-  keywords: ['ダウンロード', 'マニュアル', 'ソフトウェア', '技術資料', 'カタログ']
+  keywords: ['マニュアル', 'スキャンガイド', 'オンラインマニュアル', '技術資料', 'ドキュメント']
 })
 
-const downloads = {
-  manuals: [
+const manuals = {
+  scanGuides: [
     {
-      name: 'Lixel L2 Pro ユーザーマニュアル',
-      description: 'L2 Proシリーズの基本操作、セットアップガイド',
-      version: 'v2.5',
-      size: '45 MB',
-      format: 'PDF',
-      link: '#'
+      name: 'スキャンガイド',
+      description: '初めての方向けの基本的なスキャン方法',
+      type: 'オンラインマニュアル',
+      icon: '📖',
+      link: '/scan-guide',
+      accent: 'blue' as const
     },
     {
-      name: 'Lixel K1 ユーザーマニュアル',
-      description: 'K1の操作方法、メンテナンスガイド',
-      version: 'v1.8',
-      size: '32 MB',
-      format: 'PDF',
-      link: '#'
-    },
-    {
-      name: 'RTKセットアップガイド',
-      description: 'RTK機能の設定と最適化',
-      version: 'v1.2',
-      size: '12 MB',
-      format: 'PDF',
-      link: '#'
-    },
-    {
-      name: 'クイックスタートガイド',
-      description: '初めてお使いの方向けの簡易ガイド',
-      version: 'v3.0',
-      size: '8 MB',
-      format: 'PDF',
-      link: '#'
+      name: '上級スキャンガイド',
+      description: 'プロフェッショナル向けの高度なスキャン技術',
+      type: 'オンラインマニュアル',
+      icon: '📚',
+      link: '/advanced-scan-guide',
+      accent: 'orange' as const
     }
   ],
-  software: [
+  softwareManuals: [
     {
-      name: 'Lixel Studio',
-      description: '点群処理・編集ソフトウェア',
-      version: 'v4.2.1',
-      size: '1.2 GB',
-      platforms: ['Windows', 'macOS'],
-      requirements: {
-        cpu: 'Intel Core i7以上 / AMD Ryzen 7以上',
-        ram: '16GB以上（32GB推奨）',
-        gpu: 'NVIDIA GTX 1060以上（RTX 3060推奨）',
-        storage: '500GB以上のSSD空き容量',
-        os: 'Windows 10/11 (64bit) / macOS 12以降'
-      },
-      link: 'https://app-download.xgrids.com/'
+      name: 'LCC Studio マニュアル',
+      description: '3D Gaussian Splatting ソフトウェアの完全ガイド',
+      version: 'v1.8.0',
+      type: 'オンラインマニュアル',
+      icon: '💻',
+      link: '/lcc-studio-manual',
+      accent: 'blue' as const
     },
     {
-      name: 'Lixel Cyber Color Studio',
-      description: '3D再構築ソフトウェア',
-      version: 'v3.5.0',
-      size: '980 MB',
-      platforms: ['Windows', 'macOS'],
-      requirements: {
-        cpu: 'Intel Core i9以上 / AMD Ryzen 9以上',
-        ram: '32GB以上（64GB推奨）',
-        gpu: 'NVIDIA RTX 3070以上（RTX 4080推奨）',
-        storage: '1TB以上のSSD空き容量',
-        os: 'Windows 10/11 (64bit) / macOS 12以降'
-      },
-      link: 'https://app-download.xgrids.com/'
+      name: 'LCC for Revit ガイド',
+      description: 'Revitプラグインの簡易操作ガイド',
+      version: 'v1.0.9',
+      type: 'オンラインマニュアル',
+      icon: '🏗️',
+      link: '/lcc-revit-guide',
+      accent: 'silver' as const
     },
     {
-      name: 'LCC Viewer',
-      description: 'LCCモデル閲覧用無料ビューア',
-      version: 'v2.1.0',
-      size: '150 MB',
-      platforms: ['Windows', 'macOS', 'Web'],
-      requirements: {
-        cpu: 'Intel Core i5以上 / AMD Ryzen 5以上',
-        ram: '8GB以上',
-        gpu: '専用GPU推奨（統合GPUでも動作可）',
-        storage: '10GB以上の空き容量',
-        os: 'Windows 10/11 / macOS 11以降 / Chrome/Edge/Safari最新版'
-      },
-      link: 'https://lcc-viewer.xgrids.com/'
-    },
-    {
-      name: 'Lixel GO',
-      description: 'モバイルコントロールアプリ',
-      version: 'v5.8.3',
-      size: '120 MB',
-      platforms: ['iOS', 'Android'],
-      requirements: {
-        ios: 'iOS 14.0以降、iPhone 8以降',
-        android: 'Android 9.0以降、3GB RAM以上',
-        storage: '500MB以上の空き容量',
-        network: 'Wi-Fi接続必須（5GHz推奨）'
-      },
-      link: '#'
-    }
-  ],
-  plugins: [
-    {
-      name: 'Lixel Revit プラグイン',
-      description: 'Autodesk Revit用点群インポートプラグイン',
-      version: 'v2.3',
-      size: '85 MB',
-      platforms: ['Windows'],
-      compatibility: 'Revit 2020-2024',
-      link: '#'
-    },
-    {
-      name: 'AutoCAD点群プラグイン',
-      description: 'AutoCAD用高速点群表示プラグイン',
-      version: 'v1.8',
-      size: '45 MB',
-      platforms: ['Windows'],
-      compatibility: 'AutoCAD 2019-2024',
-      link: '#'
-    },
-    {
-      name: 'Unreal Engine統合キット',
-      description: 'UE5用LCCモデルインポーター',
-      version: 'v1.2',
-      size: '120 MB',
-      platforms: ['Windows', 'macOS'],
-      compatibility: 'Unreal Engine 5.0以降',
-      link: '#'
-    },
-    {
-      name: 'Unity LCCローダー',
-      description: 'Unity用LCCファイル読み込みパッケージ',
-      version: 'v1.5',
-      size: '65 MB',
-      platforms: ['Windows', 'macOS'],
-      compatibility: 'Unity 2021.3 LTS以降',
-      link: '#'
+      name: 'LCC for Revit マニュアル',
+      description: 'Revitプラグインの詳細マニュアル',
+      version: 'v1.0.9',
+      type: 'オンラインマニュアル',
+      icon: '📘',
+      link: '/lcc-revit-manual',
+      accent: 'orange' as const
     }
   ]
 }
 
 export default function DownloadsPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-brand-black text-white py-16 md:py-24">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-grid-pattern-dark bg-grid opacity-10"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              ダウンロード
+              マニュアル
             </h1>
-            <p className="text-xl text-gray-300">
-              最新のソフトウェア、マニュアル、技術資料をダウンロード
+            <p className="text-xl text-brand-silver-300">
+              製品の使い方、技術情報、ベストプラクティスをご覧いただけます
             </p>
           </div>
         </div>
       </section>
 
-      {/* Manuals Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* Scan Guides Section */}
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12">日本語マニュアル・技術資料</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {downloads.manuals.map((manual, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start justify-between">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-brand-black mb-4">スキャンガイド</h2>
+            <div className="w-20 h-1 bg-brand-blue-600"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            {manuals.scanGuides.map((guide, index) => (
+              <Link
+                key={index}
+                href={guide.link}
+                className={`group bg-white border-2 border-brand-silver-200 rounded-xl p-8 hover:border-brand-${guide.accent}-500 transition-all hover:shadow-lg`}
+              >
+                <div className="flex items-start gap-6">
+                  <div className={`text-5xl p-4 bg-brand-${guide.accent}-50 rounded-lg group-hover:bg-brand-${guide.accent}-100 transition-colors`}>
+                    {guide.icon}
+                  </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{manual.name}</h3>
-                    <p className="text-gray-600 mb-3">{manual.description}</p>
-                    <div className="flex items-center text-sm text-gray-500 gap-4">
-                      <span>Version {manual.version}</span>
-                      <span>{manual.size}</span>
-                      <span>{manual.format}</span>
+                    <h3 className={`text-xl font-bold mb-3 text-brand-black group-hover:text-brand-${guide.accent}-600 transition-colors`}>
+                      {guide.name}
+                    </h3>
+                    <p className="text-brand-silver-600 mb-4">{guide.description}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-brand-silver-500 font-medium">{guide.type}</span>
+                      <span className={`text-brand-${guide.accent}-600 group-hover:translate-x-2 transition-transform`}>
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
-                  <a
-                    href={manual.link}
-                    className="ml-4 p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
-                    </svg>
-                  </a>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Software Manuals Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-brand-silver-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-brand-black mb-4">ソフトウェアマニュアル</h2>
+            <div className="w-20 h-1 bg-brand-orange-500"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {manuals.softwareManuals.map((manual, index) => {
+              const accentColor = manual.accent === 'silver' ? 'silver-600' : `${manual.accent}-600`;
+              const bgColor = manual.accent === 'silver' ? 'silver-100' : `${manual.accent}-50`;
+              const hoverBgColor = manual.accent === 'silver' ? 'silver-200' : `${manual.accent}-100`;
+              
+              return (
+                <Link
+                  key={index}
+                  href={manual.link}
+                  className="group bg-white border-2 border-brand-silver-200 rounded-xl p-8 hover:border-brand-silver-400 transition-all hover:shadow-xl"
+                >
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-brand-${bgColor} rounded-full mb-6 group-hover:bg-brand-${hoverBgColor} transition-colors`}>
+                    <span className="text-3xl">{manual.icon}</span>
+                  </div>
+                  
+                  <h3 className={`text-xl font-bold mb-3 text-brand-black group-hover:text-brand-${accentColor} transition-colors`}>
+                    {manual.name}
+                  </h3>
+                  
+                  <p className="text-brand-silver-600 mb-6">
+                    {manual.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm">
+                      {manual.version && (
+                        <span className={`inline-block px-3 py-1 bg-brand-${bgColor} text-brand-${accentColor} rounded-full font-medium mr-2`}>
+                          {manual.version}
+                        </span>
+                      )}
+                      <span className="text-brand-silver-500">{manual.type}</span>
+                    </div>
+                    
+                    <span className={`text-brand-${accentColor} group-hover:translate-x-2 transition-transform`}>
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-      {/* Support Section */}
-      <section className="py-16 md:py-24 bg-blue-600">
+      {/* Additional Resources */}
+      <section className="py-16 md:py-24 bg-brand-black text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            技術サポートが必要ですか？
+          <h2 className="text-3xl font-bold mb-6">
+            その他のリソース
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            製品の設定やトラブルシューティングについて、
-            専門スタッフがサポートいたします
+          <p className="text-xl text-brand-silver-300 mb-12 max-w-2xl mx-auto">
+            カタログのダウンロードや技術サポートが必要な場合はこちらから
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/catalog"
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-orange-500 text-white font-bold rounded-lg hover:bg-brand-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              カタログを見る
+            </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-brand-black transition-all"
             >
-              サポートに問い合わせる
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              技術サポート
             </Link>
-            <a
-              href="https://developer.xgrids.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              開発者ドキュメント
-            </a>
           </div>
         </div>
       </section>

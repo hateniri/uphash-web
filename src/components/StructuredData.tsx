@@ -136,3 +136,33 @@ export const articleSchema = (article: {
     "image": `https://xgrids.uphash.net${article.image}`
   })
 })
+
+export const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "株式会社UPHASH",
+  "alternateName": "UP HASH",
+  "image": "https://xgrids.uphash.net/images/uphash_logo.png",
+  "logo": "https://xgrids.uphash.net/images/uphash_logo.png",
+  "url": "https://xgrids.uphash.net",
+  "telephone": "",
+  "email": "info@uphash.net",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎ノ門１丁目１７−１",
+    "addressLocality": "港区",
+    "addressRegion": "東京都",
+    "postalCode": "105-6415",
+    "addressCountry": "JP"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 35.6686,
+    "longitude": 139.7454
+  },
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "priceRange": "¥¥¥",
+  "servesCuisine": "",
+  "acceptsReservations": false,
+  "description": "XGRIDS Field Scannerで点群データをリアルタイムで表示。Lixel L2 ProやK1などの高精度3Dスキャナーを提供。建設、文化財保存、映画制作など幅広い分野で活用される空間スキャニングソリューション。"
+}

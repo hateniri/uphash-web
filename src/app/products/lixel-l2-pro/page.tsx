@@ -99,7 +99,7 @@ export default function LixelL2ProPage() {
             </div>
             <div className="relative h-[500px] bg-gray-700 rounded-xl overflow-hidden">
               <img 
-                src={getImagePath('/images/lixel_l2_pro.jpg')} 
+                src={getImagePath('/images/products/l2pro-feature-1.webp')} 
                 alt="Lixel L2 Proプロフェッショナル3Dレーザースキャナー製品画像"
                 className="w-full h-full object-contain"
               />
@@ -151,7 +151,7 @@ export default function LixelL2ProPage() {
             </div>
             <div className="bg-gray-100 rounded-xl p-8">
               <img 
-                src={getImagePath('/images/products/l2pro-pointcloud.jpg')} 
+                src={getImagePath('/images/products/l2pro-feature-2.webp')} 
                 alt="Lixel L2 Proで取得した高密度点群データの表示例"
                 className="w-full h-auto rounded-lg"
               />
@@ -166,7 +166,7 @@ export default function LixelL2ProPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 bg-gray-200 rounded-xl p-8">
               <img 
-                src={getImagePath('/images/products/l2pro-3dgs.jpg')} 
+                src={getImagePath('/images/products/l2pro-feature-3.webp')} 
                 alt="3D Gaussian Splatting技術で生成されたフォトリアルな3Dモデル"
                 className="w-full h-auto rounded-lg"
               />
@@ -293,7 +293,7 @@ export default function LixelL2ProPage() {
             </div>
             <div className="bg-gray-200 rounded-xl p-8">
               <img 
-                src={getImagePath('/images/products/l2pro-slam.jpg')} 
+                src={getImagePath('/images/products/l2pro-feature-4.webp')} 
                 alt="Lixel L2 ProのSLAM技術によるリアルタイム地図生成の様子"
                 className="w-full h-auto rounded-lg"
               />
@@ -317,7 +317,7 @@ export default function LixelL2ProPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="bg-gray-100 rounded-xl p-8">
               <img 
-                src={getImagePath('/images/products/l2pro-drone.jpg')} 
+                src={getImagePath('/images/products/l2pro-feature-2.webp')} 
                 alt="ドローンにLixel L2 Proを搭載した空中スキャンの様子"
                 className="w-full h-auto rounded-lg"
               />

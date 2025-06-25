@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { PRODUCTS } from '@/lib/constants'
+import { analytics } from '@/lib/analytics'
 
 interface FormData {
   name: string
@@ -59,6 +60,10 @@ export default function ContactForm() {
       console.log('レスポンスステータス:', response.status)
       
       if (response.ok) {
+        // Track successful form submission
+        analytics.trackFormSubmission('contact_form', true)
+        analytics.trackContact(formData.preferredContact)
+        
         setSubmitMessage('お問い合わせを受け付けました。担当者より2営業日以内にご連絡させていただきます。')
         // フォームをリセット
         setFormData({
@@ -73,10 +78,14 @@ export default function ContactForm() {
       } else {
         const errorText = await response.text()
         console.error('エラーレスポンス:', errorText)
+        // Track failed form submission
+        analytics.trackFormSubmission('contact_form', false)
         setSubmitMessage('エラーが発生しました。しばらくしてから再度お試しください。')
       }
     } catch (error) {
       console.error('送信エラー:', error)
+      // Track failed form submission
+      analytics.trackFormSubmission('contact_form', false)
       setSubmitMessage('ネットワークエラーが発生しました。しばらくしてから再度お試しください。')
     } finally {
       setIsSubmitting(false)

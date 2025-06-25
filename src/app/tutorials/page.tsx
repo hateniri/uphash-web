@@ -6,9 +6,54 @@ import { getImagePath } from '@/lib/utils'
 
 const tutorialCategories = [
   {
+    id: 'lixel-k1',
+    title: 'Lixel K1',
+    iconImage: '/images/logos/k1-logo.png',
+    accent: 'green' as const,
+    tutorials: [
+      {
+        id: 'k1-unboxing',
+        title: '開封',
+        description: '製品内容の確認と初期セットアップ',
+        duration: '8分',
+        difficulty: '初級',
+        thumbnail: '/images/tutorials/lixelk1/001_K1 Unboxing.jpg',
+        videoUrl: '#'
+      },
+      {
+        id: 'k1-initialization',
+        title: '初期化',
+        description: 'K1の初期設定とキャリブレーション',
+        duration: '12分',
+        difficulty: '初級',
+        thumbnail: '/images/tutorials/lixelk1/002_Initialization.jpg',
+        videoUrl: '#'
+      },
+      {
+        id: 'k1-standard-scan',
+        title: '標準スキャン操作',
+        description: 'ハンドヘルドスキャンの基本操作',
+        duration: '15分',
+        difficulty: '初級',
+        thumbnail: '/images/tutorials/lixelk1/003_Standard operation.jpg',
+        videoUrl: '#'
+      },
+      {
+        id: 'k1-cybercolor-guide',
+        title: 'スキャンガイド（CyberColor）',
+        description: 'K1でのCyberColor最適化スキャン',
+        duration: '15分',
+        difficulty: '中級',
+        thumbnail: '/images/tutorials/lixelk1/004_Scanning Guide.jpg',
+        videoUrl: '#'
+      }
+    ]
+  },
+  {
     id: 'lixel-l2-pro',
     title: 'Lixel L2 Pro',
-    icon: '/images/logos/l2-pro-logo.png',
+    iconImage: '/images/logos/l2-pro-logo.png',
+    accent: 'blue' as const,
     tutorials: [
       {
         id: 'l2-pro-unboxing',
@@ -67,44 +112,88 @@ const tutorialCategories = [
     ]
   },
   {
-    id: 'lixel-k1',
-    title: 'Lixel K1',
-    icon: '/images/logos/k1-logo.png',
+    id: 'lcc-studio',
+    title: 'Lixel Cyber Color Studio',
+    iconImage: '/images/logos/lcc-studio-logo.png',
+    accent: 'purple' as const,
     tutorials: [
       {
-        id: 'k1-unboxing',
-        title: '開封',
-        description: '製品内容の確認と初期セットアップ',
-        duration: '8分',
+        id: 'lcc-quick-start',
+        title: 'LCCクイックスタート',
+        description: 'LCC Studioの基本操作を素早く学ぶ',
+        duration: '5分',
         difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelk1/001_K1 Unboxing.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/001_LCC quick start.jpg',
         videoUrl: '#'
       },
       {
-        id: 'k1-initialization',
-        title: '初期化',
-        description: 'K1の初期設定とキャリブレーション',
-        duration: '12分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelk1/002_Initialization.jpg',
+        id: 'lcc-map-fusion',
+        title: 'LCCマップ融合',
+        description: '複数のスキャンデータを統合',
+        duration: '10分',
+        difficulty: '中級',
+        thumbnail: '/images/tutorials/lixelcybercolor/002_LCC map fusion.jpg',
         videoUrl: '#'
       },
       {
-        id: 'k1-standard-scan',
-        title: '標準スキャン操作',
-        description: 'ハンドヘルドスキャンの基本操作',
-        duration: '15分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelk1/003_Standard operation.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'k1-cybercolor-guide',
-        title: 'スキャンガイド（CyberColor）',
-        description: 'K1でのCyberColor最適化スキャン',
+        id: 'lcc-scanning-guide',
+        title: 'スキャンガイド',
+        description: 'LCC用の最適なスキャン方法',
         duration: '15分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/lixelk1/004_Scanning Guide.jpg',
+        thumbnail: '/images/tutorials/lixelcybercolor/Scanning Guide.jpg',
+        videoUrl: '#'
+      }
+    ]
+  },
+  {
+    id: 'lcc-viewer',
+    title: 'LCC Viewer',
+    iconImage: '/images/logos/lcc-viewer-logo.png',
+    accent: 'blue' as const,
+    tutorials: [
+      {
+        id: 'viewer-input-ply',
+        title: 'PLYファイルの読み込み',
+        description: '3Dモデルのインポート方法',
+        duration: '3分',
+        difficulty: '初級',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_input ply.jpg',
+        videoUrl: '#'
+      },
+      {
+        id: 'viewer-measure',
+        title: '計測機能',
+        description: '3Dモデル上での距離計測',
+        duration: '5分',
+        difficulty: '初級',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_measure.jpg',
+        videoUrl: '#'
+      },
+      {
+        id: 'viewer-point-cloud',
+        title: '点群表示への切り替え',
+        description: '3DGSから点群表示への変更',
+        duration: '3分',
+        difficulty: '初級',
+        thumbnail: '/images/tutorials/lccviewer/lcc viewer_switch to point cloud.jpg',
+        videoUrl: '#'
+      }
+    ]
+  },
+  {
+    id: 'lixel-go',
+    title: 'Lixel GO',
+    iconImage: '/images/logos/lixel-go-logo.png',
+    accent: 'green' as const,
+    tutorials: [
+      {
+        id: 'go-activation-scan',
+        title: 'デバイスのアクティベーションとスキャン',
+        description: 'モバイルアプリでのデバイス設定とスキャン操作',
+        duration: '10分',
+        difficulty: '初級',
+        thumbnail: '/images/tutorials/lixelgo/001_Device activation and scanning.jpg',
         videoUrl: '#'
       }
     ]
@@ -112,7 +201,8 @@ const tutorialCategories = [
   {
     id: 'lixel-studio',
     title: 'Lixel Studio',
-    icon: '/images/logos/lixel-studio-logo.png',
+    iconImage: '/images/logos/lixel-studio-logo.png',
+    accent: 'orange' as const,
     tutorials: [
       {
         id: 'studio-installation',
@@ -198,419 +288,161 @@ const tutorialCategories = [
     ]
   },
   {
-    id: 'lixel-cybercolor',
-    title: 'Lixel CyberColor Studio',
-    icon: '/images/logos/lcc-studio-logo.png',
+    id: 'revit-plugin',
+    title: 'Revit Plugin',
+    iconImage: '/images/logos/revit-logo.png',
+    accent: 'silver' as const,
     tutorials: [
       {
-        id: 'lcc-quickstart',
-        title: 'クイックスタート',
-        description: 'LCC Studioの基本操作',
-        duration: '10分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelcybercolor/001_LCC quick start.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-scan-guide',
-        title: 'スキャンガイド',
-        description: '最適なスキャン方法とテクニック',
-        duration: '15分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelcybercolor/Scanning Guide.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-map-fusion',
-        title: 'マップフュージョン',
-        description: '空地統合機能の活用',
+        id: 'revit-tutorial',
+        title: 'LCC for Revitチュートリアル',
+        description: 'Revitプラグインの完全ガイド',
         duration: '20分',
         difficulty: '中級',
-        thumbnail: '/images/tutorials/lixelcybercolor/002_LCC map fusion.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-avatar',
-        title: 'アバター表示',
-        description: 'アバターモードの設定と活用',
-        duration: '8分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_avatar.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-ply-import',
-        title: 'PLY読み込み',
-        description: 'PLYファイルのインポートと変換',
-        duration: '10分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_input ply.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-measurement',
-        title: '計測',
-        description: '距離・面積・体積の測定',
-        duration: '12分',
-        difficulty: '中級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_measure.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-notes',
-        title: 'ノート追加',
-        description: '注釈とメモの追加方法',
-        duration: '8分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_notes.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-pivot',
-        title: 'ピボットモード',
-        description: 'ピボット機能の使い方',
-        duration: '10分',
-        difficulty: '中級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_pivot mode.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-publish',
-        title: '公開',
-        description: 'プロジェクトの共有と公開',
-        duration: '15分',
-        difficulty: '中級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_publish.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-alignment',
-        title: '位置合わせ',
-        description: '座標系の調整と位置合わせ',
-        duration: '18分',
-        difficulty: '上級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_relocate.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-settings',
-        title: '設定',
-        description: '詳細設定とカスタマイズ',
-        duration: '10分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_setting.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-space-portal',
-        title: 'スペースポータル',
-        description: 'スペースポータル機能の活用',
-        duration: '12分',
-        difficulty: '中級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_space porta.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'lcc-point-cloud',
-        title: '点群表示切り替え',
-        description: '表示モードとレンダリング設定',
-        duration: '10分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelcybercolor/lcc studio_switch to point cloud.jpg',
-        videoUrl: '#'
-      }
-    ]
-  },
-  {
-    id: 'lcc-viewer',
-    title: 'LCC Viewer',
-    icon: '/images/logos/lcc-viewer-logo.png',
-    tutorials: [
-      {
-        id: 'viewer-avatar',
-        title: 'アバター表示',
-        description: 'ビューアでのアバターモード',
-        duration: '5分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lccviewer/lcc viewer_avatar.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'viewer-ply',
-        title: 'PLY読み込み',
-        description: 'PLYファイルの表示',
-        duration: '8分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lccviewer/lcc viewer_input ply.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'viewer-measurement',
-        title: '計測',
-        description: 'ビューアでの測定機能',
-        duration: '10分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lccviewer/lcc viewer_measure.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'viewer-notes',
-        title: 'ノート追加',
-        description: 'コメントと注釈の追加',
-        duration: '6分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lccviewer/lcc viewer_notes.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'viewer-pivot',
-        title: 'ピボットモード',
-        description: 'ビューアでのピボット操作',
-        duration: '8分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lccviewer/lcc viewer_pivot mode.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'viewer-alignment',
-        title: '位置合わせ',
-        description: 'ビューアでの位置調整',
-        duration: '10分',
-        difficulty: '中級',
-        thumbnail: '/images/tutorials/lccviewer/lcc viewer_relocate.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'viewer-settings',
-        title: '設定',
-        description: 'ビューア設定のカスタマイズ',
-        duration: '5分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lccviewer/lcc viewer_setting.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'viewer-portal',
-        title: 'スペースポータル',
-        description: 'ポータル機能の使い方',
-        duration: '8分',
-        difficulty: '中級',
-        thumbnail: '/images/tutorials/lccviewer/lcc viewer_space portal.jpg',
-        videoUrl: '#'
-      },
-      {
-        id: 'viewer-pointcloud',
-        title: '点群表示切り替え',
-        description: '表示モードの切り替え',
-        duration: '6分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lccviewer/lcc viewer_switch to point cloud.jpg',
-        videoUrl: '#'
-      }
-    ]
-  },
-  {
-    id: 'lcc-revit',
-    title: 'LCC for Revit',
-    icon: '/images/logos/revit-logo.png',
-    tutorials: [
-      {
-        id: 'revit-plugin',
-        title: 'Revit用LCCプラグインチュートリアル',
-        description: 'RevitでのLCCデータ活用完全ガイド',
-        duration: '30分',
-        difficulty: '上級',
         thumbnail: '/images/tutorials/revit/lcc for revit tutorial.jpg',
-        videoUrl: '#'
-      }
-    ]
-  },
-  {
-    id: 'lixel-go',
-    title: 'Lixel GO',
-    icon: '/images/logos/lixel-go-logo.png',
-    tutorials: [
-      {
-        id: 'go-activation-scan',
-        title: 'デバイスのアクティベーションとスキャン',
-        description: 'Lixel GOアプリの初期設定とスキャン操作',
-        duration: '15分',
-        difficulty: '初級',
-        thumbnail: '/images/tutorials/lixelgo/001_Device activation and scanning.jpg',
         videoUrl: '#'
       }
     ]
   }
 ]
 
+const difficultyColors = {
+  '初級': { bg: 'bg-green-100', text: 'text-green-700', border: 'border-green-200' },
+  '中級': { bg: 'bg-brand-orange-100', text: 'text-brand-orange-700', border: 'border-brand-orange-200' },
+  '上級': { bg: 'bg-red-100', text: 'text-red-700', border: 'border-red-200' }
+}
+
 export default function TutorialsPage() {
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
-  
-  // YouTubeのvideo IDを抽出する関数
-  const getYouTubeId = (url: string) => {
-    const match = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^&\n?#]+)/)
-    return match ? match[1] : null
-  }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url(${getImagePath('/images/banner.png')})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.15
-          }}
-        />
-        <div className="relative z-10 bg-gradient-to-br from-purple-50/90 to-white/90 py-16 md:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                チュートリアル
-              </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Lixelシリーズの使い方を動画で分かりやすく解説。
-                製品別・機能別に整理されたチュートリアルで効率的に学習できます。
-                <br />
-                <span className="text-lg">
-                  弊社のAI技術により、英語の動画を日本語に翻訳して随時アップロード予定です。
-                </span>
-              </p>
-            </div>
+      <section className="relative bg-brand-black text-white py-16 md:py-24">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-grid-pattern-dark bg-grid opacity-10"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              チュートリアル
+            </h1>
+            <p className="text-xl text-brand-silver-300">
+              製品の使い方を動画でわかりやすく解説します
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Tutorial Categories */}
-      {tutorialCategories.map((category, categoryIndex) => (
-        <section
-          key={category.id}
-          className={`py-16 md:py-24 ${categoryIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
-        >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold flex items-center gap-4">
-                <img 
-                  src={getImagePath(category.icon)} 
-                  alt={`${category.title}製品カテゴリーアイコン`}
-                  className="w-12 h-12 object-contain"
-                />
-                {category.title}
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.tutorials.map((tutorial) => {
-                const videoId = getYouTubeId(tutorial.videoUrl)
-                return (
-                  <div
-                    key={tutorial.id}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
-                    onClick={() => setSelectedVideo(tutorial.videoUrl)}
-                  >
-                    {/* Video Thumbnail */}
-                    <div className="relative aspect-video bg-gray-200">
-                      <img
-                        src={getImagePath(tutorial.thumbnail)}
-                        alt={`${tutorial.title}チュートリアルのサムネイル`}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          // YouTubeのサムネイルにフォールバック
-                          if (videoId) {
-                            e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
-                            e.currentTarget.onerror = () => {
-                              e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-                            }
-                          }
-                        }}
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="bg-gray-900/80 backdrop-blur-sm rounded-full p-6 hover:bg-gray-900/90 transition-colors">
-                          <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
+
+      {/* Tutorials Grid */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {tutorialCategories.map((category, catIndex) => (
+            <div key={category.id} className={catIndex > 0 ? 'mt-20' : ''}>
+              <div className="mb-12 flex items-center gap-4">
+                <div className="w-16 h-16 bg-brand-silver-100 rounded-lg overflow-hidden">
+                  <img 
+                    src={getImagePath(category.iconImage)} 
+                    alt={category.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-3xl font-bold text-brand-black">
+                    {category.title} チュートリアル
+                  </h2>
+                  <div className={`w-20 h-1 bg-brand-${category.accent}-600 mt-2`}></div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {category.tutorials.map((tutorial) => {
+                  const difficulty = difficultyColors[tutorial.difficulty as keyof typeof difficultyColors];
+                  
+                  return (
+                    <a
+                      key={tutorial.id}
+                      href={tutorial.videoUrl}
+                      target={tutorial.videoUrl !== '#' ? '_blank' : undefined}
+                      rel={tutorial.videoUrl !== '#' ? 'noopener noreferrer' : undefined}
+                      className="group bg-white border-2 border-brand-silver-200 rounded-xl overflow-hidden hover:border-brand-silver-400 transition-all hover:shadow-xl"
+                    >
+                      {/* Thumbnail */}
+                      <div className="relative aspect-video bg-brand-silver-100 overflow-hidden">
+                        <img
+                          src={getImagePath(tutorial.thumbnail)}
+                          alt={tutorial.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                          <div className="absolute bottom-4 left-4 text-white">
+                            <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
+                        </div>
+                        {/* Duration Badge */}
+                        <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+                          {tutorial.duration}
                         </div>
                       </div>
-                      <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
-                        {tutorial.duration}
-                      </div>
-                      <div className={`absolute top-4 left-4 px-3 py-1 rounded text-sm text-white ${
-                        tutorial.difficulty === '初級' ? 'bg-green-600' :
-                        tutorial.difficulty === '中級' ? 'bg-yellow-600' : 'bg-red-600'
-                      }`}>
-                        {tutorial.difficulty}
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold mb-2">{tutorial.title}</h3>
-                      <p className="text-gray-600">{tutorial.description}</p>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </section>
-      ))}
 
-      {/* Resource Section */}
-      <section className="py-16 md:py-24 bg-blue-600">
+                      {/* Content */}
+                      <div className="p-6">
+                        <div className="flex items-center gap-3 mb-3">
+                          <span className={`inline-block px-3 py-1 text-xs font-bold rounded-full ${difficulty.bg} ${difficulty.text} ${difficulty.border} border`}>
+                            {tutorial.difficulty}
+                          </span>
+                        </div>
+                        
+                        <h3 className={`text-lg font-bold text-brand-black mb-2 group-hover:text-brand-${category.accent}-600 transition-colors`}>
+                          {tutorial.title}
+                        </h3>
+                        
+                        <p className="text-sm text-brand-silver-600">
+                          {tutorial.description}
+                        </p>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-brand-black text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            さらに詳しく学ぶ
+          <h2 className="text-3xl font-bold mb-6">
+            さらに詳しく知りたい方へ
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            PDFマニュアルやサンプルデータもご用意しています
+          <p className="text-xl text-brand-silver-300 mb-12 max-w-2xl mx-auto">
+            マニュアルやFAQもご用意しています。技術的なご質問はお気軽にお問い合わせください。
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/downloads"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-orange-500 text-white font-bold rounded-lg hover:bg-brand-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              ダウンロードページへ
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              マニュアルを見る
             </Link>
             <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              href="/faq"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-brand-black transition-all"
             >
-              トレーニングを申し込む
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              よくある質問
             </Link>
           </div>
         </div>
       </section>
-
-      {/* Video Modal */}
-      {selectedVideo && (
-        <div 
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedVideo(null)}
-        >
-          <div 
-            className="relative w-full max-w-4xl bg-black rounded-lg overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setSelectedVideo(null)}
-              className="absolute top-4 right-4 z-10 bg-gray-900/70 hover:bg-gray-900 text-white rounded-full p-2 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <div className="relative aspect-video">
-              <iframe
-                src={`https://www.youtube.com/embed/${getYouTubeId(selectedVideo)}?autoplay=1`}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </main>
   )
 }

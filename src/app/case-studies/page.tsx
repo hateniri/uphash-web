@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
 import { generatePageMetadata } from '@/lib/seo'
+import CaseStudiesHero from '@/components/sections/CaseStudiesHero'
 
 export const metadata = generatePageMetadata({
   title: '業界別使用例・導入事例',
@@ -17,6 +18,7 @@ const industryUseCases = [
     title: '地形測量',
     category: '測量・地理空間',
     icon: '🗺️',
+    image: '/images/case-studies/topographic-survey.jpg',
     overview: 'LiDAR技術とビジュアルデータ処理を融合させたXGRIDSの3D空間計測ソリューションは、高精度な地形デジタルマッピングを、従来困難だった環境下でも実現します。',
     scenarios: [
       {
@@ -61,6 +63,7 @@ const industryUseCases = [
     title: 'トンネル・インフラ設備空間',
     category: '測量・地理空間',
     icon: '🚇',
+    image: '/images/case-studies/tunnels-utility.jpg',
     overview: 'XGRIDSのマルチセンサーフュージョン技術を用いた空間計測は、トンネルや地下インフラといった複雑・閉鎖的な環境においても、正確かつ統合的な3Dデータ取得を可能にし、施設のライフサイクル全体を通じた運用・保守を支援します。',
     scenarios: [
       {
@@ -111,6 +114,7 @@ const industryUseCases = [
     title: 'ストックパイル体積計算',
     category: '測量・地理空間',
     icon: '⛰️',
+    image: '/images/case-studies/stockpile-volume.jpg',
     overview: 'XGRIDSのLiDARスキャニングと自動処理技術を活用することで、鉱山・土木・物流・災害現場において多様な材料の高精度な体積計測を実現。安全性と効率性を両立しつつ、材料管理・コスト管理・在庫追跡を高度化します。',
     scenarios: [
       {
@@ -159,6 +163,7 @@ const industryUseCases = [
     title: '都市地下空間マネジメント',
     category: '測量・地理空間',
     icon: '🏙️',
+    image: '/images/case-studies/urban-underground.jpg',
     overview: 'XGRIDSは、地下パイプライン・防災設備・重要インフラ施設を対象に、高精度3Dデジタルツインを生成することで、都市インフラの可視化・維持管理・緊急対応の高度化を支援します。',
     scenarios: [
       {
@@ -211,6 +216,7 @@ const industryUseCases = [
     title: '森林管理',
     category: '測量・地理空間',
     icon: '🌲',
+    image: '/images/case-studies/forestry-management.jpg',
     overview: 'XGRIDSは、森林資源の定量化と健全性把握を目的に、高精度な3Dデジタル森林モデルを短時間で生成します。これにより、従来の目視・手計測に頼った現地調査を自動化・高精度化し、森林の維持管理・炭素計測・保全計画に革新をもたらします。',
     scenarios: [
       {
@@ -267,6 +273,7 @@ const industryUseCases = [
     title: '外壁計測',
     category: '建築・都市計画',
     icon: '🏢',
+    image: '/images/case-studies/facade-measurement.jpg',
     overview: 'XGRIDSのポータブル3Dスキャニング技術は、外壁（ファサード）を非接触かつ高効率でデジタル計測し、高精度な点群データとテクスチャ情報をもとに、寸法図・3Dモデル・断面図などの成果物を迅速に生成します。',
     scenarios: [
       {
@@ -317,6 +324,7 @@ const industryUseCases = [
     title: '不動産測量',
     category: '建築・都市計画',
     icon: '🏠',
+    image: '/images/case-studies/real-estate-survey.jpg',
     overview: 'XGRIDSは、屋内外を一度のスキャンで統合的に計測し、3Dモデル・平面図・立面図・断面図を迅速かつ高精度に生成。従来の目測や再訪を前提とした非効率な業務を、デジタルツインベースの即時活用型測量に変革します。',
     scenarios: [
       {
@@ -371,6 +379,7 @@ const industryUseCases = [
     title: 'リバースBIMモデリング',
     category: '建築・都市計画',
     icon: '🏗️',
+    image: '/images/case-studies/reverse-bim.jpg',
     overview: 'XGRIDSは、既存建築・構造物を3Dスキャンし、構造化されたBIMモデルへ自動変換することで、建設業界のDX（デジタルトランスフォーメーション）を加速します。3D Gaussian Splatting + Multi-SLAM + コンポーネント認識技術により、設計図面が存在しない施設でも高精度BIM化を実現します。',
     scenarios: [
       {
@@ -420,6 +429,7 @@ const industryUseCases = [
     title: 'BIM施工進捗管理',
     category: '建築・都市計画',
     icon: '🏗️',
+    image: '/images/case-studies/bim-construction-progress.jpg',
     overview: 'XGRIDSは、施工中の建築現場を3D Gaussianスキャンで可視化し、BIMモデルと重ね合わせて比較・記録することで、施工の「見える化」「証明可能な管理」「誤差の早期検出」を実現します。',
     scenarios: [
       {
@@ -467,6 +477,7 @@ const industryUseCases = [
     title: 'ロケーションスカウト＆プリビズ',
     category: '映像・エンターテインメント',
     icon: '🎬',
+    image: '/images/case-studies/location-scouting.jpg',
     overview: 'XGRIDSのリアルタイム3DスキャンとフォトリアルなGaussian Splatモデルにより、実在ロケーションをそのまま制作可能な3D資産へ変換。正確な寸法と色彩で、プリプロダクションから撮影・VFX・セット設計までを完全可視化します。',
     scenarios: [
       {
@@ -515,6 +526,7 @@ const industryUseCases = [
     title: 'AR/VR コンテンツ制作',
     category: '映像・エンターテインメント',
     icon: '🥽',
+    image: '/images/case-studies/ar-vr.jpg',
     overview: 'XGRIDSは、Multi-SLAMと3D Gaussian Splatting技術を組み合わせた高精度な空間再現により、AR／VR領域でのリアルタイム環境構築に最適な3Dデータを提供します。手作業の建模・テクスチャ作成なしで現実空間を没入型体験へ変換し、PicoやMeta Questシリーズへの最適化によって、あらゆる用途で実用的なXRコンテンツ制作が可能です。',
     features: [
       {
@@ -573,6 +585,7 @@ const industryUseCases = [
     title: 'フォレンジック（事件・事故捜査）',
     category: '公共安全',
     icon: '🔍',
+    image: '/images/case-studies/forensics.jpg',
     overview: 'XGRIDSのレーザースキャニング＋3D Gaussian Splatting技術により、事件・事故現場の空間情報を短時間で3Dモデル化し、証拠保存・視覚的解析・法廷提示に最適なフォレンジックツールとして活用可能です。',
     scenarios: [
       {
@@ -622,6 +635,7 @@ const industryUseCases = [
     title: '施設デジタルツイン',
     category: 'エネルギー・鉱業',
     icon: '🏭',
+    image: '/images/case-studies/facility-digital-twin.jpg',
     overview: 'XGRIDSの地上・空中データ統合スキャンと高精度3D再構築エンジン（Multi-SLAM + Gaussian Splatting）により、施設内外を実寸・リアル・即時再現。構造・設備・空間利用の把握を可視化し、現場を訪れずに最適化・計画・保全判断を可能にする「行動可能な施設デジタルツイン」を提供します。',
     scenarios: [
       {
@@ -672,6 +686,7 @@ const industryUseCases = [
     title: 'ロボット/ドローンシミュレーション',
     category: 'エネルギー・鉱業',
     icon: '🤖',
+    image: '/images/case-studies/robot-drone-simulation.jpg',
     overview: 'XGRIDSは、実世界の空間を数分でデジタルツイン化し、そのまま高精度なロボット／ドローン向けシミュレーション環境として活用できる革新的なプラットフォームです。視覚再現＋LiDAR深度情報＋構造整合を兼ね備えた3D Gaussian Splatモデルにより、現実と一致した空間での学習・検証・制御計画が可能になります。',
     scenarios: [
       {
@@ -722,6 +737,7 @@ const industryUseCases = [
     title: 'スマート鉱業',
     category: 'エネルギー・鉱業',
     icon: '⛏️',
+    image: '/images/case-studies/smart-mining.jpg',
     overview: 'XGRIDSは、地上・地下の鉱山エリアを高速かつ高精度に3Dスキャンし、リアルタイムでデジタルツイン化。採掘量の可視化から傾斜安定性分析、リスク予兆の検知、作業計画最適化まで、安全性・収益性・判断速度を向上させる鉱山運用の革新基盤を提供します。',
     scenarios: [
       {
@@ -777,6 +793,7 @@ const industryUseCases = [
     title: '水資源管理',
     category: 'エネルギー・鉱業',
     icon: '💧',
+    image: '/images/case-studies/water-resources.jpg',
     overview: 'XGRIDSは、ダム・貯水池・堤防・水門・排水路などの水資源インフラを3Dスキャンし、実寸・経年追跡可能なデジタルツインとして記録。現場に立ち入らずに構造変形・浸食・ひび割れ・沈下などを可視化・計測でき、災害リスク予測や保守判断を高度化します。',
     scenarios: [
       {
@@ -817,6 +834,113 @@ const industryUseCases = [
       '処理（LixelStudio / CyberColor）：点群生成 → カラー化 → 変位・クラック抽出、モデル差分比較・断面解析・PDFレポート出力',
       '活用：年次点検・突発災害時の評価・補修工事計画・行政報告書・保険査定・住民説明など'
     ]
+  },
+  
+  // 文化財・歴史継承（Cultural Heritage & Historical Preservation）
+  {
+    id: 'cultural-heritage-archive',
+    title: '文化財デジタルアーカイブ',
+    category: '文化財・歴史継承',
+    icon: '🏛️',
+    image: '/images/case-studies/cultural-heritage.jpg',
+    overview: 'XGRIDSの高精度3Dスキャニング技術により、貴重な文化財や歴史的建造物を細部まで正確にデジタル化。永久保存、研究、修復、そして次世代への継承を可能にします。',
+    scenarios: [
+      {
+        title: '国宝・重要文化財の3D記録',
+        description: '寺社仏閣、城郭、歴史的建造物などを非接触で精密にスキャン。経年劣化や災害に備えた完全なデジタルバックアップを作成'
+      },
+      {
+        title: '修復・復元プロジェクト支援',
+        description: '詳細な3Dデータを基に、伝統工法の記録、修復計画の立案、復元シミュレーションを実施。職人技術の継承にも貢献'
+      },
+      {
+        title: '考古学調査・発掘記録',
+        description: '遺跡や発掘現場の状態を層ごとに3D記録。発掘の進行過程を完全に保存し、後の研究や教育に活用'
+      },
+      {
+        title: 'バーチャルミュージアム・教育活用',
+        description: '高品質3Dモデルを使用したVR/AR展示、オンライン公開、教育コンテンツの制作。文化財へのアクセシビリティを向上'
+      }
+    ],
+    challenges: [
+      '繊細な文化財への物理的接触を避けた高精度測定の実現',
+      '広大な遺跡や複雑な建造物構造の効率的な記録',
+      '色彩・質感情報を含む視覚的に正確なアーカイブの作成',
+      '研究者・修復家・一般市民まで幅広く活用できるデータ形式の提供',
+      '長期保存に適したデジタルフォーマットでの記録'
+    ],
+    advantages: [
+      '非接触・非破壊：レーザースキャンにより文化財を傷つけることなく精密測定。国宝級の対象物も安全に記録可能',
+      '高精度記録：1mm単位の形状情報と高解像度カラー情報を同時取得。細かな彫刻や装飾も忠実に再現',
+      '効率的な作業：大規模な寺社仏閣も数日で完全スキャン。従来の手測りと比べ10倍以上の効率化',
+      '多様な活用：研究・修復・展示・教育など幅広い用途に対応。VR/AR/3Dプリント等の最新技術とも連携'
+    ],
+    products: [
+      { name: 'Lixel L2 Pro', description: '大規模建造物・遺跡の高精度スキャン。RTK対応で絶対座標での記録も可能' },
+      { name: 'Lixel K1', description: '狭い内部空間や繊細な文化財の近接スキャン。軽量で取り回しやすい' }
+    ],
+    software: [
+      { name: 'LixelStudio', description: '点群処理、メッシュ生成、断面図作成、計測・解析機能' },
+      { name: 'Lixel CyberColor', description: '高品質3Dモデル生成、テクスチャ最適化、VR/AR用データ出力' }
+    ],
+    workflow: [
+      '事前調査・計画：対象物の特性を考慮したスキャン計画立案。文化財保護の観点から最適な手法を選択',
+      'スキャン実施：非接触で対象物全体を記録。必要に応じて詳細部分の高密度スキャンも実施',
+      'データ処理：点群生成→カラー化→ノイズ除去→メッシュ生成。研究・保存・公開用の各種フォーマットで出力',
+      '活用・継承：デジタルアーカイブとして永久保存、研究資料、修復計画、VR展示、教育コンテンツなど多方面で活用'
+    ]
+  },
+  {
+    id: 'historical-building-documentation',
+    title: '歴史的建造物の記録',
+    category: '文化財・歴史継承',
+    icon: '🏰',
+    image: '/images/case-studies/historical-building.jpg',
+    overview: '明治・大正・昭和の近代建築から、江戸時代以前の伝統建築まで、日本の建築文化を3Dデータとして記録・保存。改修・移築・復元プロジェクトの基礎データとしても活用されています。',
+    scenarios: [
+      {
+        title: '登録有形文化財の現状記録',
+        description: '全国に点在する登録有形文化財建造物を体系的に3D記録。定期的な状態モニタリングにも活用'
+      },
+      {
+        title: '伝統工法の技術継承',
+        description: '宮大工や左官などの伝統技術を3Dデータとして記録。若手職人の教育や技術研究に貢献'
+      },
+      {
+        title: '災害リスク評価と対策',
+        description: '地震・火災・水害などのリスクに備え、建造物の詳細データを保存。被災時の迅速な復旧にも活用'
+      },
+      {
+        title: '観光・地域振興への活用',
+        description: 'デジタルツインを活用したバーチャルツアー、ARガイド、プロモーションコンテンツの制作'
+      }
+    ],
+    challenges: [
+      '複雑な木造建築構造の正確な記録',
+      '経年劣化した部材の現状を詳細に把握',
+      '広大な敷地や高層建築物の効率的なスキャン',
+      '歴史的価値を損なわない記録方法の確立'
+    ],
+    advantages: [
+      '完全な現状記録：建物全体から細部の装飾まで、あらゆる要素を高精度に記録',
+      '時系列比較：定期的なスキャンにより、経年変化や修復効果を定量的に評価',
+      '多角的な活用：保存記録、修復計画、研究資料、観光コンテンツなど幅広い用途',
+      'アクセシビリティ向上：デジタルデータにより、世界中の研究者や一般市民がアクセス可能に'
+    ],
+    products: [
+      { name: 'Lixel L2 Pro', description: '大規模建造物の外観・構造を高精度にスキャン' },
+      { name: 'Lixel K1', description: '内部空間や装飾細部の詳細記録に最適' }
+    ],
+    software: [
+      { name: 'LixelStudio', description: '建築図面作成、断面抽出、変形解析機能' },
+      { name: 'Lixel CyberColor', description: '写実的3Dモデル生成、文化財公開用コンテンツ制作' }
+    ],
+    workflow: [
+      '調査・計画：建造物の特性、保存状態、記録目的に応じた最適なスキャン計画を策定',
+      '3Dスキャン実施：外観・内部・細部を段階的に記録。必要に応じて季節や時間帯を変えて複数回実施',
+      'データ統合・処理：複数のスキャンデータを統合し、完全な3Dモデルを構築。各種解析や図面作成',
+      '保存・活用：長期保存用アーカイブ、研究・教育資料、観光コンテンツなど目的別にデータを最適化して提供'
+    ]
   }
 ]
 
@@ -855,58 +979,37 @@ const categories = [
     icon: '⚡',
     description: '大規模施設のデジタルツイン化から資源管理まで幅広く対応',
     useCases: ['施設デジタルツイン', 'ロボット/ドローンシミュレーション', 'スマート鉱業', '水資源管理']
+  },
+  { 
+    name: '文化財・歴史継承',
+    value: '文化財・歴史継承',
+    icon: '🏛️',
+    description: '貴重な文化遺産や歴史的建造物を高精度3Dデータとして永久保存',
+    useCases: ['文化財デジタルアーカイブ', '歴史的建造物の記録', '遺跡調査・発掘記録', '災害前後の状態記録']
   }
 ]
 
 export default function CaseStudiesPage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 md:py-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-800/20 mix-blend-multiply" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              業界別使用例
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              XGRIDSソリューションが様々な業界でどのように活用され、
-              ビジネスの課題を解決しているかをご紹介します
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mt-12">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">80%</div>
-                <div className="text-sm text-gray-400">作業時間削減</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400">5-8倍</div>
-                <div className="text-sm text-gray-400">効率向上</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">±1cm</div>
-                <div className="text-sm text-gray-400">測定精度</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400">24/7</div>
-                <div className="text-sm text-gray-400">稼働可能</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section with Image Grid */}
+      <CaseStudiesHero />
 
       {/* Categories Overview */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-brand-silver-50" id="industries">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-brand-black mb-12">
+            業界別カテゴリー
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {categories.map((category) => (
-              <div key={category.value} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6">
+              <div key={category.value} className="bg-white rounded-xl border border-brand-silver-200 hover:border-brand-blue-600 hover:shadow-xl transition-all p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-4xl">{category.icon}</span>
-                  <h3 className="text-xl font-bold">{category.name}</h3>
+                  <h3 className="text-xl font-bold text-brand-black">{category.name}</h3>
                 </div>
-                <p className="text-gray-600 text-sm mb-4">{category.description}</p>
-                <ul className="text-sm text-gray-500 space-y-1">
+                <p className="text-brand-silver-600 text-sm mb-4">{category.description}</p>
+                <ul className="text-sm text-brand-silver-500 space-y-1">
                   {category.useCases.map((useCase) => (
                     <li key={useCase} className="flex items-start">
                       <span className="text-blue-500 mr-2">•</span>
@@ -939,16 +1042,37 @@ export default function CaseStudiesPage() {
                     key={useCase.id}
                     className="bg-white rounded-xl shadow-lg overflow-hidden"
                   >
+                    {/* Image Placeholder */}
+                    {useCase.image && (
+                      <div className="relative h-64 bg-gray-100">
+                        <img
+                          src={getImagePath(useCase.image)}
+                          alt={useCase.title}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                        <div className="absolute bottom-4 left-6 right-6">
+                          <h3 className="text-2xl font-bold text-white">{useCase.title}</h3>
+                        </div>
+                      </div>
+                    )}
                     <div className="p-8">
-                      <div className="flex items-start justify-between mb-6">
-                        <div>
-                          <h3 className="text-2xl font-bold mb-3">{useCase.title}</h3>
+                      {!useCase.image && (
+                        <div className="flex items-start justify-between mb-6">
+                          <div>
+                            <h3 className="text-2xl font-bold mb-3">{useCase.title}</h3>
+                            <p className="text-gray-600">{useCase.overview}</p>
+                          </div>
+                          {useCase.icon && (
+                            <span className="text-4xl ml-4">{useCase.icon}</span>
+                          )}
+                        </div>
+                      )}
+                      {useCase.image && (
+                        <div className="mb-6">
                           <p className="text-gray-600">{useCase.overview}</p>
                         </div>
-                        {useCase.icon && (
-                          <span className="text-4xl ml-4">{useCase.icon}</span>
-                        )}
-                      </div>
+                      )}
 
                       {/* Application Scenarios */}
                       {useCase.scenarios && (

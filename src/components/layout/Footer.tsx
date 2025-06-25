@@ -55,10 +55,10 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-gray-900">Quick Links</h4>
               <ul className="space-y-2">
-                {NAVIGATION_ITEMS.map((item) => (
+                {NAVIGATION_ITEMS.filter(item => item.href).map((item) => (
                   <li key={item.href}>
                     <Link
-                      href={item.href}
+                      href={item.href!}
                       className="text-gray-600 hover:text-gray-900 transition-colors"
                     >
                       {item.label}

@@ -18,65 +18,65 @@ const accessories = [
         name: 'L2 Pro 測量用RTKキット',
         description: '高精度測量作業用の完全RTKソリューション',
         features: ['センチメートル級精度', 'GNSS L1/L2対応', '専用ベースステーション込み'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro',
-        image: '/images/accessories/l2-rtk-kit.png'
+        image: '/images/accessories/l2-rtk-kit.webp'
       },
       {
         name: 'L2 Pro RTKスタンダードキット',
         description: '標準的な測量作業向けRTKキット',
         features: ['ネットワークRTK対応', '軽量設計', '長時間稼働'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro',
-        image: '/images/accessories/l2-rtk-standard.png'
+        image: '/images/accessories/l2-rtk-standard.webp'
       },
       {
         name: 'DJI Matrice 350 RTK用マウントアダプター',
         description: 'L2 ProをDJI Matrice 350 RTKに装着するための専用アダプター',
         features: ['振動吸収設計', 'クイックリリース機構', '飛行中の安定性確保'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro + DJI M350',
-        image: '/images/accessories/l2-dji-mount.png'
+        image: '/images/accessories/l2-dji-mount.webp'
       },
       {
         name: 'L2 Series 追加バッテリー',
         description: 'L2シリーズ用大容量バッテリー',
         features: ['5時間連続稼働', 'ホットスワップ対応', '温度管理機能'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro',
-        image: '/images/accessories/l2-battery.png'
+        image: '/images/accessories/l2-battery.webp'
       },
       {
         name: 'L2 Series 延長ポール&本体マウント',
         description: '高所や狭所のスキャン用延長ポールキット',
         features: ['最大3m延長', 'カーボンファイバー製', '360°回転マウント'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro',
-        image: '/images/accessories/l2-extension-pole.png'
+        image: '/images/accessories/l2-extension-pole.webp'
       },
       {
         name: 'L2 Series スマートフォンマウントモジュール',
         description: 'L2シリーズ用スマホ・タブレットマウント',
         features: ['タブレット対応', '防振マウント', 'USB給電対応'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro',
-        image: '/images/accessories/phone-mount.jpg'
+        image: '/images/accessories/phone-mount.webp'
       },
       {
         name: 'L2 Series GCPプレート',
         description: 'L2シリーズ用大型GCPプレート',
         features: ['高精度ターゲット', '10枚セット', '耐候性素材'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro',
-        image: '/images/accessories/l2-gcp-plates.png'
+        image: '/images/accessories/l2-gcp-plates.webp'
       },
       {
         name: 'L2 Series 新バックパック',
         description: 'プロフェッショナル向け専用バックパック',
         features: ['防水・防塵設計', 'クッション内蔵', 'アクセサリーポケット多数'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro',
-        image: '/images/accessories/l2-backpack.png'
+        image: '/images/accessories/l2-backpack.webp'
       }
     ]
   },
@@ -87,65 +87,65 @@ const accessories = [
         name: 'K1 RTK モジュール',
         description: 'K1用の追加RTKモジュール',
         features: ['簡単装着', '絶対精度3cm以下', 'リアルタイム補正'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'K1',
-        image: '/images/accessories/k1-rtk-module.png'
+        image: '/images/accessories/k1-rtk-module.webp'
       },
       {
         name: 'K1 追加バッテリー&追加充電アダプターセット',
         description: '長時間作業用の予備バッテリーと充電器のセット',
         features: ['2個同時充電可能', '急速充電対応', '残量インジケーター付き'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'K1',
-        image: '/images/accessories/k1-battery-charger-set.png'
+        image: '/images/accessories/k1-battery-charger-set.webp'
       },
       {
         name: 'K1 追加バッテリー',
         description: 'K1用交換バッテリー',
         features: ['3時間連続稼働', '軽量設計', '安全保護機能内蔵'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'K1',
-        image: '/images/accessories/k1-battery.png'
+        image: '/images/accessories/k1-battery.webp'
       },
       {
         name: 'K1 延長ポール&本体マウント',
         description: 'K1用軽量延長ポール',
         features: ['最大2m延長', 'アルミニウム合金', 'クイックリリース機構'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'K1',
-        image: '/images/accessories/k1-extension-pole.png'
+        image: '/images/accessories/k1-extension-pole.webp'
       },
       {
         name: 'K1 スマートフォンマウントモジュール',
         description: 'スマートフォン装着用マウント',
         features: ['各種スマホ対応', '振動吸収設計', '角度調整可能'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'K1',
-        image: '/images/accessories/phone-mount.jpg'
+        image: '/images/accessories/phone-mount.webp'
       },
       {
         name: 'K1 GCPプレート',
         description: '地上基準点（GCP）マーカープレート',
         features: ['高反射素材', '5枚セット', 'キャリーケース付き'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'K1',
-        image: '/images/accessories/k1-gcp-plates.png'
+        image: '/images/accessories/k1-gcp-plates.webp'
       },
       {
         name: 'K1 収納ケース',
         description: 'K1専用ハードケース',
         features: ['耐衝撃設計', 'カスタムフォーム', 'TSAロック対応'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'K1',
-        image: '/images/accessories/k1-hard-case.png'
+        image: '/images/accessories/k1-hard-case.webp'
       },
       {
         name: 'K1 保護カバー',
         description: 'K1本体用保護カバー',
         features: ['シリコン製', '落下保護', 'グリップ向上'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'K1',
-        image: '/images/accessories/k1-protective-cover.png'
+        image: '/images/accessories/k1-protective-cover.webp'
       }
     ]
   },
@@ -156,33 +156,33 @@ const accessories = [
         name: 'ユニバーサル三脚',
         description: 'L2 Pro/K1両対応の専用三脚',
         features: ['高さ調整可能', 'アルミニウム合金製', '水準器内蔵'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro / K1',
-        image: '/images/accessories/universal-tripod.png'
+        image: '/images/accessories/universal-tripod.webp'
       },
       {
         name: 'ポータブル充電ステーション',
         description: '現場での充電を可能にするポータブル電源',
         features: ['大容量バッテリー', 'ソーラーパネル対応', '複数デバイス同時充電'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro / K1',
-        image: '/images/accessories/portable-charger.png'
+        image: '/images/accessories/portable-charger.webp'
       },
       {
         name: 'プロテクティブレンズフィルター',
         description: 'LiDARセンサー保護用フィルター',
         features: ['高透過率', '防塵・防水', '簡単着脱'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro / K1',
-        image: '/images/accessories/lens-filter.png'
+        image: '/images/accessories/lens-filter.webp'
       },
       {
         name: 'キャリブレーションターゲット',
         description: '精度確認用キャリブレーションセット',
         features: ['高精度ターゲット', '各種サイズ込み', '収納ケース付き'],
-        price: 'お問い合わせ',
+        price: '',
         compatibility: 'L2 Pro / K1',
-        image: '/images/accessories/calibration-target.png'
+        image: '/images/accessories/calibration-target.webp'
       }
     ]
   }

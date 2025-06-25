@@ -66,37 +66,17 @@ export default function LixelCyberColorPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-12 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-gray-500/10"></div>
-              <div className="relative text-center">
-                <div className="mb-8">
-                  <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-20"></div>
-                    <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8">
-                      <svg className="w-32 h-32 text-blue-600 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-4 max-w-md mx-auto">
-                  <div className="flex items-center justify-center gap-3 text-gray-700">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">AI</span>
-                    </div>
-                    <span className="text-2xl">+</span>
-                    <div className="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">3DGS</span>
-                    </div>
-                  </div>
-                  <p className="text-lg font-medium text-gray-700">高速・高精細な3Dモデル生成</p>
-                  <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-                    <span className="px-3 py-1 bg-blue-100 rounded-full">90%圧縮</span>
-                    <span className="px-3 py-1 bg-gray-100 rounded-full">フォトリアル</span>
-                    <span className="px-3 py-1 bg-silver-100 rounded-full">リアルタイム</span>
-                  </div>
-                </div>
-              </div>
+            <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden">
+              <video 
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={getImagePath('/images/products/lcc-hero.webm')} type="video/webm" />
+                あなたのブラウザは動画タグをサポートしていません。
+              </video>
             </div>
           </div>
         </div>

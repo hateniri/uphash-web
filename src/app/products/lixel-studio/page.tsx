@@ -56,39 +56,17 @@ export default function LixelStudioPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-12 flex items-center justify-center">
-              <div className="text-center">
-                <div className="mb-8">
-                  <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-20"></div>
-                    <svg className="relative w-32 h-32 text-blue-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-center gap-2 text-gray-700">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-lg font-medium">AI処理エンジン搭載</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 text-gray-700">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-lg font-medium">ワンクリック処理</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 text-gray-700">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-                      <path fillRule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 00-2 2v6a2 2 0 002 2h2a1 1 0 100 2H6a4 4 0 01-4-4V5a2 2 0 012-2zm9 12a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
-                      <path d="M10 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1z" />
-                    </svg>
-                    <span className="text-lg font-medium">プロ仕様の編集機能</span>
-                  </div>
-                </div>
-              </div>
+            <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden">
+              <video 
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={getImagePath('/images/products/lixel-studio-hero.webm')} type="video/webm" />
+                あなたのブラウザは動画タグをサポートしていません。
+              </video>
             </div>
           </div>
         </div>

@@ -1,17 +1,13 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { generatePageMetadata } from '@/lib/seo'
+'use client'
 
-export const metadata = generatePageMetadata({
-  title: 'よくある質問 - FAQ',
-  description: 'XGRIDS製品に関するよくある質問と回答。技術仕様、価格、サポート体制などについて詳しく解説。',
-  path: '/faq',
-  keywords: ['FAQ', 'よくある質問', '技術仕様', 'サポート']
-})
+import { useState } from 'react'
+import Link from 'next/link'
 
 const faqCategories = [
   {
     category: '製品について',
+    icon: '📦',
+    accent: 'blue' as const,
     questions: [
       {
         q: 'Lixel L2 ProとLixel K1の違いは何ですか？',
@@ -33,6 +29,8 @@ const faqCategories = [
   },
   {
     category: '購入・価格について',
+    icon: '💰',
+    accent: 'orange' as const,
     questions: [
       {
         q: '価格を教えてください',
@@ -54,6 +52,8 @@ const faqCategories = [
   },
   {
     category: '使い方・操作について',
+    icon: '🎮',
+    accent: 'silver' as const,
     questions: [
       {
         q: '初心者でも使えますか？',
@@ -70,11 +70,17 @@ const faqCategories = [
       {
         q: '他社製ソフトウェアとの互換性はありますか？',
         a: '標準的な点群フォーマット（LAS、LAZ、PLY、E57、PCD等）でエクスポート可能なため、AutoCAD、Revit、CloudCompareなど主要なCAD/BIMソフトウェアで利用できます。'
+      },
+      {
+        q: 'RTKアカウントの取得方法',
+        a: 'RTK機能を利用するには、GNSSサービスプロバイダーと別途契約し、RTKアカウントを取得する必要があります。取得したアカウント情報は、LixelGoのRTK設定ページでログインして使用します。'
       }
     ]
   },
   {
     category: 'ファームウェア更新関連',
+    icon: '🔧',
+    accent: 'blue' as const,
     questions: [
       {
         q: 'K1のファームウェアをUSB経由で更新するには？',
@@ -87,419 +93,228 @@ const faqCategories = [
     ]
   },
   {
-    category: 'カメラ・解像度関連',
+    category: 'アクティベーション',
+    icon: '🔑',
+    accent: 'purple' as const,
     questions: [
       {
-        q: 'K1のカメラ解像度は？',
-        a: '• モノクロカメラ：1MP（2基）\n• カラーカメラ：48MP（2基）\n• パノラマ合成画像の解像度：最大56MP'
+        q: 'アクティベーション時にソフトウェアが「アクティベートに失敗しました」または「ライセンスの有効期限が切れました」と表示されるのはなぜですか？',
+        a: 'コンピュータに管理者権限のないユーザーが複数います。ソフトウェアを管理者権限で再インストールし、管理者権限でLS3.0を開いてアクティベートする必要があります。\nアクティベーション後もソフトウェアが「ライセンスの有効期限が切れました」と表示される場合は、コンピュータのシステム設定を開き、「日付と時刻」に移動し、「今すぐ同期」をクリックして時計を同期してください。これを完了したら、ソフトウェアを再起動してください。'
       },
       {
-        q: 'L2 Proのカメラ構成は？',
-        a: '• 前方：モノクロ 1MP\n• 両側：カラー 48MP ×2'
+        q: 'アクティベーションコードを申請する際に「正しいSNを入力してください」というメッセージが表示されるのはなぜですか？',
+        a: '購入済みのデバイスであることを確認してください。購入されていない借り物のテストデバイスの場合は、営業担当者から試用版のアクティベーションコードを入手する必要があります。\n入力されたSNコードが完全であること（Lixel Goにデバイスを接続すると確認できます）、文字に誤りがないこと（文字「o」と数字「0」に注意）、余分なスペースや文字がないことを確認してください。\nSN番号が申請に使用できない場合は、営業担当者または公式の技術サポートスタッフに連絡してください。'
+      },
+      {
+        q: '2.5.2から3.0に切り替える際に注意すべきことは何ですか？',
+        a: '元のソフトウェアドングルは、このバージョンとは互換性がありません。LixelStudio 3.0.1.0をアクティベートして使用を開始するには、機器のSNを使用して新しいアクティベーションコードを申請してください。デバイスには3つのアクティベーションコードが付属しています（1つのアクティベーションコードは1台のコンピュータのみをアクティベートでき、アクティベーションコードは使用後に無効になります）。\n完全なSNを使用してアクティベーションコードを申請するようにしてください。LixelGoアプリを使用してデバイスを接続し、完全なSNを表示してください。\n3.0は完全に新しいファイル構造であり、バージョン2.5以前の作業プロジェクトファイルを開くことはできません。以前に処理したファイルを使用する必要がある場合は、元のフォルダから手動で再インポートする必要があります。\nバージョン2.5.2で既に処理済みだが保存されていない作業ファイル（たとえば、クリッピング結果が保存されていないなど）にアクセスしたい場合は、まずバージョン2.5を使用してすべてのデータをLAS形式でエクスポートし、次にバージョン3.0にインポートする必要があります。または、ファイルを3.0に再インポートして編集をやり直すこともできます。\nソフトウェアを閉じた後に再度開くと、既に開いているタスクがあることを示すプロンプトが表示される場合、操作が速すぎてバックグラウンドがプログラムをまだ解放していないことが原因である可能性があります。この場合、しばらく待つか、タスクマネージャーを使用してLixelStudioタスクを終了することができます。\nコンピュータのシステムを再インストールした後、以前にアクティベートされたアクティベーションコードは無効になり、新しいアクティベーションコードが必要になります。'
+      },
+      {
+        q: 'Windows 11コンピュータで開くときにソフトウェアが実行に失敗したりクラッシュしたりするのはなぜですか？',
+        a: 'まず、コンピュータでUTF-8設定を有効にしてみてください：\n\n時間と言語 > 言語と地域 > 管理言語設定 > 管理 > システムロケールの変更 > ベータ版：ワールドワイド言語サポートにUnicode UTF8を使用する をチェック\n\nこれで問題が解決しない場合は、システムにWMICツールが不足している可能性があります：\n\n設定を開き、「システム」タブを選択し、右側で「オプション機能」を選択します。検索ボックスに「WMIC」と入力し、「インストール」をクリックします。完了後、コンピュータを再起動する必要があります。'
+      },
+      {
+        q: 'LixelStudioを起動する際にWin11で0xc0000142エラーが表示されるのはなぜですか？',
+        a: 'これは、コンピュータでUTF-8が有効になっていなかったためです。'
+      },
+      {
+        q: 'ソフトウェアをサーバーコンピュータまたは仮想マシンにインストールできますか？',
+        a: 'どちらもサポートされていません。'
+      },
+      {
+        q: 'ソフトウェアを実行しようとすると「msvcp140.dllが見つかりません」と表示されるのはなぜですか？',
+        a: 'この種の問題は、新しいコンピュータや、長時間インターネットに接続されておらず、一部のシステムライブラリファイルが不足しているコンピュータでよく発生します。この問題が発生した場合は、Microsoftの公式サイトから必要なファイルをダウンロードしてインストールできます。\n\nhttps://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170'
       }
     ]
   },
   {
-    category: 'デバイス環境仕様・保守',
+    category: 'SLAMマッピング',
+    icon: '🗺️',
+    accent: 'green' as const,
     questions: [
       {
-        q: '使用可能な温度範囲は？',
-        a: '-20°C〜50°C の範囲で安定動作します。それ以外は故障・精度劣化の可能性があります。'
+        q: 'なぜプロジェクト処理中に「LIO Too Few, Please Try Robust Mode」というエラーが表示されるのですか？',
+        a: 'プロジェクト処理時に「Robust Mode（ロバストモード）」を選択し、データを再処理してください。このエラーが発生する主な原因は以下のとおりです：\n開けた場所や劣化した環境で点群データがドリフトしている。\n初期化時にデバイスが完全に静止していなかった（不適切な初期化）。\n初期化中にレーダーの視野が遮られていた、または前方に動く物体が多かった（不適切な初期化）。\nロバストモードはマッピング成功率を高めますが、精度がやや低下する場合があります。'
       },
       {
-        q: '防爆（爆発防止）性能はある？',
-        a: '対応していません。'
+        q: 'なぜプロジェクト処理中に「HBC Read Error」または「HBC Failed to Parse」というエラーが表示されるのですか？',
+        a: 'デバイスからコピーしたデータが完全であること、コピー中にエラーが発生していないことを確認してください。\nクラウドドライブとのアップロードやダウンロード中に、元のデータが欠損している、またはサイズが不完全な可能性があります。\n記録中に中断があった、またはデバイスが自動停止した可能性があります。\nデータ保存が完了する前に電源が切られた可能性があります。\nL1 または L2 のファームウェアが v1.3.2 以下の場合、収録時にアプリでデータの遅延が発生し、アプリ上の軌跡が実際の位置に戻る前に記録が終了されてしまうことがあります。\nL1 または L2 のファームウェア v1.4 以降で収録されたデータを、LS バージョン 2.4.5 以下で処理した場合、バージョンの互換性による問題が発生する可能性があります。'
       },
       {
-        q: 'LiDARスキャナの清掃方法は？',
-        a: '付属の不織布で、同一方向にやさしく拭いてください。'
+        q: 'なぜプロジェクト処理時に「SLAM Failed to Start」というエラーが表示されるのですか？',
+        a: '元データをCドライブ上に置いたり、Cドライブパス上に新しいプロジェクトを作成しないようにしてください。\n一度ログアウトするか、バックグラウンドプロセスを終了してPCリソースを確保した上で、Lixel Studioを管理者権限で起動してください。\nコンピューターの「UTF-8設定」を有効にしてください。「地域設定（Region settings）」を検索し、「ベータ：Unicode UTF-8の使用」にチェックを入れてください。'
+      },
+      {
+        q: 'なぜプロジェクト処理中に「LIO Internal Error」が発生するのですか？',
+        a: 'レーダーの視野が遮られている（例：0.5メートル以内に物体がある、または0.5メートル以下の狭い空間での収録）。これは不適切な収録と見なされます。\nデータ収録中に「レーダー周波数異常」の警告が繰り返し表示される場合は、テクニカルサポートにお問い合わせください。'
       }
     ]
   },
   {
-    category: 'LixelGoアプリ仕様・対応端末',
+    category: 'サポート・保証について',
+    icon: '🛡️',
+    accent: 'silver' as const,
     questions: [
       {
-        q: 'アプリ対応OS・端末要件は？',
-        a: '• Android：Ver10以上、Snapdragon 8推奨、RAM 8GB以上\n• iOS：iOS 17.5.1以上、iPhone13以降推奨（Type-C推奨）'
+        q: '保証期間はどのくらいですか？',
+        a: 'メーカー保証は1年です。購入時に延長保証プログラムについてご説明させていただきます。'
       },
       {
-        q: 'ホットスポットが頻繁に切れる？',
-        a: 'スマホの高温による保護機能で自動切断されることがあります。他機器の干渉、VPN、通信制限にも注意してください。'
-      }
-    ]
-  },
-  {
-    category: 'RTK設定・運用',
-    questions: [
-      {
-        q: 'RTKの「1+1モード」には対応している？',
-        a: '現時点では非対応です。'
+        q: '技術サポートは受けられますか？',
+        a: '日本語による技術サポートを提供しています。電話、メール、リモートサポートに対応しており、導入後も安心してご利用いただけます。'
       },
       {
-        q: 'RTK設定の変更方法は？（L2 Pro）',
-        a: '1. LixelGoの「高度な設定」を有効化\n2. RTK種別を「Max RTK」に設定（サーベイ用アンテナ使用時）\n3. 標準アンテナへ戻す場合は「Close」に切り替え'
+        q: 'トレーニングは提供されますか？',
+        a: 'トレーニングを提供しています。オンラインでの基本トレーニングは無料ですが、オフライン（現地）でのトレーニングは有料となります。お客様のレベルに合わせたカリキュラムを提供します。'
       },
       {
-        q: 'RTKアカウントの取得方法は？',
-        a: 'GNSSサービス事業者へ申請し、LixelGo内のRTK設定でログインしてください。'
-      }
-    ]
-  },
-  {
-    category: 'その他便利なTips',
-    questions: [
-      {
-        q: 'LCCモデルのウォーターマークはどうすれば消える？',
-        a: 'LCCやPLY形式でエクスポートすると自動的に消えます。'
-      },
-      {
-        q: '「No LCC Reconstruction Data」エラーの対処法は？',
-        a: '結果データを移動した場合、元の位置に戻すか、「Import Capture」で再読み込みしてください。'
-      },
-      {
-        q: 'LCCでクロップ（切り出し）したモデルを他形式に変換可能？',
-        a: 'LCC⇔PLYの相互変換が可能です。切り出し後は新規保存が必要です。'
-      }
-    ]
-  },
-  {
-    category: '電源・スキャン制限に関する注意事項',
-    questions: [
-      {
-        q: 'スキャン中に電池が切れるとどうなる？',
-        a: 'バッテリー残量10%で警告が出ます。そのまま継続するとデータが破損し、処理不能になるリスクがあります。'
-      },
-      {
-        q: 'バッテリー寿命の目安は？',
-        a: '約300〜500回の充放電で劣化し、容量が70〜80%になると寿命です。使用後は速やかに充電し、長期間使わないときも定期的な充電が必要です。'
-      },
-      {
-        q: 'LCC収録時間に上限はある？',
-        a: '最短3分、最長30分。30分を超えると動画が分割されてしまい、復元不可能です。収録は一度で完結させることが重要で、動画のマージ機能はありません。'
-      }
-    ]
-  },
-  {
-    category: '制御点・測量関連',
-    questions: [
-      {
-        q: '壁面に制御点を取ることは可能？',
-        a: '物理的には可能ですが、姿勢警告が出たり精度が落ちる可能性があるため非推奨です。どうしても必要な場合は、丁寧に傾けて振動を避けてください。'
-      },
-      {
-        q: '同じ制御点を複数回取ってもいい？',
-        a: '問題ありません。同名で取るとソフト側が自動で認識・統合してくれます。実座標CSVには1回だけ記載すればOKです。'
-      }
-    ]
-  },
-  {
-    category: 'LCC関連（モデル処理）',
-    questions: [
-      {
-        q: 'LCC Studioでログインしないと使えない？',
-        a: 'スタンダード版はオンラインログイン必須です。永久ライセンス版はログイン不要で使用可能です（営業担当にお問い合わせください）。'
-      },
-      {
-        q: 'LCCモデルが「再構築待機中」のまま動かない？',
-        a: '保存先ディレクトリに空き容量がない可能性があります。他のパスに変更して再構築を試してください。'
-      },
-      {
-        q: 'LCCでエラーコード 0xc0000409 / 0xc0000005 が出る？',
-        a: 'Intel第13/14世代CPUによるオーバークロックの影響があります。CPUのダウンクロック設定を行うか、別PCで試してください。'
-      },
-      {
-        q: 'LCCモデルがぼやける原因は？',
-        a: 'カメラ設置方向の誤り、映像と点群が別のものになっている、反射や露出過多、撮影角度不足などが原因です。'
-      },
-      {
-        q: 'LCC Viewerで表示できるブラウザは？',
-        a: 'Chrome、Firefox、Edge、Safari に対応しています。'
-      },
-      {
-        q: 'LCCモデルをOBJやOSGBに変換できる？',
-        a: 'LCCモデルはメッシュ形式ではないため、変換は非対応です。'
-      }
-    ]
-  },
-  {
-    category: 'その他技術仕様・用語',
-    questions: [
-      {
-        q: 'Feature Point（特徴点）とは？',
-        a: '壁、柵、屋根などの形状的な目印で、アルゴリズムが認識しやすいものです。特徴点が少ない場所では、動きを工夫したり人工物を追加する工夫が必要です。'
-      },
-      {
-        q: 'SLAMとは？',
-        a: '同時位置推定と地図作成。点群の重なり部分から姿勢を推定・合成して一つのモデルにまとめる手法です。'
-      },
-      {
-        q: 'Poses.csvとGNSS.csvの内容は？',
-        a: '• Poses.csv：タイムスタンプ、XYZ座標、回転の四元数（qw, qx, qy, qz）\n• GNSS.csv：0＝無効、1＝単独、2＝疑似距離差、4＝固定解、5＝浮動解'
-      }
-    ]
-  },
-  {
-    category: 'アクティベーション関連',
-    questions: [
-      {
-        q: 'ライセンスが失効・認証失敗になるのはなぜ？',
-        a: '管理者権限でのインストール＆起動が必要です。Windowsの日時設定を「今すぐ同期」で修正後、再起動してください。'
-      },
-      {
-        q: '「正しいSNを入力してください」と表示される理由は？',
-        a: '借用品や未購入機器には試用コードが必要です。SNコードの誤入力にも注意（Oと0、スペース混入など）してください。'
-      },
-      {
-        q: 'バージョン2.5.2から3.0へ切替時の注意点は？',
-        a: '新規アクティベーションコードが必要（1台1コード）です。旧バージョンのプロジェクトファイルは開けないため、元データからLASとして再読み込み推奨です。'
-      }
-    ]
-  },
-  {
-    category: '動作・クラッシュ関連',
-    questions: [
-      {
-        q: 'Windows 11でソフトが開けない/クラッシュする？',
-        a: 'UTF-8を有効にし、「WMIC」のインストール（オプション機能から）を行ってください。'
-      },
-      {
-        q: '0xc0000142 エラーの対処法は？',
-        a: 'UTF-8の未設定が原因です。設定後に再起動してください。'
-      },
-      {
-        q: '「msvcp140.dll が見つからない」と表示される場合は？',
-        a: 'Microsoft公式のランタイム再配布パッケージをインストールしてください。詳細はダウンロードページをご確認ください。'
-      }
-    ]
-  },
-  {
-    category: 'プロジェクト処理中のエラー',
-    questions: [
-      {
-        q: 'LIO/SLAM/最適化エラーの対処法は？',
-        a: '「Robustモード」で再実行してください（精度はやや低下）。初期化時の動き・視野障害に注意し、プロジェクトはCドライブ以外へ配置し、UTF-8を有効にしてください。'
-      },
-      {
-        q: 'メモリ不足/クラッシュが発生する？',
-        a: 'RAM 64GB以上推奨です。プロジェクトサイズの5〜465倍の空き容量が必要（L2 Proの場合）です。'
-      }
-    ]
-  },
-  {
-    category: '地図融合・メッシュ関連',
-    questions: [
-      {
-        q: '地図の結合（Map Fusion）の方法は？',
-        a: 'RTK固定・GCP（制御点）・共通制御点・再開スキャンのいずれかを使用し、15～30mの重複軌道を含めることを推奨します。'
-      },
-      {
-        q: 'メッシュ生成できない・失敗する？',
-        a: '「パノラマ画像の出力」を有効にし、同じLSバージョンでの処理結果を選んでください。L2 Proではアップサンプリング済みのデータは非対応です。'
-      }
-    ]
-  },
-  {
-    category: '写真・パノラマ・カラー処理',
-    questions: [
-      {
-        q: '撮影画像の出力方法は？',
-        a: 'Lixel Studioでカラー処理後、「panoramicImage」フォルダに保存されます。'
-      },
-      {
-        q: 'パノラマオーバーレイが使えない？',
-        a: 'フォルダ名に注意し、処理結果と一致しているか確認してください。'
-      },
-      {
-        q: '「画像と姿勢が見つからない」と表示される？',
-        a: 'パノラマ画像の生成忘れ、もしくはディレクトリ選択ミスが原因です。'
-      }
-    ]
-  },
-  {
-    category: 'ボリューム・測定・RTK関連',
-    questions: [
-      {
-        q: '体積や重量の計算は可能？',
-        a: '密度を入力することで自動計算が可能です。'
-      },
-      {
-        q: '高さ異常（ジオイド高）とは？',
-        a: '楕円体高と正高の差で、変換時に必要な情報です。'
-      },
-      {
-        q: 'RTK設定が無効になる理由は？',
-        a: '設定ミス、または未登録のRTKアカウント使用が原因です。'
-      }
-    ]
-  },
-  {
-    category: 'その他操作・注意点',
-    questions: [
-      {
-        q: 'AutoCADや3ds Maxに取り込むには？',
-        a: 'LAS形式は直接非対応です。RCP形式に変換が必要です。'
-      },
-      {
-        q: 'USBモードが起動できない・青点灯しない？',
-        a: '再起動＆再接続後、再度USBモードを有効化してください。'
-      },
-      {
-        q: 'SDカードが認識されない・マウントエラー？',
-        a: 'SDカードの再挿入＆再起動を試してください。'
-      }
-    ]
-  },
-  {
-    category: 'モバイルアプリ（Lixel Go）',
-    questions: [
-      {
-        q: '接続エラーが出る・ホットスポットが切れる？',
-        a: '他機器の干渉、スマホの熱暴走、VPN設定に注意してください。iPhoneは「互換性を最大化」をオフにしてください。'
-      },
-      {
-        q: '撮影中に点群や映像が表示されない？',
-        a: '表示されなくてもデータは保存済みなので継続OKです。'
-      }
-    ]
-  },
-  {
-    category: 'ハードウェア仕様・更新',
-    questions: [
-      {
-        q: 'バッテリー寿命・充電管理の注意点は？',
-        a: '約90分稼働。300～500回の充放電で劣化します。使用後はすぐ充電し、長期保管時は定期的な再充電を推奨します。'
-      },
-      {
-        q: 'ファームウェアのアップデート方法（USB）',
-        a: 'ダウンロード → USBモード → 本体にコピー → 再起動でアップデートされます。'
-      }
-    ]
-  },
-  {
-    category: 'トラブルシューティング',
-    questions: [
-      {
-        q: 'スキャンデータにノイズが多い場合の対処法は？',
-        a: '環境光の影響、反射面、振動などが原因の可能性があります。スキャン速度の調整、IMUキャリブレーション、適切なスキャンパスの選択により改善できます。詳しくはサポートまでご相談ください。'
-      },
-      {
-        q: 'RTKが接続できない場合は？',
-        a: 'RTK基地局との通信設定、NTRIP設定、SIMカードの状態を確認してください。また、空が開けた場所での使用を推奨します。設定ガイドはダウンロードページからご覧いただけます。'
-      },
-      {
-        q: 'ファームウェアのアップデート方法は？',
-        a: 'Lixel GOアプリまたはPCソフトウェアから簡単にアップデートできます。アップデート前には必ずデータのバックアップを取ることをお勧めします。'
-      },
-      {
-        q: '保証期間と修理について教えてください',
-        a: '製品保証期間は購入日から1年間です。延長保証プランもご用意しています。修理は国内サービスセンターで対応し、代替機の貸出サービスも行っています。'
-      }
-    ]
-  },
-  {
-    category: 'その他',
-    questions: [
-      {
-        q: 'トレーニングやサポートは受けられますか？',
-        a: '導入時の初期トレーニング、定期的なウェビナー、オンサイトトレーニングをご提供しています。技術サポートは電話、メール、リモートサポートで対応いたします。'
-      },
-      {
-        q: 'デモンストレーションは可能ですか？',
-        a: 'はい、実機でのデモンストレーションを承っています。お客様の現場での実証実験も可能です。オンラインデモもご用意していますので、お気軽にお申し込みください。'
-      },
-      {
-        q: '海外での使用は可能ですか？',
-        a: 'はい、世界各国でご利用いただけます。ただし、一部の国では電波法規制により使用が制限される場合があります。詳細はお問い合わせください。'
+        q: '故障時の対応は？',
+        a: '購入時に延長保証プログラムについてご説明させていただきます。メーカー保証は1年です。'
       }
     ]
   }
 ]
 
 export default function FAQPage() {
+  const [openQuestions, setOpenQuestions] = useState<Set<string>>(new Set())
+
+  const toggleQuestion = (questionId: string) => {
+    const newOpenQuestions = new Set(openQuestions)
+    if (newOpenQuestions.has(questionId)) {
+      newOpenQuestions.delete(questionId)
+    } else {
+      newOpenQuestions.add(questionId)
+    }
+    setOpenQuestions(newOpenQuestions)
+  }
+
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-white py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      <section className="relative bg-brand-black text-white py-16 md:py-24">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-grid-pattern-dark bg-grid opacity-10"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               よくある質問
             </h1>
-            <p className="text-xl text-gray-600">
-              お客様から寄せられる質問と回答をまとめました
+            <p className="text-xl text-brand-silver-300">
+              製品やサービスに関するお客様からのよくある質問をまとめました
             </p>
           </div>
         </div>
       </section>
 
+
       {/* FAQ Content */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            {faqCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="mb-12">
-                <h2 className="text-2xl font-bold mb-6 text-blue-600">
-                  {category.category}
-                </h2>
-                <div className="space-y-6">
-                  {category.questions.map((item, itemIndex) => (
-                    <details
-                      key={itemIndex}
-                      className="bg-white rounded-lg shadow-md overflow-hidden group"
-                    >
-                      <summary className="px-6 py-4 cursor-pointer hover:bg-gray-50 transition-colors flex items-center justify-between">
-                        <span className="font-semibold text-gray-900 pr-4">
-                          {item.q}
-                        </span>
-                        <svg
-                          className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
+            {faqCategories.map((cat, catIndex) => {
+              const accentColor = cat.accent === 'silver' ? 'silver' : cat.accent
+              
+              return (
+                <div key={cat.category} className={catIndex > 0 ? 'mt-16' : ''}>
+                  <div className="mb-8 flex items-center gap-4">
+                    <span className="text-4xl">{cat.icon}</span>
+                    <div>
+                      <h2 className="text-3xl font-bold text-brand-black">{cat.category}</h2>
+                      <div className={`w-20 h-1 bg-brand-${accentColor}-600 mt-2`}></div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {cat.questions.map((item, index) => {
+                      const questionId = `${cat.category}-${index}`
+                      const isOpen = openQuestions.has(questionId)
+                      
+                      return (
+                        <div
+                          key={index}
+                          className={`
+                            bg-white border-2 rounded-xl overflow-hidden transition-all
+                            ${isOpen 
+                              ? `border-brand-${accentColor}-500 shadow-lg` 
+                              : 'border-brand-silver-200 hover:border-brand-silver-400'
+                            }
+                          `}
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </summary>
-                      <div className="px-6 py-4 border-t border-gray-200">
-                        <p className="text-gray-600 leading-relaxed">{item.a}</p>
-                      </div>
-                    </details>
-                  ))}
+                          <button
+                            onClick={() => toggleQuestion(questionId)}
+                            className="w-full px-8 py-6 text-left flex items-start gap-4 hover:bg-brand-silver-50 transition-colors"
+                          >
+                            <div className={`
+                              flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all
+                              ${isOpen 
+                                ? `bg-brand-${accentColor}-600 text-white` 
+                                : 'bg-brand-silver-200 text-brand-silver-600'
+                              }
+                            `}>
+                              <svg 
+                                className={`w-5 h-5 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
+                                fill="none" 
+                                stroke="currentColor" 
+                                viewBox="0 0 24 24"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              </svg>
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-lg font-bold text-brand-black">
+                                {item.q}
+                              </h3>
+                            </div>
+                          </button>
+                          
+                          {isOpen && (
+                            <div className="px-8 pb-6 ml-12">
+                              <div className={`border-l-4 border-brand-${accentColor}-200 pl-6`}>
+                                <p className="text-brand-silver-700 whitespace-pre-line">
+                                  {item.a}
+                                </p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-16 md:py-24 bg-blue-600">
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-brand-black text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            ご不明な点がございましたら
+          <h2 className="text-3xl font-bold mb-6">
+            お探しの答えが見つかりませんでしたか？
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            FAQで解決しない場合は、お気軽にお問い合わせください。
-            専門スタッフが丁寧にご対応いたします。
+          <p className="text-xl text-brand-silver-300 mb-12 max-w-2xl mx-auto">
+            その他のご質問がございましたら、お気軽にお問い合わせください
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-orange-500 text-white font-bold rounded-lg hover:bg-brand-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              お問い合わせフォーム
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              お問い合わせ
             </Link>
             <Link
-              href="/tutorials"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              href="/support"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-brand-black transition-all"
             >
-              チュートリアルを見る
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              サポートセンター
             </Link>
           </div>
         </div>
