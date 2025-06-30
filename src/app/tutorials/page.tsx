@@ -359,12 +359,15 @@ export default function TutorialsPage() {
                 {category.tutorials.map((tutorial) => {
                   const difficulty = difficultyColors[tutorial.difficulty as keyof typeof difficultyColors];
                   
+                  const isExternalVideo = tutorial.videoUrl.startsWith('http');
+                  const isInternalPage = tutorial.videoUrl.startsWith('/');
+                  
                   return (
-                    <a
+                    <Link
                       key={tutorial.id}
                       href={tutorial.videoUrl}
-                      target={tutorial.videoUrl !== '#' ? '_blank' : undefined}
-                      rel={tutorial.videoUrl !== '#' ? 'noopener noreferrer' : undefined}
+                      target={isExternalVideo ? '_blank' : undefined}
+                      rel={isExternalVideo ? 'noopener noreferrer' : undefined}
                       className="group bg-white border-2 border-brand-silver-200 rounded-xl overflow-hidden hover:border-brand-silver-400 transition-all hover:shadow-xl"
                     >
                       {/* Thumbnail */}
@@ -403,7 +406,7 @@ export default function TutorialsPage() {
                           {tutorial.description}
                         </p>
                       </div>
-                    </a>
+                    </Link>
                   );
                 })}
               </div>

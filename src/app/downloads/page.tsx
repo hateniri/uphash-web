@@ -29,6 +29,24 @@ const manuals = {
       accent: 'orange' as const
     }
   ],
+  technicalGuides: [
+    {
+      name: 'L2 Pro ドローンマウント取付',
+      description: 'DJI Matrice 300/350 RTKへのSkyPort対応マウント手順',
+      type: 'テクニカルガイド',
+      icon: '🚁',
+      link: '/manuals/drone-mount',
+      accent: 'green' as const
+    },
+    {
+      name: 'PPK-SLAMデータ取得・処理',
+      description: '高精度測位のためのPPK-SLAM運用完全ガイド',
+      type: 'テクニカルガイド',
+      icon: '🛰️',
+      link: '/manuals/ppk-slam',
+      accent: 'purple' as const
+    }
+  ],
   softwareManuals: [
     {
       name: 'LCC Studio マニュアル',
@@ -120,8 +138,48 @@ export default function DownloadsPage() {
         </div>
       </section>
 
-      {/* Software Manuals Section */}
+      {/* Technical Guides Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-brand-silver-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-brand-black mb-4">テクニカルガイド</h2>
+            <div className="w-20 h-1 bg-brand-green-600"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            {manuals.technicalGuides.map((guide, index) => (
+              <Link
+                key={index}
+                href={guide.link}
+                className={`group bg-white border-2 border-brand-silver-200 rounded-xl p-8 hover:border-brand-${guide.accent}-500 transition-all hover:shadow-lg`}
+              >
+                <div className="flex items-start gap-6">
+                  <div className={`text-5xl p-4 bg-brand-${guide.accent}-50 rounded-lg group-hover:bg-brand-${guide.accent}-100 transition-colors`}>
+                    {guide.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className={`text-xl font-bold mb-3 text-brand-black group-hover:text-brand-${guide.accent}-600 transition-colors`}>
+                      {guide.name}
+                    </h3>
+                    <p className="text-brand-silver-600 mb-4">{guide.description}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-brand-silver-500 font-medium">{guide.type}</span>
+                      <span className={`text-brand-${guide.accent}-600 group-hover:translate-x-2 transition-transform`}>
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Software Manuals Section */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-brand-black mb-4">ソフトウェアマニュアル</h2>
