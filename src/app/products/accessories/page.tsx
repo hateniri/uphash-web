@@ -44,7 +44,7 @@ const accessories = [
         features: ['5時間連続稼働', 'ホットスワップ対応', '温度管理機能'],
         price: '',
         compatibility: 'L2 Pro',
-        image: '/images/accessories/l2-battery.webp'
+        image: '/images/accessories/l2-battery-2.webp'
       },
       {
         name: 'L2 Series 延長ポール&本体マウント',
@@ -77,6 +77,46 @@ const accessories = [
         price: '',
         compatibility: 'L2 Pro',
         image: '/images/accessories/l2-backpack.webp'
+      },
+      {
+        name: 'L2 Pro バッテリー充電器',
+        description: 'L2 Pro専用の高速充電器',
+        features: ['急速充電対応', 'LED充電インジケーター', '過充電保護機能'],
+        price: '',
+        compatibility: 'L2 Pro',
+        image: '/images/accessories/l2-battery-charger.webp'
+      },
+      {
+        name: 'L2 Pro バッテリー充電器セット',
+        description: 'L2 Pro用マルチバッテリー充電器',
+        features: ['4個同時充電', 'スマート充電管理', 'コンパクト設計'],
+        price: '',
+        compatibility: 'L2 Pro',
+        image: '/images/accessories/l2-battery-charger-2.webp'
+      },
+      {
+        name: 'L2 Pro ハードケース',
+        description: 'L2 Pro本体と周辺機器用の頑丈な収納ケース',
+        features: ['耐衝撃・防水設計', 'カスタムフォーム内装', 'ローラー付き'],
+        price: '',
+        compatibility: 'L2 Pro',
+        image: '/images/accessories/l2-hard-case.webp'
+      },
+      {
+        name: 'L2 Pro 保護カバー',
+        description: 'L2 Pro本体用の専用保護カバー',
+        features: ['シリコン製', '落下衝撃吸収', 'アクセスポート付き'],
+        price: '',
+        compatibility: 'L2 Pro',
+        image: '/images/accessories/l2-pro-cover.webp'
+      },
+      {
+        name: 'L2 RTK Module Pro',
+        description: 'L2シリーズ用の高性能RTKモジュール',
+        features: ['マルチGNSS対応', '高速初期化', 'センチメートル級精度'],
+        price: '',
+        compatibility: 'L2 Pro',
+        image: '/images/accessories/l2-rtk-module-pro.webp'
       }
     ]
   },
@@ -89,7 +129,7 @@ const accessories = [
         features: ['簡単装着', '絶対精度3cm以下', 'リアルタイム補正'],
         price: '',
         compatibility: 'K1',
-        image: '/images/accessories/k1-rtk-module.webp'
+        image: '/images/accessories/k1-rtk-module-2.webp'
       },
       {
         name: 'K1 追加バッテリー&追加充電アダプターセット',
@@ -146,6 +186,14 @@ const accessories = [
         price: '',
         compatibility: 'K1',
         image: '/images/accessories/k1-protective-cover.webp'
+      },
+      {
+        name: 'K1 RTモジュール',
+        description: 'K1用リアルタイム処理モジュール',
+        features: ['リアルタイム処理', '低遅延通信', 'プラグ&プレイ'],
+        price: '',
+        compatibility: 'K1',
+        image: '/images/accessories/k1-rt-module.webp'
       }
     ]
   },
@@ -183,6 +231,14 @@ const accessories = [
         price: '',
         compatibility: 'L2 Pro / K1',
         image: '/images/accessories/calibration-target.webp'
+      },
+      {
+        name: 'ユニバーサルRTモジュール',
+        description: '汎用リアルタイム処理モジュール',
+        features: ['両機種対応', 'クラウド連携', '高速データ転送'],
+        price: '',
+        compatibility: 'L2 Pro / K1',
+        image: '/images/accessories/rt-module.webp'
       }
     ]
   }
