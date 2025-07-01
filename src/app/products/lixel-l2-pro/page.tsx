@@ -11,7 +11,7 @@ const models = [
     range: '0.5m-120m',
     speed: '320,000点/秒',
     description: 'エントリーレベルのプロフェッショナルモデル',
-    image: '/images/products/l2pro/l2-pro-main.webp',
+    image: '/images/l2pro_product.png',
     price: '350万円'
   },
   {
@@ -20,7 +20,7 @@ const models = [
     range: '0.5m-120m',
     speed: '640,000点/秒',
     description: 'スタンダードモデル、最も人気の構成',
-    image: '/images/products/l2pro/l2-pro-main.webp',
+    image: '/images/l2pro_product.png',
     price: '550万円'
   },
   {
@@ -29,7 +29,7 @@ const models = [
     range: '0.5m-300m',
     speed: '640,000点/秒',
     description: '長距離対応、大規模プロジェクト向け',
-    image: '/images/products/l2pro/l2-pro-main.webp',
+    image: '/images/l2pro_product.png',
     price: '750万円'
   }
 ]
@@ -48,12 +48,12 @@ const accessories = [
   {
     name: 'Survey Grade RTKアンテナ',
     description: '測量グレードの高精度RTK測位',
-    image: '/images/accessories/rtk-antenna.jpg'
+    image: '/images/accessories/l2-rtk-standard.webp'
   },
   {
     name: '追加バッテリーパック',
     description: '長時間の連続作業をサポート',
-    image: '/images/accessories/battery.jpg'
+    image: '/images/accessories/l2-battery-2.webp'
   }
 ]
 
@@ -98,15 +98,11 @@ export default function LixelL2ProPage() {
               </div>
             </div>
             <div className="relative h-[500px] bg-gray-700 rounded-xl overflow-hidden">
-              <video 
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source src={getImagePath('/images/products/l2pro/l2-pro-video-1.mp4')} type="video/mp4" />
-              </video>
+              <img 
+                src={getImagePath('/images/products/l2pro/l2-pro-main.webp')} 
+                alt="Lixel L2 Proプロフェッショナル3Dレーザースキャナー製品画像"
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
         </div>
@@ -168,12 +164,16 @@ export default function LixelL2ProPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gray-200 rounded-xl p-8">
-              <img 
-                src={getImagePath('/images/products/l2pro/l2-pro-4.webp')} 
-                alt="3D Gaussian Splatting技術で生成されたフォトリアルな3Dモデル"
+            <div className="order-2 lg:order-1 bg-gray-200 rounded-xl overflow-hidden">
+              <video 
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-auto rounded-lg"
-              />
+              >
+                <source src={getImagePath('/images/products/l2pro/l2-pro-video-1.mp4')} type="video/mp4" />
+              </video>
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
