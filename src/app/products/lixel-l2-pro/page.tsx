@@ -12,7 +12,7 @@ const models = [
     speed: '320,000点/秒',
     description: 'エントリーレベルのプロフェッショナルモデル',
     image: '/images/l2pro_product.png',
-    price: '350万円'
+    price: 'オープンプライス'
   },
   {
     name: 'L2 Pro 32/120',
@@ -21,7 +21,7 @@ const models = [
     speed: '640,000点/秒',
     description: 'スタンダードモデル、最も人気の構成',
     image: '/images/l2pro_product.png',
-    price: '550万円'
+    price: 'オープンプライス'
   },
   {
     name: 'L2 Pro 32/300',
@@ -30,7 +30,7 @@ const models = [
     speed: '640,000点/秒',
     description: '長距離対応、大規模プロジェクト向け',
     image: '/images/l2pro_product.png',
-    price: '750万円'
+    price: 'オープンプライス'
   }
 ]
 
@@ -38,22 +38,27 @@ const accessories = [
   {
     name: '延長ポール',
     description: '高所や届きにくい場所のスキャンに最適',
-    image: '/images/accessories/extension-pole.jpg'
+    image: '/images/accessories/l2-extension-pole-new.webp'
   },
   {
     name: 'ハーネスシステム',
     description: 'ハンズフリースキャンを実現',
-    image: '/images/accessories/harness.jpg'
+    image: '/images/accessories/l2-harness-system.webp'
   },
   {
-    name: 'Survey Grade RTKアンテナ',
+    name: 'プロ用 RTKアンテナ',
     description: '測量グレードの高精度RTK測位',
-    image: '/images/accessories/l2-rtk-standard.webp'
+    image: '/images/accessories/l2-rtk-antenna-pro.webp'
   },
   {
     name: '追加バッテリーパック',
     description: '長時間の連続作業をサポート',
-    image: '/images/accessories/l2-battery-2.webp'
+    image: '/images/accessories/l2-battery-pack-new.webp'
+  },
+  {
+    name: 'ドローンマウント',
+    description: '産業用ドローンへの搭載を可能に',
+    image: '/images/accessories/l2-drone-mount.webp'
   }
 ]
 
@@ -419,14 +424,14 @@ export default function LixelL2ProPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">オプション・アクセサリー</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {accessories.map((accessory, index) => (
               <div key={index} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="h-40 bg-gray-200">
                   <img 
                     src={getImagePath(accessory.image)} 
                     alt={`${accessory.name}アクセサリー製品画像`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain p-2"
                   />
                 </div>
                 <div className="p-6">
