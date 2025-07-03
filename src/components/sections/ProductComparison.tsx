@@ -35,9 +35,8 @@ export default function ProductComparison() {
               {/* Product Image */}
               <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-brand-silver-50 via-brand-blue-50 to-white p-12">
                 <div className="absolute top-6 left-6 right-6 flex justify-between items-start">
-                  <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-brand-silver-200">
-                    <p className="text-xs text-brand-silver-600 uppercase tracking-wider">参考価格</p>
-                    <p className="text-xl font-bold text-brand-black">350万円〜</p>
+                  <div className="bg-brand-blue-600/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-brand-blue-500">
+                    <p className="text-sm font-bold text-white">お問い合わせください</p>
                   </div>
                   <span className="inline-flex items-center px-4 py-2 text-sm font-semibold bg-brand-blue-600 text-white rounded-full shadow-lg">
                     PROFESSIONAL
@@ -105,9 +104,8 @@ export default function ProductComparison() {
               {/* Product Image */}
               <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-brand-silver-50 via-brand-silver-100 to-white p-12">
                 <div className="absolute top-6 left-6 right-6 flex justify-between items-start">
-                  <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-brand-silver-200">
-                    <p className="text-xs text-brand-silver-600 uppercase tracking-wider">参考価格</p>
-                    <p className="text-xl font-bold text-brand-black">190万円〜</p>
+                  <div className="bg-brand-blue-600/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-brand-blue-500">
+                    <p className="text-sm font-bold text-white">お問い合わせください</p>
                   </div>
                   <span className="inline-flex items-center px-4 py-2 text-sm font-semibold bg-brand-silver-600 text-white rounded-full shadow-lg">
                     ENTRY MODEL
@@ -200,9 +198,9 @@ export default function ProductComparison() {
                 </thead>
                 <tbody className="divide-y divide-brand-silver-200">
                   <tr className="hover:bg-brand-silver-50 transition-colors">
-                    <td className="px-6 py-4 text-sm text-brand-silver-600">参考価格</td>
-                    <td className="px-6 py-4 text-sm font-medium text-brand-black">350万円〜</td>
-                    <td className="px-6 py-4 text-sm font-medium text-brand-black">190万円〜</td>
+                    <td className="px-6 py-4 text-sm text-brand-silver-600">価格</td>
+                    <td className="px-6 py-4 text-sm font-medium text-brand-blue-600">お問い合わせください</td>
+                    <td className="px-6 py-4 text-sm font-medium text-brand-blue-600">お問い合わせください</td>
                   </tr>
                   <tr className="hover:bg-brand-silver-50 transition-colors">
                     <td className="px-6 py-4 text-sm text-brand-silver-600">用途</td>
@@ -289,9 +287,14 @@ export default function ProductComparison() {
             {/* CTA Section */}
             <div className="bg-brand-silver-50 px-8 py-6">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p className="text-brand-silver-700">
-                  どちらの製品が最適か迷われている方は、お気軽にご相談ください
-                </p>
+                <div>
+                  <p className="text-brand-silver-700">
+                    ハードウェアの価格はお問い合わせください。
+                  </p>
+                  <p className="text-brand-silver-600 text-sm mt-1">
+                    3DGSやLixelのSDKを使用した開発のご要望も承っております。
+                  </p>
+                </div>
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-2 bg-brand-blue-600 text-white font-medium rounded-lg hover:bg-brand-blue-700 transition-colors border border-brand-blue-600"

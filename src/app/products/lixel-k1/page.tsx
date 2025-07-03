@@ -40,9 +40,8 @@ export default function LixelK1Page() {
               </p>
               <div className="bg-orange-50 rounded-lg p-4 mb-8">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-gray-600">標準価格</span>
-                  <span className="text-3xl font-bold text-orange-600">190万円</span>
-                  <span className="text-sm text-gray-500">（税別・送料別途）</span>
+                  <span className="text-gray-600">価格</span>
+                  <span className="text-3xl font-bold text-orange-600">オープンプライス</span>
                 </div>
               </div>
               <div className="flex gap-4">
