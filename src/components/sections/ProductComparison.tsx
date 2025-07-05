@@ -35,9 +35,11 @@ export default function ProductComparison() {
               {/* Product Image */}
               <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-brand-silver-50 via-brand-blue-50 to-white p-12">
                 <div className="absolute top-6 left-6 right-6 flex justify-between items-start">
-                  <div className="bg-brand-blue-600/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-brand-blue-500">
-                    <p className="text-sm font-bold text-white">お問い合わせください</p>
-                  </div>
+                  <Link href="/contact" className="inline-block">
+                    <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-brand-silver-200 hover:bg-brand-blue-50 hover:border-brand-blue-300 transition-all cursor-pointer">
+                      <p className="text-sm font-bold text-brand-blue-600 hover:text-brand-blue-700">価格 →</p>
+                    </div>
+                  </Link>
                   <span className="inline-flex items-center px-4 py-2 text-sm font-semibold bg-brand-blue-600 text-white rounded-full shadow-lg">
                     PROFESSIONAL
                   </span>
@@ -104,9 +106,11 @@ export default function ProductComparison() {
               {/* Product Image */}
               <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-brand-silver-50 via-brand-silver-100 to-white p-12">
                 <div className="absolute top-6 left-6 right-6 flex justify-between items-start">
-                  <div className="bg-brand-blue-600/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-brand-blue-500">
-                    <p className="text-sm font-bold text-white">お問い合わせください</p>
-                  </div>
+                  <Link href="/contact" className="inline-block">
+                    <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-brand-silver-200 hover:bg-brand-blue-50 hover:border-brand-blue-300 transition-all cursor-pointer">
+                      <p className="text-sm font-bold text-brand-blue-600 hover:text-brand-blue-700">価格 →</p>
+                    </div>
+                  </Link>
                   <span className="inline-flex items-center px-4 py-2 text-sm font-semibold bg-brand-silver-600 text-white rounded-full shadow-lg">
                     ENTRY MODEL
                   </span>
@@ -199,8 +203,16 @@ export default function ProductComparison() {
                 <tbody className="divide-y divide-brand-silver-200">
                   <tr className="hover:bg-brand-silver-50 transition-colors">
                     <td className="px-6 py-4 text-sm text-brand-silver-600">価格</td>
-                    <td className="px-6 py-4 text-sm font-medium text-brand-blue-600">お問い合わせください</td>
-                    <td className="px-6 py-4 text-sm font-medium text-brand-blue-600">お問い合わせください</td>
+                    <td className="px-6 py-4 text-sm font-medium">
+                      <Link href="/contact" className="text-brand-blue-600 hover:text-brand-blue-700 hover:underline">
+                        お問い合わせください →
+                      </Link>
+                    </td>
+                    <td className="px-6 py-4 text-sm font-medium">
+                      <Link href="/contact" className="text-brand-blue-600 hover:text-brand-blue-700 hover:underline">
+                        お問い合わせください →
+                      </Link>
+                    </td>
                   </tr>
                   <tr className="hover:bg-brand-silver-50 transition-colors">
                     <td className="px-6 py-4 text-sm text-brand-silver-600">用途</td>
